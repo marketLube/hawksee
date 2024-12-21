@@ -1,0 +1,23 @@
+@use "./../abstract/variables";
+
+.buttondiv {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 11rem;
+}
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.commonbutton {
+  background-color: variables.$color-gray-dark;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: larger;
+}

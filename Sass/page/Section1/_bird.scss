@@ -1,0 +1,9 @@
+@use "./../../abstract/variables";
+
+.bird {
+  height: 100vh;
+  background-color: variables.$color-primery-light;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

@@ -1,0 +1,136 @@
+@use "./../../abstract/variables";
+.get-in-touch {
+  height: 80vh;
+  background-color: #f5f5f5;
+  display: flex;
+
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 0.5rem;
+    padding-top: 2rem;
+  }
+
+  &__title {
+    font-size: 13rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: right;
+  }
+
+  &__content {
+    display: flex;
+    gap: 23rem;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6rem;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-left: 2rem;
+
+    img {
+      width: 400px;
+      height: auto;
+    }
+
+    span {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+
+  &-about {
+    display: flex;
+    gap: 8rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 6rem;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__address {
+    width: 25rem;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #000000;
+      font-weight: 700;
+    }
+    .addressnote {
+      width: 55%;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .get-in-touch {
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__content {
+      gap: 3rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .get-in-touch {
+    &__container {
+      padding: 4rem 2rem;
+    }
+
+    &__title {
+      font-size: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+}

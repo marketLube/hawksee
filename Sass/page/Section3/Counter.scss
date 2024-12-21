@@ -1,0 +1,42 @@
+@use "./../../abstract/variables";
+
+.counterSection {
+  background-color: variables.$color-primery-dark;
+  height: 100vh;
+}
+.counterup {
+  font-size: 9rem;
+  font-family: 700;
+  padding-bottom: 6rem;
+  text-align: right;
+  line-height: 1;
+  color: #fff;
+  padding-top: 7rem;
+}
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  padding: 3rem;
+  text-align: center;
+  height: 50%;
+  //   padding-top: 6rem;
+
+  &__item {
+    flex: 1;
+  }
+
+  &__value {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+  }
+}

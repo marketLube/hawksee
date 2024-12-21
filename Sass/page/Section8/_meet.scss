@@ -1,0 +1,11 @@
+@use "./../../abstract/variables";
+.meet {
+  height: 100vh;
+  background-color: variables.$color-primery-light;
+
+  &-head {
+    font-size: 7rem;
+    padding-left: 7rem;
+    padding-top: 3rem;
+  }
+}

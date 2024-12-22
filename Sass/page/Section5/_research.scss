@@ -1,6 +1,7 @@
 @use "./../../abstract/variables";
+
 .research {
-  height: 200vh;
+  height: 500vh;
   width: 100%;
   background-color: variables.$color-primery-light;
 
@@ -19,18 +20,66 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+  }
+
+  &-content {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+
+    &.second {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, calc(-50% + 20px));
+    }
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+
+      &.second {
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 
   &-head {
     font-size: 10rem;
     font-weight: 700;
     color: rgb(216, 216, 216);
+    text-align: center;
   }
+
   &-para {
     width: 40%;
+    margin: 0 auto;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
     padding-top: 1rem;
   }
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+.research-head,
+.research-para {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+
+.animate {
+  opacity: 1;
+  animation: anim 1s ease forwards;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 export const DoubleLineReels = () => {
-  const logos = Array.from({ length: 15 }, (_, i) => `Logo ${i + 1}`);
+  const logos = Array.from({ length: 15 }, (_, i) => `${i + 1}`);
 
   return (
     // <div>

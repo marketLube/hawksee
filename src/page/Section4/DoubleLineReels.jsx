@@ -2,12 +2,14 @@ import React from "react";
 
 export const DoubleLineReels = () => {
   const logos = Array.from({ length: 15 }, (_, i) => `${i + 1}`);
+  const logoss = Array.from({ length: 15 }, (_, i) => `${i + 1}`);
 
   return (
     // <div>
     //   <p>Loved by users from forward-thinking companies</p>
     <section className="logos">
       {/* <p className="logos-pp">Loved by users from forward-thinking companies</p> */}
+      <h1 className="logos-title">uijhgh</h1>
       <div className="logos-rot">
         <div className="logo-slide">
           {/* Render two sets of logos for seamless looping */}
@@ -25,6 +27,24 @@ export const DoubleLineReels = () => {
           ))}
           {logos.map((logo, index) => (
             <div key={`logo-duplicate-${index}`}>{logo}</div>
+          ))}
+        </div>
+        <div className="logo-slide">
+          {/* Render two sets of logos for seamless looping */}
+          {logoss.map((logo, index) => (
+            <div key={`logos-${index}`}>{logo}</div>
+          ))}
+          {logoss.map((logo, index) => (
+            <div key={`logos-duplicate-${index}`}>{logo}</div>
+          ))}
+          {logoss.map((logo, index) => (
+            <div key={`logos-duplicate-${index}`}>{logo}</div>
+          ))}
+          {logoss.map((logo, index) => (
+            <div key={`logos-duplicate-${index}`}>{logo}</div>
+          ))}
+          {logoss.map((logo, index) => (
+            <div key={`logos-duplicate-${index}`}>{logo}</div>
           ))}
         </div>
       </div>

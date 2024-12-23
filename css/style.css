@@ -455,24 +455,25 @@ body {
   overflow: hidden;
   background-color: rgb(0, 0, 0);
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   padding-top: 3rem;
 }
-.logos-pp {
+.logos-title {
+  font-size: 11rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: right;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
+  padding-top: 3rem;
 }
 .logos-rot {
-  transform: skew(-3deg, -3deg);
-  padding-top: 4rem;
+  transform: skew(0.02turn, -5deg);
+  padding-top: 7rem;
 }
 
 .logo-slide {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   width: calc(200% + 3rem);
 }
 .logo-slide:hover {
@@ -495,8 +496,17 @@ body {
   transform: scale(1.1);
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .realstories {
-  height: 90vh;
+  overflow: hidden;
+  height: 97vh;
   background-color: black;
 }
 .realstories-title {
@@ -508,14 +518,16 @@ body {
   padding-top: 3rem;
 }
 .realstories-rot {
-  transform: skew(-3deg, -3deg);
-  padding-top: 4rem;
+  transform: skew(0.02turn, -5deg);
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 .realstories-slide {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   width: calc(200% + 3rem);
+  animation: slide 30s linear infinite;
 }
 .realstories-slide:hover {
   animation-play-state: paused;
@@ -523,8 +535,8 @@ body {
 
 .realstories-slide div {
   flex: 0 0 auto;
-  height: 17rem;
-  width: 13rem;
+  height: 25rem;
+  width: 20rem;
   background-color: rgb(255, 255, 255);
   color: black;
   padding: 1rem;

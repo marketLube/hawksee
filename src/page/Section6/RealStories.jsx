@@ -9,19 +9,19 @@ export const RealStories = () => {
         <div className="realstories-slide">
           {/* Render two sets of logos for seamless looping */}
           {logos.map((logo, index) => (
-            <div key={`realstories-${index}`}>{logo}</div>
+            <div key={`logo-${index}`}>{logo}</div>
           ))}
           {logos.map((logo, index) => (
-            <div key={`realstories-duplicate-${index}`}>{logo}</div>
+            <div key={`logo-duplicate-${index}`}>{logo}</div>
           ))}
           {logos.map((logo, index) => (
-            <div key={`realstories-duplicate-${index}`}>{logo}</div>
+            <div key={`logo-duplicate-${index}`}>{logo}</div>
           ))}
           {logos.map((logo, index) => (
-            <div key={`realstories-duplicate-${index}`}>{logo}</div>
+            <div key={`logo-duplicate-${index}`}>{logo}</div>
           ))}
           {logos.map((logo, index) => (
-            <div key={`realstories-duplicate-${index}`}>{logo}</div>
+            <div key={`logo-duplicate-${index}`}>{logo}</div>
           ))}
         </div>
       </div>

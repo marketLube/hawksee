@@ -1,5 +1,17 @@
+@use "./../../abstract/variables";
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .realstories {
-  height: 90vh;
+  overflow: hidden;
+  height: 97vh;
   background-color: black;
 
   &-title {
@@ -12,17 +24,18 @@
   }
 
   &-rot {
-    transform: skew(-3deg, -3deg);
-    padding-top: 4rem;
+    transform: skew(0.02turn, -5deg);
+    padding-top: 8rem;
+    padding-bottom: 5rem;
   }
 }
 .realstories-slide {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   width: calc(200% + 3rem);
 
   // Rotate the container
-  // animation: slide 30s linear infinite;
+  animation: slide 30s linear infinite;
 
   &:hover {
     animation-play-state: paused;
@@ -31,8 +44,8 @@
 
 .realstories-slide div {
   flex: 0 0 auto;
-  height: 17rem;
-  width: 13rem;
+  height: 25rem;
+  width: 20rem;
   background-color: rgb(255, 255, 255);
   color: black;
   padding: 1rem;

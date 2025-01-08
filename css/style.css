@@ -13,14 +13,18 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 2rem 2rem;
+  padding: 2rem 6rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: transform 0.3s ease;
+}
+.headerNav.hidden {
+  transform: translateY(-100%);
 }
 .headerNav-hawlogo {
-  width: 5%;
+  width: 150px;
 }
 .headerNav-right {
   display: flex;
@@ -28,6 +32,10 @@ body {
   gap: 4rem;
   text-decoration: none;
   list-style: none;
+}
+.headerNav-right li {
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .logo-grid {
@@ -71,7 +79,6 @@ body {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
@@ -102,6 +109,8 @@ body {
 
 .imgsOne img {
   width: 20%;
+  height: 350px;
+  object-fit: cover;
 }
 
 .first {
@@ -164,7 +173,7 @@ body {
 }
 
 .get-in-touch {
-  height: 80vh;
+  height: 100vh;
   background-color: #f5f5f5;
   display: flex;
   position: relative;
@@ -276,7 +285,7 @@ body {
   }
 }
 .bird {
-  height: 150vh;
+  height: 200vh;
   background-color: #fff;
   align-items: center;
   justify-content: center;
@@ -430,6 +439,17 @@ body {
     transform: translateY(0rem);
   }
 }
+.research-head {
+  font-size: 13rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gradient-text {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .research-head,
 .research-para {
   opacity: 0;
@@ -477,7 +497,15 @@ body {
   object-fit: cover;
 }
 
-@keyframes slide {
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
   from {
     transform: translateX(0);
   }
@@ -489,7 +517,7 @@ body {
   overflow: hidden;
   background-color: rgb(0, 0, 0);
   width: 100%;
-  height: 120vh;
+  height: 180vh;
   padding-top: 3rem;
 }
 .logos-title {
@@ -503,21 +531,28 @@ body {
 .logos-rot {
   transform: skew(0.02turn, -5deg);
   padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .logo-slide {
   display: flex;
   gap: 1rem;
   width: calc(200% + 3rem);
+  animation: slideLeft 30s linear infinite;
 }
 .logo-slide:hover {
   animation-play-state: paused;
 }
+.logo-slide.reverse {
+  animation: slideRight 30s linear infinite;
+}
 
 .logo-slide div {
   flex: 0 0 auto;
-  height: 17rem;
-  width: 13rem;
+  height: 25rem;
+  width: 20rem;
   background-color: rgb(255, 255, 255);
   color: black;
   padding: 1rem;

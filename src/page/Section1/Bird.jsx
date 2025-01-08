@@ -8,7 +8,7 @@ export const Bird = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const viewportHeight = window.innerHeight;
-      setOffset(Math.min(scrollY, viewportHeight * 1.7));
+      setOffset(Math.min(scrollY, viewportHeight * 2));
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,8 +23,9 @@ export const Bird = () => {
         src={BirdImg}
         style={{
           transform: `translate(${-offset * 0.5}px, ${
-            -offset * 0.272
-          }px) scale(${1 + offset * 0.001})`,
+            -offset * 0.315
+          }px) scale(${0.8 + offset * 0.0005})`,
+          transition: "transform 0.6s ease-out",
         }}
       />
     </section>

@@ -12,8 +12,8 @@ export const Paragraph = () => {
 
       <div className="paragraph">
         Lorem ipsum dolor sit amet, consectetuer adipiing elit, sed diam nonummy
-        nibh euismod tincidunt ut laoreet Performance Marketing, Branding and
-        Video Production
+        nibh euismod tincidunt ut laoreet{" "}
+        <strong>Performance Marketing, Branding and Video Production</strong>
       </div>
 
       {/* <Logoauto /> */}

@@ -89,13 +89,19 @@ export const Research = () => {
           </Button>
         </div>
         <div
-          className={`research-head ${animate ? "animate" : ""}`} // Apply animation class dynamically
+          className={`research-head gradient-text ${animate ? "animate" : ""}`}
+          style={{
+            background:
+              "linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.212) 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            color: "transparent",
+          }}
         >
           {headingText}
         </div>
-        <p
-          className={`research-para ${animate ? "animate" : ""}`} // Apply animation class dynamically
-        >
+        <p className={`research-para ${animate ? "animate" : ""}`}>
           {paraText}
         </p>
       </div>

@@ -2,13 +2,19 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 2rem 2rem;
+  padding: 2rem 6rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: transform 0.3s ease;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
   &-hawlogo {
-    width: 5%;
+    width: 150px;
   }
 
   &-right {
@@ -17,5 +23,10 @@
     gap: 4rem;
     text-decoration: none;
     list-style: none;
+
+    li {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
   }
 }

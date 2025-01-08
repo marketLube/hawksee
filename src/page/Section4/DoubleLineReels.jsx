@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "../../components/Button";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export const DoubleLineReels = () => {
   const logos = Array.from({ length: 15 }, (_, i) => `${i + 1}`);
@@ -29,7 +31,7 @@ export const DoubleLineReels = () => {
             <div key={`logo-duplicate-${index}`}>{logo}</div>
           ))}
         </div>
-        <div className="logo-slide">
+        <div className="logo-slide reverse">
           {/* Render two sets of logos for seamless looping */}
           {logoss.map((logo, index) => (
             <div key={`logos-${index}`}>{logo}</div>
@@ -47,6 +49,12 @@ export const DoubleLineReels = () => {
             <div key={`logos-duplicate-${index}`}>{logo}</div>
           ))}
         </div>
+      </div>
+
+      <div className="buttondiv">
+        <Button>
+          View All <FiArrowUpRight />{" "}
+        </Button>
       </div>
     </section>
   );

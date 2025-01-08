@@ -6,6 +6,7 @@
   gap: 15px;
   background-color: variables.$color-primery-dark;
   padding: 40px;
+  position: relative;
 
   &:hover .logo-card {
     opacity: 0.4;

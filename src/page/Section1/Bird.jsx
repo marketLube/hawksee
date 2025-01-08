@@ -1,5 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import BirdImg from "../../assets/birdImg.svg";
 
 export const Bird = () => {
-  return <section className="bird">Bird</section>;
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      setOffset(Math.min(scrollY, viewportHeight * 1.7));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <section className="bird">
+      <img
+        className="bird-image"
+        alt=""
+        src={BirdImg}
+        style={{
+          transform: `translate(${-offset * 0.5}px, ${
+            -offset * 0.272
+          }px) scale(${1 + offset * 0.001})`,
+        }}
+      />
+    </section>
+  );
 };

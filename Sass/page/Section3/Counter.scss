@@ -3,6 +3,9 @@
 .counterSection {
   background-color: variables.$color-primery-dark;
   height: 100vh;
+  position: relative;
+  // top: -38rem;
+  z-index: 100;
 }
 .counterup {
   font-size: 9rem;

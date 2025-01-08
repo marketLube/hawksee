@@ -11,8 +11,11 @@
 
 .realstories {
   overflow: hidden;
-  height: 97vh;
+  height: 130vh;
   background-color: black;
+  position: relative;
+  // top: -40rem;
+  // border: 1px solid red;
 
   &-title {
     font-size: 11rem;

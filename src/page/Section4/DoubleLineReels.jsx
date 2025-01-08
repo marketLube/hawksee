@@ -9,7 +9,7 @@ export const DoubleLineReels = () => {
     //   <p>Loved by users from forward-thinking companies</p>
     <section className="logos">
       {/* <p className="logos-pp">Loved by users from forward-thinking companies</p> */}
-      <h1 className="logos-title">uijhgh</h1>
+      <h1 className="logos-title"> ل ا م ع أ ل ا</h1>
       <div className="logos-rot">
         <div className="logo-slide">
           {/* Render two sets of logos for seamless looping */}

@@ -1,6 +1,13 @@
 @use "./../../abstract/variables";
 
+.sectionPara {
+  position: relative;
+}
 .paragraph {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   text-align: center;
   display: flex;
@@ -8,13 +15,12 @@
   justify-content: center;
   font-size: 2.5rem;
   padding: 10rem;
-  position: absolute;
-  top: 137%;
-  left: 10%;
-  z-index: 3;
+  z-index: 10;
   font-weight: 200;
   width: 80%;
   line-height: 60px;
+  z-index: 100;
+  // height: 100vh;
 }
 .imgsOne {
   position: relative;

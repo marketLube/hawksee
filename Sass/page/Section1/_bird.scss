@@ -1,9 +1,25 @@
+// Sass/page/Section1/_bird.scss
 @use "./../../abstract/variables";
 
 .bird {
-  height: 100vh;
+  height: 150vh;
   background-color: variables.$color-primery-light;
   align-items: center;
   justify-content: center;
   display: flex;
+  position: sticky;
+  top: 0;
+  scroll-snap-align: start;
+  background-color: rgb(255, 255, 255);
+
+  &-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: -8rem;
+    right: -60rem;
+    transition: transform 0.4s ease;
+    z-index: 0;
+  }
 }

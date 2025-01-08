@@ -4,7 +4,11 @@
   height: 500vh;
   width: 100%;
   background-color: variables.$color-primery-light;
-
+  position: relative;
+  // top: -40rem;
+  // border: 1px solid red;
+  z-index: 100;
+  background-color: #ffffff;
   &-bttn {
     position: relative;
     bottom: 9rem;

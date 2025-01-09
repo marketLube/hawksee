@@ -609,19 +609,19 @@ body {
   animation-play-state: paused;
 }
 
-.realstories-slide div {
+.realstories-slide img {
   flex: 0 0 auto;
   height: 25rem;
   width: 20rem;
   background-color: rgb(255, 255, 255);
   color: black;
-  padding: 1rem;
+  margin: 1rem;
   border-radius: 5px;
   text-align: center;
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
 }
-.realstories-slide div:hover {
+.realstories-slide img:hover {
   transform: scale(1.1);
 }
 

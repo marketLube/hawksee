@@ -24,7 +24,7 @@ export const Bird = () => {
         style={{
           transform: `translate(${-offset * 0.5}px, ${
             -offset * 0.315
-          }px) scale(${0.85 + offset * 0.001})`,
+          }px) scale(${0.8 + offset * 0.001})`,
           transition: "transform 0.6s ease-out",
         }}
       />

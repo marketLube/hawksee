@@ -10,7 +10,7 @@ import {
 export const GetInTouch = () => {
   return (
     <>
-      <div className="get-in-touch">
+      <div id="contact" className="get-in-touch">
         <div className="get-in-touch__container">
           <h1 className="get-in-touch__title">Get in touch</h1>
 

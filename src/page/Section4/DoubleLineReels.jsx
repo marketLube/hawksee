@@ -9,7 +9,7 @@ export const DoubleLineReels = () => {
   return (
     // <div>
     //   <p>Loved by users from forward-thinking companies</p>
-    <section className="logos">
+    <section id="works" className="logos">
       {/* <p className="logos-pp">Loved by users from forward-thinking companies</p> */}
       <h1 className="logos-title"> ل ا م ع أ ل ا</h1>
       <div className="logos-rot">

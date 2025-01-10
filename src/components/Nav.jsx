@@ -23,14 +23,21 @@ export const Nav = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav id="nav" className={`headerNav ${isHidden ? "hidden" : ""}`}>
       <img src={logo} alt="logo" className="headerNav-hawlogo" />
       <ul className="headerNav-right">
-        <li>About us</li>
-        <li>Our Works</li>
-        <li>Stories</li>
-        <li>Contact</li>
+        <li onClick={() => scrollToSection("about")}>About us</li>
+        <li onClick={() => scrollToSection("works")}>Our Works</li>
+        <li onClick={() => scrollToSection("stories")}>Stories</li>
+        <li onClick={() => scrollToSection("contact")}>Contact</li>
       </ul>
     </nav>
   );

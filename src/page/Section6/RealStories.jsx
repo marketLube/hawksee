@@ -20,7 +20,7 @@ export const RealStories = () => {
   ];
 
   return (
-    <section className="realstories">
+    <section id="stories" className="realstories">
       <h1 className="realstories-title">Real Stories</h1>
       <div className="realstories-rot">
         <div className="realstories-slide">

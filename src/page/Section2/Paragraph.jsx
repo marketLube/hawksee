@@ -5,7 +5,7 @@ import image3 from "../../assets/skymarkLap.jpeg";
 
 export const Paragraph = () => {
   return (
-    <section id="paragraph" className="sectionPara">
+    <section id="about" className="sectionPara">
       <div className="imgsOne">
         <img src={image1} alt="" className="first" />
         <img src={image2} alt="" className="second" />

@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 2rem 6rem;
+  padding: 3.5rem 6rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,6 +25,7 @@ body {
 }
 .headerNav-hawlogo {
   width: 150px;
+  margin-top: -4rem;
 }
 .headerNav-right {
   display: flex;
@@ -34,8 +35,9 @@ body {
   list-style: none;
 }
 .headerNav-right li {
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
 }
 
 .logo-grid {
@@ -108,8 +110,8 @@ body {
 }
 
 .imgsOne img {
-  width: 20%;
-  height: 350px;
+  width: 19%;
+  height: 380px;
   object-fit: cover;
 }
 
@@ -173,7 +175,7 @@ body {
 }
 
 .get-in-touch {
-  height: 90vh;
+  height: 100vh;
   background-color: #f5f5f5;
   display: flex;
   position: relative;
@@ -186,7 +188,7 @@ body {
   padding-top: 2rem;
 }
 .get-in-touch__title {
-  font-size: 13rem;
+  font-size: 12.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
   text-align: right;
@@ -204,10 +206,10 @@ body {
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
-  padding-left: 2rem;
+  padding-left: -3rem;
 }
 .get-in-touch__logo img {
-  width: 400px;
+  width: 490px;
   height: auto;
 }
 .get-in-touch__logo span {
@@ -221,34 +223,63 @@ body {
 .get-in-touch__links {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  width: 6rem;
+  gap: 1.8rem;
+  width: 10rem;
+  position: relative;
+  height: 300px;
 }
 .get-in-touch__links a {
   color: #000;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 .get-in-touch__links a:hover {
   text-decoration: underline;
 }
+.get-in-touch__email {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #828283;
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.get-in-touch__email:hover {
+  text-decoration: underline;
+}
+.get-in-touch__phone {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #828283;
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.get-in-touch__phone:hover {
+  text-decoration: underline;
+}
 .get-in-touch__address {
-  width: 25rem;
+  width: fit-content;
+  position: relative;
+  height: 300px;
 }
 .get-in-touch__address h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 .get-in-touch__address p {
   font-size: 1rem;
   line-height: 1.6;
   color: #000000;
-  font-weight: 700;
+  font-weight: 600;
 }
 .get-in-touch__address .addressnote {
-  width: 55%;
+  width: 21rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 .get-in-touch__contact {
   display: flex;
@@ -267,6 +298,23 @@ body {
 }
 .get-in-touch__contact a:hover {
   text-decoration: underline;
+}
+
+.social-media-container {
+  background: black;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding-left: 12rem;
+}
+
+.social-media-link {
+  margin: 0 20px;
+}
+
+.social-media-icon {
+  color: white;
+  font-size: 40px;
 }
 
 @media (max-width: 1024px) {
@@ -474,13 +522,13 @@ body {
 }
 .meet-head {
   font-size: 7rem;
-  padding-left: 7rem;
+  padding-left: 11.6rem;
   padding-top: 4rem;
   padding-bottom: 3rem;
 }
 
 .swiper {
-  width: 88%;
+  width: 80%;
   height: 60%;
 }
 
@@ -488,9 +536,8 @@ body {
   text-align: center;
   font-size: 18px;
   border-radius: 2rem;
-  border: 1px solid black;
+  border: 3px solid black;
   gap: 4rem;
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -7,13 +7,13 @@
 
   &-head {
     font-size: 7rem;
-    padding-left: 7rem;
+    padding-left: 11.6rem;
     padding-top: 4rem;
     padding-bottom: 3rem;
   }
 }
 .swiper {
-  width: 88%;
+  width: 80%;
   height: 60%;
 }
 
@@ -22,10 +22,9 @@
   font-size: 18px;
   // background: #8e8c8c;
   border-radius: 2rem;
-  border: 1px solid black;
+  border: 3px solid black;
   gap: 4rem;
 
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 2rem 6rem;
+  padding: 3.5rem 6rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +15,7 @@
 
   &-hawlogo {
     width: 150px;
+    margin-top: -4rem;
   }
 
   &-right {
@@ -25,8 +26,9 @@
     list-style: none;
 
     li {
-      font-size: 1.3rem;
-      font-weight: 500;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: black;
     }
   }
 }

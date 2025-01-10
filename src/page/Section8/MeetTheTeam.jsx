@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+// import Avatar from "../../assets/60111.jpg";
 
 import { FreeMode, Pagination } from "swiper/modules";
 
@@ -15,49 +16,49 @@ export const MeetTheTeam = () => {
       id: 1,
       name: "John Doe",
       position: "CEO",
-      image: "/path/to/image1.jpg",
+      image: "Avatar",
     },
     {
       id: 2,
       name: "Jane Smith",
       position: "CTO",
-      image: "/path/to/image2.jpg",
+      image: "Avatar",
     },
     {
       id: 3,
       name: "Mike Johnson",
       position: "Lead Developer",
-      image: "/path/to/image3.jpg",
+      image: "Avatar",
     },
     {
       id: 4,
       name: "Sarah Williams",
       position: "UX Designer",
-      image: "/path/to/image4.jpg",
+      image: "Avatar",
     },
     {
       id: 5,
       name: "David Brown",
       position: "Product Manager",
-      image: "/path/to/image5.jpg",
+      image: "Avatar",
     },
     {
       id: 6,
       name: "Emily Davis",
       position: "Marketing Director",
-      image: "/path/to/image6.jpg",
+      image: "Avatar",
     },
     {
       id: 7,
       name: "Alex Turner",
       position: "Senior Developer",
-      image: "/path/to/image7.jpg",
+      image: "Avatar",
     },
     {
       id: 8,
       name: "Lisa Anderson",
       position: "UI Designer",
-      image: "/path/to/image8.jpg",
+      image: "Avatar",
     },
   ];
 
@@ -82,9 +83,9 @@ export const MeetTheTeam = () => {
                   src={member.image}
                   alt={member.name + " " + member.position}
                 />
+                <h3>{member.name}</h3>
+                <p>{member.position}</p>
               </div>
-              {/* <h3>{member.name}</h3>
-              <p>{member.position}</p> */}
             </SwiperSlide>
           ))}
         </Swiper>

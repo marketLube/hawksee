@@ -1,9 +1,9 @@
 import React from "react";
 import hawksee from "./../../assets/HawkseeLogo.svg";
 import {
-  FaFacebook,
+  FaFacebookF,
   FaInstagram,
-  FaLinkedin,
+  FaLinkedinIn,
   FaWhatsapp,
 } from "react-icons/fa";
 
@@ -24,6 +24,15 @@ export const GetInTouch = () => {
                 <a href="#works">Our Works</a>
                 <a href="#stories">Stories</a>
                 <a href="#contact">Contact</a>
+
+                <span
+                  className="get-in-touch__email"
+                  onClick={() => {
+                    window.open("mailto:hello@hawksee.org", "_blank");
+                  }}
+                >
+                  hello@hawksee.org
+                </span>
               </div>
 
               <div className="get-in-touch__address">
@@ -32,51 +41,47 @@ export const GetInTouch = () => {
                   Lorem ipsum dolor consectetur adipiscing euismod incididunt ut
                   dolore magna aliquam erat Ut wisi enim ad minim veniam.
                 </p>
+
+                <a href="tel:0495290199" className="get-in-touch__phone">
+                  0495-290 199
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div
-        style={{
-          background: "black",
-          height: "10vh",
-          display: "flex",
-          alignItems: "center",
-          // justifyContent: "flex-start",
-        }}
-      >
+      <div className="social-media-container">
         <a
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ margin: "0 10px" }}
+          className="social-media-link"
         >
-          <FaFacebook style={{ color: "white", fontSize: "34px" }} />
+          <FaFacebookF className="social-media-icon" />
         </a>
         <a
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ margin: "0 10px" }}
+          className="social-media-link"
         >
-          <FaInstagram style={{ color: "white", fontSize: "34px" }} />
+          <FaInstagram className="social-media-icon" />
         </a>
         <a
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ margin: "0 10px" }}
+          className="social-media-link"
         >
-          <FaLinkedin style={{ color: "white", fontSize: "34px" }} />
+          <FaLinkedinIn className="social-media-icon" />
         </a>
         <a
           href="https://whatsapp.com"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ margin: "0 10px" }}
+          className="social-media-link"
         >
-          <FaWhatsapp style={{ color: "white", fontSize: "34px" }} />
+          <FaWhatsapp className="social-media-icon" />
         </a>
       </div>
     </>

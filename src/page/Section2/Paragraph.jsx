@@ -3,7 +3,7 @@ import image1 from "./../../assets/img1.jpg";
 
 export const Paragraph = () => {
   return (
-    <section className="sectionPara">
+    <section id="paragraph" className="sectionPara">
       <div className="imgsOne">
         <img src={image1} alt="" className="first" />
         <img src={image1} alt="" className="second" />

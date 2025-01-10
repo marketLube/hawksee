@@ -16,7 +16,7 @@ export const Bird = () => {
   }, []);
 
   return (
-    <section className="bird">
+    <section id="bird" className="bird">
       <img
         className="bird-image"
         alt=""

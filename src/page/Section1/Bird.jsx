@@ -48,6 +48,32 @@ export const Bird = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [hasScrolled]);
 
+  useEffect(() => {
+    let lastScrollTop = 0;
+    const handleScroll = () => {
+      const currentScrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const birdSection = document.getElementById("bird");
+      const birdRect = birdSection.getBoundingClientRect();
+
+      const isInBirdSection =
+        birdRect.top <= 0 &&
+        birdRect.bottom >= 0 &&
+        currentScrollTop <= window.innerHeight * 3;
+
+      if (currentScrollTop < lastScrollTop && isInBirdSection) {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+      lastScrollTop = currentScrollTop;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section id="bird" className="bird">
       <img

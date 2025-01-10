@@ -24,7 +24,7 @@ export const Nav = () => {
   }, [lastScrollY]);
 
   return (
-    <nav className={`headerNav ${isHidden ? "hidden" : ""}`}>
+    <nav id="nav" className={`headerNav ${isHidden ? "hidden" : ""}`}>
       <img src={logo} alt="logo" className="headerNav-hawlogo" />
       <ul className="headerNav-right">
         <li>About us</li>

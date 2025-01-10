@@ -2,39 +2,39 @@ import React from "react";
 import image1 from "./../../assets/img1.jpg";
 
 export const Paragraph = () => {
-  React.useEffect(() => {
-    let lastScrollTop = 0;
-    let isSticky = false;
+  // React.useEffect(() => {
+  //   let lastScrollTop = 0;
+  //   let isSticky = false;
 
-    const handleScroll = () => {
-      const currentScrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const paragraphSection = document.getElementById("paragraph");
-      const paragraphRect = paragraphSection.getBoundingClientRect();
+  //   const handleScroll = () => {
+  //     const currentScrollTop =
+  //       window.pageYOffset || document.documentElement.scrollTop;
+  //     const paragraphSection = document.getElementById("paragraph");
+  //     const paragraphRect = paragraphSection.getBoundingClientRect();
 
-      if (currentScrollTop < lastScrollTop) {
-        if (Math.abs(paragraphRect.top) < 10 && isSticky) {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-          isSticky = false;
-        } else if (paragraphRect.top < 0) {
-          paragraphSection.scrollIntoView({ behavior: "smooth" });
-          isSticky = true;
-        }
-      } else {
-        if (paragraphRect.top > 0) {
-          isSticky = false;
-        }
-      }
+  //     if (currentScrollTop < lastScrollTop) {
+  //       if (Math.abs(paragraphRect.top) < 10 && isSticky) {
+  //         window.scrollTo({
+  //           top: 0,
+  //           behavior: "smooth",
+  //         });
+  //         isSticky = false;
+  //       } else if (paragraphRect.top < 0) {
+  //         paragraphSection.scrollIntoView({ behavior: "smooth" });
+  //         isSticky = true;
+  //       }
+  //     } else {
+  //       if (paragraphRect.top > 0) {
+  //         isSticky = false;
+  //       }
+  //     }
 
-      lastScrollTop = currentScrollTop;
-    };
+  //     lastScrollTop = currentScrollTop;
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <section id="paragraph" className="sectionPara">

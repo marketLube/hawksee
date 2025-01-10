@@ -1,4 +1,5 @@
 @use "./../../abstract/variables";
+@use "../../base/responsive";
 
 @keyframes slide {
   from {
@@ -24,12 +25,59 @@
     text-align: right;
     color: white;
     padding-top: 3rem;
+
+    @include responsive.respond(bigDesktop) {
+      font-size: 11rem;
+    }
+    @include responsive.respond(desktop) {
+      font-size: 8rem;
+    }
+    @include responsive.respond(bigTablets) {
+      font-size: 7rem;
+    }
+    @include responsive.respond(tablets) {
+      font-size: 7rem;
+    }
+    @include responsive.respond(phone) {
+      font-size: 5rem;
+    }
+    @include responsive.respond(smallPhone) {
+      font-size: 2.8rem;
+    }
   }
 
   &-rot {
     transform: skew(0.02turn, -5deg);
     padding-top: 8rem;
     padding-bottom: 5rem;
+
+    @include responsive.respond(bigDesktop) {
+      // padding-top: 8rem;
+      // padding-bottom: 5rem;
+    }
+    @include responsive.respond(desktop) {
+      // padding-top: 6rem;
+      // padding-bottom: 4rem;
+    }
+    @include responsive.respond(bigTablets) {
+      // padding-top: 4rem;
+      // padding-bottom: 3rem;
+    }
+    @include responsive.respond(tablets) {
+      transform: none;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+    @include responsive.respond(phone) {
+      transform: none;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
+    @include responsive.respond(smallPhone) {
+      transform: none;
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+    }
   }
 }
 .realstories-slide {
@@ -56,6 +104,29 @@
   text-align: center;
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
+
+  @include responsive.respond(bigDesktop) {
+  }
+  @include responsive.respond(desktop) {
+    height: 15rem;
+    width: 10rem;
+  }
+  @include responsive.respond(bigTablets) {
+    height: 10rem;
+    width: 7rem;
+  }
+  @include responsive.respond(tablets) {
+    height: 7rem;
+    width: 5rem;
+  }
+  @include responsive.respond(phone) {
+    height: 5rem;
+    width: 3rem;
+  }
+  @include responsive.respond(smallPhone) {
+    height: 3rem;
+    width: 2rem;
+  }
 
   &:hover {
     transform: scale(1.1);

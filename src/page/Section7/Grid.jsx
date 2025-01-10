@@ -2,30 +2,102 @@ import React from "react";
 
 export const Grid = () => {
   const logos = [
-    { id: 1, name: "logo" },
-    { id: 2, name: "logo" },
-    { id: 3, name: "logo" },
-    { id: 4, name: "log" },
-    { id: 5, name: "logo" },
-    { id: 6, name: "DENNER " },
-    { id: 7, name: "GEBERIT" },
-    { id: 8, name: "Tal" },
-    { id: 9, name: "Tal" },
-    { id: 10, name: "Tal" },
-    { id: 11, name: "Tal" },
-    { id: 12, name: "Tal" },
-    { id: 13, name: "Tal" },
-    { id: 14, name: "Tal" },
-    { id: 15, name: "Tal " },
-    { id: 16, name: "Tal" },
-    { id: 17, name: "Tall" },
-    { id: 17, name: "Tall" },
+    {
+      id: 1,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 2,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 3,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 4,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 5,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 6,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 7,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 8,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 9,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 10,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 11,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 12,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 13,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 14,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 15,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 16,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 17,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
+    {
+      id: 18,
+      image:
+        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+    },
   ];
   return (
     <div className="logo-grid">
       {logos.map((logo) => (
         <div key={logo.id} className="logo-card">
-          <div className="logo-text">{logo.name}</div>
+          <img src={logo.image} alt="Company logo" className="logo-image" />
         </div>
       ))}
     </div>

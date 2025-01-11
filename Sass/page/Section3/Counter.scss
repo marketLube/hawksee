@@ -1,20 +1,65 @@
 @use "./../../abstract/variables";
+@use "../../base/responsive";
 
 .counterSection {
   background-color: variables.$color-primery-dark;
   height: 100vh;
   position: relative;
-  // top: -38rem;
   z-index: 100;
+
+  @include responsive.respond(smallPhone) {
+    height: auto;
+    padding: 2rem 0;
+  }
 }
 .counterup {
   font-size: 9rem;
-  font-family: 700;
+  font-weight: 700;
   padding-bottom: 6rem;
   text-align: right;
   line-height: 1;
   color: #fff;
   padding-top: 7rem;
+
+  @include responsive.respond(bigDesktop) {
+    font-size: 8rem;
+    padding-bottom: 5rem;
+    padding-top: 6rem;
+  }
+
+  @include responsive.respond(desktop) {
+    font-size: 7.5rem;
+    padding-bottom: 4.5rem;
+    padding-top: 5.5rem;
+  }
+
+  @include responsive.respond(bigTablets) {
+    font-size: 7rem;
+    padding-bottom: 4rem;
+    padding-top: 5rem;
+  }
+
+  @include responsive.respond(tablets) {
+    font-size: 6rem;
+    padding-bottom: 3rem;
+    padding-top: 4rem;
+    text-align: center;
+  }
+
+  @include responsive.respond(phone) {
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+    text-align: center;
+  }
+
+  @include responsive.respond(smallPhone) {
+    font-size: 2.8rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    line-height: 1.2;
+  }
 }
 .stats-section {
   display: flex;
@@ -26,14 +71,62 @@
   height: 50%;
   //   padding-top: 6rem;
 
+  @include responsive.respond(tablets) {
+    padding: 2rem;
+  }
+
+  @include responsive.respond(phone) {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  @include responsive.respond(smallPhone) {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 1rem;
+  }
+
+  @include responsive.respond(bigDesktop) {
+    padding: 3.5rem;
+  }
+
+  @include responsive.respond(desktop) {
+    padding: 3rem;
+  }
+
   &__item {
     flex: 1;
+
+    @include responsive.respond(phone) {
+      flex: 0 0 45%;
+    }
+
+    @include responsive.respond(smallPhone) {
+      flex: 0 0 100%;
+    }
   }
 
   &__value {
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
+
+    @include responsive.respond(bigTablets) {
+      font-size: 3.5rem;
+    }
+
+    @include responsive.respond(tablets) {
+      font-size: 3rem;
+    }
+
+    @include responsive.respond(phone) {
+      font-size: 2.5rem;
+    }
+
+    @include responsive.respond(smallPhone) {
+      font-size: 2.2rem;
+    }
   }
 
   &__label {
@@ -41,5 +134,23 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0.5rem;
+
+    @include responsive.respond(phone) {
+      font-size: 0.9rem;
+    }
+
+    @include responsive.respond(smallPhone) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// Add styles for the button container
+.buttondiv {
+  text-align: center;
+  padding: 2rem 0;
+
+  @include responsive.respond(smallPhone) {
+    padding: 1.5rem 0;
   }
 }

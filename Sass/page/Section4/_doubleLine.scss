@@ -1,4 +1,5 @@
 @use "./../../abstract/variables";
+@use "./../../base/responsive" as responsive;
 
 @keyframes slideRight {
   from {
@@ -25,6 +26,20 @@
   height: 180vh;
   padding-top: 3rem;
 
+  @include responsive.respond(smallPhone) {
+    height: 120vh;
+    padding-top: 1.5rem;
+  }
+
+  @include responsive.respond(phone) {
+    height: 140vh;
+    padding-top: 2rem;
+  }
+
+  @include responsive.respond(tablets) {
+    height: 160vh;
+  }
+
   &-title {
     font-size: 11rem;
     font-weight: 700;
@@ -32,6 +47,24 @@
     text-align: right;
     color: white;
     padding-top: 3rem;
+
+    @include responsive.respond(smallPhone) {
+      font-size: 4rem;
+      padding-top: 1.5rem;
+    }
+
+    @include responsive.respond(phone) {
+      font-size: 5rem;
+      padding-top: 2rem;
+    }
+
+    @include responsive.respond(tablets) {
+      font-size: 7rem;
+    }
+
+    @include responsive.respond(bigTablets) {
+      font-size: 9rem;
+    }
   }
 
   &-rot {
@@ -40,6 +73,16 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    @include responsive.respond(smallPhone) {
+      padding-top: 3rem;
+      gap: 2rem;
+    }
+
+    @include responsive.respond(phone) {
+      padding-top: 4rem;
+      gap: 3rem;
+    }
   }
 }
 
@@ -60,8 +103,8 @@
 
 .logo-slide div {
   flex: 0 0 auto;
-  height: 25rem;
-  width: 20rem;
+  height: 23rem;
+  width: 19rem;
   background-color: rgb(255, 255, 255);
   color: black;
   padding: 1rem;
@@ -69,6 +112,36 @@
   text-align: center;
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
+
+  @include responsive.respond(smallPhone) {
+    height: 15rem;
+    width: 12rem;
+  }
+
+  @include responsive.respond(phone) {
+    height: 18rem;
+    width: 15rem;
+  }
+
+  @include responsive.respond(tablets) {
+    height: 20rem;
+    width: 16rem;
+  }
+
+  @include responsive.respond(bigTablets) {
+    height: 18rem;
+    width: 14rem;
+  }
+
+  @include responsive.respond(desktop) {
+    height: 16rem;
+    width: 13rem;
+  }
+
+  @include responsive.respond(bigDesktop) {
+    height: 20rem;
+    width: 16rem;
+  }
 
   &:hover {
     transform: scale(1.1);

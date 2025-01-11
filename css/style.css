@@ -1340,6 +1340,23 @@ body {
   height: 180vh;
   padding-top: 3rem;
 }
+@media only screen and (max-width: 575.98px) {
+  .logos {
+    height: 120vh;
+    padding-top: 1.5rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .logos {
+    height: 140vh;
+    padding-top: 2rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .logos {
+    height: 160vh;
+  }
+}
 .logos-title {
   font-size: 11rem;
   font-weight: 700;
@@ -1348,12 +1365,46 @@ body {
   color: white;
   padding-top: 3rem;
 }
+@media only screen and (max-width: 575.98px) {
+  .logos-title {
+    font-size: 4rem;
+    padding-top: 1.5rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .logos-title {
+    font-size: 5rem;
+    padding-top: 2rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .logos-title {
+    font-size: 7rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .logos-title {
+    font-size: 9rem;
+  }
+}
 .logos-rot {
   transform: skew(0.02turn, -5deg);
   padding-top: 7rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .logos-rot {
+    padding-top: 3rem;
+    gap: 2rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .logos-rot {
+    padding-top: 4rem;
+    gap: 3rem;
+  }
 }
 
 .logo-slide {
@@ -1371,8 +1422,8 @@ body {
 
 .logo-slide div {
   flex: 0 0 auto;
-  height: 25rem;
-  width: 20rem;
+  height: 23rem;
+  width: 19rem;
   background-color: rgb(255, 255, 255);
   color: black;
   padding: 1rem;
@@ -1380,6 +1431,42 @@ body {
   text-align: center;
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
+}
+@media only screen and (max-width: 575.98px) {
+  .logo-slide div {
+    height: 15rem;
+    width: 12rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .logo-slide div {
+    height: 18rem;
+    width: 15rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .logo-slide div {
+    height: 20rem;
+    width: 16rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .logo-slide div {
+    height: 18rem;
+    width: 14rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .logo-slide div {
+    height: 16rem;
+    width: 13rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .logo-slide div {
+    height: 20rem;
+    width: 16rem;
+  }
 }
 .logo-slide div:hover {
   transform: scale(1.1);

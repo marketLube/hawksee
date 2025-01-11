@@ -123,6 +123,35 @@ body {
   line-height: 60px;
   z-index: 100;
 }
+@media only screen and (max-width: 575.98px) {
+  .paragraph {
+    font-size: 1.2rem;
+    padding: 2rem;
+    width: 90%;
+    line-height: 30px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .paragraph {
+    font-size: 1.5rem;
+    padding: 3rem;
+    line-height: 35px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .paragraph {
+    font-size: 1.8rem;
+    padding: 5rem;
+    line-height: 40px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .paragraph {
+    font-size: 2rem;
+    padding: 7rem;
+    line-height: 45px;
+  }
+}
 
 .imgsOne {
   position: relative;
@@ -146,11 +175,48 @@ body {
   height: 380px;
   object-fit: cover;
 }
+@media only screen and (max-width: 575.98px) {
+  .imgsOne img {
+    width: 70%;
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .imgsOne img {
+    width: 60%;
+    height: 250px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .imgsOne img {
+    width: 40%;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .imgsOne img {
+    width: 25%;
+    height: 350px;
+  }
+}
 
 .first {
   bottom: 27%;
   left: 9%;
   position: absolute;
+}
+@media only screen and (max-width: 575.98px) {
+  .first {
+    bottom: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .first {
+    bottom: 55%;
+    left: 20%;
+  }
 }
 
 .second {
@@ -158,11 +224,38 @@ body {
   left: 40%;
   position: absolute;
 }
+@media only screen and (max-width: 575.98px) {
+  .second {
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .second {
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 
 .third {
   bottom: 27%;
   right: 9%;
   position: absolute;
+}
+@media only screen and (max-width: 575.98px) {
+  .third {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .third {
+    bottom: 15%;
+    right: 20%;
+  }
 }
 
 @keyframes slide {

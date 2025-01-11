@@ -12,7 +12,8 @@
 
 .realstories {
   overflow: hidden;
-  height: 130vh;
+  height: auto;
+  padding: 2rem 0;
   background-color: black;
   position: relative;
   // top: -40rem;
@@ -26,57 +27,40 @@
     color: white;
     padding-top: 3rem;
 
-    @include responsive.respond(bigDesktop) {
-      font-size: 11rem;
-    }
     @include responsive.respond(desktop) {
-      font-size: 8rem;
+      font-size: 9rem;
     }
     @include responsive.respond(bigTablets) {
-      font-size: 7rem;
+      font-size: 8rem;
     }
     @include responsive.respond(tablets) {
-      font-size: 7rem;
+      font-size: 6rem;
     }
     @include responsive.respond(phone) {
-      font-size: 5rem;
+      font-size: 4rem;
     }
     @include responsive.respond(smallPhone) {
-      font-size: 2.8rem;
+      font-size: 3rem;
     }
   }
 
   &-rot {
     transform: skew(0.02turn, -5deg);
-    padding-top: 8rem;
+    padding-top: 6rem;
     padding-bottom: 5rem;
 
-    @include responsive.respond(bigDesktop) {
-      // padding-top: 8rem;
-      // padding-bottom: 5rem;
-    }
-    @include responsive.respond(desktop) {
-      // padding-top: 6rem;
-      // padding-bottom: 4rem;
-    }
-    @include responsive.respond(bigTablets) {
-      // padding-top: 4rem;
-      // padding-bottom: 3rem;
-    }
     @include responsive.respond(tablets) {
-      transform: none;
-      padding-top: 3rem;
-      padding-bottom: 2rem;
+      transform: skew(0.01turn, -3deg);
+      padding-top: 4rem;
     }
     @include responsive.respond(phone) {
-      transform: none;
+      transform: skew(0.005turn, -2deg);
       padding-top: 2rem;
-      padding-bottom: 1rem;
     }
     @include responsive.respond(smallPhone) {
-      transform: none;
+      transform: skew(0.02turn, -5deg);
       padding-top: 1rem;
-      padding-bottom: 0.5rem;
+      padding-bottom: 1rem;
     }
   }
 }
@@ -90,6 +74,14 @@
 
   &:hover {
     animation-play-state: paused;
+  }
+
+  @include responsive.respond(tablets) {
+    animation: slide 25s linear infinite;
+  }
+  @include responsive.respond(phone) {
+    animation: slide 20s linear infinite;
+    width: calc(300% + 3rem); // Add more copies for smaller screens
   }
 }
 
@@ -105,30 +97,26 @@
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
 
-  @include responsive.respond(bigDesktop) {
-  }
-  @include responsive.respond(desktop) {
-    height: 15rem;
-    width: 10rem;
-  }
-  @include responsive.respond(bigTablets) {
-    height: 10rem;
-    width: 7rem;
-  }
-  @include responsive.respond(tablets) {
-    height: 7rem;
-    width: 5rem;
-  }
-  @include responsive.respond(phone) {
-    height: 5rem;
-    width: 3rem;
-  }
-  @include responsive.respond(smallPhone) {
-    height: 3rem;
-    width: 2rem;
-  }
-
   &:hover {
     transform: scale(1.1);
+  }
+
+  @include responsive.respond(bigTablets) {
+    height: 20rem;
+    width: 16rem;
+  }
+  @include responsive.respond(tablets) {
+    height: 18rem;
+    width: 14rem;
+  }
+  @include responsive.respond(phone) {
+    height: 15rem;
+    width: 12rem;
+    margin: 0.5rem;
+  }
+  @include responsive.respond(smallPhone) {
+    height: 12rem;
+    width: 10rem;
+    margin: 0.3rem;
   }
 }

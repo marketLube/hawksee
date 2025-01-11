@@ -1482,7 +1482,8 @@ body {
 }
 .realstories {
   overflow: hidden;
-  height: 130vh;
+  height: auto;
+  padding: 2rem 0;
   background-color: black;
   position: relative;
 }
@@ -1494,60 +1495,53 @@ body {
   color: white;
   padding-top: 3rem;
 }
-@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
-  .realstories-title {
-    font-size: 11rem;
-  }
-}
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .realstories-title {
-    font-size: 8rem;
+    font-size: 9rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .realstories-title {
-    font-size: 7rem;
+    font-size: 8rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .realstories-title {
-    font-size: 7rem;
+    font-size: 6rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .realstories-title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .realstories-title {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 }
 .realstories-rot {
   transform: skew(0.02turn, -5deg);
-  padding-top: 8rem;
+  padding-top: 6rem;
   padding-bottom: 5rem;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .realstories-rot {
-    transform: none;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    transform: skew(0.01turn, -3deg);
+    padding-top: 4rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .realstories-rot {
-    transform: none;
+    transform: skew(0.005turn, -2deg);
     padding-top: 2rem;
-    padding-bottom: 1rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .realstories-rot {
-    transform: none;
+    transform: skew(0.02turn, -5deg);
     padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -1559,6 +1553,17 @@ body {
 }
 .realstories-slide:hover {
   animation-play-state: paused;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .realstories-slide {
+    animation: slide 25s linear infinite;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .realstories-slide {
+    animation: slide 20s linear infinite;
+    width: calc(300% + 3rem);
+  }
 }
 
 .realstories-slide img {
@@ -1573,38 +1578,34 @@ body {
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
-  .realstories-slide img {
-    height: 15rem;
-    width: 10rem;
-  }
+.realstories-slide img:hover {
+  transform: scale(1.1);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .realstories-slide img {
-    height: 10rem;
-    width: 7rem;
+    height: 20rem;
+    width: 16rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .realstories-slide img {
-    height: 7rem;
-    width: 5rem;
+    height: 18rem;
+    width: 14rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .realstories-slide img {
-    height: 5rem;
-    width: 3rem;
+    height: 15rem;
+    width: 12rem;
+    margin: 0.5rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .realstories-slide img {
-    height: 3rem;
-    width: 2rem;
+    height: 12rem;
+    width: 10rem;
+    margin: 0.3rem;
   }
-}
-.realstories-slide img:hover {
-  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

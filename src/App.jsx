@@ -12,11 +12,9 @@ import { GetInTouch } from "./page/Section9/GetInTouch";
 function App() {
   return (
     <>
-      <header>
-        <Nav />
-      </header>
+      <header>{/* <Nav /> */}</header>
       <main>
-        <Bird />
+        {/* <Bird /> */}
         <Paragraph />
         <Counter />
         <DoubleLineReels />

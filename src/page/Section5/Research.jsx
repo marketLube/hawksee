@@ -4,12 +4,6 @@ import { FiArrowDownRight } from "react-icons/fi";
 import { useInView } from "framer-motion";
 
 export const Research = () => {
-  const [headingText, setHeadingText] = useState("Research");
-  const [paraText, setParaText] = useState(
-    "Look for grammar, spelling mistakes, and make sure you proper nouns. A paragraph three parts:"
-  );
-  const [animate, setAnimate] = useState(false); // State to trigger animation
-
   const textArray = [
     "Research",
     "Analyze",
@@ -30,6 +24,10 @@ export const Research = () => {
     "Dedicating time to understand complex topics and master new skills.",
   ];
 
+  const [headingText, setHeadingText] = useState(textArray[0]);
+  const [paraText, setParaText] = useState(paraArray[0]);
+  const [animate, setAnimate] = useState(true);
+
   const containerRef = useRef(null);
   const lastScrollTime = useRef(0);
   const lastIndex = useRef(0);
@@ -37,6 +35,8 @@ export const Research = () => {
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+
+    setAnimate(true);
 
     const handleScroll = () => {
       const rect = container.getBoundingClientRect();
@@ -57,7 +57,7 @@ export const Research = () => {
           setHeadingText(textArray[index]);
           setParaText(paraArray[index]);
 
-          setAnimate(false); // Reset animation state
+          setAnimate(false);
           setTimeout(() => setAnimate(true), 0);
         }
       } else {
@@ -66,8 +66,8 @@ export const Research = () => {
           setHeadingText(textArray[0]);
           setParaText(paraArray[0]);
 
-          setAnimate(false); // Reset animation state
-          setTimeout(() => setAnimate(true), 0); // Reapply animation
+          setAnimate(false);
+          setTimeout(() => setAnimate(true), 0);
         }
       }
     };

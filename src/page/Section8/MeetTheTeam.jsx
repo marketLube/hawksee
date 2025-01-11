@@ -73,6 +73,28 @@ export const MeetTheTeam = () => {
           pagination={{
             clickable: true,
           }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 100,
+            },
+          }}
           modules={[FreeMode, Pagination]}
           className="mySwiper"
         >

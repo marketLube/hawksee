@@ -1,4 +1,6 @@
 @use "./../../abstract/variables";
+@use "../../base/responsive";
+
 .meet {
   height: 100vh;
   background-color: variables.$color-primery-light;
@@ -10,11 +12,49 @@
     padding-left: 11.6rem;
     padding-top: 4rem;
     padding-bottom: 3rem;
+
+    @include responsive.respond(bigTablets) {
+      font-size: 6rem;
+      padding-left: 8rem;
+    }
+
+    @include responsive.respond(tablets) {
+      font-size: 5rem;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    @include responsive.respond(phone) {
+      font-size: 4rem;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    @include responsive.respond(smallPhone) {
+      font-size: 2.5rem;
+      padding-left: 0;
+      text-align: center;
+      padding-top: 2rem;
+    }
   }
 }
 .swiper {
   width: 80%;
   height: 60%;
+
+  @include responsive.respond(bigTablets) {
+    width: 85%;
+  }
+
+  @include responsive.respond(tablets) {
+    width: 90%;
+    height: 50%;
+  }
+
+  @include responsive.respond(phone) {
+    width: 95%;
+    height: 45%;
+  }
 }
 
 .swiper-slide {
@@ -28,6 +68,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include responsive.respond(tablets) {
+    gap: 2rem;
+  }
+
+  @include responsive.respond(phone) {
+    gap: 1rem;
+  }
 }
 
 .swiper-slide img {

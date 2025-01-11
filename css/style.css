@@ -1120,10 +1120,55 @@ body {
   padding-top: 4rem;
   padding-bottom: 3rem;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .meet-head {
+    font-size: 6rem;
+    padding-left: 8rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .meet-head {
+    font-size: 5rem;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .meet-head {
+    font-size: 4rem;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .meet-head {
+    font-size: 2.5rem;
+    padding-left: 0;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
 
 .swiper {
   width: 80%;
   height: 60%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .swiper {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .swiper {
+    width: 90%;
+    height: 50%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .swiper {
+    width: 95%;
+    height: 45%;
+  }
 }
 
 .swiper-slide {
@@ -1135,6 +1180,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .swiper-slide {
+    gap: 2rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .swiper-slide {
+    gap: 1rem;
+  }
 }
 
 .swiper-slide img {

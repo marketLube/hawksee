@@ -38,8 +38,11 @@ export const GetInTouch = () => {
               <div className="get-in-touch__address">
                 <h3>Address 010</h3>
                 <p className="addressnote">
-                  Lorem ipsum dolor consectetur adipiscing euismod incididunt ut
-                  dolore magna aliquam erat Ut wisi enim ad minim veniam.
+                  Lorem ipsum dolor
+                  <br /> consectetur adipiscing <br />
+                  euismod incididunt ut dolore
+                  <br /> magna aliquam erat Ut wisi
+                  <br /> enim ad minim veniam.
                 </p>
 
                 <a href="tel:0495290199" className="get-in-touch__phone">
@@ -51,38 +54,40 @@ export const GetInTouch = () => {
         </div>
       </div>
       <div className="social-media-container">
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-media-link"
-        >
-          <FaFacebookF className="social-media-icon" />
-        </a>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-media-link"
-        >
-          <FaInstagram className="social-media-icon" />
-        </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-media-link"
-        >
-          <FaLinkedinIn className="social-media-icon" />
-        </a>
-        <a
-          href="https://whatsapp.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-media-link"
-        >
-          <FaWhatsapp className="social-media-icon" />
-        </a>
+        <div className="social-media-container__content">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-media-link"
+          >
+            <FaFacebookF className="social-media-icon" />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-media-link"
+          >
+            <FaInstagram className="social-media-icon" />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-media-link"
+          >
+            <FaLinkedinIn className="social-media-icon" />
+          </a>
+          <a
+            href="https://whatsapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-media-link"
+          >
+            <FaWhatsapp className="social-media-icon" />
+          </a>
+        </div>
       </div>
     </>
   );

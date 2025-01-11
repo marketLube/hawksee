@@ -183,7 +183,7 @@ body {
 }
 
 .get-in-touch {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f5f5f5;
   display: flex;
   position: relative;
@@ -192,9 +192,14 @@ body {
 .get-in-touch__container {
   width: 100%;
   margin: 0 auto;
-  padding: 4rem 0.5rem;
+  padding: 2rem 1rem;
   padding-top: 2rem;
   height: 100%;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__container {
+    padding: 1.5rem;
+  }
 }
 .get-in-touch__title {
   font-size: 12.5rem;
@@ -202,9 +207,9 @@ body {
   margin-bottom: 2rem;
   text-align: right;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .get-in-touch__title {
-    font-size: 12.5rem;
+    font-size: 12rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
@@ -219,18 +224,17 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__title {
-    font-size: 6rem;
+    font-size: 7rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch__title {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__title {
-    font-size: 3rem;
-    text-align: center;
+    font-size: 3.5rem;
   }
 }
 .get-in-touch__content {
@@ -239,9 +243,10 @@ body {
   text-align: left;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5rem;
+  padding: 0 2rem;
+  width: 100%;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .get-in-touch__content {
     gap: 20rem;
   }
@@ -260,12 +265,15 @@ body {
   .get-in-touch__content {
     gap: 5rem;
     flex-direction: column;
+    padding: 0 1.5rem;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch__content {
     flex-direction: column;
     gap: 3rem;
+    padding: 0 1rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
@@ -285,7 +293,7 @@ body {
   width: 490px;
   height: auto;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .get-in-touch__logo img {
     width: 450px;
   }
@@ -321,7 +329,28 @@ body {
 }
 .get-in-touch-about {
   display: flex;
-  gap: 8rem;
+  gap: 10rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .get-in-touch-about {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch-about {
+    gap: 2rem;
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch-about {
+    max-width: 300px;
+  }
 }
 .get-in-touch__links {
   display: flex;
@@ -331,7 +360,7 @@ body {
   position: relative;
   height: 300px;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .get-in-touch__links {
     width: 12rem;
     gap: 2rem;
@@ -373,7 +402,7 @@ body {
 .get-in-touch__links a {
   color: #000;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -391,8 +420,53 @@ body {
     font-size: 1.1rem;
   }
 }
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .get-in-touch__links a {
+    font-size: 1.5rem !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .get-in-touch__links a {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .get-in-touch__links a {
+    font-size: 1.3rem;
+  }
+}
 .get-in-touch__links a:hover {
   text-decoration: underline;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .get-in-touch__links span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__links span {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__links span {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .get-in-touch__links span {
+    font-size: 1.5rem !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .get-in-touch__links span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .get-in-touch__links span {
+    font-size: 1.3rem;
+  }
 }
 .get-in-touch__email {
   font-size: 1.4rem;
@@ -418,14 +492,71 @@ body {
 .get-in-touch__phone:hover {
   text-decoration: underline;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .get-in-touch__phone {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .get-in-touch__phone {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .get-in-touch__phone {
+    font-size: 1.3rem;
+    position: relative;
+    margin-top: 1rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__phone {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__phone {
+    font-size: 1.1rem;
+  }
+}
 .get-in-touch__address {
   width: fit-content;
   position: relative;
   height: 300px;
 }
 .get-in-touch__address h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .get-in-touch__address h3 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__address h3 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__address h3 {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .get-in-touch__address h3 {
+    font-size: 1.5rem !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .get-in-touch__address h3 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .get-in-touch__address h3 {
+    font-size: 1.3rem;
+  }
 }
 .get-in-touch__address p {
   font-size: 1rem;
@@ -434,9 +565,38 @@ body {
   font-weight: 600;
 }
 .get-in-touch__address .addressnote {
-  width: 21rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1.5rem !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1.3rem;
+  }
 }
 .get-in-touch__contact {
   display: flex;
@@ -462,16 +622,66 @@ body {
   height: 10vh;
   display: flex;
   align-items: center;
-  padding-left: 12rem;
+  width: 100%;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .social-media-container {
+    height: auto;
+    padding: 1.5rem 0;
+  }
+}
+.social-media-container__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .social-media-container__content {
+    gap: 1.5rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .social-media-container__content {
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .social-media-container__content {
+    justify-content: center;
+  }
 }
 
 .social-media-link {
-  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.social-media-link:hover {
+  transform: translateY(-5px);
 }
 
 .social-media-icon {
   color: white;
-  font-size: 40px;
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .social-media-icon {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .social-media-icon {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .social-media-icon {
+    font-size: 1.5rem;
+  }
 }
 
 .bird {
@@ -776,7 +986,7 @@ body {
   color: white;
   padding-top: 3rem;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .realstories-title {
     font-size: 11rem;
   }

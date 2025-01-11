@@ -20,7 +20,7 @@
       @content;
     }
   } @else if $breakPoint == bigDesktop {
-    @media only screen and (min-width: 1400px) {
+    @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
       @content;
     }
   }

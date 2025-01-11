@@ -93,9 +93,30 @@ export const Grid = () => {
         "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
     },
   ];
+
+  // Function to determine how many logos to show based on screen width
+  const getVisibleLogos = () => {
+    const width = window.innerWidth;
+    if (width <= 480) return logos.slice(0, 6); // Mobile: show 6 logos
+    if (width <= 768) return logos.slice(0, 8); // Tablet: show 8 logos
+    return logos; // Desktop: show all logos
+  };
+
+  // Add window resize listener
+  const [visibleLogos, setVisibleLogos] = React.useState(getVisibleLogos());
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setVisibleLogos(getVisibleLogos());
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="logo-grid">
-      {logos.map((logo) => (
+      {visibleLogos.map((logo) => (
         <div key={logo.id} className="logo-card">
           <img src={logo.image} alt="Company logo" className="logo-image" />
         </div>

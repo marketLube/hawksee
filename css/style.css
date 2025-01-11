@@ -54,15 +54,39 @@ body {
 .logo-grid:hover .logo-card {
   opacity: 0.4;
 }
+@media (max-width: 1400px) {
+  .logo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 1024px) {
+  .logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .logo-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .logo-grid .logo-card {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #3e3d3c;
-  width: 290px;
+  width: 100%;
+  max-width: 290px;
   height: 200px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 1;
+  margin: 0 auto;
 }
 .logo-grid .logo-card:hover {
   opacity: 1;

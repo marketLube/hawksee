@@ -12,22 +12,18 @@ import { GetInTouch } from "./page/Section9/GetInTouch";
 function App() {
   return (
     <>
-      <header>
-        <Nav />
-      </header>
+      <header>{/* <Nav /> */}</header>
       <main>
-        <Bird />
-        <Paragraph />
-        <Counter />
-        <DoubleLineReels />
-        <Research />
-        <RealStories />
+        {/* <Bird /> */}
+        {/* <Paragraph /> */}
+        {/* <Counter /> */}
+        {/* <DoubleLineReels /> */}
+        {/* <Research /> */}
+        {/* <RealStories /> */}
         <Grid />
-        <MeetTheTeam />
+        {/* <MeetTheTeam /> */}
       </main>
-      <footer>
-        <GetInTouch />
-      </footer>
+      <footer>{/* <GetInTouch /> */}</footer>
     </>
   );
 }

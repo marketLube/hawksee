@@ -66,14 +66,16 @@ body {
 }
 @media (max-width: 768px) {
   .logo-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 20px;
   }
 }
 @media (max-width: 480px) {
   .logo-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 15px;
   }
 }
 .logo-grid .logo-card {
@@ -83,7 +85,7 @@ body {
   background-color: #3e3d3c;
   width: 100%;
   max-width: 290px;
-  height: 200px;
+  height: 150px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 1;
   margin: 0 auto;
@@ -100,6 +102,16 @@ body {
 }
 .logo-grid .logo-card:hover .logo-image {
   filter: grayscale(0%);
+}
+@media (max-width: 480px) {
+  .logo-grid .logo-card {
+    height: 100px;
+    max-width: 160px;
+  }
+  .logo-grid .logo-card .logo-image {
+    max-width: 70%;
+    max-height: 70%;
+  }
 }
 
 .sectionPara {

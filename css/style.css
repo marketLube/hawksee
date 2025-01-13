@@ -191,26 +191,32 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .imgsOne img {
-    width: 70%;
-    height: 200px;
+    width: 30%;
+    height: 100px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .imgsOne img {
-    width: 60%;
-    height: 250px;
+    width: 25%;
+    height: 120px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .imgsOne img {
-    width: 40%;
-    height: 300px;
+    width: 27%;
+    height: 180px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .imgsOne img {
     width: 25%;
-    height: 350px;
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .imgsOne img {
+    width: 25%;
+    height: 220px;
   }
 }
 
@@ -221,15 +227,16 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .first {
-    bottom: 60%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 27%;
+    left: 9%;
+    transform: none;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .first {
-    bottom: 55%;
-    left: 20%;
+    bottom: 27%;
+    left: 9%;
+    transform: none;
   }
 }
 
@@ -240,16 +247,16 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .second {
-    bottom: 35%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 51%;
+    left: 35%;
+    transform: none;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .second {
-    bottom: 35%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 51%;
+    left: 40%;
+    transform: none;
   }
 }
 
@@ -260,15 +267,17 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .third {
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 27%;
+    right: 9%;
+    left: auto;
+    transform: none;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .third {
-    bottom: 15%;
-    right: 20%;
+    bottom: 27%;
+    right: 9%;
+    transform: none;
   }
 }
 

@@ -1100,12 +1100,12 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .research-head {
-    font-size: 4rem;
+    font-size: 4rem !important;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .research-head {
-    font-size: 5rem;
+    font-size: 6rem !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -1129,41 +1129,42 @@ body {
   }
 }
 .research-para {
-  width: 40%;
+  width: 85%;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
   font-weight: 500;
   padding-top: 1rem;
+  line-height: 1.4;
 }
 @media only screen and (max-width: 575.98px) {
   .research-para {
     width: 85%;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .research-para {
     width: 80%;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .research-para {
     width: 70%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .research-para {
     width: 60%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .research-para {
     width: 50%;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 

@@ -866,7 +866,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .counterSection {
-    height: 85vh;
+    height: 60vh;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -885,7 +885,7 @@ body {
 }
 
 .counter-content {
-  height: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1553,8 +1553,14 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .logos {
-    height: 120vh;
+    height: 140vh;
     padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 450px) {
+  .logos {
+    height: 100vh;
+    padding-top: 1.8rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -1565,7 +1571,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .logos {
-    height: 160vh;
+    height: 140vh;
   }
 }
 .logos-title {
@@ -1630,6 +1636,9 @@ body {
 .logo-slide.reverse {
   animation: slideRight 30s linear infinite;
 }
+.logo-slide.reverse:hover {
+  animation-play-state: paused;
+}
 
 .logo-slide div {
   flex: 0 0 auto;
@@ -1681,6 +1690,56 @@ body {
 }
 .logo-slide div:hover {
   transform: scale(1.1);
+}
+
+.buttondivPortfolio {
+  margin-top: auto;
+  text-align: center;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 575.98px) {
+  .buttondivPortfolio {
+    padding: 5rem;
+  }
+  .buttondivPortfolio button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .buttondivPortfolio {
+    padding: 6rem;
+  }
+  .buttondivPortfolio button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .buttondivPortfolio {
+    padding: 8rem;
+  }
+  .buttondivPortfolio button {
+    font-size: 1rem;
+    padding: 0.7rem 1.4rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .buttondivPortfolio {
+    padding: 9rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .buttondivPortfolio {
+    padding: 10rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .buttondivPortfolio {
+    padding: 12rem;
+  }
 }
 
 @keyframes slide {

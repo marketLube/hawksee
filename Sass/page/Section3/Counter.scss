@@ -24,7 +24,7 @@
   }
 
   @include responsive.respond(tablets) {
-    height: 85vh;
+    height: 60vh;
   }
 
   @include responsive.respond(phone) {
@@ -41,7 +41,7 @@
 }
 
 .counter-content {
-  height: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

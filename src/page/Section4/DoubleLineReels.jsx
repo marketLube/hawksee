@@ -48,7 +48,7 @@ export const DoubleLineReels = () => {
         </div>
       </div>
 
-      <div className="buttondiv">
+      <div className="buttondivPortfolio">
         <Button>
           View All <FiArrowUpRight />{" "}
         </Button>

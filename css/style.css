@@ -1693,7 +1693,7 @@ body {
 }
 
 .buttondivPortfolio {
-  margin-top: auto;
+  margin-top: 10rem;
   text-align: center;
   padding-bottom: 4rem;
   display: flex;
@@ -1701,6 +1701,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .buttondivPortfolio {
+    margin-top: auto;
     padding: 5rem;
   }
   .buttondivPortfolio button {
@@ -1710,6 +1711,7 @@ body {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .buttondivPortfolio {
+    margin-top: auto;
     padding: 6rem;
   }
   .buttondivPortfolio button {
@@ -1719,6 +1721,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .buttondivPortfolio {
+    margin-top: auto;
     padding: 8rem;
   }
   .buttondivPortfolio button {
@@ -1728,16 +1731,19 @@ body {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .buttondivPortfolio {
+    margin-top: auto;
     padding: 9rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .buttondivPortfolio {
+    margin-top: auto;
     padding: 10rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .buttondivPortfolio {
+    margin-top: auto;
     padding: 12rem;
   }
 }

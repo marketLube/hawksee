@@ -1,5 +1,5 @@
 import React from "react";
-import hawksee from "./../../assets/HawkseeLogo.svg";
+import hawksee from "./../../assets/hawksee.svg";
 import {
   FaFacebookF,
   FaInstagram,

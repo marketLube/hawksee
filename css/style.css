@@ -1244,7 +1244,7 @@ body {
 
 .meet {
   background-color: #fff;
-  min-height: 115vh;
+  min-height: 110vh;
   position: relative;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
@@ -1292,6 +1292,13 @@ body {
     padding-top: 3rem;
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .meet-head {
+    font-size: 5.5rem;
+    padding-left: 6rem;
+    padding-top: 3rem;
+  }
+}
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .meet-head {
     font-size: 3.5rem;
@@ -1310,7 +1317,7 @@ body {
 
 .swiper {
   width: 85%;
-  height: 80vh;
+  height: 72vh;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .swiper {
@@ -1343,10 +1350,9 @@ body {
 }
 
 .swiper-container {
-  padding: 0 20px; /* Adds 20px padding on left and right */
+  padding: 0 20px;
 }
 
-/* Adjust padding for different screen sizes */
 @media (min-width: 576px) {
   .swiper-container {
     padding: 0 30px;

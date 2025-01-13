@@ -3,7 +3,7 @@
 
 .meet {
   background-color: variables.$color-primery-light;
-  min-height: 115vh;
+  min-height: 110vh;
   position: relative;
 
   @include responsive.respond(desktop) {
@@ -36,11 +36,15 @@
       font-size: 5.5rem;
       padding-left: 6rem;
     }
-
     @include responsive.respond(tablets) {
       font-size: 4.5rem;
       padding-left: 0;
       text-align: center;
+      padding-top: 3rem;
+    }
+    @include responsive.respond(desktop) {
+      font-size: 5.5rem;
+      padding-left: 6rem;
       padding-top: 3rem;
     }
 
@@ -60,7 +64,7 @@
 }
 .swiper {
   width: 85%;
-  height: 80vh;
+  height: 72vh;
   @include responsive.respond(desktop) {
     width: 90%;
     height: 78vh;
@@ -88,10 +92,9 @@
 }
 
 .swiper-container {
-  padding: 0 20px; /* Adds 20px padding on left and right */
+  padding: 0 20px;
 }
 
-/* Adjust padding for different screen sizes */
 @media (min-width: 576px) {
   .swiper-container {
     padding: 0 30px;

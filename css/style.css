@@ -1541,7 +1541,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .realstories-rot {
-    transform: skew(0.02turn, -5deg);
+    transform: none;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }

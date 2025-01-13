@@ -58,7 +58,7 @@
       padding-top: 2rem;
     }
     @include responsive.respond(smallPhone) {
-      transform: skew(0.02turn, -5deg);
+      transform: none;
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
@@ -69,7 +69,6 @@
   gap: 1rem;
   width: calc(200% + 3rem);
 
-  // Rotate the container
   animation: slide 30s linear infinite;
 
   &:hover {
@@ -81,7 +80,7 @@
   }
   @include responsive.respond(phone) {
     animation: slide 20s linear infinite;
-    width: calc(300% + 3rem); // Add more copies for smaller screens
+    width: calc(300% + 3rem);
   }
 }
 

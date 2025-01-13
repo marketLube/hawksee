@@ -339,6 +339,16 @@ body {
     min-height: 40vh;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch {
+    min-height: 40vh;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch {
+    min-height: 40vh !important;
+  }
+}
 .get-in-touch__container {
   width: 100%;
   margin: 0 auto;
@@ -385,6 +395,7 @@ body {
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__title {
     font-size: 3.5rem;
+    margin-bottom: -6rem;
   }
 }
 .get-in-touch__content {
@@ -414,6 +425,19 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__content {
     gap: 0rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__content {
+    flex-direction: column;
+    gap: 0rem;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__content {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 .get-in-touch__logo {
@@ -451,13 +475,14 @@ body {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch__logo img {
-    width: 200px;
+    width: 300px;
+    bottom: 70px;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__logo img {
-    width: 300px;
-    bottom: 70px;
+    width: 350px;
+    bottom: -30px;
   }
 }
 .get-in-touch__logo span {
@@ -495,14 +520,17 @@ body {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch-about {
-    gap: 2rem;
-    max-width: 400px;
+    gap: 6rem;
+    bottom: 90px;
+    margin-right: 0;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch-about {
-    max-width: 300px;
-    bottom: 100px;
+    gap: 2rem;
+    bottom: 20px;
+    height: 110px;
+    margin-right: 0;
   }
 }
 .get-in-touch__links {
@@ -550,9 +578,10 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__links {
-    width: 20rem;
+    width: fit-content;
+    white-space: nowrap;
     gap: 1rem;
-    height: 240px;
+    height: 150px;
   }
 }
 .get-in-touch__links a {
@@ -606,7 +635,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__links span {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -635,6 +664,11 @@ body {
 }
 .get-in-touch__email:hover {
   text-decoration: underline;
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__email {
+    display: none;
+  }
 }
 .get-in-touch__phone {
   font-size: 1.3rem;
@@ -678,7 +712,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__phone {
-    font-size: 1.1rem;
+    display: none;
   }
 }
 .get-in-touch__address {
@@ -689,6 +723,16 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__address {
     height: 200px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__address {
+    height: 260px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__address {
+    height: 150px;
   }
 }
 .get-in-touch__address h3 {
@@ -707,7 +751,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__address h3 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -747,7 +791,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__address .addressnote {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -782,6 +826,28 @@ body {
 }
 .get-in-touch__contact a:hover {
   text-decoration: underline;
+}
+.get-in-touch__smContact {
+  display: none;
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__smContact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    bottom: 80px;
+  }
+  .get-in-touch__smContact span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #828283;
+    cursor: pointer;
+    text-align: center;
+  }
+  .get-in-touch__smContact span:hover {
+    text-decoration: underline;
+  }
 }
 
 .social-media-container {
@@ -850,6 +916,20 @@ body {
 @media only screen and (max-width: 575.98px) {
   .social-media-icon {
     font-size: 1.5rem;
+  }
+}
+
+.get-in-touch__smContact {
+  display: none;
+  gap: 0;
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__smContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 !important;
+    bottom: 0 !important;
   }
 }
 

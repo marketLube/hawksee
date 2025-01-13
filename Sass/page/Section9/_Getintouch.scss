@@ -13,6 +13,12 @@
   @include responsive.respond(tablets) {
     min-height: 40vh;
   }
+  @include responsive.respond(phone) {
+    min-height: 40vh;
+  }
+  @include responsive.respond(smallPhone) {
+    min-height: 40vh !important;
+  }
 
   &__container {
     width: 100%;
@@ -47,6 +53,7 @@
     }
     @include responsive.respond(smallPhone) {
       font-size: 3.5rem;
+      margin-bottom: -6rem;
     }
   }
 
@@ -70,18 +77,15 @@
     }
     @include responsive.respond(tablets) {
       gap: 0rem;
-      // flex-direction: column;
-      // padding: 0 1.5rem;
-      // text-align: center;
     }
     @include responsive.respond(phone) {
-      // flex-direction: column;
-      // gap: 0rem;
-      // padding: 0 1rem;
+      flex-direction: column;
+      gap: 0rem;
+      padding: 0 1rem;
     }
     @include responsive.respond(smallPhone) {
-      // flex-direction: column;
-      // gap: 1rem;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 
@@ -111,11 +115,12 @@
         bottom: 70px;
       }
       @include responsive.respond(phone) {
-        width: 200px;
-      }
-      @include responsive.respond(smallPhone) {
         width: 300px;
         bottom: 70px;
+      }
+      @include responsive.respond(smallPhone) {
+        width: 350px;
+        bottom: -30px;
       }
     }
 
@@ -149,13 +154,17 @@
       gap: 5rem;
     }
     @include responsive.respond(phone) {
-      gap: 2rem;
-      max-width: 400px;
+      gap: 6rem;
+      // max-width: 400px;
+      bottom: 90px;
+      margin-right: 0;
     }
 
     @include responsive.respond(smallPhone) {
-      max-width: 300px;
-      bottom: 100px;
+      gap: 2rem;
+      bottom: 20px;
+      height: 110px;
+      margin-right: 0;
     }
   }
 
@@ -198,9 +207,10 @@
     }
 
     @include responsive.respond(smallPhone) {
-      width: 20rem;
+      width: fit-content;
+      white-space: nowrap;
       gap: 1rem;
-      height: 240px;
+      height: 150px;
     }
 
     a {
@@ -246,7 +256,7 @@
       }
 
       @include responsive.respond(smallPhone) {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
       }
       @include responsive.respond(bigDesktop) {
         font-size: 1.3rem !important;
@@ -270,6 +280,10 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @include responsive.respond(smallPhone) {
+      display: none;
     }
   }
 
@@ -310,7 +324,7 @@
     }
 
     @include responsive.respond(smallPhone) {
-      font-size: 1.1rem;
+      display: none;
     }
   }
 
@@ -320,6 +334,14 @@
     height: 300px;
     @include responsive.respond(tablets) {
       height: 200px;
+    }
+    @include responsive.respond(phone) {
+      height: 260px;
+      // bottom: 100px;
+    }
+
+    @include responsive.respond(smallPhone) {
+      height: 150px;
     }
 
     h3 {
@@ -333,7 +355,7 @@
         font-size: 1.2rem;
       }
       @include responsive.respond(smallPhone) {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
       }
       @include responsive.respond(bigDesktop) {
         font-size: 1.3rem !important;
@@ -366,7 +388,7 @@
       }
 
       @include responsive.respond(smallPhone) {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
       }
 
       @include responsive.respond(bigDesktop) {
@@ -398,6 +420,29 @@
 
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+
+  &__smContact {
+    display: none; // Hidden by default for larger screens
+
+    @include responsive.respond(smallPhone) {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
+      bottom: 80px;
+
+      span {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #828283;
+        cursor: pointer;
+        text-align: center;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -461,5 +506,17 @@
   }
   @include responsive.respond(smallPhone) {
     font-size: 1.5rem;
+  }
+}
+
+.get-in-touch__smContact {
+  display: none;
+  gap: 0;
+  @include responsive.respond(smallPhone) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 !important;
+    bottom: 0 !important;
   }
 }

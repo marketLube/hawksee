@@ -50,6 +50,18 @@ export const GetInTouch = () => {
                 </a>
               </div>
             </div>
+            <div className="get-in-touch__smContact">
+              <span
+                onClick={() =>
+                  window.open("mailto:hello@hawksee.org", "_blank")
+                }
+              >
+                hello@hawksee.org
+              </span>
+              <span onClick={() => window.open("tel:0495290199")}>
+                0495-290 199
+              </span>
+            </div>
           </div>
         </div>
       </div>

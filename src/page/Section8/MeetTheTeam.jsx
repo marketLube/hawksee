@@ -65,7 +65,7 @@ export const MeetTheTeam = () => {
   return (
     <div className="meet">
       <h1 className="meet-head">Meet the team</h1>
-      <>
+      <div className="swiper-container">
         <Swiper
           slidesPerView={3}
           spaceBetween={100}
@@ -77,6 +77,10 @@ export const MeetTheTeam = () => {
             320: {
               slidesPerView: 1,
               spaceBetween: 20,
+            },
+            375: {
+              slidesPerView: 1,
+              spaceBetween: 30,
             },
             576: {
               slidesPerView: 2,
@@ -105,13 +109,13 @@ export const MeetTheTeam = () => {
                   src={member.image}
                   alt={member.name + " " + member.position}
                 />
-                <h3>{member.name}</h3>
-                <p>{member.position}</p>
               </div>
+              <h3>{member.name}</h3>
+              <p>{member.position}</p>
             </SwiperSlide>
           ))}
         </Swiper>
-      </>
+      </div>
     </div>
   );
 };

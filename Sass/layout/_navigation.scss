@@ -10,7 +10,7 @@
   left: 0;
   z-index: 1000;
   transition: transform 0.3s ease;
-  background-color: #ffffff;
+  // background-color: #ffffff;
   @include responsive.respond(bigDesktop) {
     padding: 3rem 5rem 0 5rem;
   }

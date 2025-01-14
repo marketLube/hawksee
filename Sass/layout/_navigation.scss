@@ -1,21 +1,72 @@
+@use "../base/responsive";
+
 .headerNav {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 3.5rem 6rem;
+  padding: 3.5rem 6rem 0 6rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   transition: transform 0.3s ease;
+  background-color: #ffffff;
+  @include responsive.respond(bigDesktop) {
+    padding: 3rem 5rem 0 5rem;
+  }
+
+  @include responsive.respond(desktop) {
+    padding: 2.5rem 4rem 0 4rem;
+  }
+
+  @include responsive.respond(bigTablets) {
+    padding: 2rem 3rem 0 3rem;
+  }
+
+  @include responsive.respond(tablets) {
+    padding: 1.8rem 2.5rem 0 2.5rem;
+  }
+
+  @include responsive.respond(phone) {
+    padding: 1.5rem 2rem 0 2rem;
+  }
+
+  @include responsive.respond(smallPhone) {
+    padding: 1.2rem 1.5rem 0 1.5rem;
+  }
 
   &.hidden {
     transform: translateY(-100%);
   }
 
   &-hawlogo {
-    width: 150px;
+    width: 130px;
     margin-top: -4rem;
+    @include responsive.respond(bigDesktop) {
+      width: 120px;
+      margin-top: -3.5rem;
+    }
+    @include responsive.respond(desktop) {
+      width: 110px;
+      margin-top: -3rem;
+    }
+    @include responsive.respond(bigTablets) {
+      width: 100px;
+      margin-top: -2.5rem;
+    }
+    @include responsive.respond(tablets) {
+      width: 90px;
+      margin-top: -2rem;
+    }
+    @include responsive.respond(phone) {
+      width: 80px;
+      margin-top: -1.5rem;
+    }
+
+    @include responsive.respond(smallPhone) {
+      width: 70px;
+      margin-top: -1rem;
+    }
   }
 
   &-right {
@@ -25,6 +76,30 @@
     text-decoration: none;
     list-style: none;
 
+    @include responsive.respond(bigDesktop) {
+      gap: 3.5rem;
+    }
+
+    @include responsive.respond(desktop) {
+      gap: 3rem;
+    }
+
+    @include responsive.respond(bigTablets) {
+      gap: 2.5rem;
+    }
+
+    @include responsive.respond(tablets) {
+      gap: 2rem;
+    }
+
+    @include responsive.respond(phone) {
+      display: none;
+    }
+
+    @include responsive.respond(smallPhone) {
+      display: none;
+    }
+
     li {
       font-size: 1.2rem;
       font-weight: 600;
@@ -32,6 +107,244 @@
       cursor: pointer;
       height: fit-content;
       line-height: 1.2;
+
+      @include responsive.respond(bigDesktop) {
+        font-size: 1.1rem;
+      }
+
+      @include responsive.respond(desktop) {
+        font-size: 1rem;
+      }
+
+      @include responsive.respond(bigTablets) {
+        font-size: 1rem;
+      }
+
+      @include responsive.respond(tablets) {
+        font-size: 1rem;
+      }
     }
+  }
+}
+
+.navigation {
+  display: none;
+  z-index: 100000;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+.navigation__checkbox {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 30000;
+
+  @include responsive.respond(phone) {
+    top: 1rem;
+    right: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  @include responsive.respond(smallPhone) {
+    top: 0.8rem;
+    right: 0.8rem;
+    height: 2rem;
+    width: 2rem;
+  }
+}
+.navigation__btn {
+  position: relative;
+  top: 0rem;
+  right: 0rem;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1000000000000000000000000000000000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+
+  @include responsive.respond(phone) {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  @include responsive.respond(smallPhone) {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+.navigation__background {
+  background-image: radial-gradient(#322486, #030637, black);
+  height: 6rem;
+  width: 6rem;
+  border-radius: 0;
+  position: fixed;
+  top: 6.5rem;
+  left: 6.5rem;
+
+  z-index: 5000;
+  transition: transform 0.5s;
+
+  @include responsive.respond(phone) {
+    height: 5rem;
+    width: 5rem;
+    top: 5.5rem;
+    left: 5.5rem;
+  }
+
+  @include responsive.respond(smallPhone) {
+    height: 4rem;
+    width: 4rem;
+    top: 4.5rem;
+    left: 4.5rem;
+  }
+}
+.navigation__nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500000000;
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  transition: all 0.2s;
+  visibility: hidden;
+  border-radius: 0;
+}
+.navigation__list {
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+
+  font-weight: 900;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.navigation__item {
+  margin: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .navigation__item {
+    margin: 0;
+    // margin-bottom: 1.5rem;
+  }
+}
+.navigation__link {
+  display: inline-block;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+}
+@media (max-width: 900px) {
+  .navigation__link {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+@media (max-width: 900px) {
+  .navigation__link {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+.navigation__link:hover,
+.navigation__link:active {
+  // color: #470034;
+}
+@media (max-width: 900px) {
+  .navigation__link:hover,
+  .navigation__link:active {
+    // Removed transform
+  }
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+  visibility: visible;
+  width: 100%;
+  opacity: 1;
+  background-color: #000000;
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(60);
+  border-radius: 0;
+}
+.navigation__checkbox:checked ~ .navigation__btn .navigation__icon::after {
+  transform: rotate(45deg);
+  top: 0rem;
+}
+.navigation__checkbox:checked ~ .navigation__btn .navigation__icon::before {
+  transform: rotate(-45deg);
+  top: 0rem;
+}
+.navigation__checkbox:checked ~ .navigation__btn .navigation__icon {
+  background-color: transparent;
+}
+.navigation__icon {
+  position: relative;
+}
+.navigation__icon,
+.navigation__icon::after,
+.navigation__icon::before {
+  display: inline-block;
+  background-color: rgb(59, 59, 59);
+  width: 1.5rem;
+  height: 3px;
+  transition: all 0.3s;
+}
+.navigation__icon::after,
+.navigation__icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.navigation__icon::after {
+  top: 0.4rem;
+}
+.navigation__icon::before {
+  top: -0.4rem;
+}
+.navigation__btn:hover .navigation__icon::after {
+  transform: translateY(0.1rem);
+}
+.navigation__btn:hover .navigation__icon::before {
+  transform: translateY(-0.1rem);
+}
+
+.nav-item:last-child {
+  margin-left: auto;
+}
+
+.navigation__item a {
+  color: #ffffff;
+  text-decoration: none;
+
+  &.active {
+    color: #ffffff;
+    background-color: transparent;
   }
 }

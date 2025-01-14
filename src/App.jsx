@@ -16,7 +16,7 @@ function App() {
         <Nav />
       </header>
       <main>
-        <Bird />
+        {/* <Bird /> */}
         <Paragraph />
         <Counter />
         <DoubleLineReels />

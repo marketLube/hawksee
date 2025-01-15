@@ -84,17 +84,18 @@
   }
 }
 
-.realstories-slide img {
+.realstories-slide video {
   flex: 0 0 auto;
-  height: 25rem;
+  // height: 25rem;
   width: 20rem;
   background-color: rgb(255, 255, 255);
-  color: black;
+  // color: black;
   margin: 1rem;
   border-radius: 5px;
   text-align: center;
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
+  border: 2px solid black;
 
   &:hover {
     transform: scale(1.1);

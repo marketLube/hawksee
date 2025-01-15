@@ -13,9 +13,9 @@ export const Paragraph = () => {
       </div>
 
       <div className="paragraph">
-        Lorem ipsum dolor sit amet, consectetuer adipiing elit, sed diam nonummy
-        nibh euismod tincidunt ut laoreet{" "}
-        <strong>Performance Marketing, Branding and Video Production</strong>
+        Every Brand Needs Hawksee, Because We See! First, We See The Brand’s
+        Potential, Customer Needs, and the Gap. Then, We Act to Show Results.
+        {/* <strong>Performance Marketing, Branding and Video Production</strong> */}
       </div>
 
       {/* <Logoauto /> */}

@@ -1,96 +1,96 @@
 import React from "react";
+import Logo1 from "../../assets/logos/Ayu.png";
+import Logo2 from "../../assets/logos/bhima.png";
+import Logo3 from "../../assets/logos/cams.png";
+import Logo4 from "../../assets/logos/choice.png";
+import Logo5 from "../../assets/logos/dubaiGold.png";
+import Logo6 from "../../assets/logos/Eventia.png";
+import Logo7 from "../../assets/logos/kudumbini.png";
+import Logo8 from "../../assets/logos/lement.png";
+import Logo9 from "../../assets/logos/nationalH.png";
+import Logo10 from "../../assets/logos/qualityPets.png";
+import Logo11 from "../../assets/logos/rashaBowl.png";
+import Logo12 from "../../assets/logos/revive.png";
+import Logo13 from "../../assets/logos/smak.png";
+import Logo14 from "../../assets/logos/tanza.png";
+import Logo15 from "../../assets/logos/unicode.png";
+import Logo16 from "../../assets/logos/royal.png";
+import Logo17 from "../../assets/logos/white.png";
+import Logo18 from "../../assets/logos/royal.png";
 
 export const Grid = () => {
   const logos = [
     {
       id: 1,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo1,
     },
     {
       id: 2,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo2,
     },
     {
       id: 3,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo3,
     },
     {
       id: 4,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo4,
     },
     {
       id: 5,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo5,
     },
     {
       id: 6,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo6,
     },
     {
       id: 7,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo7,
     },
     {
       id: 8,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo8,
     },
     {
       id: 9,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo9,
     },
     {
       id: 10,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo10,
     },
     {
       id: 11,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo11,
     },
     {
       id: 12,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo12,
     },
     {
       id: 13,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo13,
     },
     {
       id: 14,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo14,
     },
     {
       id: 15,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo15,
     },
     {
       id: 16,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo16,
     },
     {
       id: 17,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo17,
     },
     {
       id: 18,
-      image:
-        "https://wallpapers.com/images/high/red-bull-f1-logo-j4y1l9zon2qh8604.webp",
+      image: Logo18,
     },
   ];
 

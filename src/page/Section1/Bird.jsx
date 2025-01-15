@@ -74,19 +74,41 @@ export const Bird = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const getScaleMultiplier = () => {
+    const width = window.innerWidth;
+    if (width <= 575.98) return 0.0024; // smallPhone
+    if (width <= 767.98) return 0.002; // phone
+    if (width <= 991.98) return 0.0018; // tablets
+    if (width <= 1199.98) return 0.0015; // bigTablets
+    if (width <= 1399.98) return 0.0012; // desktop
+    return 0.001; // bigDesktop and larger
+  };
+
+  const getTranslateMultiplier = () => {
+    const width = window.innerWidth;
+    if (width <= 575.98) return { x: 0.3, y: 0.2 }; // smallPhone
+    if (width <= 767.98) return { x: 0.35, y: 0.25 }; // phone
+    if (width <= 991.98) return { x: 0.4, y: 0.28 }; // tablets
+    if (width <= 1199.98) return { x: 0.45, y: 0.3 }; // bigTablets
+    if (width <= 1399.98) return { x: 0.48, y: 0.31 }; // desktop
+    return { x: 0.5, y: 0.315 }; // bigDesktop and larger
+  };
+
   return (
     <section id="bird" className="bird">
-      <img
-        className="bird-image"
-        alt=""
-        src={BirdImg}
-        style={{
-          transform: `translate(${-offset * 0.5}px, ${
-            -offset * 0.315
-          }px) scale(${0.8 + offset * 0.001})`,
-          transition: "transform 0.6s ease-out",
-        }}
-      />
+      <div className="bird-container">
+        <img
+          className="bird-image"
+          alt=""
+          src={BirdImg}
+          style={{
+            transform: `translate(${-offset * getTranslateMultiplier().x}px, ${
+              -offset * getTranslateMultiplier().y
+            }px) scale(${0.8 + offset * getScaleMultiplier()})`,
+            transition: "transform 0.6s ease-out",
+          }}
+        />
+      </div>
     </section>
   );
 };

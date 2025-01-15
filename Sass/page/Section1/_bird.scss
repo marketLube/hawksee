@@ -1,5 +1,6 @@
 // Sass/page/Section1/_bird.scss
 @use "./../../abstract/variables";
+@use "../../base/responsive";
 
 .bird {
   height: 350vh;
@@ -11,15 +12,66 @@
   top: 0;
   scroll-snap-align: start;
   background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  width: 100vw;
+  &-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  &-container {
+    height: 100vh;
+
+    @include responsive.respond(smallPhone) {
+      transform: rotate(32deg);
+    }
+    @include responsive.respond(phone) {
+      transform: rotate(25deg);
+    }
+    @include responsive.respond(tablets) {
+      transform: rotate(15deg);
+    }
+  }
 
   &-image {
-    width: 100%;
+    position: relative;
     height: auto;
+    width: 100%;
     object-fit: cover;
-    position: absolute;
+    z-index: 0;
     top: -8rem;
     right: -60rem;
-    transition: transform 0.4s ease;
-    z-index: 0;
+
+    @include responsive.respond(bigDesktop) {
+      top: -15rem;
+      right: -50rem;
+    }
+    @include responsive.respond(desktop) {
+      top: -25rem;
+      right: -40rem;
+    }
+
+    @include responsive.respond(bigTablets) {
+      top: -30rem;
+      right: -28rem;
+    }
+
+    @include responsive.respond(tablets) {
+      top: -43rem;
+      right: -10rem;
+    }
+
+    @include responsive.respond(phone) {
+      top: -44rem;
+      right: 1rem;
+    }
+
+    @include responsive.respond(smallPhone) {
+      top: -45rem;
+      right: 10rem;
+    }
   }
 }

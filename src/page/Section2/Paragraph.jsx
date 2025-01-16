@@ -13,9 +13,10 @@ export const Paragraph = () => {
       </div>
 
       <div className="paragraph">
-        Every Brand Needs Hawksee, Because We See! First, We See The Brand’s
-        Potential, Customer Needs, and the Gap. Then, We Act to Show Results.
-        {/* <strong>Performance Marketing, Branding and Video Production</strong> */}
+        Every Brand Needs Hawksee, Because We <strong>See</strong>! First, We{" "}
+        <strong>See</strong>
+        The Brand’s Potential, Customer Needs, and the Gap. Then, We Act to{" "}
+        <strong>Show</strong> Results.
       </div>
 
       {/* <Logoauto /> */}

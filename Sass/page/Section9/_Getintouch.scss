@@ -108,7 +108,7 @@
         width: 420px;
       }
       @include responsive.respond(bigTablets) {
-        width: 350px;
+        width: 330px;
       }
       @include responsive.respond(tablets) {
         width: 300px;
@@ -189,7 +189,7 @@
 
     @include responsive.respond(bigTablets) {
       width: fit-content;
-      gap: 1.6rem;
+      gap: 1.4rem;
       white-space: nowrap;
     }
 
@@ -216,8 +216,8 @@
     a {
       color: #000;
       text-decoration: none;
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.2rem;
+      font-weight: 500;
 
       @include responsive.respond(tablets) {
         font-size: 1.1rem;
@@ -232,10 +232,10 @@
       }
 
       @include responsive.respond(bigDesktop) {
-        font-size: 1.3rem !important;
+        font-size: 1.2rem !important;
       }
       @include responsive.respond(bigTablets) {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
       @include responsive.respond(desktop) {
         font-size: 1.2rem;
@@ -259,10 +259,10 @@
         font-size: 0.9rem;
       }
       @include responsive.respond(bigDesktop) {
-        font-size: 1.3rem !important;
+        font-size: 1.2rem !important;
       }
       @include responsive.respond(bigTablets) {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       @include responsive.respond(desktop) {
         font-size: 1.2rem;
@@ -270,9 +270,9 @@
     }
   }
   &__email {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #828283;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #4e4e4e;
     position: absolute;
     bottom: 0;
     text-decoration: none;
@@ -288,9 +288,9 @@
   }
 
   &__phone {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #828283;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #4e4e4e;
     position: absolute;
     bottom: 0;
     text-decoration: none;
@@ -301,14 +301,14 @@
     }
 
     @include responsive.respond(bigDesktop) {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
 
     @include responsive.respond(desktop) {
       font-size: 1.2rem;
     }
     @include responsive.respond(bigTablets) {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     @include responsive.respond(tablets) {
@@ -332,6 +332,7 @@
     width: fit-content;
     position: relative;
     height: 300px;
+    color: #4e4e4e;
     @include responsive.respond(tablets) {
       height: 200px;
     }
@@ -345,8 +346,8 @@
     }
 
     h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.2rem;
+      font-weight: 500;
 
       @include responsive.respond(tablets) {
         font-size: 1.1rem;
@@ -358,10 +359,10 @@
         font-size: 0.9rem;
       }
       @include responsive.respond(bigDesktop) {
-        font-size: 1.3rem !important;
+        font-size: 1.1rem !important;
       }
       @include responsive.respond(bigTablets) {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       @include responsive.respond(desktop) {
         font-size: 1.2rem;
@@ -369,14 +370,14 @@
     }
 
     p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
 
-      color: #000000;
-      font-weight: 600;
+      color: #4e4e4e;
+      font-weight: 500;
     }
     .addressnote {
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.2rem;
+      font-weight: 500;
       white-space: nowrap;
 
       @include responsive.respond(tablets) {
@@ -384,21 +385,21 @@
       }
 
       @include responsive.respond(phone) {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       @include responsive.respond(smallPhone) {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
 
       @include responsive.respond(bigDesktop) {
-        font-size: 1.3rem !important;
+        font-size: 1.1rem !important;
       }
       @include responsive.respond(bigTablets) {
-        font-size: 1.1rem;
+        font-size: 1rem !important;
       }
       @include responsive.respond(desktop) {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   }
@@ -425,7 +426,7 @@
   }
 
   &__smContact {
-    display: none; // Hidden by default for larger screens
+    display: none;
 
     @include responsive.respond(smallPhone) {
       display: flex;
@@ -436,8 +437,8 @@
 
       span {
         font-size: 0.9rem;
-        font-weight: 600;
-        color: #828283;
+        font-weight: 500;
+        color: #4e4e4e;
         cursor: pointer;
         text-align: center;
         &:hover {
@@ -496,7 +497,7 @@
 
 .social-media-icon {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 
   @include responsive.respond(tablets) {
     font-size: 2rem;

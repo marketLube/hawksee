@@ -20,12 +20,11 @@ export const RealStories = () => {
             <video
               key={`video-${index}`}
               src={video}
-              // Initially muted to allow autoplay
               muted
               alt={`Story ${index + 1}`}
-              onClick={(e) => (e.target.muted = false)} // Unmute on first click
-              onMouseEnter={(e) => e.target.play()} // Play video on hover
-              onMouseLeave={(e) => e.target.pause()} // Pause video when mouse leaves
+              onClick={(e) => (e.target.muted = false)}
+              onMouseEnter={(e) => e.target.play()}
+              onMouseLeave={(e) => e.target.pause()}
             />
           ))}
           {videos.map((video, index) => (

@@ -42,15 +42,16 @@ export const GetInTouch = () => {
                 <p className="addressnote">
                   5/639R, 1st Floor,
                   <br />
-                  City Gate Building,Sales tax Office Road,
-                  <br /> Mini Bypass Rd, Eranhippalam, Kozhikode,
-                  <br /> Kerala 673006
+                  City Gate Building,Sales tax Office
+                  <br /> Road, Mini Bypass Rd, Eranhippalam,
+                  <br /> Kozhikode, Kerala 673006
                 </p>
 
                 <h3 style={{ marginTop: "10px" }}>Kochi: </h3>
                 <p className="addressnote">
-                  Second Floor,Trine Tower, Seaport - Airport Rd,
-                  <br /> near Naipunya Public School, Thrikkakara, Kochi,
+                  Second Floor,Trine Tower,
+                  <br /> Seaport - Airport Rd, near Naipunya <br />
+                  Public School, Thrikkakara, Kochi,
                   <br /> Kerala 682021
                 </p>
 

@@ -36,7 +36,11 @@ export const Bird = () => {
 
       if (!hasScrolled && window.scrollY > 50) {
         setHasScrolled(true);
-        smoothScrollTo(window.innerHeight * 3.5);
+        const targetHeight =
+          window.innerWidth <= 575.98
+            ? window.innerHeight
+            : window.innerHeight * 3.5;
+        smoothScrollTo(targetHeight);
       }
 
       const scrollY = window.scrollY;
@@ -59,7 +63,10 @@ export const Bird = () => {
       const isInBirdSection =
         birdRect.top <= 0 &&
         birdRect.bottom >= 0 &&
-        currentScrollTop <= window.innerHeight * 3;
+        currentScrollTop <=
+          (window.innerWidth <= 575.98
+            ? window.innerHeight
+            : window.innerHeight * 3);
 
       if (currentScrollTop < lastScrollTop && isInBirdSection) {
         window.scrollTo({

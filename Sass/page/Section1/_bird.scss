@@ -78,13 +78,13 @@
     }
 
     @include responsive.respond(phone) {
-      top: 20rem;
-      right: -20rem;
+      top: 15rem;
+      right: -18rem;
     }
 
     @include responsive.respond(smallPhone) {
-      top: 12rem;
-      right: -13rem;
+      top: 5rem;
+      right: -10rem;
     }
   }
 }

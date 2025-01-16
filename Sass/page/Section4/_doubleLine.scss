@@ -32,7 +32,7 @@
   }
 
   @media screen and (min-width: 400px) and (max-width: 450px) {
-    height: 100vh;
+    height: 130vh;
     padding-top: 1.8rem;
   }
 
@@ -42,7 +42,7 @@
   }
 
   @include responsive.respond(tablets) {
-    height: 140vh;
+    height: 160vh;
   }
 
   &-title {

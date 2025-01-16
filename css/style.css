@@ -467,6 +467,7 @@ body {
 
 .sectionPara {
   position: relative;
+  overflow: hidden;
 }
 
 .paragraph {
@@ -484,7 +485,7 @@ body {
   font-weight: 200;
   width: 80%;
   line-height: 60px;
-  z-index: 100;
+  z-index: 10;
 }
 @media only screen and (max-width: 575.98px) {
   .paragraph {
@@ -529,7 +530,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -537,6 +537,7 @@ body {
   width: 19%;
   height: 380px;
   object-fit: cover;
+  opacity: 0.5;
 }
 @media only screen and (max-width: 575.98px) {
   .imgsOne img {
@@ -733,18 +734,20 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__title {
-    font-size: 7rem;
+    font-size: 6rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch__title {
     font-size: 5rem;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__title {
     font-size: 3.5rem;
     margin-bottom: -6rem;
+    text-align: center;
   }
 }
 .get-in-touch__content {
@@ -818,7 +821,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__logo img {
-    width: 300px;
+    width: 250px;
     bottom: 70px;
   }
 }
@@ -865,6 +868,8 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch-about {
     gap: 5rem;
+    margin-right: 0;
+    min-height: 250px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -915,7 +920,7 @@ body {
     width: fit-content;
     gap: 1.4rem;
     white-space: nowrap;
-    height: 200px;
+    height: 240px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -941,7 +946,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__links a {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -951,7 +956,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__links a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -974,7 +979,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__links span {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -984,7 +989,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__links span {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -1048,7 +1053,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__phone {
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: absolute;
     bottom: 0;
     left: 0%;
@@ -1072,7 +1077,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__address {
-    height: 200px;
+    height: 240px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -1082,7 +1087,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__address {
-    height: 150px;
+    height: 170px;
   }
 }
 .get-in-touch__address h3 {
@@ -1091,7 +1096,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__address h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -1131,7 +1136,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__address .addressnote {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -1230,7 +1235,10 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .social-media-container__content {
-    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+    position: static;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -1279,7 +1287,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0 !important;
-    bottom: 0 !important;
+    bottom: -1.8rem !important;
+  }
+  .get-in-touch__smContact span {
+    font-size: 0.8rem;
   }
 }
 
@@ -1358,14 +1369,14 @@ body {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .bird-image {
-    top: 20rem;
-    right: -20rem;
+    top: 15rem;
+    right: -18rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .bird-image {
-    top: 12rem;
-    right: -13rem;
+    top: 5rem;
+    right: -10rem;
   }
 }
 
@@ -1396,7 +1407,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .counterSection {
-    height: 60vh;
+    height: 90vh;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -1866,7 +1877,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .meet {
-    min-height: 90vh;
+    min-height: 100vh;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -1941,7 +1952,7 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .swiper {
     width: 95%;
-    height: 65vh;
+    height: 75vh;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -2089,7 +2100,7 @@ body {
 }
 @media screen and (min-width: 400px) and (max-width: 450px) {
   .logos {
-    height: 100vh;
+    height: 130vh;
     padding-top: 1.8rem;
   }
 }
@@ -2101,7 +2112,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .logos {
-    height: 140vh;
+    height: 160vh;
   }
 }
 .logos-title {
@@ -2304,7 +2315,7 @@ body {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .realstories-title {
-    font-size: 8rem;
+    font-size: 7.5rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -2335,7 +2346,7 @@ body {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .realstories-rot {
-    transform: skew(0.005turn, -2deg);
+    transform: none;
     padding-top: 2rem;
   }
 }
@@ -2384,26 +2395,22 @@ body {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .realstories-slide video {
-    height: 20rem;
     width: 16rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .realstories-slide video {
-    height: 18rem;
     width: 14rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .realstories-slide video {
-    height: 15rem;
     width: 12rem;
     margin: 0.5rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .realstories-slide video {
-    height: 12rem;
     width: 10rem;
     margin: 0.3rem;
   }

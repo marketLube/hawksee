@@ -54,43 +54,43 @@ body {
   transform: translateY(-100%);
 }
 .headerNav-hawlogo {
-  width: 130px;
-  margin-top: -4rem;
+  width: 280px;
+  margin-top: -2rem;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .headerNav-hawlogo {
-    width: 120px;
-    margin-top: -3.5rem;
+    width: 280px;
+    margin-top: -2rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .headerNav-hawlogo {
-    width: 110px;
-    margin-top: -3rem;
+    width: 280px;
+    margin-top: -2rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .headerNav-hawlogo {
-    width: 100px;
-    margin-top: -2.5rem;
+    width: 240px;
+    margin-top: -1.5rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .headerNav-hawlogo {
-    width: 90px;
-    margin-top: -2rem;
+    width: 220px;
+    margin-top: -1.2rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .headerNav-hawlogo {
-    width: 80px;
-    margin-top: -1.5rem;
+    width: 200px;
+    margin-top: -0.5rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .headerNav-hawlogo {
-    width: 70px;
-    margin-top: -1rem;
+    width: 200px;
+    margin-top: -0.5rem;
   }
 }
 .headerNav-right {
@@ -1141,12 +1141,12 @@ body {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch__address .addressnote {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__address .addressnote {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -1286,8 +1286,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0 !important;
-    bottom: -1.8rem !important;
+    gap: 0.3rem !important;
+    bottom: -0.5rem !important;
   }
   .get-in-touch__smContact span {
     font-size: 0.8rem;
@@ -1486,7 +1486,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .counterup {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
     text-align: center;

@@ -123,7 +123,8 @@ export const Bird = () => {
             transform: `translate(${-offset * getTranslateMultiplier().x}px, ${
               -offset * getTranslateMultiplier().y
             }px) scale(${
-              (windowWidth <= 767.98 ? 1 : 0.8) + offset * getScaleMultiplier()
+              (windowWidth <= 767.98 ? 1.9 : 0.8) +
+              offset * getScaleMultiplier()
             })`,
             transition: "transform 0.6s ease-out",
           }}

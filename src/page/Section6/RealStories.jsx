@@ -11,6 +11,16 @@ export const RealStories = () => {
     "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736939487/ayumanthra_2395873315_tbdjib.mp4",
   ];
 
+  const thumbnails = [
+    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028864/thum1_pw3c4d.png",
+    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028865/thumb6_eewq7i.png",
+    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028865/thum2_tdb0bv.png",
+    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028865/thumb6_eewq7i.png",
+    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028865/thumb4_wwwcks.png",
+    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028872/thumb5_orazze.png",
+    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737030315/thumb7_pbqfyo.png",
+  ];
+
   return (
     <section id="stories" className="realstories">
       <h1 className="realstories-title">Real Stories</h1>
@@ -22,6 +32,7 @@ export const RealStories = () => {
               src={video}
               muted
               alt={`Story ${index + 1}`}
+              poster={thumbnails[index]}
               onClick={(e) => (e.target.muted = false)}
               onMouseEnter={(e) => e.target.play()}
               onMouseLeave={(e) => e.target.pause()}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "./../assets/HawkseeLogo.svg";
+import logo from "./../assets/image.svg";
 
 export const Nav = () => {
   const [isHidden, setIsHidden] = useState(false);
@@ -9,7 +9,8 @@ export const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const viewportHeight = window.innerHeight * 2;
+      const multiplier = window.innerWidth < 768 ? 0.9 : 2;
+      const viewportHeight = window.innerHeight * multiplier;
 
       if (currentScrollY > viewportHeight) {
         setIsHidden(true);
@@ -20,9 +21,11 @@ export const Nav = () => {
       setLastScrollY(currentScrollY);
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -99,9 +102,6 @@ export const Nav = () => {
             </li>
             <li className="navigation__item">
               <a
-                // href="https://wa.me/9876543210"
-                // target="_blank"
-                // rel="noopener noreferrer"
                 onClick={() => {
                   scrollToSection("contact");
                   setIsChecked(false);

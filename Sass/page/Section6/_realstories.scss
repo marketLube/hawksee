@@ -16,8 +16,6 @@
   padding: 2rem 0;
   background-color: black;
   position: relative;
-  // top: -40rem;
-  // border: 1px solid red;
 
   &-title {
     font-size: 11rem;
@@ -31,7 +29,7 @@
       font-size: 9rem;
     }
     @include responsive.respond(bigTablets) {
-      font-size: 8rem;
+      font-size: 7.5rem;
     }
     @include responsive.respond(tablets) {
       font-size: 6rem;
@@ -54,7 +52,7 @@
       padding-top: 4rem;
     }
     @include responsive.respond(phone) {
-      transform: skew(0.005turn, -2deg);
+      transform: none;
       padding-top: 2rem;
     }
     @include responsive.respond(smallPhone) {
@@ -68,7 +66,6 @@
   display: flex;
   gap: 1rem;
   width: calc(200% + 3rem);
-
   animation: slide 30s linear infinite;
 
   &:hover {
@@ -86,10 +83,8 @@
 
 .realstories-slide video {
   flex: 0 0 auto;
-  // height: 25rem;
   width: 20rem;
   background-color: rgb(255, 255, 255);
-  // color: black;
   margin: 1rem;
   border-radius: 5px;
   text-align: center;
@@ -102,20 +97,16 @@
   }
 
   @include responsive.respond(bigTablets) {
-    height: 20rem;
     width: 16rem;
   }
   @include responsive.respond(tablets) {
-    height: 18rem;
     width: 14rem;
   }
   @include responsive.respond(phone) {
-    height: 15rem;
     width: 12rem;
     margin: 0.5rem;
   }
   @include responsive.respond(smallPhone) {
-    height: 12rem;
     width: 10rem;
     margin: 0.3rem;
   }

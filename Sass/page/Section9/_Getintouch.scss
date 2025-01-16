@@ -389,11 +389,11 @@
       }
 
       @include responsive.respond(phone) {
-        font-size: 1rem;
+        font-size: 0.8rem;
       }
 
       @include responsive.respond(smallPhone) {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
       }
 
       @include responsive.respond(bigDesktop) {
@@ -525,8 +525,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0 !important;
-    bottom: -1.8rem !important;
+    gap: 0.3rem !important;
+    bottom: -0.5rem !important;
     span {
       font-size: 0.8rem;
     }

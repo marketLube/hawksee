@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import BirdImg from "../../assets/birdImg.svg";
+import BirdMobile from "../../assets/birdForMobile.svg";
 
 export const Bird = () => {
   const [offset, setOffset] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const smoothScrollTo = (targetPosition) => {
     const duration = 1000;
@@ -37,7 +39,7 @@ export const Bird = () => {
       if (!hasScrolled && window.scrollY > 50) {
         setHasScrolled(true);
         const targetHeight =
-          window.innerWidth <= 575.98
+          window.innerWidth <= 1199.98
             ? window.innerHeight
             : window.innerHeight * 3.5;
         smoothScrollTo(targetHeight);
@@ -64,7 +66,7 @@ export const Bird = () => {
         birdRect.top <= 0 &&
         birdRect.bottom >= 0 &&
         currentScrollTop <=
-          (window.innerWidth <= 575.98
+          (window.innerWidth <= 1199.98
             ? window.innerHeight
             : window.innerHeight * 3);
 
@@ -81,10 +83,19 @@ export const Bird = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const getScaleMultiplier = () => {
     const width = window.innerWidth;
-    if (width <= 575.98) return 0.0024; // smallPhone
-    if (width <= 767.98) return 0.002; // phone
+    if (width <= 575.98) return 0.1; // smallPhone
+    if (width <= 767.98) return 0.05; // phone, reduced scaling
     if (width <= 991.98) return 0.0018; // tablets
     if (width <= 1199.98) return 0.0015; // bigTablets
     if (width <= 1399.98) return 0.0012; // desktop
@@ -93,8 +104,8 @@ export const Bird = () => {
 
   const getTranslateMultiplier = () => {
     const width = window.innerWidth;
-    if (width <= 575.98) return { x: 0.3, y: 0.2 }; // smallPhone
-    if (width <= 767.98) return { x: 0.35, y: 0.25 }; // phone
+    if (width <= 575.98) return { x: 0.1, y: 10 }; // smallCard
+    if (width <= 767.98) return { x: 0.1, y: 10 };
     if (width <= 991.98) return { x: 0.4, y: 0.28 }; // tablets
     if (width <= 1199.98) return { x: 0.45, y: 0.3 }; // bigTablets
     if (width <= 1399.98) return { x: 0.48, y: 0.31 }; // desktop
@@ -107,11 +118,14 @@ export const Bird = () => {
         <img
           className="bird-image"
           alt=""
-          src={BirdImg}
+          src={windowWidth <= 767.98 ? BirdMobile : BirdImg}
           style={{
             transform: `translate(${-offset * getTranslateMultiplier().x}px, ${
               -offset * getTranslateMultiplier().y
-            }px) scale(${0.8 + offset * getScaleMultiplier()})`,
+            }px) scale(${
+              (windowWidth <= 767.98 ? 1.9 : 0.8) +
+              offset * getScaleMultiplier()
+            })`,
             transition: "transform 0.6s ease-out",
           }}
         />

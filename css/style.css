@@ -733,18 +733,20 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__title {
-    font-size: 7rem;
+    font-size: 6rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch__title {
     font-size: 5rem;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__title {
     font-size: 3.5rem;
     margin-bottom: -6rem;
+    text-align: center;
   }
 }
 .get-in-touch__content {
@@ -818,7 +820,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__logo img {
-    width: 300px;
+    width: 250px;
     bottom: 70px;
   }
 }
@@ -865,6 +867,8 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch-about {
     gap: 5rem;
+    margin-right: 0;
+    min-height: 250px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -915,7 +919,7 @@ body {
     width: fit-content;
     gap: 1.4rem;
     white-space: nowrap;
-    height: 200px;
+    height: 240px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -941,7 +945,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__links a {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -951,7 +955,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__links a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -974,7 +978,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__links span {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -984,7 +988,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__links span {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -1048,7 +1052,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__phone {
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: absolute;
     bottom: 0;
     left: 0%;
@@ -1072,7 +1076,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__address {
-    height: 200px;
+    height: 240px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -1082,7 +1086,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__address {
-    height: 150px;
+    height: 170px;
   }
 }
 .get-in-touch__address h3 {
@@ -1091,7 +1095,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__address h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -1131,7 +1135,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__address .addressnote {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -1230,7 +1234,10 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .social-media-container__content {
-    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+    position: static;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -1279,7 +1286,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0 !important;
-    bottom: 0 !important;
+    bottom: -1.8rem !important;
+  }
+  .get-in-touch__smContact span {
+    font-size: 0.8rem;
   }
 }
 

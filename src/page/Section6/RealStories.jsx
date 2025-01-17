@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const RealStories = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 575);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 575);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const videos = [
     "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736939269/thechoiceschoolkochi_2396992194_xj1zmk.mp4",
     "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736939269/eventiamiddleeast_2397100622_imwrzh.mp4",
@@ -21,55 +35,87 @@ export const RealStories = () => {
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737030315/thumb7_pbqfyo.png",
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    cssEase: "ease-in-out",
+    swipeToSlide: true,
+    touchThreshold: 5,
+  };
+
   return (
     <section id="stories" className="realstories">
       <h1 className="realstories-title">Real Stories</h1>
-      <div className="realstories-rot">
-        <div className="realstories-slide">
+      {/* <div className="realstories-rot"> */}
+      {isMobile ? (
+        <Slider className="realstories-slide" {...settings}>
           {videos.map((video, index) => (
-            <video
-              key={`video-${index}`}
-              src={video}
-              muted
-              alt={`Story ${index + 1}`}
-              poster={thumbnails[index]}
-              onClick={(e) => (e.target.muted = false)}
-              onMouseEnter={(e) => e.target.play()}
-              onMouseLeave={(e) => e.target.pause()}
-            />
+            <div key={`video-${index}`} className="slider-item">
+              <video
+                src={video}
+                muted
+                alt={`Story ${index + 1}`}
+                poster={thumbnails[index]}
+                onClick={(e) => (e.target.muted = false)}
+                onMouseEnter={(e) => e.target.play()}
+                onMouseLeave={(e) => e.target.pause()}
+              />
+            </div>
           ))}
-          {videos.map((video, index) => (
-            <video
-              key={`video-duplicate-${index}`}
-              src={video}
-              // mute
-              alt={`Story ${index + 1}`}
-              onMouseEnter={(e) => e.target.play()}
-              onMouseLeave={(e) => e.target.pause()}
-            />
-          ))}
-          {videos.map((video, index) => (
-            <video
-              key={`video-duplicate-${index}`}
-              src={video}
-              // muted
-              alt={`Story ${index + 1}`}
-              onMouseEnter={(e) => e.target.play()}
-              onMouseLeave={(e) => e.target.pause()}
-            />
-          ))}
-          {videos.map((video, index) => (
-            <video
-              key={`video-duplicate-${index}`}
-              src={video}
-              // muted
-              alt={`Story ${index + 1}`}
-              onMouseEnter={(e) => e.target.play()}
-              onMouseLeave={(e) => e.target.pause()}
-            />
-          ))}
+        </Slider>
+      ) : (
+        <div className="realstories-rot">
+          <div className="realstories-slide">
+            {videos.map((video, index) => (
+              <video
+                key={`video-${index}`}
+                src={video}
+                muted
+                alt={`Story ${index + 1}`}
+                poster={thumbnails[index]}
+                onClick={(e) => (e.target.muted = false)}
+                onMouseEnter={(e) => e.target.play()}
+                onMouseLeave={(e) => e.target.pause()}
+              />
+            ))}
+            {videos.map((video, index) => (
+              <video
+                key={`video-duplicate-${index}`}
+                src={video}
+                // mute
+                alt={`Story ${index + 1}`}
+                onMouseEnter={(e) => e.target.play()}
+                onMouseLeave={(e) => e.target.pause()}
+              />
+            ))}
+            {videos.map((video, index) => (
+              <video
+                key={`video-duplicate-${index}`}
+                src={video}
+                // muted
+                alt={`Story ${index + 1}`}
+                onMouseEnter={(e) => e.target.play()}
+                onMouseLeave={(e) => e.target.pause()}
+              />
+            ))}
+            {videos.map((video, index) => (
+              <video
+                key={`video-duplicate-${index}`}
+                src={video}
+                // muted
+                alt={`Story ${index + 1}`}
+                onMouseEnter={(e) => e.target.play()}
+                onMouseLeave={(e) => e.target.pause()}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+      {/* </div> */}
     </section>
   );
 };

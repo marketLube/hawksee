@@ -40,7 +40,7 @@ export const Bird = ({ isNavScrolling }) => {
         setHasScrolled(true);
         const targetHeight =
           window.innerWidth <= 1199.98
-            ? window.innerHeight
+            ? window.innerHeight * 1.3
             : window.innerHeight * 3.5;
 
         if (isNavScrolling === null) {

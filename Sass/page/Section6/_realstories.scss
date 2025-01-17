@@ -75,9 +75,9 @@
   @include responsive.respond(tablets) {
     animation: slide 25s linear infinite;
   }
-  @include responsive.respond(phone) {
-    animation: slide 20s linear infinite;
-    width: calc(300% + 3rem);
+  @include responsive.respond(smallPhone) {
+    animation: none;
+    // width: calc(300% + 3rem);
   }
 }
 
@@ -107,7 +107,7 @@
     margin: 0.5rem;
   }
   @include responsive.respond(smallPhone) {
-    width: 10rem;
+    width: 15rem;
     margin: 0.3rem;
   }
 }

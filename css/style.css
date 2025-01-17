@@ -2100,7 +2100,7 @@ body {
 }
 @media screen and (min-width: 400px) and (max-width: 450px) {
   .logos {
-    height: 130vh;
+    height: 115vh;
     padding-top: 1.8rem;
   }
 }
@@ -2372,10 +2372,9 @@ body {
     animation: slide 25s linear infinite;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (max-width: 575.98px) {
   .realstories-slide {
-    animation: slide 20s linear infinite;
-    width: calc(300% + 3rem);
+    animation: none;
   }
 }
 
@@ -2411,7 +2410,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .realstories-slide video {
-    width: 10rem;
+    width: 15rem;
     margin: 0.3rem;
   }
 }

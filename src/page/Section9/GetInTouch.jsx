@@ -10,6 +10,15 @@ import {
 } from "react-icons/fa";
 
 export const GetInTouch = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      console.log(`Scrolling to section: ${sectionId}`);
+    } else {
+      console.error(`Element with ID ${sectionId} not found`);
+    }
+  };
   return (
     <>
       <div id="contact" className="get-in-touch">
@@ -22,10 +31,30 @@ export const GetInTouch = () => {
             </div>
             <div className="get-in-touch-about">
               <div className="get-in-touch__links">
-                <a href="#about">About us</a>
-                <a href="#works">Our Works</a>
-                <a href="#stories">Stories</a>
-                <a href="#contact">Contact</a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => scrollToSection("about")}
+                >
+                  About us
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => scrollToSection("works")}
+                >
+                  Our Works
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => scrollToSection("stories")}
+                >
+                  Stories
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => scrollToSection("contact")}
+                >
+                  Contact
+                </a>
 
                 <span
                   className="get-in-touch__email"

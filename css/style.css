@@ -294,8 +294,7 @@ body {
 }
 .navigation__link {
   display: inline-block;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   letter-spacing: 2px;
   font-size: 1.2rem;
   font-weight: 700;
@@ -397,7 +396,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 15px;
-  background-color: #000;
+  background-color: black;
   padding: 40px;
   position: relative;
   padding-top: 10rem;
@@ -457,12 +456,12 @@ body {
 }
 @media (max-width: 480px) {
   .logo-grid .logo-card {
-    height: 100px;
+    height: 90px;
     max-width: 160px;
   }
   .logo-grid .logo-card .logo-image {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 110%;
+    max-height: 110%;
   }
 }
 
@@ -882,7 +881,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch-about {
-    gap: 2rem;
+    gap: 3.5rem;
     bottom: 20px;
     height: 110px;
     margin-right: 0;

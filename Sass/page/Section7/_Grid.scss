@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 15px;
-  background-color: variables.$color-primery-dark;
+  background-color: black;
   padding: 40px;
   position: relative;
   padding-top: 10rem;
@@ -64,12 +64,12 @@
     }
 
     @media (max-width: 480px) {
-      height: 100px;
+      height: 90px;
       max-width: 160px;
 
       .logo-image {
-        max-width: 70%;
-        max-height: 70%;
+        max-width: 110%;
+        max-height: 110%;
       }
     }
   }

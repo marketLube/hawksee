@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import BirdImg from "../../assets/birdImg.svg";
 import BirdMobile from "../../assets/birdForMobile.svg";
 
-export const Bird = () => {
+export const Bird = ({ isNavScrolling }) => {
   const [offset, setOffset] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const smoothScrollTo = (targetPosition) => {
-    const duration = 1000;
+    const duration = 700;
     const start = window.scrollY;
     const distance = targetPosition - start;
     let startTime = null;
@@ -18,9 +18,9 @@ export const Bird = () => {
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
 
-      const ease = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+      const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
 
-      window.scrollTo(0, start + distance * ease(progress));
+      window.scrollTo(0, start + distance * easeInOutQuad(progress));
 
       if (timeElapsed < duration) {
         requestAnimationFrame(animation);
@@ -42,7 +42,15 @@ export const Bird = () => {
           window.innerWidth <= 1199.98
             ? window.innerHeight
             : window.innerHeight * 3.5;
-        smoothScrollTo(targetHeight);
+
+        if (isNavScrolling === null) {
+          smoothScrollTo(targetHeight);
+        } else if (isNavScrolling === true) {
+          // Hide logic when isNavScrolling is true
+          // Add your hide logic here
+        } else if (isNavScrolling === false) {
+          smoothScrollTo(targetHeight);
+        }
       }
 
       const scrollY = window.scrollY;
@@ -52,7 +60,7 @@ export const Bird = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [hasScrolled]);
+  }, [hasScrolled, isNavScrolling]);
 
   useEffect(() => {
     let lastScrollTop = 0;
@@ -96,8 +104,8 @@ export const Bird = () => {
     const width = window.innerWidth;
     if (width <= 575.98) return 0.1; // smallPhone
     if (width <= 767.98) return 0.05; // phone, reduced scaling
-    if (width <= 991.98) return 0.0018; // tablets
-    if (width <= 1199.98) return 0.0015; // bigTablets
+    if (width <= 991.98) return 0.08; // tablets
+    if (width <= 1199.98) return 0.015; // bigTablets
     if (width <= 1399.98) return 0.0012; // desktop
     return 0.001; // bigDesktop and larger
   };
@@ -106,7 +114,7 @@ export const Bird = () => {
     const width = window.innerWidth;
     if (width <= 575.98) return { x: 0.1, y: 10 }; // smallCard
     if (width <= 767.98) return { x: 0.1, y: 10 };
-    if (width <= 991.98) return { x: 0.4, y: 0.28 }; // tablets
+    if (width <= 991.98) return { x: 0.3, y: 0.28 }; // tablets
     if (width <= 1199.98) return { x: 0.45, y: 0.3 }; // bigTablets
     if (width <= 1399.98) return { x: 0.48, y: 0.31 }; // desktop
     return { x: 0.5, y: 0.315 }; // bigDesktop and larger

@@ -165,7 +165,7 @@
     }
 
     @include responsive.respond(smallPhone) {
-      gap: 2rem;
+      gap: 3.5rem;
       bottom: 20px;
       height: 110px;
       margin-right: 0;

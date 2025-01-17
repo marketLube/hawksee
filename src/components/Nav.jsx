@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "./../assets/image.svg";
 
-export const Nav = () => {
+export const Nav = ({ setIsNavScrolling }) => {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isChecked, setIsChecked] = useState(false);
@@ -26,12 +26,22 @@ export const Nav = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const scrollToSection = (sectionId) => {
+    if (sectionId !== "about") {
+      setIsNavScrolling(true);
+    }
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      console.log(`Scrolling to section: ${sectionId}`);
+
+      window.history.pushState(null, "", `#${sectionId}`);
+
+      // setTimeout(() => setIsNavScrolling(false), 1000);
+    } else {
+      console.error(`Element with ID ${sectionId} not found`);
     }
+    setTimeout(() => setIsNavScrolling(false), 1000);
   };
 
   return (
@@ -69,7 +79,7 @@ export const Nav = () => {
           <ul className="navigation__list">
             <li className="navigation__item">
               <a
-                href="#home"
+                href="#about"
                 onClick={() => {
                   scrollToSection("about");
                   setIsChecked(false);
@@ -80,7 +90,7 @@ export const Nav = () => {
             </li>
             <li className="navigation__item">
               <a
-                href="#service"
+                href="#works"
                 onClick={() => {
                   scrollToSection("works");
                   setIsChecked(false);
@@ -91,7 +101,7 @@ export const Nav = () => {
             </li>
             <li className="navigation__item">
               <a
-                href="#portfolio"
+                href="#stories"
                 onClick={() => {
                   scrollToSection("stories");
                   setIsChecked(false);
@@ -102,6 +112,7 @@ export const Nav = () => {
             </li>
             <li className="navigation__item">
               <a
+                href="#contact"
                 onClick={() => {
                   scrollToSection("contact");
                   setIsChecked(false);

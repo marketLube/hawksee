@@ -3,14 +3,15 @@ import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import { Button } from "../../components/Button";
 import { FiArrowDownRight } from "react-icons/fi";
+
 export const Counter = () => {
-  const [counterState, setCounterState] = useState(false);
+  const [animate, setAnimate] = useState(false);
 
   const stats = [
-    { value: "1000+", label: "Projects Done" },
-    { value: "23", label: "Happy Clients" },
-    { value: "12CR+", label: "Business" },
-    { value: "4.6", label: "Rated on google" },
+    { value: 1000, label: "Projects Done" },
+    { value: 500, label: "Happy Clients" },
+    { value: 12, label: "Business", suffix: "CR+" },
+    { value: 4.6, label: "Rated on google", decimals: 1 },
   ];
 
   return (
@@ -21,48 +22,28 @@ export const Counter = () => {
         </div>
 
         <ScrollTrigger
-          onEnter={() => setCounterState(true)}
-          onExit={() => setCounterState(false)}
+          onEnter={() => setAnimate(true)}
+          onExit={() => setAnimate(false)}
         >
           <div className="stats-section">
-            {counterState && (
-              <div className="stats-section__item">
+            {stats.map((stat, index) => (
+              <div key={index} className="stats-section__item">
                 <h2 className="stats-section__value">
-                  <CountUp start={0} end={1000} duration={1.5}></CountUp>+
+                  {animate ? (
+                    <CountUp
+                      start={0}
+                      end={stat.value}
+                      duration={1.5}
+                      decimals={stat.decimals || 0}
+                    />
+                  ) : (
+                    stat.value
+                  )}
+                  {stat.suffix || ""}
                 </h2>
-                <p className="stats-section__label">Projects Done</p>
+                <p className="stats-section__label">{stat.label}</p>
               </div>
-            )}
-
-            {counterState && (
-              <div className="stats-section__item">
-                <h2 className="stats-section__value">
-                  <CountUp start={0} end={500} duration={1.5}></CountUp>+
-                </h2>
-                <p className="stats-section__label">Happy Clients</p>
-              </div>
-            )}
-            {counterState && (
-              <div className="stats-section__item">
-                <h2 className="stats-section__value">
-                  <CountUp start={0} end={12} duration={1.5}></CountUp>CR+
-                </h2>
-                <p className="stats-section__label">Business</p>
-              </div>
-            )}
-            {counterState && (
-              <div className="stats-section__item">
-                <h2 className="stats-section__value">
-                  <CountUp
-                    start={0}
-                    end={4.6}
-                    duration={1.5}
-                    decimals={1}
-                  ></CountUp>
-                </h2>
-                <p className="stats-section__label">Rated on google</p>
-              </div>
-            )}
+            ))}
           </div>
         </ScrollTrigger>
 

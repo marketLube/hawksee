@@ -1,11 +1,14 @@
-import React, { useState } from "react";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import { Button } from "../../components/Button";
 import { FiArrowDownRight } from "react-icons/fi";
+import { useRef, useState } from "react";
+import { useInView } from "framer-motion";
 
 export const Counter = () => {
   const [animate, setAnimate] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const stats = [
     { value: 1000, label: "Projects Done" },
@@ -30,14 +33,26 @@ export const Counter = () => {
     <div className="counterSection">
       <div className="counter-content">
         <div className="title-container">
-          <h1 className="counterup">Does it work?</h1>
+          <h1 className="counterup">
+            <div className="counterup-text">
+              <div
+                style={
+                  animate
+                    ? { transform: "translateY(0rem)" }
+                    : { transform: "translateY(10rem)" }
+                }
+              >
+                does it work?
+              </div>
+            </div>
+          </h1>
         </div>
 
         <ScrollTrigger
           onEnter={() => setAnimate(true)}
           onExit={() => setAnimate(false)}
         >
-          <div className="stats-section">
+          <div className="stats-section" ref={ref}>
             {stats.map((stat, index) => (
               <div key={index} className="stats-section__item">
                 <h2 className="stats-section__value">

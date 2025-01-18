@@ -61,6 +61,17 @@
   text-align: right;
   padding-bottom: 6rem;
   line-height: 1;
+  overflow: hidden;
+  &-text {
+    width: 100%;
+    transition: all 1s ease;
+    margin-left: auto;
+    overflow: hidden;
+
+    & div {
+      transition: transform 0.5s ease-out;
+    }
+  }
 
   @include responsive.respond(bigDesktop) {
     font-size: 8rem;

@@ -27,12 +27,12 @@
   padding-top: 3rem;
 
   @include responsive.respond(smallPhone) {
-    height: 140vh;
+    height: fit-content;
     padding-top: 1.5rem;
   }
 
   @media screen and (min-width: 400px) and (max-width: 450px) {
-    height: 115vh;
+    height: fit-content;
     padding-top: 1.8rem;
   }
 

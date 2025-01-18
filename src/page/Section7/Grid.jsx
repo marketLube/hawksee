@@ -96,7 +96,7 @@ export const Grid = () => {
 
   const getVisibleLogos = () => {
     const width = window.innerWidth;
-    if (width <= 480) return logos.slice(0, 6);
+    if (width <= 480) return logos.slice(0, 8);
     if (width <= 768) return logos.slice(0, 9);
     return logos;
   };

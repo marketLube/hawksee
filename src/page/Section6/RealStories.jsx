@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export const RealStories = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 575);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 575);
+      setIsMobile(window.innerWidth < 992);
     };
 
     window.addEventListener("resize", handleResize);
@@ -36,15 +37,28 @@ export const RealStories = () => {
   ];
 
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesPerView: 1.3,
+    spaceBetween: 0,
     autoplay: false,
-    cssEase: "ease-in-out",
-    swipeToSlide: true,
-    touchThreshold: 5,
+    loop: true,
+    pagination: {
+      clickable: true,
+      dynamicBullets: true,
+    },
+    breakpoints: {
+      575: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 25,
+      },
+    },
   };
 
   return (
@@ -52,9 +66,13 @@ export const RealStories = () => {
       <h1 className="realstories-title">Real Stories</h1>
       {/* <div className="realstories-rot"> */}
       {isMobile ? (
-        <Slider className="realstories-slide" {...settings}>
+        <Swiper className="realstories-slide" {...settings}>
           {videos.map((video, index) => (
-            <div key={`video-${index}`} className="slider-item">
+            <SwiperSlide key={`video-${index}`}>
+              {/* <div
+              // className="slider-item"
+              // style={{ backgroundColor: "green !important" }}
+              > */}
               <video
                 src={video}
                 muted
@@ -63,10 +81,12 @@ export const RealStories = () => {
                 onClick={(e) => (e.target.muted = false)}
                 onMouseEnter={(e) => e.target.play()}
                 onMouseLeave={(e) => e.target.pause()}
+                controls
               />
-            </div>
+              {/* </div> */}
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       ) : (
         <div className="realstories-rot">
           <div className="realstories-slide">

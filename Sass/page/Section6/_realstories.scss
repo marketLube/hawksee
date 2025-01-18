@@ -48,7 +48,7 @@
     padding-bottom: 5rem;
 
     @include responsive.respond(tablets) {
-      transform: skew(0.01turn, -3deg);
+      transform: none;
       padding-top: 4rem;
     }
     @include responsive.respond(phone) {
@@ -73,10 +73,16 @@
   }
 
   @include responsive.respond(tablets) {
-    animation: slide 25s linear infinite;
+    animation: none;
+    width: 100%;
+  }
+  @include responsive.respond(phone) {
+    animation: none;
+    width: 100%;
   }
   @include responsive.respond(smallPhone) {
     animation: none;
+    width: 100%;
     // width: calc(300% + 3rem);
   }
 }
@@ -100,10 +106,10 @@
     width: 16rem;
   }
   @include responsive.respond(tablets) {
-    width: 14rem;
+    width: 16rem;
   }
   @include responsive.respond(phone) {
-    width: 12rem;
+    width: 15rem;
     margin: 0.5rem;
   }
   @include responsive.respond(smallPhone) {

@@ -44,7 +44,7 @@
   @include responsive.respond(tablets) {
     height: fit-content;
   }
-  @include responsive.respond(bigTablets) {
+  @include responsive.respond(tablets) {
     height: fit-content;
   }
 
@@ -116,7 +116,7 @@
   flex: 0 0 auto;
   height: 23rem;
   width: 19rem;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 5px;
   transition: transform 0.3s ease-in-out;
 

@@ -21,7 +21,7 @@ export const MeetTheTeam = () => {
     },
     {
       id: 2,
-      name: "ARUN",
+      name: "Akhil",
       position: "OPERATION HEAD",
       image:
         "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027276/arunOperationHead_v8acfy.jpg",

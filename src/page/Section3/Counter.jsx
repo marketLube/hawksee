@@ -14,11 +14,23 @@ export const Counter = () => {
     { value: 4.6, label: "Rated on google", decimals: 1 },
   ];
 
+  const handleButtonClick = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      console.log(`Scrolling to section: ${sectionId}`);
+
+      window.history.pushState(null, "", `#${sectionId}`);
+    } else {
+      console.error(`Element with ID ${sectionId} not found`);
+    }
+  };
+
   return (
     <div className="counterSection">
       <div className="counter-content">
         <div className="title-container">
-          <h1 className="counterup">For does it work?</h1>
+          <h1 className="counterup">Does it work?</h1>
         </div>
 
         <ScrollTrigger
@@ -48,7 +60,10 @@ export const Counter = () => {
         </ScrollTrigger>
 
         <div className="buttondivCounter">
-          <Button className="portfolio-btn">
+          <Button
+            className="portfolio-btn"
+            onClick={() => handleButtonClick("works")}
+          >
             View Portfolio <FiArrowDownRight />
           </Button>
         </div>

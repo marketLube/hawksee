@@ -29,7 +29,7 @@ export const DoubleLineReels = () => {
 
   return (
     <section id="works" className="logos">
-      <h1 className="logos-title">هل يعمل؟</h1>
+      <h1 className="logos-title">Projects</h1>
       <div className="logos-rot">
         <div className="logo-slide">
           {/* Render images for seamless looping */}

@@ -22,23 +22,23 @@ export const Grid = () => {
   const logos = [
     {
       id: 1,
-      image: Logo1,
-    },
-    {
-      id: 2,
-      image: Logo2,
-    },
-    {
-      id: 3,
-      image: Logo3,
-    },
-    {
-      id: 4,
       image: Logo4,
     },
     {
+      id: 2,
+      image: Logo1,
+    },
+    {
+      id: 3,
+      image: Logo10,
+    },
+    {
+      id: 4,
+      image: Logo2,
+    },
+    {
       id: 5,
-      image: Logo5,
+      image: Logo18,
     },
     {
       id: 6,
@@ -58,7 +58,7 @@ export const Grid = () => {
     },
     {
       id: 10,
-      image: Logo10,
+      image: Logo3,
     },
     {
       id: 11,
@@ -90,7 +90,7 @@ export const Grid = () => {
     },
     {
       id: 18,
-      image: Logo18,
+      image: Logo5,
     },
   ];
 

@@ -1,5 +1,9 @@
 import React from "react";
 
-export const Button = ({ children }) => {
-  return <button className="btn commonbutton">{children}</button>;
+export const Button = ({ children, onClick }) => {
+  return (
+    <button className="btn commonbutton" onClick={onClick}>
+      {children}
+    </button>
+  );
 };

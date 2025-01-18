@@ -44,7 +44,6 @@ export const RealStories = () => {
     pagination: {
       clickable: true,
       dynamicBullets: true,
-      direction: "horizontal",
     },
     breakpoints: {
       575: {
@@ -61,6 +60,8 @@ export const RealStories = () => {
       },
     },
   };
+
+  const isFullAlign = settings.slidesPerView === 1.3;
 
   return (
     <section id="stories" className="realstories">
@@ -83,6 +84,7 @@ export const RealStories = () => {
                 onMouseEnter={(e) => e.target.play()}
                 onMouseLeave={(e) => e.target.pause()}
                 controls
+                className={isFullAlign ? "full-align" : ""}
               />
               {/* </div> */}
             </SwiperSlide>

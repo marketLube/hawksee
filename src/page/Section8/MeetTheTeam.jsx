@@ -101,7 +101,7 @@ export const MeetTheTeam = () => {
         <Swiper
           slidesPerView={3}
           spaceBetween={100}
-          freeMode={true}
+          // freeMode={true}
           pagination={{
             clickable: true,
           }}

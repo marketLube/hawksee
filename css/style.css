@@ -278,7 +278,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3.5rem;
 }
 
 .navigation__item {
@@ -390,6 +390,10 @@ body {
 .navigation__item a.active {
   color: #ffffff;
   background-color: transparent;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .logo-grid {
@@ -2437,6 +2441,7 @@ body {
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
   border: 2px solid black;
+  object-fit: cover;
 }
 .realstories-slide video:hover {
   transform: scale(1.1);

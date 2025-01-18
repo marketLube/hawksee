@@ -26,6 +26,11 @@ export const Nav = ({ setIsNavScrolling }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle("no-scroll", isChecked);
+  }, [isChecked]);
+
   const scrollToSection = (sectionId) => {
     if (sectionId !== "about") {
       setIsNavScrolling(true);

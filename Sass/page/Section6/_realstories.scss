@@ -102,7 +102,7 @@
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
   border: 2px solid black;
-
+  object-fit: cover;
   &:hover {
     transform: scale(1.1);
   }

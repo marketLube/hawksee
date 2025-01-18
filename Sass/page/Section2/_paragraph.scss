@@ -67,32 +67,37 @@
 
 .imgsOne img {
   width: 19%;
-  height: 380px;
-  object-fit: cover;
+  height: 350px;
+  object-fit: contain;
   opacity: 0.5;
 
   @include responsive.respond(smallPhone) {
-    width: 30%;
-    height: 100px;
+    width: 35%;
+    height: 180px;
+    object-fit: contain;
   }
 
   @include responsive.respond(phone) {
-    width: 25%;
-    height: 120px;
+    width: 30%;
+    height: 180px;
+    object-fit: contain;
   }
 
   @include responsive.respond(tablets) {
     width: 27%;
     height: 180px;
+    object-fit: contain;
   }
 
   @include responsive.respond(bigTablets) {
     width: 25%;
     height: 200px;
+    object-fit: contain;
   }
   @include responsive.respond(desktop) {
     width: 25%;
     height: 220px;
+    object-fit: contain;
   }
 }
 .first {
@@ -125,7 +130,7 @@
 
   @include responsive.respond(phone) {
     bottom: 51%;
-    left: 40%;
+    left: 35%;
     transform: none;
   }
 }

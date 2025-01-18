@@ -535,38 +535,43 @@ body {
 
 .imgsOne img {
   width: 19%;
-  height: 380px;
-  object-fit: cover;
+  height: 350px;
+  object-fit: contain;
   opacity: 0.5;
 }
 @media only screen and (max-width: 575.98px) {
   .imgsOne img {
-    width: 30%;
-    height: 100px;
+    width: 35%;
+    height: 180px;
+    object-fit: contain;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .imgsOne img {
-    width: 25%;
-    height: 120px;
+    width: 30%;
+    height: 180px;
+    object-fit: contain;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .imgsOne img {
     width: 27%;
     height: 180px;
+    object-fit: contain;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .imgsOne img {
     width: 25%;
     height: 200px;
+    object-fit: contain;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .imgsOne img {
     width: 25%;
     height: 220px;
+    object-fit: contain;
   }
 }
 
@@ -605,7 +610,7 @@ body {
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .second {
     bottom: 51%;
-    left: 40%;
+    left: 35%;
     transform: none;
   }
 }
@@ -1314,7 +1319,7 @@ body {
 }
 @media only screen and (max-width: 575.98px) {
   .bird {
-    height: 100vh;
+    height: 120vh;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {

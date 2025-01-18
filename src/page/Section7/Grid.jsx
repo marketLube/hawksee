@@ -94,15 +94,13 @@ export const Grid = () => {
     },
   ];
 
-  // Function to determine how many logos to show based on screen width
   const getVisibleLogos = () => {
     const width = window.innerWidth;
-    if (width <= 480) return logos.slice(0, 6); // Mobile: show 6 logos (3 rows × 2 columns)
-    if (width <= 768) return logos.slice(0, 9); // Tablet: show 8 logos
-    return logos; // Desktop: show all logos
+    if (width <= 480) return logos.slice(0, 6);
+    if (width <= 768) return logos.slice(0, 9);
+    return logos;
   };
 
-  // Add window resize listener
   const [visibleLogos, setVisibleLogos] = React.useState(getVisibleLogos());
 
   React.useEffect(() => {

@@ -112,7 +112,7 @@ export const Bird = ({ isNavScrolling }) => {
 
   const getTranslateMultiplier = () => {
     const width = window.innerWidth;
-    if (width <= 575.98) return { x: 0.1, y: 10 }; // smallCard
+    if (width <= 575.98) return { x: 1, y: 11 }; // smallCard
     if (width <= 767.98) return { x: 0.1, y: 10 };
     if (width <= 991.98) return { x: 0.3, y: 0.28 }; // tablets
     if (width <= 1199.98) return { x: 0.45, y: 0.3 }; // bigTablets

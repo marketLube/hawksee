@@ -19,7 +19,7 @@
   }
 
   @include responsive.respond(smallPhone) {
-    height: 100vh;
+    height: 120vh;
   }
 
   @include responsive.respond(tablets) {

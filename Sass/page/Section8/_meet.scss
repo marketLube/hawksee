@@ -14,6 +14,10 @@
     min-height: 100vh;
   }
 
+  @media screen and (width: 1024px) and (height: 1366px) {
+    min-height: 70vh;
+  }
+
   @include responsive.respond(tablets) {
     min-height: 100vh;
   }
@@ -73,6 +77,10 @@
   @include responsive.respond(bigTablets) {
     width: 90%;
     height: 75vh;
+  }
+
+  @media screen and (width: 1024px) and (height: 1366px) {
+    height: 45vh;
   }
 
   @include responsive.respond(tablets) {
@@ -156,6 +164,7 @@
   text-align: center;
 
   @include responsive.respond(bigTablets) {
+    // height: 50vh;
   }
 
   @include responsive.respond(tablets) {

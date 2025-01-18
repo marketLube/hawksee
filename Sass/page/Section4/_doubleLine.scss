@@ -37,12 +37,15 @@
   }
 
   @include responsive.respond(phone) {
-    height: 140vh;
+    height: fit-content;
     padding-top: 2rem;
   }
 
   @include responsive.respond(tablets) {
-    height: 160vh;
+    height: fit-content;
+  }
+  @include responsive.respond(bigTablets) {
+    height: fit-content;
   }
 
   &-title {

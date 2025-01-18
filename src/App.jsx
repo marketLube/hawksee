@@ -29,7 +29,7 @@ function App() {
         <Counter />
         <DoubleLineReels />
         <Research />
-        <RealStories />
+        {/* <RealStories /> */}
         <Grid />
         <MeetTheTeam />
       </main>

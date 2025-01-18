@@ -1,44 +1,76 @@
-import React from "react";
+import { useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
-import image1 from "../../assets/protienNutMob.jpeg";
-import image2 from "../../assets/hilineLap.jpeg";
-import image3 from "../../assets/skymarkLap.jpeg";
 
 export const Paragraph = () => {
   // const isMobileView = window.innerWidth <= 768;
+  const ref = useRef(null);
+
+  const isInView = useInView(ref);
 
   return (
-    <section id="about" className="sectionPara">
-      <div className="imgsOne">
-        <img
-          src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737020741/para1_tv6vug.jpg"
-          alt=""
-          className="first"
-        />
-        <img
-          src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737020741/para3_qmitif.jpg"
-          alt=""
-          className="second"
-        />
-        <img
-          src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737020741/para2_ao82wb.jpg"
-          alt=""
-          className="third"
-        />
-      </div>
+    <Parallax speed={-30}>
+      <section id="about" className="sectionPara">
+        <div className="imgsOne" ref={ref}>
+          <div className="img-container">
+            <img
+              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737020741/para1_tv6vug.jpg"
+              alt=""
+              className="first"
+              style={
+                isInView
+                  ? {
+                      transform: "translateY(0%)",
+                    }
+                  : { transform: "translateY(100%)" }
+              }
+            />
+          </div>
+          <div className="img-container">
+            <img
+              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737020741/para3_qmitif.jpg"
+              alt=""
+              className="second"
+              style={
+                isInView
+                  ? {
+                      transform: "translateY(0%)",
+                    }
+                  : { transform: "translateY(200%)" }
+              }
+            />
+          </div>
 
-      <div className="parallax-wrapper">
-        {/* <Parallax speed={-110} style={{ color: "white", opacity: 1 }}> */}
-        <div className="paragraph">
-          Every Brand Needs Hawksee, Because We <strong>See</strong>! First, We{" "}
-          <strong>See</strong>
-          The Brand’s Potential, Customer Needs, and the Gap. Then, We Act to{" "}
-          <strong>Show</strong> Results.
+          <div className="img-container">
+            <img
+              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737020741/para2_ao82wb.jpg"
+              alt=""
+              className="third"
+              style={
+                isInView
+                  ? {
+                      transform: "translateY(0%)",
+                    }
+                  : { transform: "translateY(400%)" }
+              }
+            />
+          </div>
         </div>
-        {/* </Parallax> */}
-      </div>
 
-      {/* <Logoauto /> */}
-    </section>
+        <div
+          className="parallax-wrapper"
+          style={!isInView ? { opacity: "0" } : { opacity: "1" }}
+        >
+          <Parallax speed={-50} style={{ color: "white", opacity: 1 }}>
+            <div className="paragraph">
+              Every Brand Needs Hawksee, Because We <strong>See</strong>! First,
+              We <strong>See</strong>
+              The Brand’s Potential, Customer Needs, and the Gap. Then, We Act
+              to <strong>Show</strong> Results.
+            </div>
+          </Parallax>
+        </div>
+      </section>
+    </Parallax>
   );
 };

@@ -7,7 +7,6 @@ import { ParallaxProvider } from "react-scroll-parallax";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ParallaxProvider>
-      {" "}
       <App />
     </ParallaxProvider>
   </StrictMode>

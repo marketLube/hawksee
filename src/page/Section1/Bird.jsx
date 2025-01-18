@@ -41,7 +41,7 @@ export const Bird = ({ isNavScrolling }) => {
         const targetHeight =
           window.innerWidth <= 1199.98
             ? window.innerHeight * 1.3
-            : window.innerHeight * 3.5;
+            : window.innerHeight * 3.3;
 
         if (isNavScrolling === null) {
           smoothScrollTo(targetHeight);

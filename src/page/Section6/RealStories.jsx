@@ -44,6 +44,7 @@ export const RealStories = () => {
     pagination: {
       clickable: true,
       dynamicBullets: true,
+      direction: "horizontal",
     },
     breakpoints: {
       575: {

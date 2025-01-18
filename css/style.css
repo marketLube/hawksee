@@ -1652,7 +1652,7 @@ body {
 }
 
 .research {
-  height: 400vh;
+  height: 300vh;
   width: 100%;
   background-color: #fff;
   position: relative;
@@ -1830,7 +1830,7 @@ body {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .research-head {
-    font-size: 10rem !important;
+    font-size: 9rem !important;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {

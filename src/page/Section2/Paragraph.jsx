@@ -14,7 +14,7 @@ export const Paragraph = () => {
         <div className="imgsOne" ref={ref}>
           <div className="img-container">
             <img
-              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737020741/para1_tv6vug.jpg"
+              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/cc1_qo8ln2.jpg"
               alt=""
               className="first"
               style={
@@ -28,7 +28,7 @@ export const Paragraph = () => {
           </div>
           <div className="img-container">
             <img
-              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737020741/para3_qmitif.jpg"
+              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-1_ywooxn.jpg"
               alt=""
               className="second"
               style={
@@ -43,7 +43,7 @@ export const Paragraph = () => {
 
           <div className="img-container">
             <img
-              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737020741/para2_ao82wb.jpg"
+              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947126/cc6_guqslz.jpg"
               alt=""
               className="third"
               style={

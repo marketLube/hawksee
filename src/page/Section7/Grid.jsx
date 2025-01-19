@@ -6,7 +6,7 @@ import Logo4 from "../../assets/logos/choice.png";
 import Logo5 from "../../assets/logos/docdpro.png";
 import Logo6 from "../../assets/logos/dubai.png";
 import Logo7 from "../../assets/logos/Eventia.png";
-import Logo8 from "../../assets/logos/hawksee.png";
+import Logo8 from "../../assets/logos/whitefield.png";
 import Logo9 from "../../assets/logos/kudumbini.png";
 import Logo10 from "../../assets/logos/national.png";
 import Logo11 from "../../assets/logos/prime.png";

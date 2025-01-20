@@ -2,17 +2,20 @@
 @use "../../base/responsive";
 
 .logo-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
   background-color: black;
   padding: 40px;
   position: relative;
   padding-top: 10rem;
   padding-bottom: 15rem;
 
-  &:hover .logo-card {
-    opacity: 0.4;
+  &-section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+
+    &:hover .logo-card {
+      opacity: 0.4;
+    }
   }
 
   @media (max-width: 1400px) {

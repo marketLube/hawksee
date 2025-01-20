@@ -116,11 +116,13 @@ export const Grid = () => {
 
   return (
     <div className="logo-grid">
-      {visibleLogos.map((logo) => (
-        <div key={logo.id} className="logo-card">
-          <img src={logo.image} alt="Company logo" className="logo-image" />
-        </div>
-      ))}
+      <div className="logo-grid-section">
+        {visibleLogos.map((logo) => (
+          <div key={logo.id} className="logo-card">
+            <img src={logo.image} alt="Company logo" className="logo-image" />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

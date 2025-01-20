@@ -21,7 +21,7 @@ export const GetInTouch = () => {
   };
   return (
     <>
-      <div id="contact" className="get-in-touch">
+      <footer id="contact" className="get-in-touch">
         <div className="get-in-touch__container">
           <h1 className="get-in-touch__title">Get in touch</h1>
 
@@ -103,7 +103,7 @@ export const GetInTouch = () => {
             </div>
           </div>
         </div>
-      </div>
+      </footer>
       <div className="social-media-container">
         <div className="social-media-container__content">
           <a

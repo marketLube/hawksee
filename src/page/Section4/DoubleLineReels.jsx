@@ -107,14 +107,14 @@ export const DoubleLineReels = () => {
                   onClick={(e) => (e.target.muted = false)}
                   onMouseEnter={(e) => {
                     e.target.play();
-                    e.target.controls = true; // Enable controls on hover
+                    e.target.controls = true;
                     e.target
                       .closest(".doubleline-slide")
                       .swiper.autoplay.stop();
                   }}
                   onMouseLeave={(e) => {
                     e.target.pause();
-                    e.target.controls = false; // Disable controls when not hovered
+                    e.target.controls = false;
                     e.target
                       .closest(".doubleline-slide")
                       .swiper.autoplay.start();

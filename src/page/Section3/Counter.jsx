@@ -3,12 +3,10 @@ import ScrollTrigger from "react-scroll-trigger";
 import { Button } from "../../components/Button";
 import { FiArrowDownRight } from "react-icons/fi";
 import { useRef, useState } from "react";
-import { useInView } from "framer-motion";
 
 export const Counter = () => {
   const [animate, setAnimate] = useState(false);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
   const stats = [
     { value: 1000, label: "Projects Done" },

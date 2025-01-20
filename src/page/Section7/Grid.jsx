@@ -1,4 +1,6 @@
 import React from "react";
+
+import Logo0 from "../../assets/logos/kaspersky-1.svg";
 import Logo1 from "../../assets/logos/Ayu.png";
 import Logo2 from "../../assets/logos/bhima.png";
 import Logo3 from "../../assets/logos/cams.png";
@@ -26,7 +28,7 @@ export const Grid = () => {
     },
     {
       id: 2,
-      image: Logo1,
+      image: Logo0,
     },
     {
       id: 3,

@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../../components/Button";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Swiper, SwiperSlide } from "swiper/react";

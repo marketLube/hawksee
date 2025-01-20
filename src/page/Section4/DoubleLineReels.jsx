@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 export const DoubleLineReels = () => {
   const images = [
@@ -127,9 +128,11 @@ export const DoubleLineReels = () => {
       </div>
 
       <div className="buttondivPortfolio">
-        <Button>
-          View All <FiArrowUpRight />
-        </Button>
+        <Link to="/projects">
+          <Button>
+            View All <FiArrowUpRight />
+          </Button>
+        </Link>
       </div>
     </section>
   );

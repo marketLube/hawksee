@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BirdImg from "../../assets/birdImg.svg";
 import BirdMobile from "../../assets/birdForMobile.svg";
+import { Link } from "react-router-dom";
 
 export const Bird = ({ isNavScrolling }) => {
   const [offset, setOffset] = useState(0);
@@ -123,7 +124,9 @@ export const Bird = ({ isNavScrolling }) => {
   return (
     <section id="bird" className="bird">
       <div className="caption">
-        <p>Every Brand Needs Hawksee</p>
+        <a href="#projects">
+          <p>Every Brand Needs Hawksee</p>
+        </a>
       </div>
       <div className="bird-container">
         <img

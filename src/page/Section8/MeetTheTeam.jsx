@@ -5,9 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 // import Avatar from "../../assets/60111.jpg";
 
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 export const MeetTheTeam = () => {
   // Add this team members data array
@@ -105,6 +106,10 @@ export const MeetTheTeam = () => {
           pagination={{
             clickable: true,
           }}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             320: {
               slidesPerView: 1,
@@ -131,7 +136,7 @@ export const MeetTheTeam = () => {
               spaceBetween: 100,
             },
           }}
-          modules={[FreeMode, Pagination]}
+          modules={[FreeMode, Autoplay]}
           className="mySwiper"
         >
           {teamMembers.map((member) => (

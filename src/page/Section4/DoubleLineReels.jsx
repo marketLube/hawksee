@@ -5,7 +5,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export const DoubleLineReels = () => {
   const images = [
@@ -73,8 +74,41 @@ export const DoubleLineReels = () => {
     snapOnRelease: false,
   };
 
+  const [isSmall, setIsSmall] = useState(false);
+
+  const handleClick = () => {
+    window.location.hash = "#projects";
+    window.scrollTo({
+      top: window.scrollY + 100,
+      behavior: "smooth",
+    });
+  };
+  useEffect(() => {
+    // Function to check if #projects is the active target
+    const checkHash = () => {
+      if (window.location.hash === "#projects") {
+        setIsSmall(true);
+      } else setIsSmall(false);
+    };
+
+    // Add hashchange listener
+    window.addEventListener("hashchange", checkHash);
+
+    // Initial check in case the hash is already set
+    checkHash();
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("hashchange", checkHash);
+    };
+  }, []);
+
   return (
-    <section id="works" className="logos">
+    <section
+      id="works"
+      className="logos"
+      style={isSmall ? { transform: "scale(0.8)" } : { transform: "scale(1)" }}
+    >
       <h1 className="logos-title">Projects</h1>
       <div className="logos-rot">
         <div className="logo-slide">
@@ -128,11 +162,11 @@ export const DoubleLineReels = () => {
       </div>
 
       <div className="buttondivPortfolio">
-        <Link to="/projects">
-          <Button>
+        <Button onClick={handleClick}>
+          <a href="#projects">
             View All <FiArrowUpRight />
-          </Button>
-        </Link>
+          </a>
+        </Button>
       </div>
     </section>
   );

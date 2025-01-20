@@ -9,6 +9,7 @@ import { RealStories } from "./page/Section6/RealStories";
 import { Grid } from "./page/Section7/Grid";
 import { MeetTheTeam } from "./page/Section8/MeetTheTeam";
 import { GetInTouch } from "./page/Section9/GetInTouch";
+import Projects from "./page/Projects/Projects";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = React.useState(null);
@@ -32,6 +33,7 @@ function App() {
         {/* <RealStories /> */}
         <Grid />
         <MeetTheTeam />
+        <Projects />
       </main>
       <footer>
         <GetInTouch />

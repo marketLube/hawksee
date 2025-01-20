@@ -955,10 +955,14 @@ body {
   }
 }
 .get-in-touch__links a {
-  color: #000;
+  color: #000000;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  width: fit-content;
+  background-color: #d8d8d8;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__links a {
@@ -1109,6 +1113,7 @@ body {
 .get-in-touch__address h3 {
   font-size: 1.2rem;
   font-weight: 500;
+  color: #000;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__address h3 {
@@ -1146,7 +1151,7 @@ body {
   font-weight: 500;
 }
 .get-in-touch__address .addressnote {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -2218,6 +2223,18 @@ body {
   .logos-title {
     font-size: 9rem;
   }
+}
+.logos-text {
+  width: 100%;
+  transition: all 1s ease;
+  margin-left: auto;
+  overflow: hidden;
+}
+.logos-text-text.animate {
+  transform: translateY(10rem);
+}
+.logos-text div {
+  transition: transform 0.5s ease-out;
 }
 .logos-rot {
   transform: skew(0.02turn, -5deg);

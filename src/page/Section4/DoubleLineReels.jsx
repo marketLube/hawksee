@@ -5,19 +5,12 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
+import haw from "../../assets/About/hawkgrid.png";
 
 export const DoubleLineReels = () => {
   const images = [
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-1_ywooxn.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935750/portfolio-2_bjxa5k.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-3_ehundx.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-4_afbyfw.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-5_bz87jz.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935754/portfolio-6_zhxyf0.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-7_lam80k.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935753/portfolio-8_b9vkwc.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935752/portfolio-9_s8vzrf.jpg",
-
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/cc1_qo8ln2.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/ccc2_qyszou.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/ccc3_hb1jbq.jpg",
@@ -27,6 +20,7 @@ export const DoubleLineReels = () => {
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947128/cc4_olsgfg.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947126/cc5_cmbv2q.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947126/cc6_guqslz.jpg",
+    haw,
   ];
 
   const videos = [
@@ -71,12 +65,36 @@ export const DoubleLineReels = () => {
     },
     snapOnRelease: false,
   };
+  // const isInView = useInView(ref, { once: true });
+  const rotRef = useRef(null);
+  const [animate, setAnimate] = useState(false);
+  const isInView = useInView(rotRef);
+
+  useEffect(() => {
+    if (isInView) {
+      setAnimate(true);
+    } else {
+      setAnimate(false);
+    }
+  }, [isInView]);
 
   return (
     <section id="works" className="logos">
-      <h1 className="logos-title">Projects</h1>
+      <h1 className="logos-title">
+        <div className="logos-text ">
+          <div
+            style={
+              animate
+                ? { transform: "translateY(-1rem)" }
+                : { transform: "translateY(10rem)" }
+            }
+          >
+            Projects
+          </div>
+        </div>
+      </h1>
       <div className="logos-rot">
-        <div className="logo-slide">
+        <div className="logo-slide" ref={rotRef}>
           {images.map((image, index) => (
             <img key={`image-${index}`} src={image} alt={`Slide ${index}`} />
           ))}

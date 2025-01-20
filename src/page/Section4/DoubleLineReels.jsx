@@ -17,6 +17,7 @@ export const DoubleLineReels = () => {
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-7_lam80k.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935753/portfolio-8_b9vkwc.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935752/portfolio-9_s8vzrf.jpg",
+
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/cc1_qo8ln2.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/ccc2_qyszou.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/ccc3_hb1jbq.jpg",
@@ -106,19 +107,18 @@ export const DoubleLineReels = () => {
                   onClick={(e) => (e.target.muted = false)}
                   onMouseEnter={(e) => {
                     e.target.play();
-
+                    e.target.controls = true; // Enable controls on hover
                     e.target
                       .closest(".doubleline-slide")
                       .swiper.autoplay.stop();
                   }}
                   onMouseLeave={(e) => {
                     e.target.pause();
-
+                    e.target.controls = false; // Disable controls when not hovered
                     e.target
                       .closest(".doubleline-slide")
                       .swiper.autoplay.start();
                   }}
-                  controls
                 />
               </SwiperSlide>
             ))}

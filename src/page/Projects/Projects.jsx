@@ -1,50 +1,96 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState, useCallback } from "react";
+import ProjectsNav from "./ProjectsNav";
+import ProjectsShowAllBody from "./ProjectsShowAllBody";
+import { useHash } from "./useHash";
 
-export default function Projects() {
-  const location = useLocation();
-  const [isAnmate, setIsAnmate] = useState(false);
+const Projects = () => {
+  const [isAnimate, setIsAnimate] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startY, setStartY] = useState(0);
 
-  useEffect(() => {
-    // Function to check if #projects is the active target
-    const checkHash = () => {
-      if (window.location.hash === "#projects") {
-        setIsAnmate(true);
-      } else setIsAnmate(false);
-    };
+  useHash({ setIsAnimate });
 
-    // Add hashchange listener
-    window.addEventListener("hashchange", checkHash);
-
-    // Initial check in case the hash is already set
-    checkHash();
-
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener("hashchange", checkHash);
-    };
+  const handleScrolling = useCallback((deltaY) => {
+    const maxScroll = window.innerHeight * 4; // 400vh for scrollable area
+    setScrollPosition((prev) => {
+      const newPosition = prev + deltaY;
+      return Math.max(0, Math.min(newPosition, maxScroll));
+    });
   }, []);
+
+  // Handle wheel scrolling
+  useEffect(() => {
+    if (!isAnimate) return;
+
+    const initialScrollY = window.scrollY;
+
+    const handleWheel = (e) => {
+      e.preventDefault();
+      handleScrolling(e.deltaY * 0.5); // Adjust multiplier for speed
+      window.scrollTo(0, initialScrollY);
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => window.removeEventListener("wheel", handleWheel);
+  }, [isAnimate, handleScrolling]);
+
+  // Handle touch/drag scrolling
+  const handleTouchStart = (e) => {
+    if (!isAnimate) return;
+    setIsDragging(true);
+    setStartY(e.touches ? e.touches[0].clientY : e.clientY);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging || !isAnimate) return;
+    const currentY = e.touches ? e.touches[0].clientY : e.clientY;
+    const deltaY = startY - currentY;
+    handleScrolling(deltaY * 0.5);
+    setStartY(currentY);
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
+  const progressPercentage = (scrollPosition / (window.innerHeight * 4)) * 100;
 
   return (
     <div
       id="projects"
-      className="projects"
-      style={
-        isAnmate
-          ? { height: "500vh", backgroundColor: "rgba(0, 0, 0, 0.5)" }
-          : { height: "0rem", backgroundColor: "transparent" }
-      }
+      className={`projects ${isAnimate ? "projects--active" : ""}`}
+      style={{
+        height: isAnimate ? "500vh" : "0",
+        backgroundColor: isAnimate ? "rgba(0, 0, 0, 0.5)" : "transparent",
+        pointerEvents: isAnimate ? "auto" : "none",
+        cursor: isDragging ? "grabbing" : "grab",
+      }}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      onMouseDown={handleTouchStart}
+      onMouseMove={handleTouchMove}
+      onMouseUp={handleTouchEnd}
+      onMouseLeave={handleTouchEnd}
     >
       <div
-        className="projects_body"
-        style={
-          isAnmate
-            ? { transform: "translateY(0)" }
-            : { transform: "translateY(150vh)" }
-        }
+        className="projects__body"
+        style={{
+          transform: isAnimate
+            ? `translateY(calc(-${progressPercentage}% + 0vh))`
+            : "translateY(150vh)",
+          pointerEvents: "auto",
+        }}
       >
-        <h2 className="projects__title">Projects</h2>
+        <div className="projects__content">
+          <h2 className="projects__title">Projects</h2>
+          <ProjectsNav />
+          <ProjectsShowAllBody isAnimate={isAnimate} />
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default Projects;

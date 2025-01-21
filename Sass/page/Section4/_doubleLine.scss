@@ -75,6 +75,21 @@
     }
   }
 
+  &-text {
+    width: 100%;
+    transition: all 1s ease;
+    margin-left: auto;
+    overflow: hidden;
+
+    &-text.animate {
+      transform: translateY(10rem);
+    }
+
+    & div {
+      transition: transform 0.5s ease-out;
+    }
+  }
+
   &-rot {
     transform: skew(0.02turn, -5deg);
     padding-top: 7rem;

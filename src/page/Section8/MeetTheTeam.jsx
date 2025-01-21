@@ -100,7 +100,7 @@ export const MeetTheTeam = () => {
       <h1 className="meet-head">Meet the team</h1>
       <div className="swiper-container">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={4}
           spaceBetween={100}
           // freeMode={true}
           pagination={{
@@ -134,6 +134,14 @@ export const MeetTheTeam = () => {
             1200: {
               slidesPerView: 3,
               spaceBetween: 100,
+            },
+            1300: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+            1400: {
+              slidesPerView: 4,
+              spaceBetween: 20,
             },
           }}
           modules={[FreeMode, Autoplay]}

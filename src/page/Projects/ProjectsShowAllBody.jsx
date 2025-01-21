@@ -95,11 +95,16 @@ export default function ProjectsShowAllBody({
               {val.endsWith(".mp4") ? (
                 <video
                   src={val}
-                  controls
                   style={{
                     height: "100%",
                     width: "100%",
                     objectFit: "contain",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.controls = true;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.controls = false;
                   }}
                 />
               ) : (
@@ -117,7 +122,12 @@ export default function ProjectsShowAllBody({
           ) : activeIndex === 1 ? (
             <video
               src={val}
-              controls
+              onMouseEnter={(e) => {
+                e.target.controls = true;
+              }}
+              onMouseLeave={(e) => {
+                e.target.controls = false;
+              }}
               style={{
                 height: "100%",
                 width: "100%",

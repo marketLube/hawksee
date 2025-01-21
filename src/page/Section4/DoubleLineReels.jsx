@@ -6,6 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link, useLocation } from "react-router-dom";
+
+import haw from "../../assets/About/hawkgrid.png";
+
 import { useEffect, useState } from "react";
 
 export const DoubleLineReels = () => {
@@ -19,6 +22,7 @@ export const DoubleLineReels = () => {
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947128/cc4_olsgfg.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947126/cc5_cmbv2q.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947126/cc6_guqslz.jpg",
+    haw,
   ];
 
   const videos = [

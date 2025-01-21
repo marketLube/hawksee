@@ -269,6 +269,9 @@ a {
   transition: all 0.2s;
   visibility: hidden;
   border-radius: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .navigation__list {

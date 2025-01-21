@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-export default function ProjectsNav({ activeIndex, setActiveIndex }) {
+export default function ProjectsNav({
+  activeIndex,
+  setActiveIndex,
+  setSelectedNav,
+}) {
   const navItems = ["Show All", "Videos", "Social Media"];
 
   return (
@@ -9,7 +13,10 @@ export default function ProjectsNav({ activeIndex, setActiveIndex }) {
         <li
           key={index}
           className={activeIndex === index ? "active" : ""}
-          onClick={() => setActiveIndex(index)}
+          onClick={() => {
+            setActiveIndex(index);
+            setSelectedNav(item);
+          }}
         >
           {item}
         </li>

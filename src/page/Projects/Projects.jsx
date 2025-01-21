@@ -9,6 +9,8 @@ const Projects = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startY, setStartY] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedNav, setSelectedNav] = useState("Show All");
+  console.log(selectedNav, "KGSdksgakgskaks");
 
   useHash({ setIsAnimate });
 
@@ -65,7 +67,7 @@ const Projects = () => {
         height: isAnimate ? "500vh" : "0",
         backgroundColor: isAnimate ? "rgba(0, 0, 0, 0.5)" : "transparent",
         pointerEvents: isAnimate ? "auto" : "none",
-        cursor: isDragging ? "grabbing" : "grab",
+        // cursor: isDragging ? "grabbing" : "grab",
       }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -89,10 +91,12 @@ const Projects = () => {
           <ProjectsNav
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
+            setSelectedNav={setSelectedNav}
           />
           <ProjectsShowAllBody
             isAnimate={isAnimate}
             activeIndex={activeIndex}
+            selectedNav={selectedNav}
           />
         </div>
       </div>

@@ -67,7 +67,6 @@ const Projects = () => {
         height: isAnimate ? "500vh" : "0",
         backgroundColor: isAnimate ? "rgba(0, 0, 0, 0.5)" : "transparent",
         pointerEvents: isAnimate ? "auto" : "none",
-        // cursor: isDragging ? "grabbing" : "grab",
       }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}

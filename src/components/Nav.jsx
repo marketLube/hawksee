@@ -31,6 +31,18 @@ export const Nav = ({ setIsNavScrolling }) => {
     document.body.classList.toggle("no-scroll", isChecked);
   }, [isChecked]);
 
+  useEffect(() => {
+    if (isChecked) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isChecked]);
+
   const scrollToSection = (sectionId) => {
     if (sectionId !== "about") {
       setIsNavScrolling(true);

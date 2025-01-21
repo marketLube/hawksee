@@ -2666,8 +2666,8 @@ a {
 .projects-show-item {
   width: 100%;
   height: 30rem;
-  background-color: red;
   transition: transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
+  background-color: burlywood;
 }
 
 @keyframes fadeIn {

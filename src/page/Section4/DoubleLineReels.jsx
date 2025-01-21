@@ -10,16 +10,6 @@ import { useEffect, useState } from "react";
 
 export const DoubleLineReels = () => {
   const images = [
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-1_ywooxn.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935750/portfolio-2_bjxa5k.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-3_ehundx.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-4_afbyfw.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-5_bz87jz.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935754/portfolio-6_zhxyf0.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935751/portfolio-7_lam80k.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935753/portfolio-8_b9vkwc.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736935752/portfolio-9_s8vzrf.jpg",
-
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/cc1_qo8ln2.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/ccc2_qyszou.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/ccc3_hb1jbq.jpg",

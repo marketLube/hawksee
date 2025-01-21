@@ -961,10 +961,14 @@ a {
   }
 }
 .get-in-touch__links a {
-  color: #000;
+  color: #000000;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  width: fit-content;
+  background-color: #d8d8d8;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__links a {
@@ -1115,6 +1119,7 @@ a {
 .get-in-touch__address h3 {
   font-size: 1.2rem;
   font-weight: 500;
+  color: #000;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__address h3 {
@@ -1152,7 +1157,7 @@ a {
   font-weight: 500;
 }
 .get-in-touch__address .addressnote {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -2225,6 +2230,18 @@ a {
     font-size: 9rem;
   }
 }
+.logos-text {
+  width: 100%;
+  transition: all 1s ease;
+  margin-left: auto;
+  overflow: hidden;
+}
+.logos-text-text.animate {
+  transform: translateY(10rem);
+}
+.logos-text div {
+  transition: transform 0.5s ease-out;
+}
 .logos-rot {
   transform: skew(0.02turn, -5deg);
   padding-top: 7rem;
@@ -2586,31 +2603,71 @@ a {
 }
 
 .projects {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100vw;
   position: fixed;
-  z-index: 10000;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  transition: all 0.5s cubic-bezier(0.13, 0.39, 0.71, 0.91);
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
   transform-origin: bottom;
-  overflow: hidden;
+}
+.projects--active .projects__content {
+  opacity: 1;
+}
+.projects__body {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  transition: transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+.projects__content {
+  padding: 5rem;
+  min-height: 200vh;
+  position: relative;
+  opacity: 0;
+  overflow: visible; /* Avoid double scrollbars */
+  transition: opacity 0.5s ease-in-out;
 }
 .projects__title {
   font-size: 10rem;
+  font-weight: 500;
   color: white;
+  animation: fadeIn2 1s ease-in-out forwards;
   animation-delay: 0.5s;
+  opacity: 0;
 }
-.projects_body {
-  height: 100vh;
+.projects-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+  list-style: none;
+  margin: 4rem 0;
+}
+.projects-nav li {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.projects-nav li.active {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.projects-show {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.projects-show-item {
+  width: 100%;
+  height: 30rem;
+  background-color: red;
   transition: transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
-  background-color: rgb(0, 0, 0);
-}
-
-#projects:target {
-  display: block;
 }
 
 @keyframes fadeIn {
@@ -2632,23 +2689,19 @@ a {
     opacity: 1;
   }
 }
-/* Initial state for entering */
 .fade-enter {
   opacity: 0;
 }
 
-/* Active state for entering */
 .fade-enter-active {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
 
-/* Initial state for exiting */
 .fade-exit {
   opacity: 1;
 }
 
-/* Active state for exiting */
 .fade-exit-active {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;

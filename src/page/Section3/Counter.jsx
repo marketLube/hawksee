@@ -38,7 +38,10 @@ export const Counter = () => {
               <div
                 style={
                   animate
-                    ? { transform: "translateY(0rem)" }
+                    ? {
+                        transform: "translateY(0rem)",
+                        transition: "transform 0.5s",
+                      }
                     : { transform: "translateY(10rem)" }
                 }
               >

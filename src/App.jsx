@@ -5,7 +5,7 @@ import { Paragraph } from "./page/Section2/Paragraph";
 import { Counter } from "./page/Section3/Counter";
 import { DoubleLineReels } from "./page/Section4/DoubleLineReels";
 import { Research } from "./page/Section5/Research";
-import { RealStories } from "./page/Section6/RealStories";
+
 import { Grid } from "./page/Section7/Grid";
 import { MeetTheTeam } from "./page/Section8/MeetTheTeam";
 import { GetInTouch } from "./page/Section9/GetInTouch";
@@ -27,13 +27,13 @@ function App() {
           setIsNavScrolling={setIsNavScrolling}
         />
         <Paragraph />
+        <Projects />
         <Counter />
         <DoubleLineReels />
         <Research />
         {/* <RealStories /> */}
         <Grid />
         <MeetTheTeam />
-        <Projects />
       </main>
       <footer>
         <GetInTouch />

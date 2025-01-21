@@ -50,7 +50,15 @@ export const GetInTouch = () => {
                   Stories
                 </a>
                 <a
-                  style={{ cursor: "pointer" }}
+                  href="https://wa.me/919995000123"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    cursor: "pointer",
+                    backgroundColor: "black",
+                    color: "white",
+                    padding: ".5rem 1rem",
+                  }}
                   onClick={() => scrollToSection("contact")}
                 >
                   Contact

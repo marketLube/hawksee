@@ -132,7 +132,7 @@ export const MeetTheTeam = () => {
               spaceBetween: 50,
             },
             1200: {
-              slidesPerView: 3,
+              slidesPerView: 3.5,
               spaceBetween: 100,
             },
             1300: {
@@ -140,8 +140,8 @@ export const MeetTheTeam = () => {
               spaceBetween: 50,
             },
             1400: {
-              slidesPerView: 4,
-              spaceBetween: 20,
+              slidesPerView: 5,
+              spaceBetween: 50,
             },
           }}
           modules={[FreeMode, Autoplay]}

@@ -3,6 +3,8 @@
 
 .sectionPara {
   position: relative;
+  height: 100vh;
+  width: 100%;
 }
 .paragraph {
   position: absolute;
@@ -18,8 +20,10 @@
   z-index: 10;
   font-weight: 200;
   width: 80%;
+  // height: 10rem;
+
   line-height: 60px;
-  z-index: 100;
+  z-index: 10000000000;
 
   @include responsive.respond(smallPhone) {
     font-size: 1.2rem;
@@ -46,51 +50,49 @@
     line-height: 45px;
   }
 }
-.imgsOne {
-  position: relative;
-  background-color: variables.$color-primery-dark;
-  height: 100vh;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
+.imgsOne {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .imgsOne img {
   width: 19%;
-  height: 380px;
-  object-fit: cover;
-
+  height: 350px;
+  object-fit: contain;
+  opacity: 0.5;
+  transition: transform 1s ease;
   @include responsive.respond(smallPhone) {
-    width: 30%;
-    height: 100px;
+    width: 35%;
+    height: 180px;
+    object-fit: contain;
   }
 
   @include responsive.respond(phone) {
-    width: 25%;
-    height: 120px;
+    width: 30%;
+    height: 180px;
+    object-fit: contain;
   }
 
   @include responsive.respond(tablets) {
     width: 27%;
     height: 180px;
+    object-fit: contain;
   }
 
   @include responsive.respond(bigTablets) {
     width: 25%;
     height: 200px;
+    object-fit: contain;
   }
   @include responsive.respond(desktop) {
     width: 25%;
     height: 220px;
+    object-fit: contain;
   }
 }
 .first {
@@ -123,7 +125,7 @@
 
   @include responsive.respond(phone) {
     bottom: 51%;
-    left: 40%;
+    left: 35%;
     transform: none;
   }
 }
@@ -144,4 +146,13 @@
     right: 9%;
     transform: none;
   }
+}
+
+.parallax-wrapper {
+  box-shadow: 0 0 10px 10px black;
+  transition: all 2s ease;
+}
+.paragraph-container {
+  height: 1rem;
+  overflow: hidden;
 }

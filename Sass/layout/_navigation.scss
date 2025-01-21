@@ -40,32 +40,32 @@
   }
 
   &-hawlogo {
-    width: 130px;
-    margin-top: -4rem;
+    width: 280px;
+    margin-top: -2rem;
     @include responsive.respond(bigDesktop) {
-      width: 120px;
-      margin-top: -3.5rem;
-    }
-    @include responsive.respond(desktop) {
-      width: 110px;
-      margin-top: -3rem;
-    }
-    @include responsive.respond(bigTablets) {
-      width: 100px;
-      margin-top: -2.5rem;
-    }
-    @include responsive.respond(tablets) {
-      width: 90px;
+      width: 280px;
       margin-top: -2rem;
     }
-    @include responsive.respond(phone) {
-      width: 80px;
+    @include responsive.respond(desktop) {
+      width: 280px;
+      margin-top: -2rem;
+    }
+    @include responsive.respond(bigTablets) {
+      width: 240px;
       margin-top: -1.5rem;
+    }
+    @include responsive.respond(tablets) {
+      width: 220px;
+      margin-top: -1.2rem;
+    }
+    @include responsive.respond(phone) {
+      width: 200px;
+      margin-top: -0.5rem;
     }
 
     @include responsive.respond(smallPhone) {
-      width: 70px;
-      margin-top: -1rem;
+      width: 200px;
+      margin-top: -0.5rem;
     }
   }
 
@@ -239,7 +239,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3.5rem;
 }
 .navigation__item {
   margin: 0.5rem;
@@ -284,6 +284,7 @@
   .navigation__link:hover,
   .navigation__link:active {
     // Removed transform
+    // border-bottom: 2px solid #ffffff;
   }
 }
 .navigation__checkbox:checked ~ .navigation__nav {
@@ -350,4 +351,8 @@
     color: #ffffff;
     background-color: transparent;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

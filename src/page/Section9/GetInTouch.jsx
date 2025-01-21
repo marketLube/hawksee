@@ -5,12 +5,23 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
+  FaYoutube,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 
 export const GetInTouch = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      console.log(`Scrolling to section: ${sectionId}`);
+    } else {
+      console.error(`Element with ID ${sectionId} not found`);
+    }
+  };
   return (
     <>
-      <div id="contact" className="get-in-touch">
+      <footer id="contact" className="get-in-touch">
         <div className="get-in-touch__container">
           <h1 className="get-in-touch__title">Get in touch</h1>
 
@@ -20,10 +31,30 @@ export const GetInTouch = () => {
             </div>
             <div className="get-in-touch-about">
               <div className="get-in-touch__links">
-                <a href="#about">About us</a>
-                <a href="#works">Our Works</a>
-                <a href="#stories">Stories</a>
-                <a href="#contact">Contact</a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => scrollToSection("about")}
+                >
+                  About us
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => scrollToSection("works")}
+                >
+                  Our Works
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => scrollToSection("stories")}
+                >
+                  Stories
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => scrollToSection("contact")}
+                >
+                  Contact
+                </a>
 
                 <span
                   className="get-in-touch__email"
@@ -36,17 +67,25 @@ export const GetInTouch = () => {
               </div>
 
               <div className="get-in-touch__address">
-                <h3>Address 010</h3>
+                <h3>Calicut: </h3>
                 <p className="addressnote">
-                  Lorem ipsum dolor
-                  <br /> consectetur adipiscing <br />
-                  euismod incididunt ut dolore
-                  <br /> magna aliquam erat Ut wisi
-                  <br /> enim ad minim veniam.
+                  5/639R, 1st Floor,
+                  <br />
+                  City Gate Building,Sales tax Office
+                  <br /> Road, Mini Bypass Rd, Eranhippalam,
+                  <br /> Kozhikode, Kerala 673006
+                </p>
+
+                <h3 style={{ marginTop: "10px" }}>Kochi: </h3>
+                <p className="addressnote">
+                  Second Floor,Trine Tower,
+                  <br /> Seaport - Airport Rd, near Naipunya <br />
+                  Public School, Thrikkakara, Kochi,
+                  <br /> Kerala 682021
                 </p>
 
                 <a href="tel:0495290199" className="get-in-touch__phone">
-                  0495-290 199
+                  9995000123
                 </a>
               </div>
             </div>
@@ -56,7 +95,7 @@ export const GetInTouch = () => {
                   window.open("mailto:hello@hawksee.org", "_blank")
                 }
               >
-                hello@hawksee.org
+                info@hawksee.in
               </span>
               <span onClick={() => window.open("tel:0495290199")}>
                 0495-290 199
@@ -64,11 +103,11 @@ export const GetInTouch = () => {
             </div>
           </div>
         </div>
-      </div>
+      </footer>
       <div className="social-media-container">
         <div className="social-media-container__content">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/hawkseedigital"
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
@@ -76,7 +115,7 @@ export const GetInTouch = () => {
             <FaFacebookF className="social-media-icon" />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/hawkseedigital/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
@@ -84,7 +123,7 @@ export const GetInTouch = () => {
             <FaInstagram className="social-media-icon" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/hawksee-digital-marketing"
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
@@ -92,12 +131,28 @@ export const GetInTouch = () => {
             <FaLinkedinIn className="social-media-icon" />
           </a>
           <a
-            href="https://whatsapp.com"
+            href="https://www.youtube.com/@hawkseedigitalmarketing2411"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-media-link"
+          >
+            <FaYoutube className="social-media-icon" />
+          </a>
+          <a
+            href="https://wa.me/919995000123"
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
           >
             <FaWhatsapp className="social-media-icon" />
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Your+Location"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-media-link"
+          >
+            <FaMapMarkerAlt className="social-media-icon" />
           </a>
         </div>
       </div>

@@ -16,8 +16,6 @@
   padding: 2rem 0;
   background-color: black;
   position: relative;
-  // top: -40rem;
-  // border: 1px solid red;
 
   &-title {
     font-size: 11rem;
@@ -31,7 +29,7 @@
       font-size: 9rem;
     }
     @include responsive.respond(bigTablets) {
-      font-size: 8rem;
+      font-size: 7.5rem;
     }
     @include responsive.respond(tablets) {
       font-size: 6rem;
@@ -41,6 +39,8 @@
     }
     @include responsive.respond(smallPhone) {
       font-size: 3rem;
+      padding-top: 0rem;
+      text-align: center;
     }
   }
 
@@ -50,11 +50,11 @@
     padding-bottom: 5rem;
 
     @include responsive.respond(tablets) {
-      transform: skew(0.01turn, -3deg);
+      transform: none;
       padding-top: 4rem;
     }
     @include responsive.respond(phone) {
-      transform: skew(0.005turn, -2deg);
+      transform: none;
       padding-top: 2rem;
     }
     @include responsive.respond(smallPhone) {
@@ -68,7 +68,6 @@
   display: flex;
   gap: 1rem;
   width: calc(200% + 3rem);
-
   animation: slide 30s linear infinite;
 
   &:hover {
@@ -76,46 +75,50 @@
   }
 
   @include responsive.respond(tablets) {
-    animation: slide 25s linear infinite;
+    animation: none;
+    width: 100%;
+    height: fit-content;
   }
   @include responsive.respond(phone) {
-    animation: slide 20s linear infinite;
-    width: calc(300% + 3rem);
+    animation: none;
+    width: 100%;
+    height: fit-content;
+  }
+  @include responsive.respond(smallPhone) {
+    animation: none;
+    width: 100%;
+    // width: calc(300% + 3rem);
+    height: fit-content;
   }
 }
 
-.realstories-slide img {
+.realstories-slide video {
   flex: 0 0 auto;
-  height: 25rem;
   width: 20rem;
   background-color: rgb(255, 255, 255);
-  color: black;
   margin: 1rem;
   border-radius: 5px;
   text-align: center;
   font-size: 1rem;
   transition: transform 0.3s ease-in-out;
-
+  border: 2px solid black;
+  object-fit: cover;
   &:hover {
     transform: scale(1.1);
   }
 
   @include responsive.respond(bigTablets) {
-    height: 20rem;
     width: 16rem;
   }
   @include responsive.respond(tablets) {
-    height: 18rem;
-    width: 14rem;
+    width: 16rem;
   }
   @include responsive.respond(phone) {
-    height: 15rem;
-    width: 12rem;
+    width: 15rem;
     margin: 0.5rem;
   }
   @include responsive.respond(smallPhone) {
-    height: 12rem;
-    width: 10rem;
+    width: 15rem;
     margin: 0.3rem;
   }
 }

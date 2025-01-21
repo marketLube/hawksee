@@ -5,60 +5,93 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 // import Avatar from "../../assets/60111.jpg";
 
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 export const MeetTheTeam = () => {
   // Add this team members data array
   const teamMembers = [
     {
       id: 1,
-      name: "John Doe",
+      name: "ASHRAF",
       position: "CEO",
-      image: "Avatar",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/ashrafceo_vup4vc.jpg",
     },
     {
       id: 2,
-      name: "Jane Smith",
-      position: "CTO",
-      image: "Avatar",
+      name: "Akhil",
+      position: "OPERATION HEAD",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027276/arunOperationHead_v8acfy.jpg",
     },
     {
       id: 3,
-      name: "Mike Johnson",
-      position: "Lead Developer",
-      image: "Avatar",
+      name: "HIBA",
+      position: "PRODUCTION MANAGER",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/hibaProductionManager_gq380p.jpg",
     },
     {
       id: 4,
-      name: "Sarah Williams",
-      position: "UX Designer",
-      image: "Avatar",
+      name: "SHEETHAL",
+      position: "CRM",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/sheethalCrm_kfsuwv.jpg",
     },
     {
       id: 5,
-      name: "David Brown",
-      position: "Product Manager",
-      image: "Avatar",
+      name: "ARUN",
+      position: "CREATIVE HEAD",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/arunCreativeHead_asx7qz.jpg",
     },
     {
       id: 6,
-      name: "Emily Davis",
-      position: "Marketing Director",
-      image: "Avatar",
+      name: "ASHIQ",
+      position: "WEB DEVELOPER",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/ashiqWebdeveloper_m7xdqo.jpg",
     },
     {
       id: 7,
-      name: "Alex Turner",
-      position: "Senior Developer",
-      image: "Avatar",
+      name: "SAFNA",
+      position: "ACCOUNTS",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/safnaAccounts_g445k3.jpg",
     },
     {
       id: 8,
-      name: "Lisa Anderson",
-      position: "UI Designer",
-      image: "Avatar",
+      name: "NIYAS",
+      position: "VIDEO EDITOR",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/niyasVideoEditor_ympdqh.jpg",
+    },
+
+    {
+      id: 9,
+      name: "NIKHIL",
+      position: "SR. GRAPHIC DESIGHNER",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/nikhilsrGraphicDesigner_sgjccg.jpg",
+    },
+
+    {
+      id: 10,
+      name: "SHAHAL",
+      position: "CONTENT CREATOR",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/shahalContentCreator_cqqbjy.jpg",
+    },
+
+    {
+      id: 11,
+      name: "SHAHID",
+      position: "GRAPHIC DESIGNER",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/shahidGraphicDesigner_lbzxts.jpg",
     },
   ];
 
@@ -69,9 +102,13 @@ export const MeetTheTeam = () => {
         <Swiper
           slidesPerView={3}
           spaceBetween={100}
-          freeMode={true}
+          // freeMode={true}
           pagination={{
             clickable: true,
+          }}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
           }}
           breakpoints={{
             320: {
@@ -99,7 +136,7 @@ export const MeetTheTeam = () => {
               spaceBetween: 100,
             },
           }}
-          modules={[FreeMode, Pagination]}
+          modules={[FreeMode, Autoplay]}
           className="mySwiper"
         >
           {teamMembers.map((member) => (

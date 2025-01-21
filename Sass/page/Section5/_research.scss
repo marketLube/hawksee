@@ -2,12 +2,10 @@
 @use "../../base/responsive";
 
 .research {
-  height: 500vh;
+  height: 300vh;
   width: 100%;
   background-color: variables.$color-primery-light;
   position: relative;
-  // top: -40rem;
-  // border: 1px solid red;
   z-index: 100;
   background-color: #ffffff;
   &-bttn {
@@ -150,22 +148,22 @@
   text-align: center;
 
   @include responsive.respond(smallPhone) {
-    font-size: 3rem;
+    font-size: 3rem !important;
   }
   @include responsive.respond(phone) {
-    font-size: 6rem;
+    font-size: 5rem !important;
   }
   @include responsive.respond(tablets) {
-    font-size: 8rem;
+    font-size: 8rem !important;
   }
   @include responsive.respond(bigTablets) {
-    font-size: 10rem;
+    font-size: 9rem !important;
   }
   @include responsive.respond(desktop) {
-    font-size: 11rem;
+    font-size: 11rem !important ;
   }
   @include responsive.respond(bigDesktop) {
-    font-size: 12rem;
+    font-size: 12rem !important;
   }
 }
 

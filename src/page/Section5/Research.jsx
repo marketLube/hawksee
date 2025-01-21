@@ -4,24 +4,13 @@ import { FiArrowDownRight } from "react-icons/fi";
 import { useInView } from "framer-motion";
 
 export const Research = () => {
-  const textArray = [
-    "Research",
-    "Analyze",
-    "Discover",
-    "Innovate",
-    "Learn",
-    "Searching",
-    "Study",
-  ];
+  const textArray = ["Preparation", "Execution", "Analysis", "Optimization"];
 
   const paraArray = [
-    "Look for grammar, spelling mistakes, and make sure you proper nouns. A paragraph three parts:",
-    "Examining data patterns and trends to draw meaningful insights and conclusions.",
-    "Exploring new possibilities and uncovering hidden connections in research.",
-    "Creating new solutions and pushing boundaries through creative thinking.",
-    "Gaining knowledge and understanding through systematic study and practice.",
-    "Finding specific information and resources through methodical investigation.",
-    "Dedicating time to understand complex topics and master new skills.",
+    "Market research, brain storming for result oriented strategy development",
+    "Execute the marketing strategy in the most impactful ways to reach the target customers",
+    "Performance monitoring and analysis of the marketing activities.",
+    "Optimization based on results to create the maximum results.",
   ];
 
   const [headingText, setHeadingText] = useState(textArray[0]);
@@ -42,13 +31,13 @@ export const Research = () => {
       const rect = container.getBoundingClientRect();
       if (rect.top <= 0) {
         const scrolledPastTop = Math.abs(rect.top);
-        const scrollMultiplier = 5;
         const viewportHeight = window.innerHeight;
+        const scrollMultiplier = 2;
         const scrollSegment =
           (viewportHeight / textArray.length) * scrollMultiplier;
 
         const index = Math.min(
-          Math.ceil(scrolledPastTop / scrollSegment),
+          Math.floor(scrolledPastTop / scrollSegment),
           textArray.length - 1
         );
 

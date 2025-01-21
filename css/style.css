@@ -60,50 +60,48 @@ a {
 }
 .headerNav-hawlogo {
   width: 280px;
-  margin-top: -2rem;
+  height: 4rem;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .headerNav-hawlogo {
     width: 280px;
-    margin-top: -2rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .headerNav-hawlogo {
     width: 280px;
-    margin-top: -2rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .headerNav-hawlogo {
     width: 240px;
-    margin-top: -1.5rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .headerNav-hawlogo {
     width: 220px;
-    margin-top: -1.2rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .headerNav-hawlogo {
     width: 200px;
-    margin-top: -0.5rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .headerNav-hawlogo {
     width: 200px;
-    margin-top: -0.5rem;
   }
 }
 .headerNav-right {
   display: flex;
   justify-content: space-around;
   gap: 4rem;
+  height: 4rem;
   text-decoration: none;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .headerNav-right {
@@ -135,31 +133,37 @@ a {
     display: none;
   }
 }
-.headerNav-right li {
+.headerNav-right li,
+.headerNav-right a {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 400;
   color: black;
   cursor: pointer;
   height: fit-content;
   line-height: 1.2;
+  text-decoration: none;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
-  .headerNav-right li {
+  .headerNav-right li,
+  .headerNav-right a {
     font-size: 1.1rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
-  .headerNav-right li {
+  .headerNav-right li,
+  .headerNav-right a {
     font-size: 1rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .headerNav-right li {
+  .headerNav-right li,
+  .headerNav-right a {
     font-size: 1rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .headerNav-right li {
+  .headerNav-right li,
+  .headerNav-right a {
     font-size: 1rem;
   }
 }

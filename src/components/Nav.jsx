@@ -68,7 +68,19 @@ export const Nav = ({ setIsNavScrolling }) => {
         <li onClick={() => scrollToSection("about")}>About us</li>
         <li onClick={() => scrollToSection("works")}>Our Works</li>
         <li onClick={() => scrollToSection("stories")}>Stories</li>
-        <li onClick={() => scrollToSection("contact")}>Contact</li>
+        <a
+          href="https://wa.me/919995000123"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            padding: "0.5rem 1rem",
+            borderRadius: "3rem",
+          }}
+        >
+          Contact
+        </a>
       </ul>
 
       <div className="navigation">

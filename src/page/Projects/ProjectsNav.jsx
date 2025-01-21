@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-export default function ProjectsNav() {
-  const [activeIndex, setActiveIndex] = useState(0); // Default active item index
-
+export default function ProjectsNav({ activeIndex, setActiveIndex }) {
   const navItems = ["Show All", "Videos", "Social Media"];
 
   return (

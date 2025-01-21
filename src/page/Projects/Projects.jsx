@@ -8,6 +8,7 @@ const Projects = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startY, setStartY] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useHash({ setIsAnimate });
 
@@ -85,8 +86,14 @@ const Projects = () => {
       >
         <div className="projects__content">
           <h2 className="projects__title">Projects</h2>
-          <ProjectsNav />
-          <ProjectsShowAllBody isAnimate={isAnimate} />
+          <ProjectsNav
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
+          />
+          <ProjectsShowAllBody
+            isAnimate={isAnimate}
+            activeIndex={activeIndex}
+          />
         </div>
       </div>
     </div>

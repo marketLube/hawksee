@@ -45,8 +45,30 @@ export const DoubleLineReels = () => {
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737030315/thumb7_pbqfyo.png",
   ];
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const settings = {
-    slidesPerView: 5,
+    slidesPerView:
+      windowWidth < 480
+        ? 1.3
+        : windowWidth < 768
+        ? 2
+        : windowWidth < 1024
+        ? 3
+        : windowWidth < 1400
+        ? 4
+        : 5,
     spaceBetween: 0,
     freeMode: true,
     freeModeMomentum: true,

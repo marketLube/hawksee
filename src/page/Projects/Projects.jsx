@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import ProjectsNav from "./ProjectsNav";
 import ProjectsShowAllBody from "./ProjectsShowAllBody";
 import { useHash } from "./useHash";
+import { FiArrowLeft } from "react-icons/fi";
 
 const Projects = () => {
   const [isAnimate, setIsAnimate] = useState(false);
@@ -114,6 +115,22 @@ const Projects = () => {
         ref={contentRef}
       >
         <div className="projects__content">
+          <button
+            className="back-button"
+            onClick={() => window.history.back()}
+            style={{
+              borderRadius: "50%",
+              background: "transparent",
+              border: "1px solid white",
+              cursor: "pointer",
+
+              zIndex: 100,
+              width: "40px",
+              height: "40px",
+            }}
+          >
+            <FiArrowLeft size={20} color="white" />
+          </button>
           <h2 className="projects__title">Projects</h2>
           <ProjectsNav
             activeIndex={activeIndex}

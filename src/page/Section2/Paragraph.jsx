@@ -7,14 +7,13 @@ import para2 from "../../assets/About/two.jpeg";
 import para3 from "../../assets/About/three.jpeg";
 
 export const Paragraph = () => {
-  // const isMobileView = window.innerWidth <= 768;
   const ref = useRef(null);
 
   const isInView = useInView(ref);
 
   return (
-    <Parallax speed={-30}>
-      <section id="about" className="sectionPara">
+    <Parallax speed={-40}>
+      {/* <section id="about" className="sectionPara">
         <div className="imgsOne" ref={ref}>
           <div className="img-container">
             <img
@@ -70,13 +69,66 @@ export const Paragraph = () => {
               <div>
                 Every Brand Needs Hawksee, Because We <strong>See</strong>!
               </div>
-              First, We <strong>See</strong> The Brand’s Potential, Customer
+              First, We <strong>See</strong> The Brand's Potential, Customer
               Needs,
               <div>
                 and the Gap. Then, We Act to <strong>Show</strong> Results.
               </div>
             </div>
           </Parallax>
+        </div>
+      </section> */}
+      <section>
+        <div className="paragraph">
+          <div className="paragraph__imageDiv" ref={ref}>
+            <img
+              src={para1}
+              alt="Image 1"
+              className="paragraph__imageDiv__image1"
+              style={
+                isInView
+                  ? {
+                      transform: "translateY(0%)",
+                    }
+                  : { transform: "translateY(100%)" }
+              }
+            />
+            <img
+              src={para2}
+              alt="Image 2"
+              className="paragraph__imageDiv__image2"
+              style={
+                isInView
+                  ? {
+                      transform: "translateY(0%)",
+                    }
+                  : { transform: "translateY(200%)" }
+              }
+            />
+            <img
+              src={para3}
+              alt="Image 3"
+              className="paragraph__imageDiv__image3"
+              style={
+                isInView
+                  ? {
+                      transform: "translateY(0%)",
+                    }
+                  : { transform: "translateY(400%)" }
+              }
+            />
+          </div>
+          <div className="paragraph__textDiv">
+            {/* <Parallax speed={0} style={{ color: "white", opacity: 1 }}> */}
+            <div>
+              Every Brand Needs Hawksee, Because We <strong>See</strong>!<br />
+              First, We <strong>See</strong> The Brand's Potential, Customer
+              Needs,
+              <br />
+              and the Gap. Then, We Act to <strong>Show</strong> Results.
+            </div>
+            {/* </Parallax> */}
+          </div>
         </div>
       </section>
     </Parallax>

@@ -15,19 +15,19 @@
   overflow: hidden;
   width: 100vw;
   @include responsive.respond(phone) {
-    height: 100vh;
+    height: 180vh;
   }
 
   @include responsive.respond(smallPhone) {
-    height: 120vh;
+    height: 170vh;
   }
 
   @include responsive.respond(tablets) {
-    height: 100vh;
+    height: 160vh;
   }
 
   @include responsive.respond(bigTablets) {
-    height: 100vh;
+    height: 200vh;
   }
   &-container {
     width: 100%;

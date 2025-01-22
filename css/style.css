@@ -415,6 +415,18 @@ a {
   padding-top: 10rem;
   padding-bottom: 15rem;
 }
+@media (max-width: 768px) {
+  .logo-grid {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+}
+@media (max-width: 480px) {
+  .logo-grid {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+}
 .logo-grid-section {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -424,27 +436,27 @@ a {
   opacity: 0.4;
 }
 @media (max-width: 1400px) {
-  .logo-grid {
+  .logo-grid-section {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 1024px) {
-  .logo-grid {
+  .logo-grid-section {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
-  .logo-grid {
+  .logo-grid-section {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 20px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 @media (max-width: 480px) {
-  .logo-grid {
+  .logo-grid-section {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 25px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 .logo-grid .logo-card {

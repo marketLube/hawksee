@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo0 from "../../assets/logos/kaspersky-1.svg";
+import Logo0 from "../../assets/logos/kaspersky.png";
 import Logo1 from "../../assets/logos/Ayu.png";
 import Logo2 from "../../assets/logos/bhima.png";
 import Logo3 from "../../assets/logos/cams.png";

@@ -67,7 +67,7 @@ export const Nav = ({ setIsNavScrolling }) => {
       <ul className="headerNav-right">
         <li onClick={() => scrollToSection("about")}>About us</li>
         <li onClick={() => scrollToSection("works")}>Our Works</li>
-        <li onClick={() => scrollToSection("stories")}>Stories</li>
+        {/* <li onClick={() => scrollToSection("stories")}>Stories</li> */}
         <a
           href="https://wa.me/919995000123"
           target="_blank"
@@ -128,7 +128,7 @@ export const Nav = ({ setIsNavScrolling }) => {
                 Our Works
               </a>
             </li>
-            <li className="navigation__item">
+            {/* <li className="navigation__item">
               <a
                 href="#stories"
                 onClick={() => {
@@ -138,7 +138,7 @@ export const Nav = ({ setIsNavScrolling }) => {
               >
                 Stories
               </a>
-            </li>
+            </li> */}
             <li className="navigation__item">
               <a
                 href="#contact"

@@ -225,8 +225,7 @@
       padding: 5px 10px;
       border-radius: 1rem;
       width: fit-content;
-
-      text-decoration: none;
+      background-color: #d8d8d8;
 
       @include responsive.respond(tablets) {
         font-size: 1rem;
@@ -386,32 +385,31 @@
       font-weight: 500;
     }
     .addressnote {
-      font-size: 1rem !important;
-      font-weight: 300;
+      font-size: 1rem;
+      font-weight: 500;
       white-space: nowrap;
-      margin-top: 0.4rem;
 
-      // @include responsive.respond(tablets) {
-      //   font-size: 1rem;
-      // }
+      @include responsive.respond(tablets) {
+        font-size: 1rem;
+      }
 
-      // @include responsive.respond(phone) {
-      //   font-size: 0.8rem;
-      // }
+      @include responsive.respond(phone) {
+        font-size: 0.8rem;
+      }
 
-      // @include responsive.respond(smallPhone) {
-      //   font-size: 0.6rem;
-      // }
+      @include responsive.respond(smallPhone) {
+        font-size: 0.6rem;
+      }
 
-      // @include responsive.respond(bigDesktop) {
-      //   font-size: 1.1rem !important;
-      // }
-      // @include responsive.respond(bigTablets) {
-      //   font-size: 1rem !important;
-      // }
-      // @include responsive.respond(desktop) {
-      //   font-size: 1rem;
-      // }
+      @include responsive.respond(bigDesktop) {
+        font-size: 1.1rem !important;
+      }
+      @include responsive.respond(bigTablets) {
+        font-size: 1rem !important;
+      }
+      @include responsive.respond(desktop) {
+        font-size: 1rem;
+      }
     }
   }
 

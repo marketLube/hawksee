@@ -975,7 +975,7 @@ a {
   padding: 5px 10px;
   border-radius: 1rem;
   width: fit-content;
-  text-decoration: none;
+  background-color: #d8d8d8;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__links a {
@@ -1164,10 +1164,39 @@ a {
   font-weight: 500;
 }
 .get-in-touch__address .addressnote {
-  font-size: 1rem !important;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 500;
   white-space: nowrap;
-  margin-top: 0.4rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 0.6rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1.1rem !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1rem !important;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .get-in-touch__address .addressnote {
+    font-size: 1rem;
+  }
 }
 .get-in-touch__contact {
   display: flex;

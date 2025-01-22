@@ -10,12 +10,11 @@ const Projects = () => {
   const [startY, setStartY] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedNav, setSelectedNav] = useState("Show All");
-  console.log(selectedNav, "KGSdksgakgskaks");
 
   useHash({ setIsAnimate });
 
   const handleScrolling = useCallback((deltaY) => {
-    const maxScroll = window.innerHeight * 4; // 400vh for scrollable area
+    const maxScroll = window.innerHeight * 4;
     setScrollPosition((prev) => {
       const newPosition = prev + deltaY;
       return Math.max(0, Math.min(newPosition, maxScroll));
@@ -58,6 +57,30 @@ const Projects = () => {
   };
 
   const progressPercentage = (scrollPosition / (window.innerHeight * 4)) * 100;
+
+  // Reset state when component unmounts
+  useEffect(() => {
+    const handlePopState = () => {
+      setIsAnimate(false);
+      setScrollPosition(0);
+      setIsDragging(false);
+      setStartY(0);
+      setActiveIndex(0);
+      setSelectedNav("Show All");
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      setIsAnimate(false);
+      setScrollPosition(0);
+      setIsDragging(false);
+      setStartY(0);
+      setActiveIndex(0);
+      setSelectedNav("Show All");
+    };
+  }, []);
 
   return (
     <div

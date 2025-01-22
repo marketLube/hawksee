@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import ProjectsNav from "./ProjectsNav";
 import ProjectsShowAllBody from "./ProjectsShowAllBody";
 import { useHash } from "./useHash";
@@ -11,10 +11,14 @@ const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedNav, setSelectedNav] = useState("Show All");
 
+  const contentRef = useRef(null);
+
   useHash({ setIsAnimate });
 
   const handleScrolling = useCallback((deltaY) => {
-    const maxScroll = window.innerHeight * 4;
+    const maxScroll = contentRef.current
+      ? contentRef?.current?.clientHeight
+      : 0;
     setScrollPosition((prev) => {
       const newPosition = prev + deltaY;
       return Math.max(0, Math.min(newPosition, maxScroll));
@@ -107,6 +111,7 @@ const Projects = () => {
             : "translateY(150vh)",
           pointerEvents: "auto",
         }}
+        ref={contentRef}
       >
         <div className="projects__content">
           <h2 className="projects__title">Projects</h2>

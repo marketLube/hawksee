@@ -141,7 +141,8 @@ export const Nav = ({ setIsNavScrolling }) => {
             </li> */}
             <li className="navigation__item">
               <a
-                href="#contact"
+                href="https://wa.me/919995000123"
+                target="_blank"
                 onClick={() => {
                   scrollToSection("contact");
                   setIsChecked(false);

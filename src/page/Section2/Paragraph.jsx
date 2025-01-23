@@ -82,7 +82,7 @@ export const Paragraph = () => {
         <div className="paragraph">
           <div className="paragraph__imageDiv" ref={ref}>
             <img
-              src={para1}
+              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737617764/hawPara2_ficgo6.png"
               alt="Image 1"
               className="paragraph__imageDiv__image1"
               style={
@@ -94,7 +94,7 @@ export const Paragraph = () => {
               }
             />
             <img
-              src={para2}
+              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737617764/hawPara3_sinygl.png"
               alt="Image 2"
               className="paragraph__imageDiv__image2"
               style={
@@ -106,7 +106,7 @@ export const Paragraph = () => {
               }
             />
             <img
-              src={para3}
+              src="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737617764/hawPara1_c0p6nf.png"
               alt="Image 3"
               className="paragraph__imageDiv__image3"
               style={

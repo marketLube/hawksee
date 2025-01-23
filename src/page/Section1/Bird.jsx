@@ -124,7 +124,7 @@ export const Bird = ({ isNavScrolling }) => {
   return (
     <section id="bird" className="bird">
       <div className="caption">
-        <a href="#projects">
+        <a>
           <p>Every Brand Needs Hawksee</p>
         </a>
       </div>

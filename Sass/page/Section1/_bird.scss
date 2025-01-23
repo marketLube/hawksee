@@ -27,29 +27,29 @@
   }
 
   @include responsive.respond(bigTablets) {
-    height: 200vh;
+    height: 100vh;
   }
   &-container {
     width: 100%;
-    height: 100vh;
+    height: 20vh;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
   }
-  &-container {
-    height: 100vh;
+  // &-container {
+  //   height: 100vh;
 
-    // @include responsive.respond(smallPhone) {
-    //   transform: rotate(32deg);
-    // }
-    // @include responsive.respond(phone) {
-    //   transform: rotate(25deg);
-    // }
-    // @include responsive.respond(tablets) {
-    //   transform: rotate(15deg);
-    // }
-  }
+  //   // @include responsive.respond(smallPhone) {
+  //   //   transform: rotate(32deg);
+  //   // }
+  //   // @include responsive.respond(phone) {
+  //   //   transform: rotate(25deg);
+  //   // }
+  //   // @include responsive.respond(tablets) {
+  //   //   transform: rotate(15deg);
+  //   // }
+  // }
 
   &-image {
     position: relative;
@@ -100,8 +100,8 @@
     }
 
     @include responsive.respond(smallPhone) {
-      top: -10rem;
-      right: -10rem;
+      top: 2rem;
+      right: -13rem;
     }
   }
 }

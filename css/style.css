@@ -763,7 +763,7 @@ a {
 }
 
 .get-in-touch {
-  min-height: 90vh;
+  height: 90vh !important;
   background-color: #f5f5f5;
   display: flex;
   position: relative;

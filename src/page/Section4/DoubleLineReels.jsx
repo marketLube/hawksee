@@ -6,10 +6,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link, useLocation } from "react-router-dom";
+import { useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import ScrollTrigger from "react-scroll-trigger";
 
 import haw from "../../assets/About/hawkgrid.png";
-
-import { useEffect, useState } from "react";
 
 export const DoubleLineReels = () => {
   const images = [
@@ -121,13 +122,30 @@ export const DoubleLineReels = () => {
     };
   }, []);
 
+  const [animate, setAnimate] = useState(false);
+  const sectionRef = useRef(null);
+
   return (
     <section
       id="works"
       className="logos"
+      ref={sectionRef}
       style={isSmall ? { transform: "scale(0.8)" } : { transform: "scale(1)" }}
     >
-      <h1 className="logos-title">Projects</h1>
+      <ScrollTrigger
+        onEnter={() => setAnimate(true)}
+        onExit={() => setAnimate(false)}
+      >
+        <h1
+          className="logos-title"
+          style={{
+            transform: animate ? "translateY(0rem)" : "translateY(10rem)",
+            transition: "transform 0.6s",
+          }}
+        >
+          Projects
+        </h1>
+      </ScrollTrigger>
       <div className="logos-rot">
         <div className="logo-slide">
           {images.map((image, index) => (

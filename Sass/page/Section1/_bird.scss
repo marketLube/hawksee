@@ -27,7 +27,7 @@
   }
 
   @include responsive.respond(bigTablets) {
-    height: 100vh;
+    height: 200vh;
   }
   &-container {
     width: 100%;
@@ -74,8 +74,8 @@
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
-      top: -15rem !important; // Adjusted for smaller screens
-      right: -30rem !important; // Adjusted for smaller screens
+      top: 20rem !important;
+      right: -30rem !important;
     }
 
     @include responsive.respond(bigDesktop) {

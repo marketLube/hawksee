@@ -68,7 +68,9 @@ export const DoubleLineReels = () => {
         ? 3
         : windowWidth < 1400
         ? 4
-        : 5,
+        : windowWidth < 1600
+        ? 4.1
+        : 5.6,
     spaceBetween: 0,
     freeMode: true,
     freeModeMomentum: true,

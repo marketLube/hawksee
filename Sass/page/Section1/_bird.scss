@@ -15,15 +15,15 @@
   overflow: hidden;
   width: 100vw;
   @include responsive.respond(phone) {
-    height: 180vh;
+    height: 200vh;
   }
 
   @include responsive.respond(smallPhone) {
-    height: 170vh;
+    height: 200vh;
   }
 
   @include responsive.respond(tablets) {
-    height: 160vh;
+    height: 200vh;
   }
 
   @include responsive.respond(bigTablets) {
@@ -71,22 +71,22 @@
     }
 
     @include responsive.respond(bigTablets) {
-      top: 24rem;
+      top: 12rem;
       right: -28rem;
     }
 
     @include responsive.respond(tablets) {
-      top: 20rem;
+      top: -10rem;
       right: -20rem;
     }
 
     @include responsive.respond(phone) {
-      top: 15rem;
+      top: -5rem;
       right: -18rem;
     }
 
     @include responsive.respond(smallPhone) {
-      top: 5rem;
+      top: -10rem;
       right: -10rem;
     }
   }

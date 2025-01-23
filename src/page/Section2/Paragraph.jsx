@@ -121,11 +121,10 @@ export const Paragraph = () => {
           <div className="paragraph__textDiv">
             {/* <Parallax speed={0} style={{ color: "white", opacity: 1 }}> */}
             <div>
-              Every Brand Needs Hawksee, Because We <strong>See</strong>!<br />
-              First, We <strong>See</strong> The Brand's Potential, Customer
-              Needs,
-              <br />
-              and the Gap. Then, We Act to <strong>Show</strong> Results.
+              Every Brand Needs Hawksee, Because We <strong>See</strong>! First,
+              <br /> We <strong>See</strong> The Brand's Potential, Customer
+              Needs, and the Gap. <br />
+              Then, We Act to <strong>Show</strong> Results.
             </div>
             {/* </Parallax> */}
           </div>

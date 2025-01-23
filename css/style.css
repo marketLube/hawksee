@@ -710,6 +710,14 @@ a {
     min-width: 1200px;
   }
 }
+@media (min-width: 1600px) {
+  .paragraph__textDiv {
+    font-size: 3rem;
+    line-height: normal;
+    padding: 0rem;
+    min-width: 1800px;
+  }
+}
 
 @keyframes slide {
   from {
@@ -1395,17 +1403,17 @@ a {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .bird {
-    height: 180vh;
+    height: 200vh;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .bird {
-    height: 170vh;
+    height: 200vh;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .bird {
-    height: 160vh;
+    height: 200vh;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1448,25 +1456,25 @@ a {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .bird-image {
-    top: 24rem;
+    top: 12rem;
     right: -28rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .bird-image {
-    top: 20rem;
+    top: -10rem;
     right: -20rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .bird-image {
-    top: 15rem;
+    top: -5rem;
     right: -18rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .bird-image {
-    top: 5rem;
+    top: -10rem;
     right: -10rem;
   }
 }

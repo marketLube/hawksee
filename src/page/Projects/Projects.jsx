@@ -19,9 +19,9 @@ const Projects = () => {
   const handleScrolling = useCallback(
     (deltaY) => {
       const getScrollOffset = () => {
-        if (selectedNav === "Show All") return 10;
-        if (selectedNav === "Videos") return 60;
-        if (selectedNav === "Social Media") return 70;
+        if (selectedNav === "Show All") return 15;
+        if (selectedNav === "Videos") return 15;
+        if (selectedNav === "Social Media") return 75;
         return 70; // Default value
       };
 

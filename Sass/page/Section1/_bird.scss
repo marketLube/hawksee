@@ -95,7 +95,7 @@
     }
 
     @include responsive.respond(phone) {
-      top: -5rem;
+      top: 0rem;
       right: -18rem;
     }
 

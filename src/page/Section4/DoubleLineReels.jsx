@@ -61,7 +61,7 @@ export const DoubleLineReels = () => {
   const settings = {
     slidesPerView:
       windowWidth < 480
-        ? 1.3
+        ? 1.5
         : windowWidth < 768
         ? 2
         : windowWidth < 1024

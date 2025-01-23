@@ -511,20 +511,20 @@ a {
 }
 @media only screen and (max-width: 575.98px) {
   .paragraph__imageDiv__image1 {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .paragraph__imageDiv__image1 {
-    width: 160px;
-    height: 160px;
+    width: 170px;
+    height: 170px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .paragraph__imageDiv__image1 {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -558,25 +558,25 @@ a {
 }
 @media only screen and (max-width: 575.98px) {
   .paragraph__imageDiv__image2 {
-    width: 100px;
-    height: 100px;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    bottom: 8rem;
+    width: 120px;
+    height: 120px;
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+    bottom: 14rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .paragraph__imageDiv__image2 {
-    width: 160px;
-    height: 160px;
+    width: 170px;
+    height: 170px;
     margin-left: 3rem;
     margin-right: 3rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .paragraph__imageDiv__image2 {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
   }
@@ -614,20 +614,21 @@ a {
 }
 @media only screen and (max-width: 575.98px) {
   .paragraph__imageDiv__image3 {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    margin-top: 4rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .paragraph__imageDiv__image3 {
-    width: 160px;
-    height: 160px;
+    width: 170px;
+    height: 170px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .paragraph__imageDiv__image3 {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -664,26 +665,26 @@ a {
 }
 @media only screen and (max-width: 575.98px) {
   .paragraph__textDiv {
-    font-size: 1rem;
-    line-height: normal;
+    font-size: 1.4rem;
+    line-height: 2.3rem;
     padding: 0rem;
-    min-width: 300px;
+    min-width: 350px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .paragraph__textDiv {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     line-height: normal;
     padding: 0rem;
-    min-width: 500px;
+    min-width: 550px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .paragraph__textDiv {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     line-height: normal;
     padding: 0rem;
-    min-width: 600px;
+    min-width: 650px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -1513,17 +1514,19 @@ a {
   height: 30%;
   font-size: 3rem;
 }
-@media only screen and (max-width: 575.98px) {
-  .caption p {
-    font-size: 1.7rem;
-  }
-}
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .caption p {
     font-size: 2.5rem;
   }
 }
 
+@media (max-width: 575.98px) {
+  .caption p {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30%;
+  }
+}
 .counterSection {
   background-color: #000;
   height: 100vh;

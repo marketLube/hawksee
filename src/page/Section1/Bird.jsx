@@ -103,7 +103,7 @@ export const Bird = ({ isNavScrolling }) => {
 
   const getScaleMultiplier = () => {
     const width = window.innerWidth;
-    if (width <= 575.98) return 0.1; // smallPhone
+    if (width <= 575.98) return 0.5; // smallPhone
     if (width <= 767.98) return 0.05; // phone, reduced scaling
     if (width <= 991.98) return 0.08; // tablets
     if (width <= 1199.98) return 0.015; // bigTablets
@@ -125,7 +125,7 @@ export const Bird = ({ isNavScrolling }) => {
     <section id="bird" className="bird">
       <div className="caption">
         <a>
-          <p>Every Brand Needs Hawksee</p>
+          <p>Every Brand {windowWidth <= 575.98 && <br />} Needs Hawksee</p>
         </a>
       </div>
       <div className="bird-container">

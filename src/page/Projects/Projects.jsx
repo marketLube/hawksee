@@ -16,26 +16,6 @@ const Projects = () => {
 
   useHash({ setIsAnimate });
 
-  const handleScrolling = useCallback(
-    (deltaY) => {
-      const getScrollOffset = () => {
-        if (selectedNav === "Show All") return 15;
-        if (selectedNav === "Videos") return 15;
-        if (selectedNav === "Social Media") return 75;
-        return 70; // Default value
-      };
-
-      const maxScroll = contentRef.current
-        ? contentRef?.current?.clientHeight - getScrollOffset() * 16
-        : 0;
-      setScrollPosition((prev) => {
-        const newPosition = prev + deltaY;
-        return Math.max(0, Math.min(newPosition, maxScroll));
-      });
-    },
-    [selectedNav]
-  );
-
   // Handle wheel scrolling
   useEffect(() => {
     if (!isAnimate) return;
@@ -43,14 +23,16 @@ const Projects = () => {
     const initialScrollY = window.scrollY;
 
     const handleWheel = (e) => {
-      e.preventDefault();
-      handleScrolling(e.deltaY * 0.5); // Adjust multiplier for speed
-      window.scrollTo(0, initialScrollY);
+      if (contentRef.current.scrollHeight > contentRef.current.clientHeight) {
+        // Allow default scrolling if content is scrollable
+        e.preventDefault();
+        window.scrollTo(0, initialScrollY);
+      }
     };
 
     window.addEventListener("wheel", handleWheel, { passive: false });
     return () => window.removeEventListener("wheel", handleWheel);
-  }, [isAnimate, handleScrolling]);
+  }, [isAnimate]);
 
   // Handle touch/drag scrolling
   const handleTouchStart = (e) => {
@@ -63,7 +45,6 @@ const Projects = () => {
     if (!isDragging || !isAnimate) return;
     const currentY = e.touches ? e.touches[0].clientY : e.clientY;
     const deltaY = startY - currentY;
-    handleScrolling(deltaY * 0.5);
     setStartY(currentY);
   };
 

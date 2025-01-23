@@ -16,15 +16,25 @@ const Projects = () => {
 
   useHash({ setIsAnimate });
 
-  const handleScrolling = useCallback((deltaY) => {
-    const maxScroll = contentRef.current
-      ? contentRef?.current?.clientHeight
-      : 0;
-    setScrollPosition((prev) => {
-      const newPosition = prev + deltaY;
-      return Math.max(0, Math.min(newPosition, maxScroll));
-    });
-  }, []);
+  const handleScrolling = useCallback(
+    (deltaY) => {
+      const getScrollOffset = () => {
+        if (selectedNav === "Show All") return 10;
+        if (selectedNav === "Videos") return 60;
+        if (selectedNav === "Social Media") return 70;
+        return 70; // Default value
+      };
+
+      const maxScroll = contentRef.current
+        ? contentRef?.current?.clientHeight - getScrollOffset() * 16
+        : 0;
+      setScrollPosition((prev) => {
+        const newPosition = prev + deltaY;
+        return Math.max(0, Math.min(newPosition, maxScroll));
+      });
+    },
+    [selectedNav]
+  );
 
   // Handle wheel scrolling
   useEffect(() => {

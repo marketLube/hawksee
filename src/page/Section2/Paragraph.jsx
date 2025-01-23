@@ -78,7 +78,7 @@ export const Paragraph = () => {
           </Parallax>
         </div>
       </section> */}
-      <section>
+      <section id="about">
         <div className="paragraph">
           <div className="paragraph__imageDiv" ref={ref}>
             <img

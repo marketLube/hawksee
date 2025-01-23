@@ -41,7 +41,7 @@ export const Bird = ({ isNavScrolling }) => {
         setHasScrolled(true);
         const targetHeight =
           window.innerWidth <= 1199.98
-            ? window.innerHeight * 1.3
+            ? window.innerHeight * 2
             : window.innerHeight * 3.3;
 
         if (isNavScrolling === null) {
@@ -76,7 +76,7 @@ export const Bird = ({ isNavScrolling }) => {
         birdRect.bottom >= 0 &&
         currentScrollTop <=
           (window.innerWidth <= 1199.98
-            ? window.innerHeight
+            ? window.innerHeight * 2
             : window.innerHeight * 3);
 
       if (currentScrollTop < lastScrollTop && isInBirdSection) {

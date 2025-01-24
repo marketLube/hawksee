@@ -771,22 +771,27 @@ a {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .get-in-touch {
-    min-height: 50vh;
+    height: 50vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch {
-    min-height: 40vh;
+    height: 45vh !important;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch {
-    min-height: 40vh;
+    height: 60vh !important;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch {
-    min-height: 40vh !important;
+    height: 75vh !important;
+  }
+}
+@media (max-width: 399px) {
+  .get-in-touch {
+    height: 85vh !important;
   }
 }
 .get-in-touch__container {

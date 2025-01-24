@@ -7,17 +7,21 @@
   display: flex;
   position: relative;
   flex-direction: column;
+
   @include responsive.respond(bigTablets) {
-    min-height: 50vh;
+    height: 50vh !important;
   }
   @include responsive.respond(tablets) {
-    min-height: 40vh;
+    height: 45vh !important;
   }
   @include responsive.respond(phone) {
-    min-height: 40vh;
+    height: 60vh !important;
   }
   @include responsive.respond(smallPhone) {
-    min-height: 40vh !important;
+    height: 75vh !important;
+  }
+  @media (max-width: 399px) {
+    height: 85vh !important;
   }
 
   &__container {

@@ -10,6 +10,7 @@ import { Grid } from "./page/Section7/Grid";
 import { MeetTheTeam } from "./page/Section8/MeetTheTeam";
 import { GetInTouch } from "./page/Section9/GetInTouch";
 import Projects from "./page/Projects/Projects";
+import Service from "./page/Service/service";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = React.useState(null);
@@ -27,6 +28,7 @@ function App() {
           setIsNavScrolling={setIsNavScrolling}
         />
         <Paragraph />
+        {/* <Service /> */}
         <Projects />
         <Counter />
         <DoubleLineReels />

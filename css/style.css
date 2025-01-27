@@ -2997,6 +2997,7 @@ a {
   transform: translateY(20px);
   transition: all 0.5s ease-in-out;
   visibility: hidden;
+  display: none;
 }
 
 .fade-in-image {

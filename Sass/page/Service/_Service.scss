@@ -1,3 +1,9 @@
+.scroll-container {
+  height: 340vh;
+  width: 100%;
+  background-color: #ffffff;
+}
+
 .serviceMain {
   height: 100vh;
   display: flex;
@@ -9,7 +15,7 @@
   gap: 2rem;
   z-index: 100000000;
   position: sticky;
-  // top: 0;
+  top: -1px;
 
   &__image-container {
     flex: 1;
@@ -47,6 +53,15 @@
     font-size: 3rem;
   }
 
+  &__main-subtitle,
+  &__main-subtitle-fade,
+  &__main-title,
+  &__main-title-fade,
+  &__description,
+  &__description-fade {
+    transition: all 0.3s ease-in-out;
+  }
+
   &__main-subtitle {
     font-size: 0.9rem;
     letter-spacing: 3px;
@@ -57,7 +72,7 @@
   &__main-title {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #ccc; // Opposite color of #333
+    color: #ccc;
     font-weight: 400;
     line-height: 1.2;
   }
@@ -65,15 +80,59 @@
   &__description {
     font-size: 1rem;
     margin-bottom: 20px;
-    color: #ccc; // Opposite color of #333
+    color: #ccc;
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
   }
 
   &__key-statement,
   &__additional-statement {
     font-size: 1.5rem;
-    color: #ccc; // Opposite color of gray
+    color: #ccc;
     margin: 5px 0;
     opacity: 0.8;
+  }
+
+  &__main-subtitle-fade {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    font-weight: 200;
+    color: #ccc;
+    opacity: 0.4;
+  }
+
+  &__main-title-fade {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-weight: 400;
+    line-height: 1.2;
+    opacity: 0.4;
+  }
+
+  &__description-fade {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ccc;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    // display: none;
+  }
+}
+
+.fade-in-image {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

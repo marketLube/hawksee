@@ -2893,6 +2893,12 @@ a {
   transition: opacity 0.5s ease-in-out;
 }
 
+.scroll-container {
+  height: 340vh;
+  width: 100%;
+  background-color: #ffffff;
+}
+
 .serviceMain {
   height: 100vh;
   display: flex;
@@ -2904,6 +2910,7 @@ a {
   gap: 2rem;
   z-index: 100000000;
   position: sticky;
+  top: -1px;
 }
 .serviceMain__image-container {
   flex: 1;
@@ -2937,6 +2944,9 @@ a {
   margin-bottom: 2rem;
   font-size: 3rem;
 }
+.serviceMain__main-subtitle, .serviceMain__main-subtitle-fade, .serviceMain__main-title, .serviceMain__main-title-fade, .serviceMain__description, .serviceMain__description-fade {
+  transition: all 0.3s ease-in-out;
+}
 .serviceMain__main-subtitle {
   font-size: 0.9rem;
   letter-spacing: 3px;
@@ -2954,6 +2964,9 @@ a {
   font-size: 1rem;
   margin-bottom: 20px;
   color: #ccc;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 .serviceMain__key-statement, .serviceMain__additional-statement {
   font-size: 1.5rem;
@@ -2961,7 +2974,43 @@ a {
   margin: 5px 0;
   opacity: 0.8;
 }
+.serviceMain__main-subtitle-fade {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  font-weight: 200;
+  color: #ccc;
+  opacity: 0.4;
+}
+.serviceMain__main-title-fade {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ccc;
+  font-weight: 400;
+  line-height: 1.2;
+  opacity: 0.4;
+}
+.serviceMain__description-fade {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+}
 
+.fade-in-image {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.5s forwards;

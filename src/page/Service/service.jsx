@@ -1,4 +1,17 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+
+const ImageComponent = ({ src, isActive }) => (
+  <div
+    className="serviceMain__image-wrapper"
+    style={{ display: isActive ? "block" : "none" }}
+  >
+    <img
+      src={src}
+      alt="IMGS"
+      style={{ animation: "blinker 1s linear infinite" }}
+    />
+  </div>
+);
 
 const Service = () => {
   const contentArray = [
@@ -28,27 +41,71 @@ const Service = () => {
     "https://cdn.prod.website-files.com/66b0a2749f8ac3c146b191c2/66b0b02ee9974feab54aa9b4_unsplash_R-6HkET2pTU.png",
   ];
 
+  const scrollContainerRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollContainer = scrollContainerRef.current;
+      const scrollPosition = window.scrollY;
+      const containerTop = scrollContainer.offsetTop;
+      const sectionHeight = window.innerHeight;
+      const relativeScroll = scrollPosition - containerTop;
+      const newIndex = Math.floor(relativeScroll / sectionHeight);
+
+      if (newIndex >= 0 && newIndex < contentArray.length) {
+        setActiveIndex(newIndex);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [contentArray.length, activeIndex]);
+
   return (
-    <div className="serviceMain">
-      {/* <div> */}
-      <div className="serviceMain__image-container">
-        <div className="serviceMain__image-wrapper">
-          <img
-            src="https://cdn.prod.website-files.com/66b0a2749f8ac3c146b191c2/66b0b02ee9974feab54aa9b4_unsplash_R-6HkET2pTU.png"
-            alt="IMGS"
-          />
+    <div className="scroll-container" ref={scrollContainerRef}>
+      <div className="serviceMain">
+        <div className="serviceMain__image-container">
+          {images.map((image, index) => (
+            <ImageComponent
+              key={index}
+              src={image}
+              isActive={index === activeIndex}
+            />
+          ))}
+        </div>
+        <div className="serviceMain__text-container">
+          {contentArray.map((content, index) => (
+            <div
+              className="serviceMain__content-item"
+              key={index}
+              style={{ opacity: index === activeIndex ? 1 : 0.4 }}
+            >
+              <h4
+                className={`serviceMain__main-subtitle${
+                  index === activeIndex ? "" : "-fade"
+                }`}
+              >
+                {content.subtitle}
+              </h4>
+              <h1
+                className={`serviceMain__main-title${
+                  index === activeIndex ? "" : "-fade"
+                }`}
+              >
+                {content.title}
+              </h1>
+              <p
+                className={`serviceMain__description${
+                  index === activeIndex ? "" : "-fade"
+                }`}
+              >
+                {content.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="serviceMain__text-container">
-        {contentArray.map((content, index) => (
-          <div className="serviceMain__content-item" key={index}>
-            <h4 className="serviceMain__main-subtitle">{content.subtitle}</h4>
-            <h1 className="serviceMain__main-title">{content.title}</h1>
-            <p className="serviceMain__description">{content.description}</p>
-          </div>
-        ))}
-      </div>
-      {/* </div> */}
     </div>
   );
 };

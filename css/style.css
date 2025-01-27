@@ -2924,7 +2924,7 @@ a {
   overflow-y: auto;
   height: 100%;
   gap: 1rem;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 .serviceMain__image-container img {
   width: 100%;
@@ -2943,6 +2943,7 @@ a {
 .serviceMain__content-item {
   margin-bottom: 2rem;
   font-size: 3rem;
+  position: relative;
 }
 .serviceMain__main-subtitle, .serviceMain__main-subtitle-fade, .serviceMain__main-title, .serviceMain__main-title-fade, .serviceMain__description, .serviceMain__description-fade {
   transition: all 0.3s ease-in-out;
@@ -2964,7 +2965,6 @@ a {
   font-size: 1rem;
   margin-bottom: 20px;
   color: #ccc;
-  transform: translateY(0);
   opacity: 1;
   transition: all 0.5s ease-in-out;
 }
@@ -2994,10 +2994,10 @@ a {
   margin-bottom: 20px;
   color: #ccc;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease-in-out;
   visibility: hidden;
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .fade-in-image {

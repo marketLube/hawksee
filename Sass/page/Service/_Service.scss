@@ -29,7 +29,7 @@
       overflow-y: auto;
       height: 100%;
       gap: 1rem;
-      transition: opacity 0.5s ease-in-out;
+      transition: opacity 2s ease-in-out;
     }
 
     img {
@@ -51,6 +51,7 @@
   &__content-item {
     margin-bottom: 2rem;
     font-size: 3rem;
+    position: relative;
   }
 
   &__main-subtitle,
@@ -81,7 +82,6 @@
     font-size: 1rem;
     margin-bottom: 20px;
     color: #ccc;
-    transform: translateY(0);
     opacity: 1;
     transition: all 0.5s ease-in-out;
   }
@@ -116,10 +116,11 @@
     margin-bottom: 20px;
     color: #ccc;
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
+
     visibility: hidden;
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 

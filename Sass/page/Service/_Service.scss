@@ -49,9 +49,11 @@
     justify-content: center;
   }
   &__content-item {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 3rem;
     position: relative;
+    opacity: 1;
+    overflow: hidden;
   }
 
   &__main-subtitle,
@@ -60,7 +62,6 @@
   &__main-title-fade,
   &__description,
   &__description-fade {
-    transition: all 0.3s ease-in-out;
   }
 
   &__main-subtitle {
@@ -80,7 +81,7 @@
 
   &__description {
     font-size: 1rem;
-    margin-bottom: 20px;
+
     color: #ccc;
     opacity: 1;
     transition: all 0.5s ease-in-out;
@@ -113,14 +114,11 @@
 
   &__description-fade {
     font-size: 1rem;
-    margin-bottom: 20px;
     color: #ccc;
-    opacity: 0;
-
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   }
 }
 
@@ -144,6 +142,32 @@
 
 @keyframes fadeIn {
   to {
+    opacity: 1;
+  }
+}
+
+.serviceMain__description-fade {
+  opacity: 1;
+  transform: translateY(0);
+  overflow: visible;
+}
+.serviceMain__content-item-active {
+  // opacity: 1;
+  // transform: translateY(-200px);
+  // overflow: visible;
+}
+.blinking-effect img {
+  animation: blink 0.4s linear;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
     opacity: 1;
   }
 }

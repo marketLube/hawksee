@@ -1,19 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const ImageComponent = ({ src, isActive }) => (
+const ImageComponent = ({ src, isActive, animationClass }) => (
   <div
-    className="serviceMain__image-wrapper"
+    className={`serviceMain__image-wrapper ${isActive ? animationClass : ""}`}
     style={{ display: isActive ? "block" : "none" }}
   >
-    <img
-      src={src}
-      alt="IMGS"
-      style={{ animation: "blinker 1s linear infinite" }}
-    />
+    <img src={src} alt="IMGS" />
   </div>
 );
 
 const Service = () => {
+  const [animationClass, setAnimationClass] = useState("");
   const contentArray = [
     {
       title: "Save the Environment",
@@ -62,6 +59,17 @@ const Service = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [contentArray.length, activeIndex]);
 
+  useEffect(() => {
+    // Add animation class when activeIndex changes
+    setAnimationClass("blinking-effect");
+
+    // Remove animation class after animation duration
+    const timer = setTimeout(() => {
+      setAnimationClass("");
+    }, 1000); // Matches the animation duration (1s)
+
+    return () => clearTimeout(timer);
+  }, [activeIndex]);
   return (
     <div className="scroll-container" ref={scrollContainerRef}>
       <div className="serviceMain">
@@ -71,15 +79,17 @@ const Service = () => {
               key={index}
               src={image}
               isActive={index === activeIndex}
+              animationClass={animationClass}
             />
           ))}
         </div>
         <div className="serviceMain__text-container">
           {contentArray.map((content, index) => (
             <div
-              className="serviceMain__content-item"
+              className={`serviceMain__content-item ${
+                index === activeIndex ? "serviceMain__content-item-active" : ""
+              } ${index === 0 ? "serviceMain__content-item-fixed" : ""}`}
               key={index}
-              style={{ opacity: index === activeIndex ? 1 : 0.4 }}
             >
               <h4
                 className={`serviceMain__main-subtitle${

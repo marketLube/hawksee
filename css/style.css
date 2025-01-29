@@ -505,6 +505,11 @@ a {
   overflow-y: hidden;
   position: relative;
 }
+@media only screen and (max-width: 575.98px) {
+  .paragraph {
+    margin-bottom: -10rem;
+  }
+}
 .paragraph__imageDiv__image1 {
   width: 350px;
   height: 350px;
@@ -2905,6 +2910,7 @@ a {
   height: 350vh;
   width: 100%;
   background-color: #ffffff;
+  margin-top: -29rem;
 }
 
 .serviceMain {

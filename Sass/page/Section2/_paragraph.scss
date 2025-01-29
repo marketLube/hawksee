@@ -11,6 +11,10 @@
   overflow-y: hidden;
   position: relative;
 
+  @include responsive.respond(smallPhone) {
+    margin-bottom: -10rem;
+  }
+
   &__imageDiv {
     &__image1 {
       width: 350px;

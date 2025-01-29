@@ -1,5 +1,7 @@
+@use "../../base/responsive" as responsive;
+
 .scroll-container {
-  height: 340vh;
+  height: 330vh;
   width: 100%;
   background-color: #ffffff;
 }
@@ -16,6 +18,21 @@
   z-index: 100000000;
   position: sticky;
   top: -1px;
+
+  @include responsive.respond(bigDesktop) {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
+  @include responsive.respond(desktop) {
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
+
+  @include responsive.respond(bigTablets) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 
   &__image-container {
     flex: 1;
@@ -47,21 +64,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include responsive.respond(bigDesktop) {
+    }
+
+    @include responsive.respond(desktop) {
+    }
+
+    @include responsive.respond(bigTablets) {
+    }
   }
   &__content-item {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
     position: relative;
     opacity: 1;
     overflow: hidden;
-  }
-
-  &__main-subtitle,
-  &__main-subtitle-fade,
-  &__main-title,
-  &__main-title-fade,
-  &__description,
-  &__description-fade {
+    background-color: black;
   }
 
   &__main-subtitle {
@@ -69,6 +88,18 @@
     letter-spacing: 3px;
     font-weight: 200;
     color: #ccc;
+
+    @include responsive.respond(bigDesktop) {
+      font-size: 0.85rem;
+    }
+
+    @include responsive.respond(desktop) {
+      font-size: 0.8rem;
+    }
+
+    @include responsive.respond(bigTablets) {
+      font-size: 0.75rem;
+    }
   }
 
   &__main-title {
@@ -77,14 +108,33 @@
     color: #ccc;
     font-weight: 400;
     line-height: 1.2;
+    @include responsive.respond(bigDesktop) {
+      font-size: 2.4rem;
+    }
+    @include responsive.respond(desktop) {
+      font-size: 1.5rem;
+    }
+    @include responsive.respond(bigTablets) {
+      font-size: 1rem;
+    }
   }
 
   &__description {
     font-size: 1rem;
-
     color: #ccc;
     opacity: 1;
     transition: all 0.5s ease-in-out;
+    @include responsive.respond(bigDesktop) {
+      font-size: 1rem;
+    }
+
+    @include responsive.respond(desktop) {
+      font-size: 1rem;
+    }
+
+    @include responsive.respond(bigTablets) {
+      font-size: 1rem;
+    }
   }
 
   &__key-statement,
@@ -110,15 +160,22 @@
     font-weight: 400;
     line-height: 1.2;
     opacity: 0.4;
+
+    @include responsive.respond(bigDesktop) {
+      font-size: 2.4rem;
+    }
+    @include responsive.respond(desktop) {
+      font-size: 1.5rem;
+    }
+    @include responsive.respond(bigTablets) {
+      font-size: 1rem;
+    }
   }
 
   &__description-fade {
     font-size: 1rem;
     color: #ccc;
-    height: 0;
-    overflow: hidden;
-    transform: translateY(20px);
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
   }
 }
 
@@ -146,27 +203,15 @@
   }
 }
 
-.serviceMain__description-fade {
-  opacity: 1;
-  transform: translateY(0);
-  overflow: visible;
-}
-.serviceMain__content-item-active {
-  // opacity: 1;
-  // transform: translateY(-200px);
-  // overflow: visible;
-}
 .blinking-effect img {
   animation: blink 0.4s linear;
 }
 
 @keyframes blink {
   0% {
-    opacity: 1;
+    opacity: 0.5;
   }
-  50% {
-    opacity: 0.7;
-  }
+
   100% {
     opacity: 1;
   }

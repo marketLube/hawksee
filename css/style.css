@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -2894,7 +2895,7 @@ a {
 }
 
 .scroll-container {
-  height: 340vh;
+  height: 330vh;
   width: 100%;
   background-color: #ffffff;
 }
@@ -2911,6 +2912,24 @@ a {
   z-index: 100000000;
   position: sticky;
   top: -1px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .serviceMain {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .serviceMain {
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .serviceMain {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 .serviceMain__image-container {
   flex: 1;
@@ -2941,17 +2960,33 @@ a {
   justify-content: center;
 }
 .serviceMain__content-item {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   font-size: 3rem;
   position: relative;
   opacity: 1;
   overflow: hidden;
+  background-color: black;
 }
 .serviceMain__main-subtitle {
   font-size: 0.9rem;
   letter-spacing: 3px;
   font-weight: 200;
   color: #ccc;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .serviceMain__main-subtitle {
+    font-size: 0.85rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .serviceMain__main-subtitle {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .serviceMain__main-subtitle {
+    font-size: 0.75rem;
+  }
 }
 .serviceMain__main-title {
   font-size: 2.5rem;
@@ -2960,11 +2995,41 @@ a {
   font-weight: 400;
   line-height: 1.2;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .serviceMain__main-title {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .serviceMain__main-title {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .serviceMain__main-title {
+    font-size: 1rem;
+  }
+}
 .serviceMain__description {
   font-size: 1rem;
   color: #ccc;
   opacity: 1;
   transition: all 0.5s ease-in-out;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .serviceMain__description {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .serviceMain__description {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .serviceMain__description {
+    font-size: 1rem;
+  }
 }
 .serviceMain__key-statement, .serviceMain__additional-statement {
   font-size: 1.5rem;
@@ -2987,13 +3052,25 @@ a {
   line-height: 1.2;
   opacity: 0.4;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .serviceMain__main-title-fade {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .serviceMain__main-title-fade {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .serviceMain__main-title-fade {
+    font-size: 1rem;
+  }
+}
 .serviceMain__description-fade {
   font-size: 1rem;
   color: #ccc;
-  height: 0;
-  overflow: hidden;
-  transform: translateY(20px);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0;
 }
 
 .fade-in-image {
@@ -3018,22 +3095,13 @@ a {
     opacity: 1;
   }
 }
-.serviceMain__description-fade {
-  opacity: 1;
-  transform: translateY(0);
-  overflow: visible;
-}
-
 .blinking-effect img {
   animation: blink 0.4s linear;
 }
 
 @keyframes blink {
   0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;

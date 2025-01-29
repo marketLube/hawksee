@@ -2,8 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 
 const ImageComponent = ({ src, isActive, animationClass }) => (
   <div
-    className={`serviceMain__image-wrapper ${isActive ? animationClass : ""}`}
-    style={{ display: isActive ? "block" : "none" }}
+    className={`serviceMain__image-wrapper`}
+    style={{
+      display: isActive ? "block" : "none",
+      animation: isActive ? "blink 0.6s ease-in-out forwards" : "none",
+    }}
   >
     <img src={src} alt="IMGS" />
   </div>
@@ -60,16 +63,15 @@ const Service = () => {
   }, [contentArray.length, activeIndex]);
 
   useEffect(() => {
-    // Add animation class when activeIndex changes
     setAnimationClass("blinking-effect");
 
-    // Remove animation class after animation duration
     const timer = setTimeout(() => {
       setAnimationClass("");
-    }, 1000); // Matches the animation duration (1s)
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [activeIndex]);
+
   return (
     <div className="scroll-container" ref={scrollContainerRef}>
       <div className="serviceMain">
@@ -90,6 +92,21 @@ const Service = () => {
                 index === activeIndex ? "serviceMain__content-item-active" : ""
               } ${index === 0 ? "serviceMain__content-item-fixed" : ""}`}
               key={index}
+              style={
+                index === activeIndex && index !== 0
+                  ? {
+                      opacity: 1,
+                      marginTop: index === 2 ? "-5rem" : "0",
+                    }
+                  : index === 1 && activeIndex === 2
+                  ? {
+                      transform: "translateY(0rem)",
+                    }
+                  : {
+                      transform: "translateY(5rem)",
+                      marginTop: index === 2 ? "-5rem" : "0",
+                    }
+              }
             >
               <h4
                 className={`serviceMain__main-subtitle${

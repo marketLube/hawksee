@@ -2,8 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 body {
   font-family: "Inter", serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }

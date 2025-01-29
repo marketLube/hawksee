@@ -23,7 +23,7 @@
   overflow: hidden;
   background-color: rgb(0, 0, 0);
   width: 100%;
-  height: 180vh;
+  height: fit-content;
   padding-top: 3rem;
 
   @include responsive.respond(smallPhone) {
@@ -44,7 +44,7 @@
   @include responsive.respond(tablets) {
     height: fit-content;
   }
-  @include responsive.respond(bigTablets) {
+  @include responsive.respond(tablets) {
     height: fit-content;
   }
 
@@ -75,6 +75,21 @@
     }
   }
 
+  &-text {
+    width: 100%;
+    transition: all 1s ease;
+    margin-left: auto;
+    overflow: hidden;
+
+    &-text.animate {
+      transform: translateY(10rem);
+    }
+
+    & div {
+      transition: transform 0.5s ease-out;
+    }
+  }
+
   &-rot {
     transform: skew(0.02turn, -5deg);
     padding-top: 7rem;
@@ -98,7 +113,7 @@
   display: flex;
   gap: 1rem;
   width: calc(200% + 3rem);
-  animation: slideLeft 30s linear infinite;
+  animation: slideRight 30s linear infinite;
 
   &:hover {
     animation-play-state: paused;
@@ -114,39 +129,39 @@
 
 .logo-slide img {
   flex: 0 0 auto;
-  height: 23rem;
+  height: 19rem;
   width: 19rem;
   object-fit: cover;
   border-radius: 5px;
   transition: transform 0.3s ease-in-out;
 
   @include responsive.respond(smallPhone) {
-    height: 15rem;
+    height: 12rem;
     width: 12rem;
   }
 
   @include responsive.respond(phone) {
-    height: 18rem;
+    height: 15rem;
     width: 15rem;
   }
 
   @include responsive.respond(tablets) {
-    height: 20rem;
+    height: 16rem;
     width: 16rem;
   }
 
   @include responsive.respond(bigTablets) {
-    height: 18rem;
+    height: 14rem;
     width: 14rem;
   }
 
   @include responsive.respond(desktop) {
-    height: 16rem;
+    height: 13rem;
     width: 13rem;
   }
 
   @include responsive.respond(bigDesktop) {
-    height: 20rem;
+    height: 16rem;
     width: 16rem;
   }
 
@@ -207,5 +222,68 @@
     margin-top: auto;
 
     padding: 12rem;
+  }
+}
+
+.doubleline-slide {
+  display: flex;
+  gap: 1rem;
+
+  @include responsive.respond(tablets) {
+    width: 100%;
+    height: fit-content;
+  }
+  @include responsive.respond(phone) {
+    width: 100%;
+    height: fit-content;
+  }
+  @include responsive.respond(smallPhone) {
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+.doubleline-slide video {
+  flex: 0 0 auto;
+  width: 20rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+  border: 2px solid black;
+  object-fit: cover;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @include responsive.respond(bigTablets) {
+    width: 16rem;
+  }
+  @include responsive.respond(tablets) {
+    width: 16rem;
+  }
+  @include responsive.respond(phone) {
+    width: 15rem;
+    margin: 0.5rem;
+  }
+  @include responsive.respond(smallPhone) {
+    width: 15rem;
+    margin: 0.3rem;
+  }
+}
+.swiper {
+  width: 100% !important;
+}
+.slider-item {
+  animation: slideLinear 30s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes slideLinear {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust based on the number of items */
   }
 }

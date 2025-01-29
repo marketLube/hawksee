@@ -41,31 +41,25 @@
 
   &-hawlogo {
     width: 280px;
-    margin-top: -2rem;
+    height: 4rem;
     @include responsive.respond(bigDesktop) {
       width: 280px;
-      margin-top: -2rem;
     }
     @include responsive.respond(desktop) {
       width: 280px;
-      margin-top: -2rem;
     }
     @include responsive.respond(bigTablets) {
       width: 240px;
-      margin-top: -1.5rem;
     }
     @include responsive.respond(tablets) {
       width: 220px;
-      margin-top: -1.2rem;
     }
     @include responsive.respond(phone) {
       width: 200px;
-      margin-top: -0.5rem;
     }
 
     @include responsive.respond(smallPhone) {
       width: 200px;
-      margin-top: -0.5rem;
     }
   }
 
@@ -73,9 +67,14 @@
     display: flex;
     justify-content: space-around;
     gap: 4rem;
+
+    height: 4rem;
     text-decoration: none;
     list-style: none;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include responsive.respond(bigDesktop) {
       gap: 3.5rem;
     }
@@ -100,14 +99,15 @@
       display: none;
     }
 
-    li {
+    li,
+    a {
       font-size: 1.2rem;
-      font-weight: 600;
+      font-weight: 400;
       color: black;
       cursor: pointer;
       height: fit-content;
       line-height: 1.2;
-
+      text-decoration: none;
       @include responsive.respond(bigDesktop) {
         font-size: 1.1rem;
       }
@@ -222,6 +222,9 @@
   transition: all 0.2s;
   visibility: hidden;
   border-radius: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 .navigation__list {
   cursor: pointer;

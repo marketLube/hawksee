@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BirdImg from "../../assets/birdImg.svg";
 import BirdMobile from "../../assets/birdForMobile.svg";
+import { Link } from "react-router-dom";
 
 export const Bird = ({ isNavScrolling }) => {
   const [offset, setOffset] = useState(0);
@@ -40,7 +41,7 @@ export const Bird = ({ isNavScrolling }) => {
         setHasScrolled(true);
         const targetHeight =
           window.innerWidth <= 1199.98
-            ? window.innerHeight * 1.3
+            ? window.innerHeight * 2
             : window.innerHeight * 3.3;
 
         if (isNavScrolling === null) {
@@ -75,7 +76,7 @@ export const Bird = ({ isNavScrolling }) => {
         birdRect.bottom >= 0 &&
         currentScrollTop <=
           (window.innerWidth <= 1199.98
-            ? window.innerHeight
+            ? window.innerHeight * 2
             : window.innerHeight * 3);
 
       if (currentScrollTop < lastScrollTop && isInBirdSection) {
@@ -102,7 +103,7 @@ export const Bird = ({ isNavScrolling }) => {
 
   const getScaleMultiplier = () => {
     const width = window.innerWidth;
-    if (width <= 575.98) return 0.1; // smallPhone
+    if (width <= 575.98) return 0.5; // smallPhone
     if (width <= 767.98) return 0.05; // phone, reduced scaling
     if (width <= 991.98) return 0.08; // tablets
     if (width <= 1199.98) return 0.015; // bigTablets
@@ -122,6 +123,11 @@ export const Bird = ({ isNavScrolling }) => {
 
   return (
     <section id="bird" className="bird">
+      <div className="caption">
+        <a>
+          <p>Every Brand {windowWidth <= 575.98 && <br />} Needs Hawksee</p>
+        </a>
+      </div>
       <div className="bird-container">
         <img
           className="bird-image"
@@ -134,7 +140,7 @@ export const Bird = ({ isNavScrolling }) => {
               (windowWidth <= 767.98 ? 1.9 : 0.8) +
               offset * getScaleMultiplier()
             })`,
-            transition: "transform 0.6s ease-out",
+            transition: "transform 0s cubic-bezier(.32,.69,.67,.77)",
           }}
         />
       </div>

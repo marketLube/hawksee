@@ -5,10 +5,12 @@ import { Paragraph } from "./page/Section2/Paragraph";
 import { Counter } from "./page/Section3/Counter";
 import { DoubleLineReels } from "./page/Section4/DoubleLineReels";
 import { Research } from "./page/Section5/Research";
-import { RealStories } from "./page/Section6/RealStories";
+
 import { Grid } from "./page/Section7/Grid";
 import { MeetTheTeam } from "./page/Section8/MeetTheTeam";
 import { GetInTouch } from "./page/Section9/GetInTouch";
+import Projects from "./page/Projects/Projects";
+import Service from "./page/Service/service";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = React.useState(null);
@@ -26,10 +28,12 @@ function App() {
           setIsNavScrolling={setIsNavScrolling}
         />
         <Paragraph />
+        <Service />
+        <Projects />
         <Counter />
         <DoubleLineReels />
         <Research />
-        <RealStories />
+        {/* <RealStories /> */}
         <Grid />
         <MeetTheTeam />
       </main>

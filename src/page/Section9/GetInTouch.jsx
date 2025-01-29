@@ -21,7 +21,7 @@ export const GetInTouch = () => {
   };
   return (
     <>
-      <div id="contact" className="get-in-touch">
+      <footer id="contact" className="get-in-touch">
         <div className="get-in-touch__container">
           <h1 className="get-in-touch__title">Get in touch</h1>
 
@@ -50,7 +50,15 @@ export const GetInTouch = () => {
                   Stories
                 </a>
                 <a
-                  style={{ cursor: "pointer" }}
+                  href="https://wa.me/919995000123"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    cursor: "pointer",
+                    backgroundColor: "black",
+                    color: "white",
+                    padding: ".5rem 1rem",
+                  }}
                   onClick={() => scrollToSection("contact")}
                 >
                   Contact
@@ -85,7 +93,7 @@ export const GetInTouch = () => {
                 </p>
 
                 <a href="tel:0495290199" className="get-in-touch__phone">
-                  9995000123
+                  +91 9995000123
                 </a>
               </div>
             </div>
@@ -98,12 +106,12 @@ export const GetInTouch = () => {
                 info@hawksee.in
               </span>
               <span onClick={() => window.open("tel:0495290199")}>
-                0495-290 199
+                +91 9995000123
               </span>
             </div>
           </div>
         </div>
-      </div>
+      </footer>
       <div className="social-media-container">
         <div className="social-media-container__content">
           <a

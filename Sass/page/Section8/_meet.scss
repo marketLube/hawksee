@@ -3,7 +3,7 @@
 
 .meet {
   background-color: variables.$color-primery-light;
-  min-height: 110vh;
+  min-height: 80vh;
   position: relative;
 
   @include responsive.respond(desktop) {
@@ -32,7 +32,7 @@
 
   &-head {
     font-size: 7rem;
-    padding-left: 11.6rem;
+    padding-left: 2rem;
     padding-top: 4rem;
     padding-bottom: 3rem;
 
@@ -122,7 +122,7 @@
 
 .team-member {
   text-align: center;
-  min-height: 30rem;
+  min-height: 20rem;
   width: 100%;
   margin: 0 auto;
   border-radius: 2rem;

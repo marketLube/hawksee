@@ -5,9 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 // import Avatar from "../../assets/60111.jpg";
 
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 export const MeetTheTeam = () => {
   // Add this team members data array
@@ -21,7 +22,7 @@ export const MeetTheTeam = () => {
     },
     {
       id: 2,
-      name: "ARUN",
+      name: "Akhil",
       position: "OPERATION HEAD",
       image:
         "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027276/arunOperationHead_v8acfy.jpg",
@@ -99,11 +100,15 @@ export const MeetTheTeam = () => {
       <h1 className="meet-head">Meet the team</h1>
       <div className="swiper-container">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={4}
           spaceBetween={100}
           // freeMode={true}
           pagination={{
             clickable: true,
+          }}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
           }}
           breakpoints={{
             320: {
@@ -127,11 +132,19 @@ export const MeetTheTeam = () => {
               spaceBetween: 50,
             },
             1200: {
-              slidesPerView: 3,
+              slidesPerView: 3.5,
               spaceBetween: 100,
             },
+            1300: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+            1400: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
           }}
-          modules={[FreeMode, Pagination]}
+          modules={[FreeMode, Autoplay]}
           className="mySwiper"
         >
           {teamMembers.map((member) => (

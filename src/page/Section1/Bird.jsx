@@ -140,7 +140,7 @@ export const Bird = ({ isNavScrolling }) => {
               (windowWidth <= 767.98 ? 1.9 : 0.8) +
               offset * getScaleMultiplier()
             })`,
-            transition: "transform 0.6s ease-out",
+            transition: "transform 0s cubic-bezier(.32,.69,.67,.77)",
           }}
         />
       </div>

@@ -33,6 +33,11 @@ const Service = () => {
       description:
         "Simply stated, electric cars are fun to drive–with quick acceleration and enviable performance. Unlike gas-powered cars, electric motors produce peak torque from a standstill, without the buildup gasoline engines require to reach maximum power.",
     },
+    // {
+    //   title: "",
+    //   subtitle: "",
+    //   description: "",
+    // },
   ];
 
   const images = [
@@ -87,50 +92,57 @@ const Service = () => {
         </div>
         <div className="serviceMain__text-container">
           {contentArray.map((content, index) => (
-            <div
-              className={`serviceMain__content-item ${
-                index === activeIndex ? "serviceMain__content-item-active" : ""
-              } ${index === 0 ? "serviceMain__content-item-fixed" : ""}`}
-              key={index}
-              style={
-                index === activeIndex && index !== 0
-                  ? {
-                      opacity: 1,
-                      marginTop: index === 2 ? "-5rem" : "0",
-                    }
-                  : index === 1 && activeIndex === 2
-                  ? {
-                      transform: "translateY(0rem)",
-                    }
-                  : {
-                      transform: "translateY(5rem)",
-                      marginTop: index === 2 ? "-5rem" : "0",
-                    }
-              }
-            >
-              <h4
-                className={`serviceMain__main-subtitle${
-                  index === activeIndex ? "" : "-fade"
-                }`}
+            <>
+              <div
+                className={`serviceMain__content-item ${
+                  index === activeIndex
+                    ? "serviceMain__content-item-active"
+                    : ""
+                } ${index === 0 ? "serviceMain__content-item-fixed" : ""}`}
+                key={index}
+                style={
+                  index === activeIndex && index !== 0
+                    ? {
+                        opacity: 1,
+                        marginTop:
+                          index === 2 ? "-8rem" : index === 3 ? "-11rem" : "0",
+                      }
+                    : index === 1 && activeIndex === 2
+                    ? {
+                        transform: "translateY(0rem)",
+                      }
+                    : {
+                        transform: "translateY(8rem)",
+                        marginTop:
+                          index === 2 ? "-8rem" : index === 3 ? "-11rem" : "0",
+                      }
+                }
               >
-                {content.subtitle}
-              </h4>
-              <h1
-                className={`serviceMain__main-title${
-                  index === activeIndex ? "" : "-fade"
-                }`}
-              >
-                {content.title}
-              </h1>
-              <p
-                className={`serviceMain__description${
-                  index === activeIndex ? "" : "-fade"
-                }`}
-              >
-                {content.description}
-              </p>
-            </div>
+                <h4
+                  className={`serviceMain__main-subtitle${
+                    index === activeIndex ? "" : "-fade"
+                  }`}
+                >
+                  {content.subtitle}
+                </h4>
+                <h1
+                  className={`serviceMain__main-title${
+                    index === activeIndex ? "" : "-fade"
+                  }`}
+                >
+                  {content.title}
+                </h1>
+                <p
+                  className={`serviceMain__description${
+                    index === activeIndex ? "" : "-fade"
+                  }`}
+                >
+                  {content.description}
+                </p>
+              </div>
+            </>
           ))}
+          <div className="serviceMain__content-item-button"></div>
         </div>
       </div>
     </div>

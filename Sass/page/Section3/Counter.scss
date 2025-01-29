@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 2rem;
-
+  margin-top: -10rem;
   @include responsive.respond(bigDesktop) {
     height: 100vh;
   }
@@ -49,7 +49,6 @@
 
 .title-container {
   text-align: center;
-  padding-top: 4rem;
 }
 
 .counterup {

@@ -1,5 +1,6 @@
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 export const Paragraph = () => {
   const ref = useRef(null);
@@ -52,7 +53,6 @@ export const Paragraph = () => {
           />
         </div>
         <div className="paragraph__textDiv">
-          {/* <Parallax speed={0} style={{ color: "white", opacity: 1 }}> */}
           <div
             style={
               isInView
@@ -67,7 +67,6 @@ export const Paragraph = () => {
             Needs, and the Gap. <br />
             Then, We Act to <strong>Show</strong> Results.
           </div>
-          {/* </Parallax> */}
         </div>
       </div>
     </section>

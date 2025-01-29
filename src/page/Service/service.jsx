@@ -73,7 +73,7 @@ const Service = () => {
   }, [activeIndex]);
 
   return (
-    <div className="scroll-container" ref={scrollContainerRef}>
+    <div className="scroll-container" ref={scrollContainerRef} id="service">
       <div className="serviceMain">
         <div className="serviceMain__image-container">
           {images.map((image, index) => (

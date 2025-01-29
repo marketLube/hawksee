@@ -186,6 +186,10 @@
   }
 }
 
+.no-transition {
+  transition: none !important;
+}
+
 // .sectionPara {
 //   position: relative;
 //   height: 100vh;

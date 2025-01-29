@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -409,7 +410,7 @@ a {
 }
 
 .logo-grid {
-  background-color: black;
+  background-color: black !important;
   padding: 40px;
   position: relative;
   padding-top: 10rem;
@@ -720,6 +721,10 @@ a {
     padding: 0rem;
     min-width: 1800px;
   }
+}
+
+.no-transition {
+  transition: none !important;
 }
 
 @keyframes slide {

@@ -7,8 +7,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  overflow-y: hidden;
+  overflow: hidden;
+  position: relative;
 
   &__imageDiv {
     &__image1 {
@@ -16,7 +16,7 @@
       height: 350px;
       object-fit: cover;
       opacity: 0.5;
-      transition: transform 1s ease;
+      transition: all 1s ease;
 
       @include responsive.respond(smallPhone) {
         width: 120px;
@@ -124,12 +124,14 @@
       }
     }
   }
+
   &__textDiv {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    background-color: transparent;
     text-align: center;
     z-index: 10;
     font-weight: 200;
@@ -137,6 +139,10 @@
     font-size: 2.5rem;
     line-height: 70px;
     min-width: fit-content;
+
+    & div {
+      transition: all 1s ease;
+    }
 
     @include responsive.respond(smallPhone) {
       font-size: 1.4rem;

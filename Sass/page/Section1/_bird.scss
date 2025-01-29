@@ -15,7 +15,7 @@
   overflow: hidden;
   width: 100vw;
   @include responsive.respond(phone) {
-    height: 200vh;
+    height: 300vh;
   }
 
   @include responsive.respond(smallPhone) {

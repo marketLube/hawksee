@@ -502,15 +502,15 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  overflow-y: hidden;
+  overflow: hidden;
+  position: relative;
 }
 .paragraph__imageDiv__image1 {
   width: 350px;
   height: 350px;
   object-fit: cover;
   opacity: 0.5;
-  transition: transform 1s ease;
+  transition: all 1s ease;
 }
 @media only screen and (max-width: 575.98px) {
   .paragraph__imageDiv__image1 {
@@ -654,10 +654,11 @@ a {
 }
 .paragraph__textDiv {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  background-color: transparent;
   text-align: center;
   z-index: 10;
   font-weight: 200;
@@ -665,6 +666,9 @@ a {
   font-size: 2.5rem;
   line-height: 70px;
   min-width: fit-content;
+}
+.paragraph__textDiv div {
+  transition: all 1s ease;
 }
 @media only screen and (max-width: 575.98px) {
   .paragraph__textDiv {
@@ -1415,7 +1419,7 @@ a {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .bird {
-    height: 200vh;
+    height: 300vh;
   }
 }
 @media only screen and (max-width: 575.98px) {

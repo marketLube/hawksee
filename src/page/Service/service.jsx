@@ -33,11 +33,6 @@ const Service = () => {
       description:
         "Simply stated, electric cars are fun to drive–with quick acceleration and enviable performance. Unlike gas-powered cars, electric motors produce peak torque from a standstill, without the buildup gasoline engines require to reach maximum power.",
     },
-    // {
-    //   title: "",
-    //   subtitle: "",
-    //   description: "",
-    // },
   ];
 
   const images = [

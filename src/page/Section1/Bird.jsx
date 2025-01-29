@@ -151,7 +151,7 @@ export const Bird = ({ isNavScrolling }) => {
             })`,
             transition: `${
               scrollDirection === "up"
-                ? "transform 0s cubic-bezier(.07,.69,.49,.75)"
+                ? "transform .5s cubic-bezier(0,.62,.12,.99)"
                 : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)"
             }`,
           }}

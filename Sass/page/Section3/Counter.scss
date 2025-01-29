@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 2rem;
-  margin-top: -10rem;
+  margin-top: -5rem;
   @include responsive.respond(bigDesktop) {
     height: 100vh;
   }

@@ -5,7 +5,7 @@ const ImageComponent = ({ src, isActive, animationClass }) => (
     className={`serviceMain__image-wrapper`}
     style={{
       display: isActive ? "block" : "none",
-      animation: isActive ? "blink 0.6s ease-in-out forwards" : "none",
+      animation: isActive ? "blink 1s ease-in-out forwards" : "none",
     }}
   >
     <img src={src} alt="IMGS" />

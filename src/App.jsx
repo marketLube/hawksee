@@ -28,7 +28,7 @@ function App() {
           setIsNavScrolling={setIsNavScrolling}
         />
         <Paragraph />
-        {/* <Service /> */}
+        <Service />
         <Projects />
         <Counter />
         <DoubleLineReels />

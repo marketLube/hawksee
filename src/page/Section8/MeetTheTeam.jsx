@@ -18,56 +18,56 @@ export const MeetTheTeam = () => {
       name: "ASHRAF",
       position: "CEO",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/ashrafceo_vup4vc.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987050/ashrafceo_n2bbx0.jpg",
     },
     {
       id: 2,
       name: "Akhil",
       position: "OPERATION HEAD",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027276/arunOperationHead_v8acfy.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987044/arunOperationHead_tncqso.jpg",
     },
     {
       id: 3,
       name: "HIBA",
       position: "PRODUCTION MANAGER",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/hibaProductionManager_gq380p.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987042/hibaProductionManager_skotsv.jpg",
     },
     {
       id: 4,
       name: "SHEETHAL",
       position: "CRM",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/sheethalCrm_kfsuwv.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987041/sheethalCrm_idgo2q.jpg",
     },
     {
       id: 5,
       name: "ARUN",
       position: "CREATIVE HEAD",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/arunCreativeHead_asx7qz.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987045/arunCreativeHead_poywrm.jpg",
     },
     {
       id: 6,
       name: "ASHIQ",
       position: "WEB DEVELOPER",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/ashiqWebdeveloper_m7xdqo.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987069/ashiqWebdeveloper_whdfj4.jpg",
     },
     {
       id: 7,
       name: "SAFNA",
       position: "ACCOUNTS",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/safnaAccounts_g445k3.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987072/safnaAccounts_trhozu.jpg",
     },
     {
       id: 8,
       name: "NIYAS",
       position: "VIDEO EDITOR",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027272/niyasVideoEditor_ympdqh.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987066/niyasVideoEditor_k0ewdb.jpg",
     },
 
     {
@@ -75,7 +75,7 @@ export const MeetTheTeam = () => {
       name: "NIKHIL",
       position: "SR. GRAPHIC DESIGHNER",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/nikhilsrGraphicDesigner_sgjccg.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987044/nikhilsrGraphicDesigner_huq3tr.jpg",
     },
 
     {
@@ -83,7 +83,7 @@ export const MeetTheTeam = () => {
       name: "SHAHAL",
       position: "CONTENT CREATOR",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/shahalContentCreator_cqqbjy.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987045/shahalContentCreator_u8ic7h.jpg",
     },
 
     {
@@ -91,7 +91,7 @@ export const MeetTheTeam = () => {
       name: "SHAHID",
       position: "GRAPHIC DESIGNER",
       image:
-        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737027271/shahidGraphicDesigner_lbzxts.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987042/shahidGraphicDesigner_idecbb.jpg",
     },
   ];
 

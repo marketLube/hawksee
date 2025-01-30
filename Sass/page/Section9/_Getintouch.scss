@@ -2,22 +2,26 @@
 @use "../../base/responsive" as responsive;
 
 .get-in-touch {
-  min-height: 90vh;
+  height: 90vh !important;
   background-color: #f5f5f5;
   display: flex;
   position: relative;
   flex-direction: column;
+
   @include responsive.respond(bigTablets) {
-    min-height: 50vh;
+    height: 50vh !important;
   }
   @include responsive.respond(tablets) {
-    min-height: 40vh;
+    height: 45vh !important;
   }
   @include responsive.respond(phone) {
-    min-height: 40vh;
+    height: 60vh !important;
   }
   @include responsive.respond(smallPhone) {
-    min-height: 40vh !important;
+    height: 75vh !important;
+  }
+  @media (max-width: 399px) {
+    height: 85vh !important;
   }
 
   &__container {
@@ -225,7 +229,7 @@
       padding: 5px 10px;
       border-radius: 1rem;
       width: fit-content;
-      background-color: #d8d8d8;
+      // background-color: #d8d8d8;
 
       @include responsive.respond(tablets) {
         font-size: 1rem;

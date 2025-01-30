@@ -15,19 +15,19 @@
   overflow: hidden;
   width: 100vw;
   @include responsive.respond(phone) {
-    height: 100vh;
+    height: 300vh;
   }
 
   @include responsive.respond(smallPhone) {
-    height: 120vh;
+    height: 200vh;
   }
 
   @include responsive.respond(tablets) {
-    height: 100vh;
+    height: 200vh;
   }
 
   @include responsive.respond(bigTablets) {
-    height: 100vh;
+    height: 200vh;
   }
   &-container {
     width: 100%;
@@ -36,20 +36,23 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    @include responsive.respond(smallPhone) {
+      height: 20vh;
+    }
   }
-  &-container {
-    height: 100vh;
+  // &-container {
+  //   height: 100vh;
 
-    // @include responsive.respond(smallPhone) {
-    //   transform: rotate(32deg);
-    // }
-    // @include responsive.respond(phone) {
-    //   transform: rotate(25deg);
-    // }
-    // @include responsive.respond(tablets) {
-    //   transform: rotate(15deg);
-    // }
-  }
+  //   // @include responsive.respond(smallPhone) {
+  //   //   transform: rotate(32deg);
+  //   // }
+  //   // @include responsive.respond(phone) {
+  //   //   transform: rotate(25deg);
+  //   // }
+  //   // @include responsive.respond(tablets) {
+  //   //   transform: rotate(15deg);
+  //   // }
+  // }
 
   &-image {
     position: relative;
@@ -60,6 +63,20 @@
     top: -8rem;
     right: -60rem;
     bottom: 0;
+    @media screen and (min-width: 768px) and (max-width: 770px) and (max-height: 1024px) {
+      top: -10rem !important; // Adjusted for smaller screens
+      right: -40rem; // Adjusted for smaller screens
+    }
+
+    @media screen and (min-width: 820px) and (max-width: 825px) and (max-height: 1180px) {
+      top: -5rem; // Adjusted for smaller screens
+      right: -40rem; // Adjusted for smaller screens
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
+      top: 20rem !important;
+      right: -30rem !important;
+    }
 
     @include responsive.respond(bigDesktop) {
       top: -15rem;
@@ -71,23 +88,23 @@
     }
 
     @include responsive.respond(bigTablets) {
-      top: 24rem;
+      top: 12rem;
       right: -28rem;
     }
 
     @include responsive.respond(tablets) {
-      top: 20rem;
+      top: -10rem;
       right: -20rem;
     }
 
     @include responsive.respond(phone) {
-      top: 15rem;
+      top: 0rem;
       right: -18rem;
     }
 
     @include responsive.respond(smallPhone) {
-      top: 5rem;
-      right: -10rem;
+      top: 2rem;
+      right: -13rem;
     }
   }
 }
@@ -105,5 +122,16 @@
   & p {
     height: 30%;
     font-size: 3rem;
+
+    @include responsive.respond(phone) {
+      font-size: 2.5rem;
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .caption p {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30%;
   }
 }

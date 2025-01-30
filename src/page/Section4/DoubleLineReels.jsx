@@ -5,22 +5,30 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import ScrollTrigger from "react-scroll-trigger";
+
+import haw from "../../assets/About/hawkgrid.png";
 
 export const DoubleLineReels = () => {
   const images = [
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/cc1_qo8ln2.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/ccc2_qyszou.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/ccc3_hb1jbq.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947125/cc1_qo8ln2.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947126/cc2_onpzpf.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947126/cc3_mchddg.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947128/cc4_olsgfg.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947126/cc5_cmbv2q.jpg",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1736947126/cc6_guqslz.jpg",
-    // haw,
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738231033/intimate_tiles_tcsjgs.png",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986962/hawPara1_cc6pa2.png",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
+    haw,
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738231033/intimate_tiles_tcsjgs.png",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986962/hawPara1_cc6pa2.png",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
+    haw,
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738231033/intimate_tiles_tcsjgs.png",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986962/hawPara1_cc6pa2.png",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
+    haw,
   ];
 
   const videos = [
@@ -43,8 +51,32 @@ export const DoubleLineReels = () => {
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737030315/thumb7_pbqfyo.png",
   ];
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const settings = {
-    slidesPerView: 5,
+    slidesPerView:
+      windowWidth < 480
+        ? 1.5
+        : windowWidth < 768
+        ? 2
+        : windowWidth < 1024
+        ? 3
+        : windowWidth < 1400
+        ? 4
+        : windowWidth < 1600
+        ? 4.1
+        : 5,
     spaceBetween: 0,
     freeMode: true,
     freeModeMomentum: true,
@@ -65,36 +97,62 @@ export const DoubleLineReels = () => {
     },
     snapOnRelease: false,
   };
-  // const isInView = useInView(ref, { once: true });
-  const rotRef = useRef(null);
-  const [animate, setAnimate] = useState(false);
-  const isInView = useInView(rotRef);
 
+  const [isSmall, setIsSmall] = useState(false);
+
+  const handleClick = () => {
+    window.location.hash = "#projects";
+    window.scrollTo({
+      top: window.scrollY + 100,
+      behavior: "smooth",
+    });
+  };
   useEffect(() => {
-    if (isInView) {
-      setAnimate(true);
-    } else {
-      setAnimate(false);
-    }
-  }, [isInView]);
+    // Function to check if #projects is the active target
+    const checkHash = () => {
+      if (window.location.hash === "#projects") {
+        setIsSmall(true);
+      } else setIsSmall(false);
+    };
+
+    // Add hashchange listener
+    window.addEventListener("hashchange", checkHash);
+
+    // Initial check in case the hash is already set
+    checkHash();
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("hashchange", checkHash);
+    };
+  }, []);
+
+  const [animate, setAnimate] = useState(false);
+  const sectionRef = useRef(null);
 
   return (
-    <section id="works" className="logos">
-      <h1 className="logos-title">
-        <div className="logos-text ">
-          <div
-            style={
-              animate
-                ? { transform: "translateY(-1rem)" }
-                : { transform: "translateY(10rem)" }
-            }
-          >
-            Projects
-          </div>
-        </div>
-      </h1>
+    <section
+      id="works"
+      className="logos"
+      ref={sectionRef}
+      style={isSmall ? { transform: "scale(0.8)" } : { transform: "scale(1)" }}
+    >
+      <ScrollTrigger
+        onEnter={() => setAnimate(true)}
+        onExit={() => setAnimate(false)}
+      >
+        <h1
+          className="logos-title"
+          style={{
+            transform: animate ? "translateY(0rem)" : "translateY(10rem)",
+            transition: "transform 0.6s",
+          }}
+        >
+          Projects
+        </h1>
+      </ScrollTrigger>
       <div className="logos-rot">
-        <div className="logo-slide" ref={rotRef}>
+        <div className="logo-slide">
           {images.map((image, index) => (
             <img key={`image-${index}`} src={image} alt={`Slide ${index}`} />
           ))}
@@ -145,11 +203,11 @@ export const DoubleLineReels = () => {
       </div>
 
       <div className="buttondivPortfolio">
-        <Link to="/projects">
-          <Button>
+        <Button onClick={handleClick}>
+          <a href="#projects">
             View All <FiArrowUpRight />
-          </Button>
-        </Link>
+          </a>
+        </Button>
       </div>
     </section>
   );

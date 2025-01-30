@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Nav } from "./components/Nav";
 import { Bird } from "./page/Section1/Bird";
 import { Paragraph } from "./page/Section2/Paragraph";
@@ -12,6 +12,7 @@ import { GetInTouch } from "./page/Section9/GetInTouch";
 import Projects from "./page/Projects/Projects";
 import Service from "./page/Service/service";
 import ServiceMobo from "./page/Service/serviceMobo";
+import About from "./page/Section2/About";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
@@ -38,12 +39,13 @@ function App() {
         />
       </header>
       <main>
-        <Bird
+        {/* <Bird
           isNavScrolling={isNavScrolling}
           setIsNavScrolling={setIsNavScrolling}
-        />
+        /> */}
         <Paragraph />
-        {windowWidth > 768 ? <Service /> : <ServiceMobo />}
+        <About />
+        {/* {windowWidth > 768 ? <About /> : <ServiceMobo />} */}
         <Projects />
         <Counter />
         <DoubleLineReels />

@@ -45,7 +45,7 @@ function App() {
         />
         <Paragraph />
         <ServiceSCroll />
-        {/* {windowWidth > 768 ? <Service /> : <ServiceMobo />} */}
+        {/* {windowWidth > 768 ? <ServiceSCroll /> : <ServiceMobo />} */}
         <Projects />
         <Counter />
         <DoubleLineReels />

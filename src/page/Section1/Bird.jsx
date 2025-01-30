@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import BirdImg from "../../assets/birdImg.svg";
 import BirdMobile from "../../assets/birdForMobile.svg";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ export const Bird = ({ isNavScrolling }) => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scrollDirection, setScrollDirection] = useState("down");
+  const birdSectionRef = useRef(null); // Create a ref for the bird section
 
   const smoothScrollTo = (targetPosition) => {
     const duration = 700;
@@ -72,8 +73,7 @@ export const Bird = ({ isNavScrolling }) => {
     const handleScroll = () => {
       const currentScrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-      const birdSection = document.getElementById("bird");
-      const birdRect = birdSection.getBoundingClientRect();
+      const birdRect = birdSectionRef.current.getBoundingClientRect();
 
       const isInBirdSection =
         birdRect.top <= 0 &&
@@ -112,7 +112,7 @@ export const Bird = ({ isNavScrolling }) => {
 
   const getScaleMultiplier = () => {
     const width = window.innerWidth;
-    // if (width <= 575.98) return 0.05; // smallPhone
+    // if (width <= 575.98) return 0.03; // smallPhone
     if (width <= 767.98) return 0.05; // phone, reduced scaling
     if (width <= 991.98) return 0.08; // tablets
     if (width <= 1199.98) return 0.015; // bigTablets
@@ -132,7 +132,9 @@ export const Bird = ({ isNavScrolling }) => {
   };
 
   return (
-    <section id="bird" className="bird">
+    <section id="bird" className="bird" ref={birdSectionRef}>
+      {" "}
+      {/* Attach the ref here */}
       <div className="caption">
         <a>
           <p>Every Brand {windowWidth <= 575.98 && <br />} Needs Hawksee</p>

@@ -1,369 +1,369 @@
-@use "../../base/responsive" as responsive;
+// @use "../../base/responsive" as responsive;
 
-.scroll-container {
-  height: 350vh;
-  width: 100%;
-  background-color: #ffffff;
-}
+// .scroll-container {
+//   height: 350vh;
+//   width: 100%;
+//   background-color: #ffffff;
+// }
 
-.serviceMain {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(0, 0, 0);
-  padding-left: 20rem;
-  padding-right: 20rem;
-  gap: 2rem;
-  z-index: 100000000;
-  position: sticky;
-  top: -1px;
+// .serviceMain {
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: rgb(0, 0, 0);
+//   padding-left: 20rem;
+//   padding-right: 20rem;
+//   gap: 2rem;
+//   z-index: 100000000;
+//   position: sticky;
+//   top: -1px;
 
-  @include responsive.respond(bigDesktop) {
-    padding-left: 11rem;
-    padding-right: 11rem;
-  }
+//   @include responsive.respond(bigDesktop) {
+//     padding-left: 11rem;
+//     padding-right: 11rem;
+//   }
 
-  @include responsive.respond(desktop) {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
+//   @include responsive.respond(desktop) {
+//     padding-left: 10rem;
+//     padding-right: 10rem;
+//   }
 
-  @include responsive.respond(bigTablets) {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
+//   @include responsive.respond(bigTablets) {
+//     padding-left: 8rem;
+//     padding-right: 8rem;
+//   }
 
-  @include responsive.respond(tablets) {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 875px) {
-    padding-left: 5rem;
-    padding-right: 3rem;
-  }
+//   @include responsive.respond(tablets) {
+//     padding-left: 6rem;
+//     padding-right: 6rem;
+//   }
+//   @media only screen and (min-width: 768px) and (max-width: 875px) {
+//     padding-left: 5rem;
+//     padding-right: 3rem;
+//   }
 
-  &__image-container {
-    flex: 1;
-    overflow: hidden;
-    border-radius: 1.5rem;
-    &__image-wrapper {
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-      height: 100%;
-      gap: 1rem;
-      transition: opacity 2s ease-in-out;
-    }
+//   &__image-container {
+//     flex: 1;
+//     overflow: hidden;
+//     border-radius: 1.5rem;
+//     &__image-wrapper {
+//       display: flex;
+//       flex-direction: column;
+//       overflow-y: auto;
+//       height: 100%;
+//       gap: 1rem;
+//       transition: opacity 2s ease-in-out;
+//     }
 
-    img {
-      width: 80%;
-      height: 80%;
-      border-radius: 10px;
-      object-fit: fill;
-      object-position: bottom;
+//     img {
+//       width: 80%;
+//       height: 80%;
+//       border-radius: 10px;
+//       object-fit: fill;
+//       object-position: bottom;
 
-      @include responsive.respond(tablets) {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
+//       @include responsive.respond(tablets) {
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+//   }
 
-  &__text-container {
-    flex: 1;
-    height: auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    // justify-content: center;
-    height: fit-content;
-    position: relative;
+//   &__text-container {
+//     flex: 1;
+//     height: auto;
+//     padding: 10px;
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: center;
+//     height: fit-content;
+//     position: relative;
 
-    padding-bottom: 10rem;
-  }
-  &__content-item {
-    margin-bottom: 4rem;
-    font-size: 3rem;
-    position: relative;
-    opacity: 1;
-    overflow: hidden;
-    background-color: black;
+//     padding-bottom: 10rem;
+//   }
+//   &__content-item {
+//     margin-bottom: 4rem;
+//     font-size: 3rem;
+//     position: relative;
+//     opacity: 1;
+//     overflow: hidden;
+//     background-color: black;
 
-    @include responsive.respond(desktop) {
-      margin-bottom: 3rem;
-    }
+//     @include responsive.respond(desktop) {
+//       margin-bottom: 3rem;
+//     }
 
-    @media only screen and (min-width: 768px) and (max-width: 875px) {
-      // margin-bottom: 2rem;
-    }
+//     @media only screen and (min-width: 768px) and (max-width: 875px) {
+//       // margin-bottom: 2rem;
+//     }
 
-    // @include responsive.respond(tablets) {
-    //   margin-bottom: 3rem;
-    // }
-  }
+//     // @include responsive.respond(tablets) {
+//     //   margin-bottom: 3rem;
+//     // }
+//   }
 
-  &__main-subtitle {
-    font-size: 0.9rem;
-    letter-spacing: 3px;
-    font-weight: 200;
-    color: #ccc;
+//   &__main-subtitle {
+//     font-size: 0.9rem;
+//     letter-spacing: 3px;
+//     font-weight: 200;
+//     color: #ccc;
 
-    @include responsive.respond(bigDesktop) {
-      font-size: 0.85rem;
-    }
+//     @include responsive.respond(bigDesktop) {
+//       font-size: 0.85rem;
+//     }
 
-    @include responsive.respond(desktop) {
-      font-size: 0.8rem;
-    }
+//     @include responsive.respond(desktop) {
+//       font-size: 0.8rem;
+//     }
 
-    @include responsive.respond(bigTablets) {
-      font-size: 0.7rem;
-    }
-    @include responsive.respond(tablets) {
-      font-size: 0.6rem;
-    }
-  }
+//     @include responsive.respond(bigTablets) {
+//       font-size: 0.7rem;
+//     }
+//     @include responsive.respond(tablets) {
+//       font-size: 0.6rem;
+//     }
+//   }
 
-  &__main-title {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #ccc;
-    font-weight: 400;
-    line-height: 1.2;
-    @include responsive.respond(bigDesktop) {
-      font-size: 2.4rem;
-    }
-    @include responsive.respond(desktop) {
-      font-size: 1.5rem;
-    }
-    @include responsive.respond(bigTablets) {
-      font-size: 1.4rem;
-    }
-    @include responsive.respond(tablets) {
-      font-size: 1.6rem;
-    }
+//   &__main-title {
+//     font-size: 2.5rem;
+//     margin-bottom: 1.5rem;
+//     color: #ccc;
+//     font-weight: 400;
+//     line-height: 1.2;
+//     @include responsive.respond(bigDesktop) {
+//       font-size: 2.4rem;
+//     }
+//     @include responsive.respond(desktop) {
+//       font-size: 1.5rem;
+//     }
+//     @include responsive.respond(bigTablets) {
+//       font-size: 1.4rem;
+//     }
+//     @include responsive.respond(tablets) {
+//       font-size: 1.6rem;
+//     }
 
-    @media only screen and (min-width: 768px) and (max-width: 875px) {
-      font-size: 1.4rem;
-      margin-bottom: 1.3rem;
-    }
-  }
+//     @media only screen and (min-width: 768px) and (max-width: 875px) {
+//       font-size: 1.4rem;
+//       margin-bottom: 1.3rem;
+//     }
+//   }
 
-  &__description {
-    font-size: 1rem;
-    color: #ccc;
-    opacity: 1;
-    transition: all 0.5s ease-in-out;
-    @include responsive.respond(bigDesktop) {
-      font-size: 1rem;
-    }
+//   &__description {
+//     font-size: 1rem;
+//     color: #ccc;
+//     opacity: 1;
+//     transition: all 0.5s ease-in-out;
+//     @include responsive.respond(bigDesktop) {
+//       font-size: 1rem;
+//     }
 
-    @include responsive.respond(desktop) {
-      font-size: 1rem;
-    }
+//     @include responsive.respond(desktop) {
+//       font-size: 1rem;
+//     }
 
-    @include responsive.respond(bigTablets) {
-      font-size: 0.8rem;
-    }
-    @include responsive.respond(tablets) {
-      font-size: 0.8rem;
-    }
-    @media only screen and (min-width: 768px) and (max-width: 875px) {
-      font-size: 0.7rem;
-    }
-  }
+//     @include responsive.respond(bigTablets) {
+//       font-size: 0.8rem;
+//     }
+//     @include responsive.respond(tablets) {
+//       font-size: 0.8rem;
+//     }
+//     @media only screen and (min-width: 768px) and (max-width: 875px) {
+//       font-size: 0.7rem;
+//     }
+//   }
 
-  &__key-statement,
-  &__additional-statement {
-    font-size: 1.5rem;
-    color: #ccc;
-    margin: 5px 0;
-    opacity: 0.8;
-  }
+//   &__key-statement,
+//   &__additional-statement {
+//     font-size: 1.5rem;
+//     color: #ccc;
+//     margin: 5px 0;
+//     opacity: 0.8;
+//   }
 
-  &__main-subtitle-fade {
-    font-size: 0.9rem;
-    letter-spacing: 3px;
-    font-weight: 200;
-    color: #ccc;
-    opacity: 0.4;
+//   &__main-subtitle-fade {
+//     font-size: 0.9rem;
+//     letter-spacing: 3px;
+//     font-weight: 200;
+//     color: #ccc;
+//     opacity: 0.4;
 
-    @include responsive.respond(bigTablets) {
-      font-size: 0.7rem !important;
-    }
-    @include responsive.respond(tablets) {
-      font-size: 0.6rem;
-    }
-  }
+//     @include responsive.respond(bigTablets) {
+//       font-size: 0.7rem !important;
+//     }
+//     @include responsive.respond(tablets) {
+//       font-size: 0.6rem;
+//     }
+//   }
 
-  &__main-title-fade {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #ccc;
-    font-weight: 400;
-    line-height: 1.2;
-    opacity: 0.4;
+//   &__main-title-fade {
+//     font-size: 2.5rem;
+//     margin-bottom: 1.5rem;
+//     color: #ccc;
+//     font-weight: 400;
+//     line-height: 1.2;
+//     opacity: 0.4;
 
-    @include responsive.respond(bigDesktop) {
-      font-size: 2.4rem;
-    }
-    @include responsive.respond(desktop) {
-      font-size: 1.5rem;
-    }
-    @include responsive.respond(bigTablets) {
-      font-size: 1.4rem;
-    }
-    @include responsive.respond(tablets) {
-      font-size: 1.6rem;
-    }
-    @media only screen and (min-width: 768px) and (max-width: 875px) {
-      font-size: 1.4rem;
-      margin-bottom: 1.3rem;
-    }
-  }
+//     @include responsive.respond(bigDesktop) {
+//       font-size: 2.4rem;
+//     }
+//     @include responsive.respond(desktop) {
+//       font-size: 1.5rem;
+//     }
+//     @include responsive.respond(bigTablets) {
+//       font-size: 1.4rem;
+//     }
+//     @include responsive.respond(tablets) {
+//       font-size: 1.6rem;
+//     }
+//     @media only screen and (min-width: 768px) and (max-width: 875px) {
+//       font-size: 1.4rem;
+//       margin-bottom: 1.3rem;
+//     }
+//   }
 
-  &__description-fade {
-    font-size: 1rem;
-    color: #ccc;
-    opacity: 0.3;
+//   &__description-fade {
+//     font-size: 1rem;
+//     color: #ccc;
+//     opacity: 0.3;
 
-    @include responsive.respond(bigTablets) {
-      font-size: 0.8rem;
-    }
-    @include responsive.respond(tablets) {
-      font-size: 0.8rem;
-    }
-    @media only screen and (min-width: 768px) and (max-width: 875px) {
-      font-size: 0.7rem;
-    }
-  }
-}
+//     @include responsive.respond(bigTablets) {
+//       font-size: 0.8rem;
+//     }
+//     @include responsive.respond(tablets) {
+//       font-size: 0.8rem;
+//     }
+//     @media only screen and (min-width: 768px) and (max-width: 875px) {
+//       font-size: 0.7rem;
+//     }
+//   }
+// }
 
-.fade-in-image {
-  animation: fadeIn 0.5s ease-in-out;
-}
+// .fade-in-image {
+//   animation: fadeIn 0.5s ease-in-out;
+// }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-}
+// .fade-in {
+//   opacity: 0;
+//   animation: fadeIn 0.5s forwards;
+// }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
+// @keyframes fadeIn {
+//   to {
+//     opacity: 1;
+//   }
+// }
 
-.blinking-effect img {
-  animation: blink 0.4s linear;
-}
+// .blinking-effect img {
+//   animation: blink 0.4s linear;
+// }
 
-@keyframes blink {
-  0% {
-    opacity: 0.5;
-  }
+// @keyframes blink {
+//   0% {
+//     opacity: 0.5;
+//   }
 
-  100% {
-    opacity: 1;
-  }
-}
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-.serviceMain__content-item-button {
-  background-color: rgb(0, 0, 0);
-  height: 10rem;
-  width: 100%;
-  position: absolute;
-  bottom: -5rem;
-  display: none;
-  @include responsive.respond(bigDesktop) {
-    bottom: 2rem;
-  }
-}
+// .serviceMain__content-item-button {
+//   background-color: rgb(0, 0, 0);
+//   height: 10rem;
+//   width: 100%;
+//   position: absolute;
+//   bottom: -5rem;
+//   display: none;
+//   @include responsive.respond(bigDesktop) {
+//     bottom: 2rem;
+//   }
+// }
 
-.mob-work-section {
-  background-color: black !important;
-  padding: 2rem;
-  height: 350vh;
-  z-index: 10000;
+// .mob-work-section {
+//   background-color: black !important;
+//   padding: 2rem;
+//   height: 350vh;
+//   z-index: 10000;
 
-  &__scroll-container {
-    // background-color: black !important;
-    height: fit-content;
-    position: relative;
-    height: 100%;
-  }
+//   &__scroll-container {
+//     // background-color: black !important;
+//     height: fit-content;
+//     position: relative;
+//     height: 100%;
+//   }
 
-  &__item {
-    height: 100vh;
-    position: sticky;
-    top: 2rem;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    &-image-container {
-      height: 55%;
-      border-radius: 1rem;
-      & img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center;
-        border-radius: 1rem;
-      }
-    }
-  }
+//   &__item {
+//     height: 100vh;
+//     position: sticky;
+//     top: 2rem;
+//     background-color: black;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 2rem;
+//     &-image-container {
+//       height: 55%;
+//       border-radius: 1rem;
+//       & img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: contain;
+//         object-position: center;
+//         border-radius: 1rem;
+//       }
+//     }
+//   }
 
-  & .work-section__heading-style {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: #ccc;
-    font-weight: 400;
-    line-height: 1.2;
-  }
+//   & .work-section__heading-style {
+//     font-size: 1.8rem;
+//     margin-bottom: 1.5rem;
+//     color: #ccc;
+//     font-weight: 400;
+//     line-height: 1.2;
+//   }
 
-  & .work-section__subtitle-style {
-    font-size: 0.9rem;
-    letter-spacing: 3px;
-    font-weight: 200;
-    color: #ccc;
-  }
+//   & .work-section__subtitle-style {
+//     font-size: 0.9rem;
+//     letter-spacing: 3px;
+//     font-weight: 200;
+//     color: #ccc;
+//   }
 
-  & .work-section__para-style {
-    font-size: 0.9rem;
-    color: #ccc;
-    opacity: 1;
-    transition: all 0.5s ease-in-out;
-  }
+//   & .work-section__para-style {
+//     font-size: 0.9rem;
+//     color: #ccc;
+//     opacity: 1;
+//     transition: all 0.5s ease-in-out;
+//   }
 
-  & .work-section__linktag {
-    font-size: 0.8rem !important;
-    width: fit-content;
-    margin-top: 1rem;
-  }
-  &__item-pills {
-    display: flex;
-    flex-direction: column;
-    // border: 1px solid #ccc;
-    gap: 0.1rem;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    // box-shadow: 0 1px 0.1px #ccc;
-  }
+//   & .work-section__linktag {
+//     font-size: 0.8rem !important;
+//     width: fit-content;
+//     margin-top: 1rem;
+//   }
+//   &__item-pills {
+//     display: flex;
+//     flex-direction: column;
+//     // border: 1px solid #ccc;
+//     gap: 0.1rem;
+//     border-radius: 0.5rem;
+//     padding: 1rem;
+//     // box-shadow: 0 1px 0.1px #ccc;
+//   }
 
-  @media (max-width: 768px) {
-    &__pill-item {
-      margin: 0.5rem 0;
-    }
-  }
-}
+//   @media (max-width: 768px) {
+//     &__pill-item {
+//       margin: 0.5rem 0;
+//     }
+//   }
+// }

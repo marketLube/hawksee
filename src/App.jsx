@@ -12,6 +12,7 @@ import { GetInTouch } from "./page/Section9/GetInTouch";
 import Projects from "./page/Projects/Projects";
 import Service from "./page/Service/service";
 import ServiceMobo from "./page/Service/serviceMobo";
+import ServiceSCroll from "./page/Service/ServiceSCroll";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
@@ -43,7 +44,8 @@ function App() {
           setIsNavScrolling={setIsNavScrolling}
         />
         <Paragraph />
-        {windowWidth > 768 ? <Service /> : <ServiceMobo />}
+        <ServiceSCroll />
+        {/* {windowWidth > 768 ? <Service /> : <ServiceMobo />} */}
         <Projects />
         <Counter />
         <DoubleLineReels />

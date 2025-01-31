@@ -4,44 +4,22 @@ import { useMediaQuery } from "react-responsive";
 
 export const BirdMobo = () => {
   const isSmallMobile = useMediaQuery({ query: "(max-width: 578px)" });
+  const [isAnimated, setIsAnimated] = useState(false);
   const birdRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (birdRef.current) {
-        if (window.scrollY > 100 && window.scrollY < 500) {
-          birdRef.current.classList.add("animate-bird");
-          birdRef.current.classList.remove("animate-bird-reverse");
-          // Smooth scroll to the next section
-          const nextSection =
-            document.querySelector("#bird").nextElementSibling;
-          if (nextSection) {
-            nextSection.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        } else if (window.scrollY < 100) {
-          birdRef.current.classList.remove("animate-bird");
-          birdRef.current.classList.add("animate-bird-reverse");
+        if (window.scrollY > 500) {
+          setIsAnimated(true);
+        } else {
+          setIsAnimated(false);
         }
       }
     };
 
-    // Throttle the scroll event to prevent too many calls
-    let ticking = false;
-    const scrollListener = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", scrollListener);
-    return () => window.removeEventListener("scroll", scrollListener);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -52,7 +30,16 @@ export const BirdMobo = () => {
         </a>
       </div>
       <div className="bird-container">
-        <img ref={birdRef} className="bird-image" alt="" src={BirdMobile} />
+        <img
+          ref={birdRef}
+          style={{
+            transform: isAnimated
+              ? "translate(-10rem, -50rem) scale(10)"
+              : "translate(0, 0) scale(1)",
+          }}
+          alt=""
+          src={BirdMobile}
+        />
       </div>
     </section>
   );

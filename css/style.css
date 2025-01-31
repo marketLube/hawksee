@@ -1465,24 +1465,6 @@ a {
   right: -60rem;
   bottom: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 770px) and (max-height: 1024px) {
-  .bird-image {
-    top: -10rem !important;
-    right: -40rem;
-  }
-}
-@media screen and (min-width: 820px) and (max-width: 825px) and (max-height: 1180px) {
-  .bird-image {
-    top: -5rem;
-    right: -40rem;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
-  .bird-image {
-    top: 20rem !important;
-    right: -30rem !important;
-  }
-}
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .bird-image {
     top: -15rem;
@@ -1516,7 +1498,7 @@ a {
 @media only screen and (max-width: 575.98px) {
   .bird-image {
     top: 2rem;
-    right: -13rem;
+    right: 0;
   }
 }
 
@@ -1547,30 +1529,6 @@ a {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 30%;
-  }
-}
-.animate-bird {
-  animation: flyBird 1s cubic-bezier(0.79, 0.07, 1, 0.69) forwards;
-}
-
-.animate-bird-reverse {
-  animation: flyBirdReverse 1s cubic-bezier(0.79, 0.07, 1, 0.69) forwards;
-}
-
-@keyframes flyBird {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    transform: translate(-10rem, -50rem) scale(10);
-  }
-}
-@keyframes flyBirdReverse {
-  0% {
-    transform: translate(-10rem, -50rem) scale(10);
-  }
-  100% {
-    transform: translateY(0) scale(1);
   }
 }
 .counterSection {

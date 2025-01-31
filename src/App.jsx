@@ -42,7 +42,10 @@ function App() {
       </header>
       <main>
         {isMobile ? (
-          <BirdMobo />
+          <BirdMobo
+            isNavScrolling={isNavScrolling}
+            setIsNavScrolling={setIsNavScrolling}
+          />
         ) : (
           <Bird
             isNavScrolling={isNavScrolling}

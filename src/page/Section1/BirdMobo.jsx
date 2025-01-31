@@ -5,13 +5,18 @@ import { useMediaQuery } from "react-responsive";
 export const BirdMobo = ({ isNavScrolling }) => {
   const [offset, setOffset] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("down");
   const birdSectionRef = useRef(null);
 
+  // Initialize window width after component mount to avoid SSR issues
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   const smoothScrollTo = (targetPosition) => {
     const duration = 700;
-    const start = window.scrollY;
+    const start = window.pageYOffset || document.documentElement.scrollTop;
     const distance = targetPosition - start;
     let startTime = null;
 
@@ -33,13 +38,23 @@ export const BirdMobo = ({ isNavScrolling }) => {
   };
 
   useEffect(() => {
+    let rafId;
+
     const handleScroll = () => {
-      requestAnimationFrame(() => {
-        if (window.scrollY < 50) {
+      // Cancel any existing animation frame
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+
+      rafId = requestAnimationFrame(() => {
+        const scrollY =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollY < 50) {
           setHasScrolled(false);
         }
 
-        if (!hasScrolled && window.scrollY > 50) {
+        if (!hasScrolled && scrollY > 50) {
           setHasScrolled(true);
           const targetHeight =
             window.innerWidth <= 1199.98
@@ -51,47 +66,68 @@ export const BirdMobo = ({ isNavScrolling }) => {
           }
         }
 
-        const scrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
         setOffset(Math.min(scrollY, viewportHeight * 2.7));
       });
     };
 
+    // Use passive scroll listener for better performance
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+    };
   }, [hasScrolled, isNavScrolling]);
 
   useEffect(() => {
     let lastScrollTop = 0;
+    let rafId;
+
     const handleScroll = () => {
-      const currentScrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const birdRect = birdSectionRef.current.getBoundingClientRect();
-
-      const isInBirdSection =
-        birdRect.top <= 0 &&
-        birdRect.bottom >= 0 &&
-        currentScrollTop <=
-          (window.innerWidth <= 1199.98
-            ? window.innerHeight * 2
-            : window.innerHeight * 3);
-
-      if (currentScrollTop < lastScrollTop) {
-        setScrollDirection("up");
-        if (isInBirdSection) {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        }
-      } else {
-        setScrollDirection("down");
+      if (rafId) {
+        cancelAnimationFrame(rafId);
       }
-      lastScrollTop = currentScrollTop;
+
+      rafId = requestAnimationFrame(() => {
+        const currentScrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (!birdSectionRef.current) return;
+
+        const birdRect = birdSectionRef.current.getBoundingClientRect();
+
+        const isInBirdSection =
+          birdRect.top <= 0 &&
+          birdRect.bottom >= 0 &&
+          currentScrollTop <=
+            (window.innerWidth <= 1199.98
+              ? window.innerHeight * 2
+              : window.innerHeight * 3);
+
+        if (currentScrollTop < lastScrollTop) {
+          setScrollDirection("up");
+          if (isInBirdSection) {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }
+        } else {
+          setScrollDirection("down");
+        }
+        lastScrollTop = currentScrollTop;
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -104,22 +140,22 @@ export const BirdMobo = ({ isNavScrolling }) => {
   }, []);
 
   const getScaleMultiplier = () => {
-    const width = window.visualViewport?.width || window.innerWidth;
-    if (width <= 575.98) return 0.05;
-    if (width <= 767.98) return 0.05;
-    if (width <= 991.98) return 0.08;
-    if (width <= 1199.98) return 0.015;
-    if (width <= 1399.98) return 0.0012;
+    if (!windowWidth) return 0.001; // Default value
+    if (windowWidth <= 575.98) return 0.05;
+    if (windowWidth <= 767.98) return 0.05;
+    if (windowWidth <= 991.98) return 0.08;
+    if (windowWidth <= 1199.98) return 0.015;
+    if (windowWidth <= 1399.98) return 0.0012;
     return 0.001;
   };
 
   const getTranslateMultiplier = () => {
-    const width = window.innerWidth;
-    if (width <= 575.98) return { x: 0.5, y: 5 };
-    if (width <= 767.98) return { x: 0.1, y: 10 };
-    if (width <= 991.98) return { x: 0.3, y: 0.28 };
-    if (width <= 1199.98) return { x: 0.45, y: 0.3 };
-    if (width <= 1399.98) return { x: 0.48, y: 0.31 };
+    if (!windowWidth) return { x: 0.5, y: 0.315 }; // Default values
+    if (windowWidth <= 575.98) return { x: 0.5, y: 5 };
+    if (windowWidth <= 767.98) return { x: 0.1, y: 10 };
+    if (windowWidth <= 991.98) return { x: 0.3, y: 0.28 };
+    if (windowWidth <= 1199.98) return { x: 0.45, y: 0.3 };
+    if (windowWidth <= 1399.98) return { x: 0.48, y: 0.31 };
     return { x: 0.5, y: 0.315 };
   };
 
@@ -132,23 +168,18 @@ export const BirdMobo = ({ isNavScrolling }) => {
       (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
     })`,
     transformOrigin: "center center",
-    transition: `${
-      scrollDirection === "up"
-        ? "transform 0.5s cubic-bezier(0.01, 0.62, 0.38, 1.02)"
-        : "transform 1.3s cubic-bezier(0.49, 0.41, 0.1, 1.02)"
-    }`,
+    transition: `transform ${
+      scrollDirection === "up" ? "0.5s" : "1.3s"
+    } cubic-bezier(0.49, 0.41, 0.1, 1.02)`,
+    willChange: "transform",
+    // Add hardware acceleration
+    WebkitBackfaceVisibility: "hidden",
+    WebkitPerspective: 1000,
     WebkitTransform: `translate3d(${-offset * getTranslateMultiplier().x}px, ${
       -offset * getTranslateMultiplier().y
     }px, 0) scale(${
       (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
     })`,
-    WebkitTransformOrigin: "center center",
-    WebkitTransition: `${
-      scrollDirection === "up"
-        ? "-webkit-transform 0.5s cubic-bezier(0.01, 0.62, 0.38, 1.02)"
-        : "-webkit-transform 1.3s cubic-bezier(0.49, 0.41, 0.1, 1.02)"
-    }`,
-    willChange: "transform",
   };
 
   return (

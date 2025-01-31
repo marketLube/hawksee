@@ -1549,6 +1549,30 @@ a {
     margin-bottom: 30%;
   }
 }
+.animate-bird {
+  animation: flyBird 1s cubic-bezier(0.79, 0.07, 1, 0.69) forwards;
+}
+
+.animate-bird-reverse {
+  animation: flyBirdReverse 1s cubic-bezier(0.79, 0.07, 1, 0.69) forwards;
+}
+
+@keyframes flyBird {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translate(-10rem, -50rem) scale(10);
+  }
+}
+@keyframes flyBirdReverse {
+  0% {
+    transform: translate(-10rem, -50rem) scale(10);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
 .counterSection {
   background-color: #000;
   height: 100vh;

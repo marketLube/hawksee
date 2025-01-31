@@ -29,7 +29,9 @@ function LeftScroll({ content }) {
         <span>{content.title}</span>
       </div>
       <div className="about-para-container">
-        <button onClick={handleRegisterNow}>Register Now</button>
+        <button className="clickbtn" onClick={handleRegisterNow}>
+          Register Now
+        </button>
         <p className="about-para-container-right">{content.description}</p>
       </div>
     </div>

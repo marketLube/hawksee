@@ -8,7 +8,10 @@
   & .home-text {
     height: 25rem;
     overflow: hidden;
-    width: 80%;
+    width: 75%;
+    color: white;
+    font-size: 6.5rem;
+    font-weight: 300;
 
     @include responsive.respond(bigTablets) {
       font-size: 65px;
@@ -85,6 +88,7 @@
       text-align: left;
       font-size: 1.2rem;
       line-height: 1.5;
+      color: white;
     }
   }
 }
@@ -193,6 +197,18 @@
   height: fit-content;
   z-index: 2;
   padding-top: 1rem;
+}
+
+.clickbtn {
+  background-color: white;
+  width: 7.5rem;
+  height: 2rem;
+  font-size: medium;
+  color: black;
+  font-weight: 700;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
 }
 .about-mob-para {
   line-height: 1.5;

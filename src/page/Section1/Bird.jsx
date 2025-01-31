@@ -8,7 +8,7 @@ export const Bird = ({ isNavScrolling }) => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scrollDirection, setScrollDirection] = useState("down");
-  const birdSectionRef = useRef(null); // Create a ref for the bird section
+  const birdSectionRef = useRef(null);
 
   const smoothScrollTo = (targetPosition) => {
     const duration = 700;
@@ -35,7 +35,6 @@ export const Bird = ({ isNavScrolling }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Use requestAnimationFrame for smoother animations on iOS
       requestAnimationFrame(() => {
         if (window.scrollY < 50) {
           setHasScrolled(false);
@@ -48,12 +47,7 @@ export const Bird = ({ isNavScrolling }) => {
               ? window.innerHeight * 2
               : window.innerHeight * 3.3;
 
-          if (isNavScrolling === null) {
-            smoothScrollTo(targetHeight);
-          } else if (isNavScrolling === true) {
-            // Hide logic when isNavScrolling is true
-            // Add your hide logic here
-          } else if (isNavScrolling === false) {
+          if (isNavScrolling === null || isNavScrolling === false) {
             smoothScrollTo(targetHeight);
           }
         }
@@ -111,30 +105,27 @@ export const Bird = ({ isNavScrolling }) => {
   }, []);
 
   const getScaleMultiplier = () => {
-    const width = window.innerWidth;
-    // if (width <= 575.98) return 0.03; // smallPhone
-    if (width <= 767.98) return 0.05; // phone, reduced scaling
-    if (width <= 991.98) return 0.08; // tablets
-    if (width <= 1199.98) return 0.015; // bigTablets
-    if (width <= 1399.98) return 0.0012; // desktop
+    const width = window.visualViewport?.width || window.innerWidth;
+    if (width <= 575.98) return 0.05;
+    if (width <= 767.98) return 0.05;
+    if (width <= 991.98) return 0.08;
+    if (width <= 1199.98) return 0.015;
+    if (width <= 1399.98) return 0.0012;
     return 0.001;
   };
 
   const getTranslateMultiplier = () => {
     const width = window.innerWidth;
-
-    if (width <= 575.98) return { x: 0.5, y: 5 }; // smallCard
+    if (width <= 575.98) return { x: 0.5, y: 5 };
     if (width <= 767.98) return { x: 0.1, y: 10 };
-    if (width <= 991.98) return { x: 0.3, y: 0.28 }; // tablets
-    if (width <= 1199.98) return { x: 0.45, y: 0.3 }; // bigTablets
-    if (width <= 1399.98) return { x: 0.48, y: 0.31 }; // desktop
-    return { x: 0.5, y: 0.315 }; // bigDesktop and larger
+    if (width <= 991.98) return { x: 0.3, y: 0.28 };
+    if (width <= 1199.98) return { x: 0.45, y: 0.3 };
+    if (width <= 1399.98) return { x: 0.48, y: 0.31 };
+    return { x: 0.5, y: 0.315 };
   };
 
   return (
     <section id="bird" className="bird" ref={birdSectionRef}>
-      {" "}
-      {/* Attach the ref here */}
       <div className="caption">
         <a>
           <p>Every Brand {windowWidth <= 575.98 && <br />} Needs Hawksee</p>
@@ -146,16 +137,18 @@ export const Bird = ({ isNavScrolling }) => {
           alt=""
           src={windowWidth <= 767.98 ? BirdMobile : BirdImg}
           style={{
-            transform: `translate(${-offset * getTranslateMultiplier().x}px, ${
-              -offset * getTranslateMultiplier().y
-            }px) scale(${
+            transform: `translate3d(${
+              -offset * getTranslateMultiplier().x
+            }px, ${-offset * getTranslateMultiplier().y}px, 0) scale(${
               (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
             })`,
+            transformOrigin: "center center",
             transition: `${
               scrollDirection === "up"
                 ? "transform .5s cubic-bezier(0,.62,.12,.99)"
                 : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)"
             }`,
+            willChange: "transform",
           }}
         />
       </div>

@@ -432,6 +432,7 @@ a {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 15px;
+  background-color: black;
 }
 .logo-grid-section:hover .logo-card {
   opacity: 0.4;

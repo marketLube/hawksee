@@ -31,26 +31,7 @@ export const BirdMobo = ({ setIsAnimated, isAnimated }) => {
           <p>Every Brand {isSmallMobile && <br />} Needs Hawksee</p>
         </a>
       </div>
-      <div className="bird-container">
-        <img
-          ref={birdRef}
-          className="bird-image"
-          alt=""
-          src={BirdMobile}
-          style={
-            animateBird
-              ? {
-                  transform: "translate(-10rem, -50rem) scale(10)",
-                  transition:
-                    "transform 0.5s cubic-bezier(0.79, 0.07, 1, 0.69)",
-                }
-              : {
-                  transform: "translateY(0) scale(1)",
-                  transition: "transform 1s ease-in-out",
-                }
-          }
-        />
-      </div>
+      <div className="bird-container"></div>
     </section>
   );
 };

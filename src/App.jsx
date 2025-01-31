@@ -18,6 +18,8 @@ function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  const [isAnimated, setIsAnimated] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -42,10 +44,7 @@ function App() {
       </header>
       <main>
         {isMobile ? (
-          <BirdMobo
-            isNavScrolling={isNavScrolling}
-            setIsNavScrolling={setIsNavScrolling}
-          />
+          <BirdMobo isAnimated={isAnimated} setIsAnimated={setIsAnimated} />
         ) : (
           <Bird
             isNavScrolling={isNavScrolling}

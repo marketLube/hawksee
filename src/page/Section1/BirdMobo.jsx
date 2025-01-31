@@ -2,47 +2,27 @@ import React, { useEffect, useState, useRef } from "react";
 import BirdMobile from "../../assets/birdForMobile.svg";
 import { useMediaQuery } from "react-responsive";
 
-export const BirdMobo = () => {
+export const BirdMobo = ({ setIsAnimated, isAnimated }) => {
   const isSmallMobile = useMediaQuery({ query: "(max-width: 578px)" });
   const birdRef = useRef(null);
+  const [animateBird, setAnimateBird] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (birdRef.current) {
-        if (window.scrollY > 100 && window.scrollY < 500) {
-          birdRef.current.classList.add("animate-bird");
-          birdRef.current.classList.remove("animate-bird-reverse");
-          // Smooth scroll to the next section
-          const nextSection =
-            document.querySelector("#bird").nextElementSibling;
-          if (nextSection) {
-            nextSection.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        } else if (window.scrollY < 100) {
-          birdRef.current.classList.remove("animate-bird");
-          birdRef.current.classList.add("animate-bird-reverse");
+        if (window.scrollY > 300) {
+          setAnimateBird(true);
+          setIsAnimated(true);
+        } else {
+          setAnimateBird(false);
+          setIsAnimated(false);
         }
       }
     };
 
-    // Throttle the scroll event to prevent too many calls
-    let ticking = false;
-    const scrollListener = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", scrollListener);
-    return () => window.removeEventListener("scroll", scrollListener);
-  }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [setIsAnimated]);
 
   return (
     <section id="bird" className="bird">
@@ -52,7 +32,24 @@ export const BirdMobo = () => {
         </a>
       </div>
       <div className="bird-container">
-        <img ref={birdRef} className="bird-image" alt="" src={BirdMobile} />
+        <img
+          ref={birdRef}
+          className="bird-image"
+          alt=""
+          src={BirdMobile}
+          style={
+            animateBird
+              ? {
+                  transform: "translate(-10rem, -50rem) scale(10)",
+                  transition:
+                    "transform 0.5s cubic-bezier(0.79, 0.07, 1, 0.69)",
+                }
+              : {
+                  transform: "translateY(0) scale(1)",
+                  transition: "transform 1s ease-in-out",
+                }
+          }
+        />
       </div>
     </section>
   );

@@ -3,30 +3,63 @@ import React from "react";
 const serviceMobo = () => {
   const items = [
     {
-      image:
-        "https://cdn.prod.website-files.com/66b0a2749f8ac3c146b191c2/66b0b02ee9974feab54aa9b4_unsplash_R-6HkET2pTU.png",
-
-      title: "Save the Environment",
-      subtitle: "HS1",
+      title: "Social Media Management",
       description:
-        "With electric cars, you'll reduce smog pollution around you right now and cut greenhouse gases to protect people and the planet for years to come. Future generations will thank you.",
+        "Strategically managing and growing your brand’s presence across social platforms.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314849/medium-shot-men-holding-smartphone_1_1_g4xoqb.jpg",
     },
     {
-      image:
-        "https://cdn.prod.website-files.com/66b0a2749f8ac3c146b191c2/66b0b02de9974feab54aa8fd_Car%203.png",
-
-      title: "Embrace Renewable Energy",
-      subtitle: "HS2",
-      description:
-        "On average, an electric car costs less than £1.30 to drive 100 miles (based on our GoElectric 35 tariff during off-peak hours) vs. £17.16(1) for a petrol car. Save on Fuel and Maintenance Costs.",
+      title: "Performance Marketing",
+      description: "Data-driven ad campaigns to maximize conversions and ROI.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314188/email-4284157_1280_thrf18.png",
     },
     {
-      image:
-        "https://cdn.prod.website-files.com/66b0a2749f8ac3c146b191c2/66b0b02ee9974feab54aa9b4_unsplash_R-6HkET2pTU.png",
-      title: "Conserve Water",
-      subtitle: "HS3",
+      title: "Content Creation ",
       description:
-        "Simply stated, electric cars are fun to drive–with quick acceleration and enviable performance. Unlike gas-powered cars, electric motors produce peak torque from a standstill, without the buildup gasoline engines require to reach maximum power.",
+        "High-quality visuals, videos, and graphics to enhance brand storytelling.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314736/side-view-woman-using-computer-laptop_2_jm2kju.jpg",
+    },
+    {
+      title: "Video Production",
+      description:
+        "Professional video shoots and edits tailored to your brand’s message.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314191/pexels-bertellifotografia-2608519_qyt9rk.jpg",
+    },
+    {
+      title: "Branding & Design",
+      description:
+        "Crafting unique brand identities with logos, collaterals, and design assets.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314188/pexels-knownasovan-57690_lprrdo.jpg",
+    },
+    {
+      title: "Website Development",
+      description:
+        "User-friendly, conversion-optimized websites for businesses of all sizes.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314191/pexels-divinetechygirl-1181359_obar07.jpg",
+    },
+    {
+      title: "SEO & Digital Strategy",
+      description:
+        "Enhancing online visibility with tailored SEO and digital growth strategies.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314188/32010_wacweg.jpg",
+    },
+    {
+      title: "Influencer Marketing",
+      description:
+        "Connecting brands with the right influencers for authentic engagement.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314280/influencer-posting-social-media_1_yi3qqt.jpg",
+    },
+    {
+      title: "Reels Marketing",
+      description:
+        "Engaging short-form video strategies to boost brand awareness and reach.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314185/5140568_u1ugv7.jpg",
+    },
+    {
+      title: "Outdoor & Print Advertising",
+      description:
+        "Designing and printing leaflets, brochures, hoardings, and other marketing materials.",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314187/pexels-valeriiamiller-3752659_ct5hxe.jpg",
     },
   ];
   return (
@@ -39,7 +72,7 @@ const serviceMobo = () => {
         {items.map((item, index) => (
           <div key={index} className="mob-work-section__item">
             <div className="mob-work-section__item-image-container">
-              <img src={item.image} alt={item.heading} />
+              <img src={item.img} alt={item.heading} />
             </div>
             <div className="mob-work-section__item-pills">
               <h4 className="work-section__subtitle-style">{item.subtitle}</h4>

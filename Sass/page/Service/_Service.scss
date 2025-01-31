@@ -293,12 +293,11 @@
 .mob-work-section {
   background-color: black !important;
   padding: 2rem;
-  height: 350vh;
+  height: 1100vh;
   z-index: 10000;
 
   &__scroll-container {
-    // background-color: black !important;
-    height: fit-content;
+    height: 100%;
     position: relative;
     height: 100%;
   }
@@ -311,13 +310,14 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    border-radius: 1rem;
     &-image-container {
-      height: 55%;
+      height: fit-content;
       border-radius: 1rem;
       & img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: fill;
         object-position: center;
         border-radius: 1rem;
       }

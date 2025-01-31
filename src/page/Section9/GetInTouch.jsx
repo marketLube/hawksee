@@ -43,12 +43,12 @@ export const GetInTouch = () => {
                 >
                   Our Works
                 </a>
-                <a
+                {/* <a
                   style={{ cursor: "pointer" }}
                   onClick={() => scrollToSection("stories")}
                 >
                   Stories
-                </a>
+                </a> */}
                 <a
                   href="https://wa.me/919995000123"
                   target="_blank"

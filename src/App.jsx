@@ -10,8 +10,9 @@ import { Grid } from "./page/Section7/Grid";
 import { MeetTheTeam } from "./page/Section8/MeetTheTeam";
 import { GetInTouch } from "./page/Section9/GetInTouch";
 import Projects from "./page/Projects/Projects";
-import Service from "./page/Service/service";
+// import Service from "./page/Service/service";
 import ServiceMobo from "./page/Service/serviceMobo";
+import ServiceSCroll from "./page/Service/ServiceSCroll";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
@@ -43,7 +44,12 @@ function App() {
           setIsNavScrolling={setIsNavScrolling}
         />
         <Paragraph />
-        {windowWidth > 768 ? <Service /> : <ServiceMobo />}
+        {windowWidth > 768 ? (
+          //  <Service />
+          <ServiceSCroll />
+        ) : (
+          <ServiceMobo />
+        )}
         <Projects />
         <Counter />
         <DoubleLineReels />

@@ -10,7 +10,6 @@ import { Grid } from "./page/Section7/Grid";
 import { MeetTheTeam } from "./page/Section8/MeetTheTeam";
 import { GetInTouch } from "./page/Section9/GetInTouch";
 import Projects from "./page/Projects/Projects";
-import Service from "./page/Service/service";
 import ServiceMobo from "./page/Service/serviceMobo";
 import ServiceSCroll from "./page/Service/ServiceSCroll";
 
@@ -44,8 +43,8 @@ function App() {
           setIsNavScrolling={setIsNavScrolling}
         />
         <Paragraph />
-        <ServiceSCroll />
-        {/* {windowWidth > 768 ? <ServiceSCroll /> : <ServiceMobo />} */}
+        {/* <ServiceSCroll /> */}
+        {windowWidth > 768 ? <ServiceSCroll /> : <ServiceMobo />}
         <Projects />
         <Counter />
         <DoubleLineReels />

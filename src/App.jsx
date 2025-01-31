@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Nav } from "./components/Nav";
 import { Bird } from "./page/Section1/Bird";
@@ -58,7 +58,6 @@ function App() {
         <Counter />
         <DoubleLineReels />
         <Research />
-        {/* <RealStories /> */}
         <Grid />
         <MeetTheTeam />
       </main>

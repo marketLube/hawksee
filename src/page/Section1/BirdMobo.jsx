@@ -35,7 +35,10 @@ export const BirdMobo = () => {
           style={{
             transform: isAnimated
               ? "translate(-10rem, -50rem) scale(10)"
-              : "translate(0, 0) scale(1)",
+              : "translate(10rem, 1rem) scale(1.5)",
+            transition: isAnimated
+              ? "transform 1s cubic-bezier(.79,.07,.85,.64)"
+              : "transform .5s cubic-bezier(0,.74,.6,.92)",
           }}
           alt=""
           src={BirdMobile}

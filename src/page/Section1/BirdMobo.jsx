@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import BirdMobile from "../../assets/birdForMobile.svg";
 import { useMediaQuery } from "react-responsive";
+
 export const BirdMobo = ({ isNavScrolling }) => {
   const [offset, setOffset] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -124,6 +125,32 @@ export const BirdMobo = ({ isNavScrolling }) => {
 
   const isSmallMobile = useMediaQuery({ query: "(max-width: 578px)" });
 
+  const birdStyle = {
+    transform: `translate3d(${-offset * getTranslateMultiplier().x}px, ${
+      -offset * getTranslateMultiplier().y
+    }px, 0) scale(${
+      (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
+    })`,
+    transformOrigin: "center center",
+    transition: `${
+      scrollDirection === "up"
+        ? "transform 0.5s cubic-bezier(0.01, 0.62, 0.38, 1.02)"
+        : "transform 1.3s cubic-bezier(0.49, 0.41, 0.1, 1.02)"
+    }`,
+    WebkitTransform: `translate3d(${-offset * getTranslateMultiplier().x}px, ${
+      -offset * getTranslateMultiplier().y
+    }px, 0) scale(${
+      (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
+    })`,
+    WebkitTransformOrigin: "center center",
+    WebkitTransition: `${
+      scrollDirection === "up"
+        ? "-webkit-transform 0.5s cubic-bezier(0.01, 0.62, 0.38, 1.02)"
+        : "-webkit-transform 1.3s cubic-bezier(0.49, 0.41, 0.1, 1.02)"
+    }`,
+    willChange: "transform",
+  };
+
   return (
     <section id="bird" className="bird" ref={birdSectionRef}>
       <div className="caption">
@@ -132,25 +159,7 @@ export const BirdMobo = ({ isNavScrolling }) => {
         </a>
       </div>
       <div className="bird-container">
-        <img
-          className="bird-image"
-          alt=""
-          src={BirdMobile}
-          style={{
-            transform: `translate3d(${
-              -offset * getTranslateMultiplier().x
-            }px, ${-offset * getTranslateMultiplier().y}px, 0) scale(${
-              (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
-            })`,
-            transformOrigin: "center center",
-            transition: `${
-              scrollDirection === "up"
-                ? "transform 0.5s cubic-bezier(.73,.58,.83,.67)"
-                : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)"
-            }`,
-            willChange: "transform",
-          }}
-        />
+        <img className="bird-image" alt="" src={BirdMobile} style={birdStyle} />
       </div>
     </section>
   );

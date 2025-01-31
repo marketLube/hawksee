@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import { Nav } from "./components/Nav";
 import { Bird } from "./page/Section1/Bird";
+import { BirdMobo } from "./page/Section1/BirdMobo";
 import { Paragraph } from "./page/Section2/Paragraph";
 import { Counter } from "./page/Section3/Counter";
 import { DoubleLineReels } from "./page/Section4/DoubleLineReels";
 import { Research } from "./page/Section5/Research";
-
 import { Grid } from "./page/Section7/Grid";
 import { MeetTheTeam } from "./page/Section8/MeetTheTeam";
 import { GetInTouch } from "./page/Section9/GetInTouch";
 import Projects from "./page/Projects/Projects";
-// import Service from "./page/Service/service";
 import ServiceMobo from "./page/Service/serviceMobo";
 import ServiceSCroll from "./page/Service/ServiceSCroll";
 
@@ -30,6 +30,8 @@ function App() {
     };
   }, []);
 
+  const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
+
   return (
     <>
       <header>
@@ -39,17 +41,16 @@ function App() {
         />
       </header>
       <main>
-        <Bird
-          isNavScrolling={isNavScrolling}
-          setIsNavScrolling={setIsNavScrolling}
-        />
-        <Paragraph />
-        {windowWidth > 768 ? (
-          //  <Service />
-          <ServiceSCroll />
+        {isMobile ? (
+          <BirdMobo />
         ) : (
-          <ServiceMobo />
+          <Bird
+            isNavScrolling={isNavScrolling}
+            setIsNavScrolling={setIsNavScrolling}
+          />
         )}
+        <Paragraph />
+        {isMobile ? <ServiceMobo /> : <ServiceSCroll />}
         <Projects />
         <Counter />
         <DoubleLineReels />

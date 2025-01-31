@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
-import BirdImg from "../../assets/birdImg.svg";
-
-export const Bird = ({ isNavScrolling }) => {
+import BirdMobile from "../../assets/birdForMobile.svg";
+import { useMediaQuery } from "react-responsive";
+export const BirdMobo = ({ isNavScrolling }) => {
   const [offset, setOffset] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -122,18 +122,20 @@ export const Bird = ({ isNavScrolling }) => {
     return { x: 0.5, y: 0.315 };
   };
 
+  const isSmallMobile = useMediaQuery({ query: "(max-width: 578px)" });
+
   return (
     <section id="bird" className="bird" ref={birdSectionRef}>
       <div className="caption">
         <a>
-          <p>Every Brand Needs Hawksee</p>
+          <p>Every Brand {isSmallMobile && <br />} Needs Hawksee</p>
         </a>
       </div>
       <div className="bird-container">
         <img
           className="bird-image"
           alt=""
-          src={BirdImg}
+          src={BirdMobile}
           style={{
             transform: `translate3d(${
               -offset * getTranslateMultiplier().x

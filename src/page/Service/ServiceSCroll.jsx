@@ -8,50 +8,60 @@ const contentList = [
     title: "Social Media Management",
     description:
       "Strategically managing and growing your brand’s presence across social platforms.",
+    img: "https://cdn.example.com/social-media.jpg",
   },
   {
     title: "Performance Marketing",
     description: "Data-driven ad campaigns to maximize conversions and ROI.",
+    img: "https://cdn.example.com/performance-marketing.jpg",
   },
   {
     title: "Content Creation ",
     description:
       "High-quality visuals, videos, and graphics to enhance brand storytelling.",
+    img: "https://cdn.example.com/content-creation.jpg",
   },
   {
     title: "Video Production",
     description:
       "Professional video shoots and edits tailored to your brand’s message.",
+    img: "https://cdn.example.com/video-production.jpg",
   },
   {
     title: "Branding & Design",
     description:
       "Crafting unique brand identities with logos, collaterals, and design assets.",
+    img: "https://cdn.example.com/branding-design.jpg",
   },
   {
     title: "Website Development",
     description:
       "User-friendly, conversion-optimized websites for businesses of all sizes.",
+    img: "https://cdn.example.com/website-development.jpg",
   },
   {
     title: "SEO & Digital Strategy",
     description:
       "Enhancing online visibility with tailored SEO and digital growth strategies.",
+    img: "https://cdn.example.com/seo-strategy.jpg",
   },
   {
     title: "Influencer Marketing",
     description:
       "Connecting brands with the right influencers for authentic engagement.",
+    img: "https://cdn.example.com/influencer-marketing.jpg",
   },
   {
     title: "Reels Marketing",
     description:
       "Engaging short-form video strategies to boost brand awareness and reach.",
+    img: "https://cdn.example.com/reels-marketing.jpg",
   },
   {
     title: "Outdoor & Print Advertising",
     description:
       "Designing and printing leaflets, brochures, hoardings, and other marketing materials.",
+    img: "https://cdn.example.com/outdoor-advertising.jpg",
   },
 ];
 
@@ -148,11 +158,7 @@ function ServiceSCroll() {
             reelsRef,
             outdoorRef,
           ].map((ref, index) => (
-            <RightScroll
-              key={index}
-              refs={ref}
-              img="https://cdn.prod.website-files.com/66b0a2749f8ac3c146b191c2"
-            />
+            <RightScroll key={index} refs={ref} img={contentList[index].img} />
           ))}
         </div>
       </div>

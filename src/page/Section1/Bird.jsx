@@ -1,14 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import BirdImg from "../../assets/birdImg.svg";
 import BirdMobile from "../../assets/birdForMobile.svg";
-import { Link } from "react-router-dom";
 
 export const Bird = ({ isNavScrolling }) => {
   const [offset, setOffset] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scrollDirection, setScrollDirection] = useState("down");
-  const birdSectionRef = useRef(null); // Create a ref for the bird section
+  const birdSectionRef = useRef(null);
 
   const smoothScrollTo = (targetPosition) => {
     const duration = 700;
@@ -17,7 +16,7 @@ export const Bird = ({ isNavScrolling }) => {
     let startTime = null;
 
     const animation = (currentTime) => {
-      if (startTime === null) startTime = currentTime;
+      if (startTime === null) startTime = currentTime - 100;
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
 

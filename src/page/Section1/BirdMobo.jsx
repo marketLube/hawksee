@@ -15,6 +15,13 @@ export const BirdMobo = ({ isNavScrolling }) => {
   }, []);
 
   const smoothScrollTo = (targetPosition) => {
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      return;
+    }
+
     const duration = 700;
     const start = window.pageYOffset || document.documentElement.scrollTop;
     const distance = targetPosition - start;

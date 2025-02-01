@@ -88,10 +88,10 @@
       font-size: 6rem !important;
     }
     @include responsive.respond(tablets) {
-      font-size: 6rem;
+      font-size: 5.9rem;
     }
     @include responsive.respond(bigTablets) {
-      font-size: 7rem;
+      font-size: 6rem;
     }
     @include responsive.respond(desktop) {
       font-size: 8rem;
@@ -154,7 +154,7 @@
     font-size: 5rem !important;
   }
   @include responsive.respond(tablets) {
-    font-size: 8rem !important;
+    font-size: 7rem !important;
   }
   @include responsive.respond(bigTablets) {
     font-size: 9rem !important;

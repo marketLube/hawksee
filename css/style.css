@@ -1997,12 +1997,12 @@ a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .research-head {
-    font-size: 6rem;
+    font-size: 5.9rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .research-head {
-    font-size: 7rem;
+    font-size: 6rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
@@ -2082,7 +2082,7 @@ a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .research-head {
-    font-size: 8rem !important;
+    font-size: 7rem !important;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {

@@ -9,7 +9,7 @@ export const Nav = ({ setIsNavScrolling }) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const multiplier = window.innerWidth < 768 ? 0.9 : 2;
+      const multiplier = window.innerWidth < 768 ? 0.1 : 2;
       const viewportHeight = window.innerHeight * multiplier;
 
       if (currentScrollY > viewportHeight) {

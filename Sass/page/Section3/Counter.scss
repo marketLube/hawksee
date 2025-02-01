@@ -39,6 +39,12 @@
     padding: 2rem 0;
     margin-top: -5rem;
   }
+  @media screen and (min-width: 400px) and (max-width: 430px) {
+    height: auto;
+    min-height: 75vh;
+    padding: 2rem 0;
+    margin-top: -18rem;
+  }
 }
 
 .counter-content {

@@ -18,10 +18,11 @@
     height: 60vh !important;
   }
   @include responsive.respond(smallPhone) {
-    height: 75vh !important;
+    height: fit-content !important;
   }
+
   @media (max-width: 399px) {
-    height: 85vh !important;
+    height: fit-content !important;
   }
 
   &__container {

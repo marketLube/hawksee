@@ -802,12 +802,12 @@ a {
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch {
-    height: 75vh !important;
+    height: fit-content !important;
   }
 }
 @media (max-width: 399px) {
   .get-in-touch {
-    height: 85vh !important;
+    height: fit-content !important;
   }
 }
 .get-in-touch__container {

@@ -7,7 +7,6 @@
   width: 100vw;
   height: 100vh;
   z-index: 10000;
-  //   transition: all 0.5s cubic-bezier(0.13, 0.39, 0.71, 0.91);
   transform-origin: bottom;
 
   &--active {
@@ -132,7 +131,6 @@
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1rem;
     }
-
     &-item {
       width: 100%;
       height: fit-content;

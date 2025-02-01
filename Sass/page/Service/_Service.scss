@@ -1,9 +1,10 @@
 @use "../../base/responsive" as responsive;
 
 .scroll-container {
-  height: 350vh;
+  height: fit-content;
   width: 100%;
   background-color: #ffffff;
+  margin-bottom: -20rem;
 }
 
 .serviceMain {
@@ -369,11 +370,9 @@
 }
 
 .buttondivPortfolioSer {
-  margin-top: 0rem;
-  text-align: center;
-  padding-bottom: 4rem;
-  display: flex;
-  justify-content: center;
+  text-align: left;
+
+  margin-top: 8rem;
 
   @include responsive.respond(smallPhone) {
     padding: 1rem;
@@ -399,15 +398,15 @@
     }
   }
 
-  @include responsive.respond(bigTablets) {
-    padding: 9rem;
-  }
+  //   @include responsive.respond(bigTablets) {
+  //     padding: 9rem;
+  //   }
 
-  @include responsive.respond(desktop) {
-    padding: 10rem;
-  }
+  //   @include responsive.respond(desktop) {
+  //     padding: 10rem;
+  //   }
 
-  @include responsive.respond(bigDesktop) {
-    padding: 12rem;
-  }
+  //   @include responsive.respond(bigDesktop) {
+  //     padding: 12rem;
+  //   }
 }

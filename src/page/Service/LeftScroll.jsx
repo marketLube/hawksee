@@ -34,15 +34,17 @@ function LeftScroll({ content }) {
         shouldAnimate ? "animate-mount" : ""
       }`}
     >
-      <div className="home-text">
-        <span>{content?.title}</span>
-      </div>
-      <div className="about-para-container">
+      <div style={{ height: "15rem" }}>
+        <div className="home-text">
+          <span>{content?.title}</span>
+        </div>
+        {/* <div className="about-para-container"> */}
         {/* <button className="clickbtn" onClick={handleRegisterNow}>
           Register Now
         </button> */}
         <p className="about-para-container-right">{content?.description}</p>
       </div>
+      {/* </div> */}
       <div className="buttondivPortfolioSer">
         <Button onClick={handleClick}>
           <a href="#projects">

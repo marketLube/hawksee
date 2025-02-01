@@ -86,7 +86,12 @@ const serviceMobo = () => {
             </div>
             <div className="mob-work-section__item-pills">
               <h4 className="work-section__subtitle-style">{item.subtitle}</h4>
-              <h1 className="work-section__heading-style">{item.title}</h1>
+              <h1
+                className="work-section__heading-style"
+                style={{ fontWeight: "500" }}
+              >
+                {item.title}
+              </h1>
               <p className="work-section__para-style">{item.description}</p>
             </div>
             <div className="buttondivPortfolioSer">

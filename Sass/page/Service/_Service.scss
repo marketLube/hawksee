@@ -410,6 +410,10 @@
     }
   }
 
+  @media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
+    margin-top: 0;
+  }
+
   //   @include responsive.respond(bigTablets) {
   //     padding: 9rem;
   //   }

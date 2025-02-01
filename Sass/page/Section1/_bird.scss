@@ -83,6 +83,7 @@
     @include responsive.respond(tablets) {
       top: -10rem;
       right: -20rem;
+      scale: 1.4;
     }
 
     @include responsive.respond(phone) {

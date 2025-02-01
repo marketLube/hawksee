@@ -1479,8 +1479,9 @@ a {
 }
 @media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
   .bird-image {
-    top: 20rem !important;
-    right: -30rem !important;
+    top: -15rem !important;
+    right: -25rem !important;
+    scale: 1.5;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {

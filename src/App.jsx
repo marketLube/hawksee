@@ -31,6 +31,7 @@ function App() {
   }, []);
 
   const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
+  const isMini = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
     <>
@@ -53,7 +54,7 @@ function App() {
           />
         )}
         <Paragraph />
-        {isMobile ? <ServiceMobo /> : <ServiceSCroll />}
+        {isMini ? <ServiceMobo /> : <ServiceSCroll />}
         <Projects />
         <Counter />
         <DoubleLineReels />

@@ -23,7 +23,8 @@
   }
 
   @include responsive.respond(tablets) {
-    height: 90vh;
+    height: fit-content;
+    margin-top: -12rem;
   }
 
   @include responsive.respond(phone) {

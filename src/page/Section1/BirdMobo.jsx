@@ -48,7 +48,6 @@ export const BirdMobo = ({ isNavScrolling }) => {
     let rafId;
 
     const handleScroll = () => {
-      // Cancel any existing animation frame
       if (rafId) {
         cancelAnimationFrame(rafId);
       }
@@ -65,7 +64,7 @@ export const BirdMobo = ({ isNavScrolling }) => {
           setHasScrolled(true);
           const targetHeight =
             window.innerWidth <= 1199.98
-              ? window.innerHeight * 2
+              ? window.innerHeight * 2.14
               : window.innerHeight * 3.3;
 
           if (isNavScrolling === null || isNavScrolling === false) {
@@ -146,58 +145,30 @@ export const BirdMobo = ({ isNavScrolling }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const getScaleMultiplier = () => {
-    if (!windowWidth) return 0.001; // Default value
-    if (windowWidth <= 575.98) return 0.05;
-    if (windowWidth <= 767.98) return 0.05;
-    if (windowWidth <= 991.98) return 0.08;
-    if (windowWidth <= 1199.98) return 0.015;
-    if (windowWidth <= 1399.98) return 0.0012;
-    return 0.001;
-  };
-
-  const getTranslateMultiplier = () => {
-    if (!windowWidth) return { x: 0.5, y: 0.315 }; // Default values
-    if (windowWidth <= 575.98) return { x: 0.5, y: 5 };
-    if (windowWidth <= 767.98) return { x: 0.1, y: 10 };
-    if (windowWidth <= 991.98) return { x: 0.3, y: 0.28 };
-    if (windowWidth <= 1199.98) return { x: 0.45, y: 0.3 };
-    if (windowWidth <= 1399.98) return { x: 0.48, y: 0.31 };
-    return { x: 0.5, y: 0.315 };
+  const birdStyle = {
+    transform: "scale(1.2)",
+    transformOrigin: "center center",
+    willChange: "transform",
+    WebkitBackfaceVisibility: "hidden",
+    WebkitPerspective: 1000,
   };
 
   const isSmallMobile = useMediaQuery({ query: "(max-width: 578px)" });
 
-  const birdStyle = {
-    transform: `translate3d(${-offset * getTranslateMultiplier().x}px, ${
-      -offset * getTranslateMultiplier().y
-    }px, 0) scale(${
-      (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
-    })`,
-    transformOrigin: "center center",
-    transition: `transform ${
-      scrollDirection === "up" ? "0.5s" : "1.3s"
-    } cubic-bezier(0.49, 0.41, 0.1, 1.02)`,
-    willChange: "transform",
-    // Add hardware acceleration
-    WebkitBackfaceVisibility: "hidden",
-    WebkitPerspective: 1000,
-    WebkitTransform: `translate3d(${-offset * getTranslateMultiplier().x}px, ${
-      -offset * getTranslateMultiplier().y
-    }px, 0) scale(${
-      (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
-    })`,
-  };
-
   return (
-    <section id="bird" className="bird" ref={birdSectionRef}>
-      <div className="caption">
+    <section id="bird" className="birdMobo" ref={birdSectionRef}>
+      <div className="captionMobo">
         <a>
           <p>Every Brand {isSmallMobile && <br />} Needs Hawksee</p>
         </a>
       </div>
-      <div className="bird-container">
-        <img className="bird-image" alt="" src={BirdMobile} style={birdStyle} />
+      <div className="bird-containerMobo">
+        <img
+          className="bird-imageMobo"
+          alt="bird"
+          src={BirdMobile}
+          style={birdStyle}
+        />
       </div>
     </section>
   );

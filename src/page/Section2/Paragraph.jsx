@@ -1,16 +1,23 @@
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
-
+import { useMediaQuery } from "react-responsive";
 export const Paragraph = () => {
   const ref = useRef(null);
 
   const isInView = useInView(ref, { amount: 0.2 });
 
+  const isSmallMobile = useMediaQuery({ query: "(max-width: 575.98px)" });
+
   return (
     // <Parallax speed={-40} className="no-transition">
     <section id="about">
-      <div className="paragraph">
+      <div
+        className="paragraph"
+        style={{
+          backgroundColor: isSmallMobile ? "black" : "transparent",
+        }}
+      >
         <div className="paragraph__imageDiv" ref={ref}>
           <img
             src="https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png"

@@ -19,7 +19,7 @@
   }
 
   @include responsive.respond(tablets) {
-    min-height: 100vh;
+    min-height: fit-content;
   }
 
   @include responsive.respond(phone) {
@@ -68,7 +68,7 @@
 }
 .swiper {
   width: 85%;
-  height: 72vh;
+  height: 65vh;
   @include responsive.respond(desktop) {
     width: 90%;
     height: 78vh;
@@ -85,7 +85,7 @@
 
   @include responsive.respond(tablets) {
     width: 95%;
-    height: 75vh;
+    height: 55vh;
   }
 
   @include responsive.respond(phone) {
@@ -168,6 +168,7 @@
   }
 
   @include responsive.respond(tablets) {
+    height: fit-content;
   }
 
   @include responsive.respond(phone) {

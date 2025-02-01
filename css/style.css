@@ -2124,7 +2124,7 @@ a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .meet {
-    min-height: 100vh;
+    min-height: fit-content;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -2182,7 +2182,7 @@ a {
 
 .swiper {
   width: 85%;
-  height: 72vh;
+  height: 65vh;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .swiper {
@@ -2204,7 +2204,7 @@ a {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .swiper {
     width: 95%;
-    height: 75vh;
+    height: 55vh;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -2285,6 +2285,11 @@ a {
 
 .swiper-slide {
   text-align: center;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .swiper-slide {
+    height: fit-content;
+  }
 }
 @media only screen and (max-width: 575.98px) {
   .swiper-slide {

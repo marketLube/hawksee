@@ -143,7 +143,7 @@ export const Bird = ({ isNavScrolling }) => {
             transformOrigin: "center center",
             transition: `${
               scrollDirection === "up"
-                ? "transform 0.5s cubic-bezier(.73,.58,.83,.67)"
+                ? "transform 0.1s cubic-bezier(.73,.58,.83,.67)"
                 : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)"
             }`,
             willChange: "transform",

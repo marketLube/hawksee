@@ -12,7 +12,8 @@
     color: white;
     font-size: 6.5rem;
     font-weight: 300;
-
+    line-height: 1.2;
+    margin-bottom: 2rem;
     @include responsive.respond(bigDesktop) {
       font-size: 6.5rem;
     }

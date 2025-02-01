@@ -2391,8 +2391,8 @@ a {
   }
 }
 .logos-title {
-  font-size: 11rem;
-  font-weight: 700;
+  font-size: 10rem;
+  font-weight: 600;
   margin-bottom: 2rem;
   text-align: right;
   color: white;
@@ -3379,6 +3379,8 @@ a {
   color: white;
   font-size: 6.5rem;
   font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 2rem;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .about .home-text {

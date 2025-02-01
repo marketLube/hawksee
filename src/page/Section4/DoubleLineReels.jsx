@@ -143,10 +143,10 @@ export const DoubleLineReels = () => {
       >
         <h1
           className="logos-title"
-          style={{
-            transform: animate ? "translateY(0rem)" : "translateY(10rem)",
-            transition: "transform 0.6s",
-          }}
+          // style={{
+          //   transform: animate ? "translateY(0rem)" : "translateY(10rem)",
+          //   transition: "transform 0.6s",
+          // }}
         >
           Projects
         </h1>

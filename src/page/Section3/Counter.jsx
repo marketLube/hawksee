@@ -43,7 +43,7 @@ export const Counter = () => {
                     : { transform: "translateY(10rem)" }
                 }
               >
-                does it work?
+                Does it work?
               </div>
             </div>
           </h1>

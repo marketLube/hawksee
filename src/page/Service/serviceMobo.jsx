@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "../../components/Button";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const serviceMobo = () => {
   const items = [
@@ -62,6 +64,14 @@ const serviceMobo = () => {
       img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314187/pexels-valeriiamiller-3752659_ct5hxe.jpg",
     },
   ];
+
+  const handleClick = () => {
+    window.location.hash = "#projects";
+    window.scrollTo({
+      top: window.scrollY + 100,
+      behavior: "smooth",
+    });
+  };
   return (
     <div
       className="mob-work-section"
@@ -79,6 +89,14 @@ const serviceMobo = () => {
               <h1 className="work-section__heading-style">{item.title}</h1>
               <p className="work-section__para-style">{item.description}</p>
             </div>
+            {/*
+            <div className="buttondivPortfolioSer">
+              <Button onClick={handleClick}>
+                <a href="#projects">
+                  View All <FiArrowUpRight />
+                </a>
+              </Button>
+            </div> */}
           </div>
         ))}
       </div>

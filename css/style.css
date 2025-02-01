@@ -3360,6 +3360,14 @@ a {
   }
 }
 
+.buttondivPortfolioSer {
+  margin-top: 10rem;
+  text-align: center;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
 .about {
   height: fit-content;
   padding: 0 5rem;

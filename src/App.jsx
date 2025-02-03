@@ -16,55 +16,47 @@ import ServiceSCroll from "./page/Service/ServiceSCroll";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
   const isAir = useMediaQuery({ query: "(max-width: 820px)" });
 
   return (
     <>
-      <header>
+      <header aria-label="Main navigation header">
         <Nav
           isNavScrolling={isNavScrolling}
           setIsNavScrolling={setIsNavScrolling}
+          aria-label="Main navigation"
         />
       </header>
-      <main>
+      <main aria-label="Main content area">
         {isMobile ? (
           <BirdMobo
             isNavScrolling={isNavScrolling}
             setIsNavScrolling={setIsNavScrolling}
+            aria-label="Mobile bird section"
           />
         ) : (
           <Bird
             isNavScrolling={isNavScrolling}
             setIsNavScrolling={setIsNavScrolling}
+            aria-label="Desktop bird section"
           />
         )}
-        <Paragraph />
-        {isAir ? <ServiceMobo /> : <ServiceSCroll />}
-        <Projects />
-        <Counter />
-        <DoubleLineReels />
-        <Research />
-        {/* <RealStories /> */}
-        <Grid />
-        <MeetTheTeam />
+        <Paragraph aria-label="Paragraph section" />
+        {isAir ? (
+          <ServiceMobo aria-label="Mobile service section" />
+        ) : (
+          <ServiceSCroll aria-label="Scroll service section" />
+        )}
+        <Projects aria-label="Projects section" />
+        <Counter aria-label="Counter section" />
+        <DoubleLineReels aria-label="Double line reels section" />
+        <Research aria-label="Research section" />
+        <Grid aria-label="Grid section" />
+        <MeetTheTeam aria-label="Meet the team section" />
       </main>
-      <footer>
-        <GetInTouch />
+      <footer aria-label="Footer section">
+        <GetInTouch aria-label="Get in touch section" />
       </footer>
     </>
   );

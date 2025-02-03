@@ -131,9 +131,7 @@ const serviceMobo = () => {
                 onClick={handleClick}
                 aria-label="View all projects button"
               >
-                {/* <a href="#projects" aria-label="Link to view all projects"> */}
                 View All <FiArrowUpRight />
-                {/* </a> */}
               </Button>
             </div>
           </div>

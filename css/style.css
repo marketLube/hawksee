@@ -3407,7 +3407,7 @@ a {
 .mob-work-section .work-section__heading-style {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: #ccc;
+  color: white;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -3420,11 +3420,11 @@ a {
   font-size: 0.9rem;
   letter-spacing: 3px;
   font-weight: 200;
-  color: #ccc;
+  color: white;
 }
 .mob-work-section .work-section__para-style {
   font-size: 0.9rem;
-  color: #ccc;
+  color: white;
   opacity: 1;
   transition: all 0.5s ease-in-out;
 }

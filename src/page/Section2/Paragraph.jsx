@@ -30,7 +30,7 @@ export const Paragraph = () => {
               isInView
                 ? {
                     transform: "translateY(0%)",
-                    opacity: ".5",
+                    opacity: "0.2",
                   }
                 : { transform: "translateY(100%)", opacity: "0" }
             }
@@ -44,7 +44,7 @@ export const Paragraph = () => {
               isInView
                 ? {
                     transform: "translateY(0%)",
-                    opacity: ".5",
+                    opacity: ".2",
                   }
                 : { transform: "translateY(200%)", opacity: "0" }
             }
@@ -58,7 +58,7 @@ export const Paragraph = () => {
               isInView
                 ? {
                     transform: "translateY(0%)",
-                    opacity: ".5",
+                    opacity: ".2",
                   }
                 : { transform: "translateY(400%)", opacity: "0" }
             }

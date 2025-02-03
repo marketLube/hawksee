@@ -108,17 +108,16 @@
   align-items: center;
   margin-bottom: 5rem;
   font-weight: 100;
-  & p {
-    height: 30%;
+  & h1 {
     font-size: 3rem;
-
+    font-weight: 100;
     @include responsive.respond(phone) {
       font-size: 2.5rem;
     }
   }
 }
 @media (max-width: 575.98px) {
-  .caption p {
+  .caption h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 30%;
@@ -158,10 +157,11 @@
   align-items: center;
   margin-bottom: 5rem;
   font-weight: 100;
-  & p {
-    height: 30%;
+  & h1 {
     font-size: 3rem;
-
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 5rem;
     @include responsive.respond(phone) {
       font-size: 2.5rem;
     }

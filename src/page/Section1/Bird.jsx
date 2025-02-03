@@ -130,9 +130,7 @@ export const Bird = ({ isNavScrolling }) => {
       aria-label="Bird section"
     >
       <div className="caption" aria-label="Caption for the bird section">
-        <a>
-          <p>Every Brand Needs Hawksee</p>
-        </a>
+        <h1>Every Brand Needs Hawksee</h1>
       </div>
       <div className="bird-container" aria-label="Container for the bird image">
         <img

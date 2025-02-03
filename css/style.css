@@ -1534,18 +1534,18 @@ a {
   margin-bottom: 5rem;
   font-weight: 100;
 }
-.caption p {
-  height: 30%;
+.caption h1 {
   font-size: 3rem;
+  font-weight: 100;
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
-  .caption p {
+  .caption h1 {
     font-size: 2.5rem;
   }
 }
 
 @media (max-width: 575.98px) {
-  .caption p {
+  .caption h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 30%;
@@ -1587,12 +1587,14 @@ a {
   margin-bottom: 5rem;
   font-weight: 100;
 }
-.captionMobo p {
-  height: 30%;
+.captionMobo h1 {
   font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
-  .captionMobo p {
+  .captionMobo h1 {
     font-size: 2.5rem;
   }
 }

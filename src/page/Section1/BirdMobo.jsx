@@ -37,9 +37,7 @@ export const BirdMobo = () => {
       aria-label="Bird section"
     >
       <div className="captionMobo" aria-label="Caption for the bird section">
-        <a>
-          <p>Every Brand {isSmallMobile && <br />} Needs Hawksee</p>
-        </a>
+        <h1>Every Brand {isSmallMobile && <br />} Needs Hawksee</h1>
       </div>
       <div
         className="bird-containerMobo"

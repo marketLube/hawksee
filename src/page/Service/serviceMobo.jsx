@@ -77,26 +77,61 @@ const serviceMobo = () => {
       className="mob-work-section"
       id="service"
       style={{ backgroundColor: "black" }}
+      aria-label="Mobile work section for services"
     >
-      <div className="mob-work-section__scroll-container">
+      <div
+        className="mob-work-section__scroll-container"
+        aria-label="Scroll container for service items"
+      >
         {items.map((item, index) => (
-          <div key={index} className="mob-work-section__item">
-            <div className="mob-work-section__item-image-container">
-              <img src={item.img} alt={item.heading} />
+          <div
+            key={index}
+            className="mob-work-section__item"
+            aria-label={`Service item ${index + 1}`}
+          >
+            <div
+              className="mob-work-section__item-image-container"
+              aria-label={`Image for ${item.title}`}
+            >
+              <img
+                src={item.img}
+                alt={item.heading}
+                aria-label={`Image representing ${item.title}`}
+              />
             </div>
-            <div className="mob-work-section__item-pills">
-              <h4 className="work-section__subtitle-style">{item.subtitle}</h4>
+            <div
+              className="mob-work-section__item-pills"
+              aria-label={`Details for ${item.title}`}
+            >
+              <h4
+                className="work-section__subtitle-style"
+                aria-label={`Subtitle for ${item.title}`}
+              >
+                {item.subtitle}
+              </h4>
               <h1
                 className="work-section__heading-style"
                 style={{ fontWeight: "500" }}
+                aria-label={`Title for ${item.title}`}
               >
                 {item.title}
               </h1>
-              <p className="work-section__para-style">{item.description}</p>
+              <p
+                className="work-section__para-style"
+                aria-label={`Description for ${item.title}`}
+              >
+                {item.description}
+              </p>
             </div>
-            <div className="buttondivPortfolioSer">
-              <Button onClick={handleClick}>
-                <a href="#projects">
+            <div
+              className="buttondivPortfolioSer"
+              aria-label="Button to view all projects"
+            >
+              <Button
+                onClick={handleClick}
+                aria-label="View all projects button"
+              >
+                <a href="#projects" aria-label="Link to view all projects">
                   View All <FiArrowUpRight />
                 </a>
               </Button>

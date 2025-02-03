@@ -26,42 +26,33 @@ export const Paragraph = () => {
             alt="Image 1"
             className="paragraph__imageDiv__image1"
             aria-label="Image representing the brand's potential"
-            style={
-              isInView
-                ? {
-                    transform: "translateY(0%)",
-                    opacity: "0.2",
-                  }
-                : { transform: "translateY(100%)", opacity: "0" }
-            }
+            style={{
+              transform: isInView ? "translateY(0%)" : "translateY(100%)",
+              opacity: isInView ? "0.2" : "0",
+              transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
+            }}
           />
           <img
             src="https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png"
             alt="Image 2"
             className="paragraph__imageDiv__image2"
             aria-label="Image representing the brand's vision"
-            style={
-              isInView
-                ? {
-                    transform: "translateY(0%)",
-                    opacity: ".2",
-                  }
-                : { transform: "translateY(200%)", opacity: "0" }
-            }
+            style={{
+              transform: isInView ? "translateY(0%)" : "translateY(100%)",
+              opacity: isInView ? "0.2" : "0",
+              transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
+            }}
           />
           <img
             src="https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986962/hawPara1_cc6pa2.png"
             alt="Image 3"
             className="paragraph__imageDiv__image3"
             aria-label="Image representing the brand's journey"
-            style={
-              isInView
-                ? {
-                    transform: "translateY(0%)",
-                    opacity: ".2",
-                  }
-                : { transform: "translateY(400%)", opacity: "0" }
-            }
+            style={{
+              transform: isInView ? "translateY(0%)" : "translateY(100%)",
+              opacity: isInView ? "0.2" : "0",
+              transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
+            }}
           />
         </div>
         <div className="paragraph__textDiv" aria-label="Text container">

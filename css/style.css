@@ -1549,6 +1549,7 @@ a {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 30%;
+    will-change: contents;
   }
 }
 .birdMobo {

@@ -103,7 +103,7 @@ export const Nav = ({ setIsNavScrolling }) => {
       <div className="navigation" aria-label="Navigation menu">
         <input
           checked={isChecked}
-          onClick={() => setIsChecked(!isChecked)}
+          onChange={() => setIsChecked(!isChecked)}
           type="checkbox"
           className="navigation__checkbox"
           id="navi__toggle"

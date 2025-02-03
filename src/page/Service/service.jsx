@@ -7,8 +7,9 @@ const ImageComponent = ({ src, isActive, animationClass }) => (
       display: isActive ? "block" : "none",
       animation: isActive ? "blink 1s ease-in-out forwards" : "none",
     }}
+    aria-label={isActive ? "Active service image" : "Inactive service image"}
   >
-    <img src={src} alt="IMGS" />
+    <img src={src} alt="IMGS" aria-label="Service image" />
   </div>
 );
 
@@ -73,9 +74,17 @@ const Service = () => {
   }, [activeIndex]);
 
   return (
-    <div className="scroll-container" ref={scrollContainerRef} id="service">
-      <div className="serviceMain">
-        <div className="serviceMain__image-container">
+    <div
+      className="scroll-container"
+      ref={scrollContainerRef}
+      id="service"
+      aria-label="Service section scroll container"
+    >
+      <div className="serviceMain" aria-label="Main service section">
+        <div
+          className="serviceMain__image-container"
+          aria-label="Image container"
+        >
           {images.map((image, index) => (
             <ImageComponent
               key={index}
@@ -85,7 +94,10 @@ const Service = () => {
             />
           ))}
         </div>
-        <div className="serviceMain__text-container">
+        <div
+          className="serviceMain__text-container"
+          aria-label="Service main text container"
+        >
           {contentArray.map((content, index) => (
             <>
               <div
@@ -95,6 +107,7 @@ const Service = () => {
                     : ""
                 } ${index === 0 ? "serviceMain__content-item-fixed" : ""}`}
                 key={index}
+                aria-label={`Service content item ${index + 1}`}
                 style={
                   index === activeIndex && index !== 0
                     ? {
@@ -117,6 +130,7 @@ const Service = () => {
                   className={`serviceMain__main-subtitle${
                     index === activeIndex ? "" : "-fade"
                   }`}
+                  aria-label={`Service subtitle for item ${index + 1}`}
                 >
                   {content.subtitle}
                 </h4>
@@ -124,6 +138,7 @@ const Service = () => {
                   className={`serviceMain__main-title${
                     index === activeIndex ? "" : "-fade"
                   }`}
+                  aria-label={`Service title for item ${index + 1}`}
                 >
                   {content.title}
                 </h1>
@@ -131,13 +146,17 @@ const Service = () => {
                   className={`serviceMain__description${
                     index === activeIndex ? "" : "-fade"
                   }`}
+                  aria-label={`Service description for item ${index + 1}`}
                 >
                   {content.description}
                 </p>
               </div>
             </>
           ))}
-          <div className="serviceMain__content-item-button"></div>
+          <div
+            className="serviceMain__content-item-button"
+            aria-label="Service content item button"
+          ></div>
         </div>
       </div>
     </div>

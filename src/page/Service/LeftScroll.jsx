@@ -1,15 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { FiArrowUpRight } from "react-icons/fi";
 function LeftScroll({ content }) {
   const prevContentRef = useRef(content);
   const [shouldAnimate, setShouldAnimate] = useState(false);
-  const navigate = useNavigate();
-
-  const handleRegisterNow = () => {
-    navigate("/enquiry");
-  };
 
   useEffect(() => {
     if (
@@ -33,20 +27,29 @@ function LeftScroll({ content }) {
       className={`about-scroll-container-left-content ${
         shouldAnimate ? "animate-mount" : ""
       }`}
+      aria-label="Left scroll content container"
     >
-      <div style={{ height: "15rem" }}>
-        <div className="home-text">
-          <span>{content?.title}</span>
+      <div
+        style={{ height: "15rem" }}
+        aria-label="Content area with fixed height"
+      >
+        <div className="home-text" aria-label="Left scroll title">
+          <span aria-label="Left scroll title text">{content?.title}</span>
         </div>
-        {/* <div className="about-para-container"> */}
-
-        <p className="about-para-container-right">{content?.description}</p>
+        <p
+          className="about-para-container-right"
+          aria-label="Left scroll description"
+        >
+          {content?.description}
+        </p>
       </div>
-      {/* </div> */}
-      <div className="buttondivPortfolioSer">
-        <Button onClick={handleClick}>
-          <a href="#projects">
-            View All <FiArrowUpRight />
+      <div
+        className="buttondivPortfolioSer"
+        aria-label="Button container for portfolio section"
+      >
+        <Button onClick={handleClick} aria-label="View all button">
+          <a href="#projects" aria-label="View all projects link">
+            View All <FiArrowUpRight aria-label="Arrow icon for view all" />
           </a>
         </Button>
       </div>

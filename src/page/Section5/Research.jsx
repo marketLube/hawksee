@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Button } from "../../components/Button";
 import { FiArrowDownRight } from "react-icons/fi";
-import { useInView } from "framer-motion";
 
 export const Research = () => {
   const textArray = ["Preparation", "Execution", "Analysis", "Optimization"];
@@ -16,9 +15,7 @@ export const Research = () => {
   const [headingText, setHeadingText] = useState(textArray[0]);
   const [paraText, setParaText] = useState(paraArray[0]);
   const [animate, setAnimate] = useState(true);
-
   const containerRef = useRef(null);
-  const lastScrollTime = useRef(0);
   const lastIndex = useRef(0);
 
   useEffect(() => {
@@ -70,10 +67,10 @@ export const Research = () => {
   }, [textArray, paraArray]);
 
   return (
-    <div className="research" ref={containerRef}>
-      <div className="research-scrol">
-        <div className="research-bttn">
-          <Button>
+    <div className="research" ref={containerRef} aria-label="Research section">
+      <div className="research-scrol" aria-label="Research scroll section">
+        <div className="research-bttn" aria-label="Research button section">
+          <Button aria-label="Research button">
             The Process <FiArrowDownRight />
           </Button>
         </div>
@@ -87,10 +84,15 @@ export const Research = () => {
             backgroundClip: "text",
             color: "transparent",
           }}
+          aria-label="Research heading"
         >
           {headingText}
         </div>
-        <p className={`research-para ${animate ? "animate" : ""}`}>
+
+        <p
+          className={`research-para ${animate ? "animate" : ""}`}
+          aria-label="Research paragraph"
+        >
           {paraText}
         </p>
       </div>

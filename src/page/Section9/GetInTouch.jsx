@@ -14,41 +14,54 @@ export const GetInTouch = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      console.log(`Scrolling to section: ${sectionId}`);
     } else {
       console.error(`Element with ID ${sectionId} not found`);
     }
   };
   return (
     <>
-      <footer id="contact" className="get-in-touch">
-        <div className="get-in-touch__container">
-          <h1 className="get-in-touch__title">Get in touch</h1>
+      <footer
+        id="contact"
+        className="get-in-touch"
+        aria-label="Get in touch section"
+      >
+        <div
+          className="get-in-touch__container"
+          aria-label="Get in touch container"
+        >
+          <h1 className="get-in-touch__title" aria-label="Get in touch title">
+            Get in touch
+          </h1>
 
-          <div className="get-in-touch__content">
-            <div className="get-in-touch__logo">
-              <img src={hawksee} alt="Hawksee Logo" />
+          <div
+            className="get-in-touch__content"
+            aria-label="Get in touch content"
+          >
+            <div className="get-in-touch__logo" aria-label="Get in touch logo">
+              <img src={hawksee} alt="Hawksee Logo" aria-label="Hawksee Logo" />
             </div>
-            <div className="get-in-touch-about">
-              <div className="get-in-touch__links">
+            <div
+              className="get-in-touch-about"
+              aria-label="Get in touch about section"
+            >
+              <div
+                className="get-in-touch__links"
+                aria-label="Links to get in touch"
+              >
                 <a
                   style={{ cursor: "pointer" }}
                   onClick={() => scrollToSection("about")}
+                  aria-label="Navigate to About Us section"
                 >
                   About us
                 </a>
                 <a
                   style={{ cursor: "pointer" }}
                   onClick={() => scrollToSection("works")}
+                  aria-label="Navigate to Our Works section"
                 >
                   Our Works
                 </a>
-                {/* <a
-                  style={{ cursor: "pointer" }}
-                  onClick={() => scrollToSection("stories")}
-                >
-                  Stories
-                </a> */}
                 <a
                   href="https://wa.me/919995000123"
                   target="_blank"
@@ -60,6 +73,7 @@ export const GetInTouch = () => {
                     padding: ".5rem 1rem",
                   }}
                   onClick={() => scrollToSection("contact")}
+                  aria-label="Contact us via WhatsApp"
                 >
                   Contact
                 </a>
@@ -69,56 +83,89 @@ export const GetInTouch = () => {
                   onClick={() => {
                     window.open("mailto:hello@hawksee.org", "_blank");
                   }}
+                  aria-label="Email address for contact"
                 >
                   hello@hawksee.org
                 </span>
               </div>
 
-              <div className="get-in-touch__address">
-                <h3>Calicut: </h3>
-                <p className="addressnote">
+              <div
+                className="get-in-touch__address"
+                aria-label="Get in touch address"
+              >
+                <h3 aria-label="Location heading for Calicut">Calicut: </h3>
+                <p
+                  className="addressnote"
+                  aria-label="Address for Calicut location"
+                >
                   5/639R, 1st Floor,
                   <br />
-                  City Gate Building,Sales tax Office
+                  City Gate Building, Sales tax Office
                   <br /> Road, Mini Bypass Rd, Eranhippalam,
                   <br /> Kozhikode, Kerala 673006
                 </p>
 
-                <h3 style={{ marginTop: "10px" }}>Kochi: </h3>
-                <p className="addressnote">
+                <h3
+                  style={{ marginTop: "10px" }}
+                  aria-label="Location heading for Kochi"
+                >
+                  Kochi:{" "}
+                </h3>
+                <p
+                  className="addressnote"
+                  aria-label="Address for Kochi location"
+                >
                   Second Floor,Trine Tower,
                   <br /> Seaport - Airport Rd, near Naipunya <br />
                   Public School, Thrikkakara, Kochi,
                   <br /> Kerala 682021
                 </p>
 
-                <a href="tel:0495290199" className="get-in-touch__phone">
+                <a
+                  href="tel:0495290199"
+                  className="get-in-touch__phone"
+                  aria-label="Phone number for contact"
+                >
                   +91 9995000123
                 </a>
               </div>
             </div>
-            <div className="get-in-touch__smContact">
+            <div
+              className="get-in-touch__smContact"
+              aria-label="Social media contact information"
+            >
               <span
                 onClick={() =>
                   window.open("mailto:hello@hawksee.org", "_blank")
                 }
+                aria-label="Email contact for Hawksee"
               >
                 info@hawksee.in
               </span>
-              <span onClick={() => window.open("tel:0495290199")}>
+              <span
+                onClick={() => window.open("tel:0495290199")}
+                aria-label="Click to call the phone number +91 9995000123"
+              >
                 +91 9995000123
               </span>
             </div>
           </div>
         </div>
       </footer>
-      <div className="social-media-container">
-        <div className="social-media-container__content">
+      <div
+        className="social-media-container"
+        aria-label="Social media container"
+      >
+        <div
+          className="social-media-container__content"
+          aria-label="Social media content"
+        >
           <a
             href="https://www.facebook.com/hawkseedigital"
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
+            aria-label="Visit our Facebook page"
           >
             <FaFacebookF className="social-media-icon" />
           </a>
@@ -127,6 +174,7 @@ export const GetInTouch = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
+            aria-label="Visit our Instagram page"
           >
             <FaInstagram className="social-media-icon" />
           </a>
@@ -135,6 +183,7 @@ export const GetInTouch = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
+            aria-label="Visit our LinkedIn page"
           >
             <FaLinkedinIn className="social-media-icon" />
           </a>
@@ -143,6 +192,7 @@ export const GetInTouch = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
+            aria-label="Visit our YouTube channel"
           >
             <FaYoutube className="social-media-icon" />
           </a>
@@ -151,6 +201,7 @@ export const GetInTouch = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
+            aria-label="Visit our WhatsApp chat"
           >
             <FaWhatsapp className="social-media-icon" />
           </a>
@@ -159,6 +210,7 @@ export const GetInTouch = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"
+            aria-label="Visit our location on Google Maps"
           >
             <FaMapMarkerAlt className="social-media-icon" />
           </a>

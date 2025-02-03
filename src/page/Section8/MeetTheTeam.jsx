@@ -1,17 +1,12 @@
 import React from "react";
-import { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-// import Avatar from "../../assets/60111.jpg";
-
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 export const MeetTheTeam = () => {
-  // Add this team members data array
   const teamMembers = [
     {
       id: 1,
@@ -96,13 +91,14 @@ export const MeetTheTeam = () => {
   ];
 
   return (
-    <div className="meet">
-      <h1 className="meet-head">Meet the team</h1>
-      <div className="swiper-container">
+    <div className="meet" aria-label="Meet the team section">
+      <h1 className="meet-head" aria-label="Meet the team title">
+        Meet the team
+      </h1>
+      <div className="swiper-container" aria-label="Swiper container">
         <Swiper
           slidesPerView={4}
           spaceBetween={100}
-          // freeMode={true}
           pagination={{
             clickable: true,
           }}
@@ -148,15 +144,23 @@ export const MeetTheTeam = () => {
           className="mySwiper"
         >
           {teamMembers.map((member) => (
-            <SwiperSlide key={member.id}>
-              <div className="team-member">
+            <SwiperSlide
+              key={member.id}
+              aria-label={`Team member ${member.name}`}
+            >
+              <div className="team-member" aria-label="Team member">
                 <img
                   src={member.image}
                   alt={member.name + " " + member.position}
+                  aria-label={`Team member ${member.name}`}
                 />
               </div>
-              <h3>{member.name}</h3>
-              <p>{member.position}</p>
+              <h3 aria-label={`Team member name ${member.name}`}>
+                {member.name}
+              </h3>
+              <p aria-label={`Team member position ${member.position}`}>
+                {member.position}
+              </p>
             </SwiperSlide>
           ))}
         </Swiper>

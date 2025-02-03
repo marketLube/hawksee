@@ -5,12 +5,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Link, useLocation } from "react-router-dom";
-import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import ScrollTrigger from "react-scroll-trigger";
-
-import haw from "../../assets/About/hawkgrid.png";
 
 export const DoubleLineReels = () => {
   const images = [
@@ -91,9 +87,7 @@ export const DoubleLineReels = () => {
       init: (swiper) => {
         swiper.autoplay.start();
       },
-      slideChange: (swiper) => {
-        console.log("Slide changed to: ", swiper.activeIndex);
-      },
+      slideChange: (swiper) => {},
     },
     snapOnRelease: false,
   };
@@ -108,20 +102,16 @@ export const DoubleLineReels = () => {
     });
   };
   useEffect(() => {
-    // Function to check if #projects is the active target
     const checkHash = () => {
       if (window.location.hash === "#projects") {
         setIsSmall(true);
       } else setIsSmall(false);
     };
 
-    // Add hashchange listener
     window.addEventListener("hashchange", checkHash);
 
-    // Initial check in case the hash is already set
     checkHash();
 
-    // Cleanup listener on unmount
     return () => {
       window.removeEventListener("hashchange", checkHash);
     };
@@ -136,35 +126,36 @@ export const DoubleLineReels = () => {
       className="logos"
       ref={sectionRef}
       style={isSmall ? { transform: "scale(0.8)" } : { transform: "scale(1)" }}
+      aria-label="Projects section showcasing logos and videos"
     >
       <ScrollTrigger
         onEnter={() => setAnimate(true)}
         onExit={() => setAnimate(false)}
       >
-        <h1
-          className="logos-title"
-          // style={{
-          //   transform: animate ? "translateY(0rem)" : "translateY(10rem)",
-          //   transition: "transform 0.6s",
-          // }}
-        >
+        <h1 className="logos-title" aria-label="Projects title">
           Projects
         </h1>
       </ScrollTrigger>
-      <div className="logos-rot">
-        <div className="logo-slide">
+      <div className="logos-rot" aria-label="Rotating logos section">
+        <div className="logo-slide" aria-label="Logo slide section">
           {images.map((image, index) => (
-            <img key={`image-${index}`} src={image} alt={`Slide ${index}`} />
+            <img
+              key={`image-${index}`}
+              src={image}
+              alt={`Slide ${index}`}
+              aria-label={`Image slide ${index}`}
+            />
           ))}
           {images.map((image, index) => (
             <img
               key={`image-duplicate-${index}`}
               src={image}
               alt={`Slide ${index}`}
+              aria-label={`Image slide ${index}`}
             />
           ))}
         </div>
-        <div className="video-slide">
+        <div className="video-slide" aria-label="Video slide section">
           <Swiper
             modules={[Autoplay]}
             {...settings}
@@ -174,11 +165,14 @@ export const DoubleLineReels = () => {
             className="doubleline-slide"
           >
             {videos.map((video, index) => (
-              <SwiperSlide key={`video-${index}`}>
+              <SwiperSlide
+                key={`video-${index}`}
+                aria-label={`Video slide ${index}`}
+              >
                 <video
                   src={video}
                   muted
-                  alt={`Story ${index + 1}`}
+                  aria-label={`Story ${index + 1}`}
                   poster={thumbnails[index]}
                   onClick={(e) => (e.target.muted = false)}
                   onMouseEnter={(e) => {
@@ -202,9 +196,9 @@ export const DoubleLineReels = () => {
         </div>
       </div>
 
-      <div className="buttondivPortfolio">
-        <Button onClick={handleClick}>
-          <a href="#projects">
+      <div className="buttondivPortfolio" aria-label="Button section">
+        <Button onClick={handleClick} aria-label="View all button">
+          <a href="#projects" aria-label="View all link">
             View All <FiArrowUpRight />
           </a>
         </Button>

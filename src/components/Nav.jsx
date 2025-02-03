@@ -50,8 +50,6 @@ export const Nav = ({ setIsNavScrolling }) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      console.log(`Scrolling to section: ${sectionId}`);
-
       window.history.pushState(null, "", `#${sectionId}`);
     } else {
       console.error(`Element with ID ${sectionId} not found`);

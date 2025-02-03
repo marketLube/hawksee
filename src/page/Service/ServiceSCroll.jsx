@@ -135,12 +135,21 @@ function ServiceSCroll() {
     isOutdoor,
   ]);
   return (
-    <section className="about" id="about">
-      <div className="about-scroll-container">
-        <div className="about-scroll-container-left">
+    <section className="about" id="about" aria-label="About section">
+      <div
+        className="about-scroll-container"
+        aria-label="About scroll container"
+      >
+        <div
+          className="about-scroll-container-left"
+          aria-label="About scroll left container"
+        >
           <LeftScroll content={content} />
         </div>
-        <div className="about-scroll-container-right">
+        <div
+          className="about-scroll-container-right"
+          aria-label="About scroll right container"
+        >
           {[
             primeRef,
             expandRef,

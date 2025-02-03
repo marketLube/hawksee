@@ -64,21 +64,25 @@ export const RealStories = () => {
   const isFullAlign = settings.slidesPerView === 1.3;
 
   return (
-    <section id="stories" className="realstories">
-      <h1 className="realstories-title">Real Stories</h1>
-      {/* <div className="realstories-rot"> */}
+    <section
+      id="stories"
+      className="realstories"
+      aria-label="Real stories section"
+    >
+      <h1 className="realstories-title" aria-label="Real Stories title">
+        Real Stories
+      </h1>
       {isMobile ? (
         <Swiper className="realstories-slide" {...settings}>
           {videos.map((video, index) => (
-            <SwiperSlide key={`video-${index}`}>
-              {/* <div
-              // className="slider-item"
-              // style={{ backgroundColor: "green !important" }}
-              > */}
+            <SwiperSlide
+              key={`video-${index}`}
+              aria-label={`Story ${index + 1}`}
+            >
               <video
                 src={video}
                 muted
-                alt={`Story ${index + 1}`}
+                aria-label={`Story ${index + 1}`}
                 poster={thumbnails[index]}
                 onClick={(e) => (e.target.muted = false)}
                 onMouseEnter={(e) => e.target.play()}
@@ -86,19 +90,25 @@ export const RealStories = () => {
                 controls
                 className={isFullAlign ? "full-align" : ""}
               />
-              {/* </div> */}
             </SwiperSlide>
           ))}
         </Swiper>
       ) : (
-        <div className="realstories-rot">
-          <div className="realstories-slide">
+        <div
+          className="realstories-rot"
+          aria-label="Real stories rotation section"
+        >
+          <div
+            className="realstories-slide"
+            aria-label="Real stories slide section"
+          >
             {videos.map((video, index) => (
               <video
                 key={`video-${index}`}
                 src={video}
                 muted
                 alt={`Story ${index + 1}`}
+                aria-label={`Story ${index + 1}`}
                 poster={thumbnails[index]}
                 onClick={(e) => (e.target.muted = false)}
                 onMouseEnter={(e) => e.target.play()}
@@ -109,8 +119,8 @@ export const RealStories = () => {
               <video
                 key={`video-duplicate-${index}`}
                 src={video}
-                // mute
                 alt={`Story ${index + 1}`}
+                aria-label={`Story ${index + 1}`}
                 onMouseEnter={(e) => e.target.play()}
                 onMouseLeave={(e) => e.target.pause()}
               />
@@ -119,8 +129,8 @@ export const RealStories = () => {
               <video
                 key={`video-duplicate-${index}`}
                 src={video}
-                // muted
                 alt={`Story ${index + 1}`}
+                aria-label={`Story ${index + 1}`}
                 onMouseEnter={(e) => e.target.play()}
                 onMouseLeave={(e) => e.target.pause()}
               />
@@ -129,8 +139,8 @@ export const RealStories = () => {
               <video
                 key={`video-duplicate-${index}`}
                 src={video}
-                // muted
                 alt={`Story ${index + 1}`}
+                aria-label={`Story ${index + 1}`}
                 onMouseEnter={(e) => e.target.play()}
                 onMouseLeave={(e) => e.target.pause()}
               />
@@ -138,7 +148,6 @@ export const RealStories = () => {
           </div>
         </div>
       )}
-      {/* </div> */}
     </section>
   );
 };

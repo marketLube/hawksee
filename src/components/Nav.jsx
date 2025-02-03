@@ -71,10 +71,19 @@ export const Nav = ({ setIsNavScrolling }) => {
         className="headerNav-hawlogo"
         aria-label="Hawksee logo"
       />
-      <ul className="headerNav-right">
-        <li onClick={() => scrollToSection("about")}>About us</li>
-        <li onClick={() => scrollToSection("works")}>Our Works</li>
-        {/* <li onClick={() => scrollToSection("stories")}>Stories</li> */}
+      <ul className="headerNav-right" aria-label="Navigation links">
+        <li
+          onClick={() => scrollToSection("about")}
+          aria-label="Navigate to About us section"
+        >
+          About us
+        </li>
+        <li
+          onClick={() => scrollToSection("works")}
+          aria-label="Navigate to Our Works section"
+        >
+          Our Works
+        </li>
         <a
           href="https://wa.me/919995000123"
           target="_blank"
@@ -85,12 +94,13 @@ export const Nav = ({ setIsNavScrolling }) => {
             padding: "0.5rem 1rem",
             borderRadius: "3rem",
           }}
+          aria-label="Contact us via WhatsApp"
         >
           Contact
         </a>
       </ul>
 
-      <div className="navigation">
+      <div className="navigation" aria-label="Navigation menu">
         <input
           checked={isChecked}
           onClick={() => setIsChecked(!isChecked)}
@@ -103,6 +113,7 @@ export const Nav = ({ setIsNavScrolling }) => {
           htmlFor="navi__toggle"
           className="navigation__btn"
           aria-controls="navigationMenu"
+          aria-label="Toggle navigation menu"
         >
           <span className="navigation__icon">&nbsp;</span>
         </label>
@@ -112,7 +123,7 @@ export const Nav = ({ setIsNavScrolling }) => {
           id="navigationMenu"
           aria-label="Main navigation"
         >
-          <ul className="navigation__list">
+          <ul className="navigation__list" aria-label="Main navigation links">
             <li className="navigation__item">
               <a
                 href="#about"
@@ -120,6 +131,7 @@ export const Nav = ({ setIsNavScrolling }) => {
                   scrollToSection("about");
                   setIsChecked(false);
                 }}
+                aria-label="Navigate to About us section"
               >
                 About us
               </a>
@@ -131,21 +143,11 @@ export const Nav = ({ setIsNavScrolling }) => {
                   scrollToSection("works");
                   setIsChecked(false);
                 }}
+                aria-label="Navigate to Our Works section"
               >
                 Our Works
               </a>
             </li>
-            {/* <li className="navigation__item">
-              <a
-                href="#stories"
-                onClick={() => {
-                  scrollToSection("stories");
-                  setIsChecked(false);
-                }}
-              >
-                Stories
-              </a>
-            </li> */}
             <li className="navigation__item">
               <a
                 href="https://wa.me/919995000123"
@@ -154,6 +156,7 @@ export const Nav = ({ setIsNavScrolling }) => {
                   scrollToSection("contact");
                   setIsChecked(false);
                 }}
+                aria-label="Contact us via WhatsApp"
               >
                 Contact
               </a>

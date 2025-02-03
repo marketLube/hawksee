@@ -52,6 +52,7 @@ export const GetInTouch = () => {
                   style={{ cursor: "pointer" }}
                   onClick={() => scrollToSection("about")}
                   aria-label="Navigate to About Us section"
+                  href="#about"
                 >
                   About us
                 </a>
@@ -59,6 +60,7 @@ export const GetInTouch = () => {
                   style={{ cursor: "pointer" }}
                   onClick={() => scrollToSection("works")}
                   aria-label="Navigate to Our Works section"
+                  href="#works"
                 >
                   Our Works
                 </a>
@@ -139,12 +141,15 @@ export const GetInTouch = () => {
                   window.open("mailto:hello@hawksee.org", "_blank")
                 }
                 aria-label="Email contact for Hawksee"
+                href="mailto:hello@hawksee.org"
               >
                 info@hawksee.in
               </a>
+
               <a
                 onClick={() => window.open("tel:0495290199")}
                 aria-label="Click to call the phone number +91 9995000123"
+                href="tel:0495290199"
               >
                 +91 9995000123
               </a>

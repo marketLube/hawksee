@@ -82,20 +82,22 @@ export const Nav = ({ setIsNavScrolling }) => {
         >
           Our Works
         </li>
-        <a
-          href="https://wa.me/919995000123"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            backgroundColor: "black",
-            color: "white",
-            padding: "0.5rem 1rem",
-            borderRadius: "3rem",
-          }}
-          aria-label="Contact us via WhatsApp"
-        >
-          Contact
-        </a>
+        <li>
+          <a
+            href="https://wa.me/919995000123"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              backgroundColor: "black",
+              color: "white",
+              padding: "0.5rem 1rem",
+              borderRadius: "3rem",
+            }}
+            aria-label="Contact us via WhatsApp"
+          >
+            Contact
+          </a>
+        </li>
       </ul>
 
       <div className="navigation" aria-label="Navigation menu">

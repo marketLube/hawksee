@@ -33,9 +33,9 @@ function LeftScroll({ content }) {
         style={{ height: "15rem" }}
         aria-label="Content area with fixed height"
       >
-        <h3 className="home-text" aria-label="Left scroll title">
+        <h2 className="home-text" aria-label="Left scroll title">
           <span aria-label="Left scroll title text">{content?.title}</span>
-        </h3>
+        </h2>
         <p
           className="about-para-container-right"
           aria-label="Left scroll description"
@@ -48,9 +48,7 @@ function LeftScroll({ content }) {
         aria-label="Button container for portfolio section"
       >
         <Button onClick={handleClick} aria-label="View all button">
-          {/* <a href="#projects" aria-label="View all projects link"> */}
           View All <FiArrowUpRight aria-label="Arrow icon for view all" />
-          {/* </a> */}
         </Button>
       </div>
     </div>

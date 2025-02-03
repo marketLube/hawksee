@@ -123,17 +123,23 @@ export const Bird = ({ isNavScrolling }) => {
   };
 
   return (
-    <section id="bird" className="bird" ref={birdSectionRef}>
-      <div className="caption">
+    <section
+      id="bird"
+      className="bird"
+      ref={birdSectionRef}
+      aria-label="Bird section"
+    >
+      <div className="caption" aria-label="Caption for the bird section">
         <a>
           <p>Every Brand Needs Hawksee</p>
         </a>
       </div>
-      <div className="bird-container">
+      <div className="bird-container" aria-label="Container for the bird image">
         <img
           className="bird-image"
-          alt=""
+          alt="A stylized bird representing Hawksee"
           src={BirdImg}
+          aria-label="Stylized bird representing Hawksee"
           style={{
             transform: `translate3d(${
               -offset * getTranslateMultiplier().x

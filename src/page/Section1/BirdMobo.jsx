@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import BirdMobile from "../../assets/birdForMobile.svg";
+
 import { useMediaQuery } from "react-responsive";
 
 export const BirdMobo = () => {
@@ -46,7 +46,9 @@ export const BirdMobo = () => {
         <img
           className="bird-imageMobo"
           alt="A stylized bird representing Hawksee"
-          src={BirdMobile}
+          src={
+            "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
+          }
           style={birdStyle}
           aria-label="Stylized bird representing Hawksee"
         />

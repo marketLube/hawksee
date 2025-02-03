@@ -67,10 +67,15 @@ export const Research = () => {
   }, [textArray, paraArray]);
 
   return (
-    <div className="research" ref={containerRef} aria-label="Research section">
+    <div
+      id="research"
+      className="research"
+      ref={containerRef}
+      aria-label="Research section"
+    >
       <div className="research-scrol" aria-label="Research scroll section">
         <div className="research-bttn" aria-label="Research button section">
-          <Button aria-label="Research button">
+          <Button aria-label="Research button" href="#research">
             The Process <FiArrowDownRight />
           </Button>
         </div>

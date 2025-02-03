@@ -95,6 +95,7 @@ export const Counter = () => {
             className="portfolio-btn"
             onClick={() => handleButtonClick("works")}
             aria-label="View portfolio button"
+            href="#works"
           >
             View Portfolio <FiArrowDownRight />
           </Button>

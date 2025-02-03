@@ -47,7 +47,11 @@ function LeftScroll({ content }) {
         className="buttondivPortfolioSer"
         aria-label="Button container for portfolio section"
       >
-        <Button onClick={handleClick} aria-label="View all button">
+        <Button
+          onClick={handleClick}
+          aria-label="View all button"
+          href="#projects"
+        >
           View All <FiArrowUpRight aria-label="Arrow icon for view all" />
         </Button>
       </div>

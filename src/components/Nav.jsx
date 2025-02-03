@@ -53,8 +53,6 @@ export const Nav = ({ setIsNavScrolling }) => {
       console.log(`Scrolling to section: ${sectionId}`);
 
       window.history.pushState(null, "", `#${sectionId}`);
-
-      // setTimeout(() => setIsNavScrolling(false), 1000);
     } else {
       console.error(`Element with ID ${sectionId} not found`);
     }
@@ -62,8 +60,17 @@ export const Nav = ({ setIsNavScrolling }) => {
   };
 
   return (
-    <nav id="nav" className={`headerNav ${isHidden ? "hidden" : ""}`}>
-      <img src={logo} alt="logo" className="headerNav-hawlogo" />
+    <nav
+      id="nav"
+      className={`headerNav ${isHidden ? "hidden" : ""}`}
+      aria-label="Main navigation"
+    >
+      <img
+        src={logo}
+        alt="Hawksee logo"
+        className="headerNav-hawlogo"
+        aria-label="Hawksee logo"
+      />
       <ul className="headerNav-right">
         <li onClick={() => scrollToSection("about")}>About us</li>
         <li onClick={() => scrollToSection("works")}>Our Works</li>

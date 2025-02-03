@@ -28,11 +28,11 @@ export const Counter = () => {
   };
 
   return (
-    <div className="counterSection">
-      <div className="counter-content">
-        <div className="title-container">
-          <h1 className="counterup">
-            <div className="counterup-text">
+    <div className="counterSection" aria-label="Counter section">
+      <div className="counter-content" aria-label="Counter content">
+        <div className="title-container" aria-label="Title container">
+          <h1 className="counterup" aria-label="Counter title">
+            <div className="counterup-text" aria-label="Counterup text">
               <div
                 style={
                   animate
@@ -42,6 +42,7 @@ export const Counter = () => {
                       }
                     : { transform: "translateY(10rem)" }
                 }
+                aria-label="Does it work text"
               >
                 Does it work?
               </div>
@@ -53,10 +54,21 @@ export const Counter = () => {
           onEnter={() => setAnimate(true)}
           onExit={() => setAnimate(false)}
         >
-          <div className="stats-section" ref={ref}>
+          <div
+            className="stats-section"
+            ref={ref}
+            aria-label="Statistics section"
+          >
             {stats.map((stat, index) => (
-              <div key={index} className="stats-section__item">
-                <h2 className="stats-section__value">
+              <div
+                key={index}
+                className="stats-section__item"
+                aria-label={`Statistic ${index + 1}`}
+              >
+                <h2
+                  className="stats-section__value"
+                  aria-label={`Value for ${stat.label}`}
+                >
                   {animate ? (
                     <CountUp
                       start={0}
@@ -69,7 +81,12 @@ export const Counter = () => {
                   )}
                   {stat.suffix || ""}
                 </h2>
-                <p className="stats-section__label">{stat.label}</p>
+                <p
+                  className="stats-section__label"
+                  aria-label={`Label for ${stat.label}`}
+                >
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
@@ -79,6 +96,7 @@ export const Counter = () => {
           <Button
             className="portfolio-btn"
             onClick={() => handleButtonClick("works")}
+            aria-label="View portfolio button"
           >
             View Portfolio <FiArrowDownRight />
           </Button>

@@ -33,9 +33,9 @@ function LeftScroll({ content }) {
         style={{ height: "15rem" }}
         aria-label="Content area with fixed height"
       >
-        <div className="home-text" aria-label="Left scroll title">
+        <h3 className="home-text" aria-label="Left scroll title">
           <span aria-label="Left scroll title text">{content?.title}</span>
-        </div>
+        </h3>
         <p
           className="about-para-container-right"
           aria-label="Left scroll description"

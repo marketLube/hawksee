@@ -55,6 +55,7 @@
     text-align: right;
     color: white;
     padding-top: 3rem;
+    padding-right: 2rem;
 
     @include responsive.respond(smallPhone) {
       font-size: 4rem;

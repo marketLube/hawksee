@@ -77,8 +77,11 @@
     margin-left: auto;
     overflow: hidden;
 
-    & div {
+    & h2 {
       transition: transform 0.5s ease-out;
+      font-size: 9rem;
+      font-weight: 700;
+      color: #fff;
     }
   }
 

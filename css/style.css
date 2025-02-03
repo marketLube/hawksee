@@ -1703,8 +1703,11 @@ a {
   margin-left: auto;
   overflow: hidden;
 }
-.counterup-text div {
+.counterup-text h2 {
   transition: transform 0.5s ease-out;
+  font-size: 9rem;
+  font-weight: 700;
+  color: #fff;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .counterup {
@@ -2413,6 +2416,7 @@ a {
   text-align: right;
   color: white;
   padding-top: 3rem;
+  padding-right: 2rem;
 }
 @media only screen and (max-width: 575.98px) {
   .logos-title {

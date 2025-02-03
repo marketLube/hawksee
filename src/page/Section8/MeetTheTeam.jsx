@@ -92,9 +92,9 @@ export const MeetTheTeam = () => {
 
   return (
     <div className="meet" aria-label="Meet the team section">
-      <h1 className="meet-head" aria-label="Meet the team title">
+      <h2 className="meet-head" aria-label="Meet the team title">
         Meet the team
-      </h1>
+      </h2>
       <div className="swiper-container" aria-label="Swiper container">
         <Swiper
           slidesPerView={4}

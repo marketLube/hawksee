@@ -132,9 +132,9 @@ export const DoubleLineReels = () => {
         onEnter={() => setAnimate(true)}
         onExit={() => setAnimate(false)}
       >
-        <h1 className="logos-title" aria-label="Projects title">
+        <h2 className="logos-title" aria-label="Projects title">
           Projects
-        </h1>
+        </h2>
       </ScrollTrigger>
       <div className="logos-rot" aria-label="Rotating logos section">
         <div className="logo-slide" aria-label="Logo slide section">

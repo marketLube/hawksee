@@ -65,7 +65,7 @@ export const Paragraph = () => {
           />
         </div>
         <div className="paragraph__textDiv" aria-label="Text container">
-          <div
+          <p
             aria-label="Text content for the brand's message"
             style={
               isInView
@@ -79,7 +79,7 @@ export const Paragraph = () => {
             <br /> We <strong>See</strong> The Brand&apos;s Potential, Customer
             Needs, and the Gap. <br />
             Then, We Act to <strong>Show</strong> Results.
-          </div>
+          </p>
         </div>
       </div>
     </section>

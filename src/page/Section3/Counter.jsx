@@ -31,7 +31,7 @@ export const Counter = () => {
         <div className="title-container" aria-label="Title container">
           <h1 className="counterup" aria-label="Counter title">
             <div className="counterup-text" aria-label="Counterup text">
-              <div
+              <h2
                 style={
                   animate
                     ? {
@@ -43,7 +43,7 @@ export const Counter = () => {
                 aria-label="Does it work text"
               >
                 Does it work?
-              </div>
+              </h2>
             </div>
           </h1>
         </div>
@@ -63,7 +63,7 @@ export const Counter = () => {
                 className="stats-section__item"
                 aria-label={`Statistic ${index + 1}`}
               >
-                <h2
+                <h3
                   className="stats-section__value"
                   aria-label={`Value for ${stat.label}`}
                 >
@@ -78,7 +78,7 @@ export const Counter = () => {
                     stat.value
                   )}
                   {stat.suffix || ""}
-                </h2>
+                </h3>
                 <p
                   className="stats-section__label"
                   aria-label={`Label for ${stat.label}`}

@@ -74,7 +74,7 @@ export const Research = () => {
             The Process <FiArrowDownRight />
           </Button>
         </div>
-        <div
+        <h3
           className={`research-head gradient-text ${animate ? "animate" : ""}`}
           style={{
             background:
@@ -87,7 +87,7 @@ export const Research = () => {
           aria-label="Research heading"
         >
           {headingText}
-        </div>
+        </h3>
 
         <p
           className={`research-para ${animate ? "animate" : ""}`}

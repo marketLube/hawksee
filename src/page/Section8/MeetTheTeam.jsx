@@ -95,7 +95,7 @@ export const MeetTheTeam = () => {
       <h2 className="meet-head" aria-label="Meet the team title">
         Meet the team
       </h2>
-      <div className="swiper-container" aria-label="Swiper container">
+      <article className="swiper-container" aria-label="Swiper container">
         <Swiper
           slidesPerView={4}
           spaceBetween={100}
@@ -164,7 +164,7 @@ export const MeetTheTeam = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </article>
     </div>
   );
 };

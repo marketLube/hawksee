@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive";
 export const Paragraph = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
-  const isSmallMobile = useMediaQuery({ query: "(max-width: 575.98px)" });
+  const isSmallMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
 
   return (
     <section id="about" aria-label="About section">

@@ -48,9 +48,9 @@ function LeftScroll({ content }) {
         aria-label="Button container for portfolio section"
       >
         <Button onClick={handleClick} aria-label="View all button">
-          <a href="#projects" aria-label="View all projects link">
-            View All <FiArrowUpRight aria-label="Arrow icon for view all" />
-          </a>
+          {/* <a href="#projects" aria-label="View all projects link"> */}
+          View All <FiArrowUpRight aria-label="Arrow icon for view all" />
+          {/* </a> */}
         </Button>
       </div>
     </div>

@@ -198,9 +198,9 @@ export const DoubleLineReels = () => {
 
       <div className="buttondivPortfolio" aria-label="Button section">
         <Button onClick={handleClick} aria-label="View all button">
-          <a href="#projects" aria-label="View all link">
-            View All <FiArrowUpRight />
-          </a>
+          {/* <a href="#projects" aria-label="View all link"> */}
+          View All <FiArrowUpRight />
+          {/* </a> */}
         </Button>
       </div>
     </section>

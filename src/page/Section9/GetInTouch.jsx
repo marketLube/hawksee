@@ -29,9 +29,9 @@ export const GetInTouch = () => {
           className="get-in-touch__container"
           aria-label="Get in touch container"
         >
-          <h1 className="get-in-touch__title" aria-label="Get in touch title">
+          <h3 className="get-in-touch__title" aria-label="Get in touch title">
             Get in touch
-          </h1>
+          </h3>
 
           <div
             className="get-in-touch__content"
@@ -93,7 +93,7 @@ export const GetInTouch = () => {
                 className="get-in-touch__address"
                 aria-label="Get in touch address"
               >
-                <h3 aria-label="Location heading for Calicut">Calicut: </h3>
+                <h4 aria-label="Location heading for Calicut">Calicut: </h4>
                 <p
                   className="addressnote"
                   aria-label="Address for Calicut location"
@@ -105,12 +105,12 @@ export const GetInTouch = () => {
                   <br /> Kozhikode, Kerala 673006
                 </p>
 
-                <h3
+                <h4
                   style={{ marginTop: "10px" }}
                   aria-label="Location heading for Kochi"
                 >
                   Kochi:{" "}
-                </h3>
+                </h4>
                 <p
                   className="addressnote"
                   aria-label="Address for Kochi location"
@@ -134,20 +134,20 @@ export const GetInTouch = () => {
               className="get-in-touch__smContact"
               aria-label="Social media contact information"
             >
-              <span
+              <a
                 onClick={() =>
                   window.open("mailto:hello@hawksee.org", "_blank")
                 }
                 aria-label="Email contact for Hawksee"
               >
                 info@hawksee.in
-              </span>
-              <span
+              </a>
+              <a
                 onClick={() => window.open("tel:0495290199")}
                 aria-label="Click to call the phone number +91 9995000123"
               >
                 +91 9995000123
-              </span>
+              </a>
             </div>
           </div>
         </div>

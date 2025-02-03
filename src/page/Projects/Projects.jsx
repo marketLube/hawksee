@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import ProjectsNav from "./ProjectsNav";
 import ProjectsShowAllBody from "./ProjectsShowAllBody";
 import { useHash } from "./useHash";
@@ -94,6 +94,7 @@ const Projects = () => {
       onMouseMove={handleTouchMove}
       onMouseUp={handleTouchEnd}
       onMouseLeave={handleTouchEnd}
+      aria-label="Projects section"
     >
       <div
         className="projects__body"
@@ -104,8 +105,12 @@ const Projects = () => {
           pointerEvents: "auto",
         }}
         ref={contentRef}
+        aria-label="Projects body section"
       >
-        <div className="projects__content">
+        <div
+          className="projects__content"
+          aria-label="Projects content section"
+        >
           <button
             className="back-button"
             onClick={() => window.history.back()}
@@ -114,24 +119,28 @@ const Projects = () => {
               background: "transparent",
               border: "1px solid white",
               cursor: "pointer",
-
               zIndex: 100,
               width: "40px",
               height: "40px",
             }}
+            aria-label="Go back to the previous page"
           >
             <FiArrowLeft size={20} color="white" />
           </button>
-          <h2 className="projects__title">Projects</h2>
+          <h2 className="projects__title" aria-label="Projects title">
+            Projects
+          </h2>
           <ProjectsNav
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
             setSelectedNav={setSelectedNav}
+            aria-label="Projects navigation section"
           />
           <ProjectsShowAllBody
             isAnimate={isAnimate}
             activeIndex={activeIndex}
             selectedNav={selectedNav}
+            aria-label="Projects show all body section"
           />
         </div>
       </div>

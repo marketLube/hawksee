@@ -1,7 +1,4 @@
 import React from "react";
-import haw from "../../assets/About/hawkgrid.png";
-
-const arr = ["one", "two", "three", "four", "five"];
 
 export default function ProjectsShowAllBody({
   isAnimate,
@@ -67,24 +64,25 @@ export default function ProjectsShowAllBody({
   };
 
   return (
-    <div className="projects-show">
+    <div className="projects-show" aria-label="Projects show all body section">
       {renderContent().map((val, i) => (
         <div
           className="projects-show-item"
           style={{
-            // transition: "transform 1s cubic-bezier(0, 1.08, 0.69, 0.97)",
             transform: isAnimate
               ? `translateY(0rem)`
               : `translateY(${i * 30}rem)`,
             opacity: isAnimate ? 1 : 0,
           }}
           key={i}
+          aria-label={`Project item ${i + 1}`}
         >
           {activeIndex === 0 ? (
             <>
               {val.endsWith(".mp4") ? (
                 <video
                   src={val}
+                  aria-label={`Project video ${i + 1}`}
                   style={{
                     height: "100%",
                     width: "100%",
@@ -101,6 +99,7 @@ export default function ProjectsShowAllBody({
                 <img
                   src={val}
                   alt={val}
+                  aria-label={`Project image ${i + 1}`}
                   style={{
                     height: "100%",
                     width: "100%",
@@ -112,6 +111,7 @@ export default function ProjectsShowAllBody({
           ) : activeIndex === 1 ? (
             <video
               src={val}
+              aria-label={`Project video ${i + 1}`}
               onMouseEnter={(e) => {
                 e.target.controls = true;
               }}
@@ -128,6 +128,7 @@ export default function ProjectsShowAllBody({
             <img
               src={val}
               alt={val}
+              aria-label={`Project image ${i + 1}`}
               style={{
                 height: "100%",
                 width: "100%",

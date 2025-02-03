@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function ProjectsNav({
   activeIndex,
@@ -8,7 +8,7 @@ export default function ProjectsNav({
   const navItems = ["Show All", "Videos", "Social Media"];
 
   return (
-    <ul className="projects-nav">
+    <ul className="projects-nav" aria-label="Projects navigation section">
       {navItems.map((item, index) => (
         <li
           key={index}
@@ -17,6 +17,7 @@ export default function ProjectsNav({
             setActiveIndex(index);
             setSelectedNav(item);
           }}
+          aria-label={`Navigate to ${item} section`}
         >
           {item}
         </li>

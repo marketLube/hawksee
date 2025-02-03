@@ -2886,13 +2886,13 @@ a {
   left: 0;
   background-color: black;
   transition: transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  -webkit-overflow-scrolling: touch;
 }
 .projects__content {
   padding: 5rem;
   position: relative;
   opacity: 0;
-  overflow: visible; /* Avoid double scrollbars */
+  overflow: visible;
   transition: opacity 0.5s ease-in-out;
   max-height: 100vh;
   overflow-y: auto;

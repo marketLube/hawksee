@@ -16,7 +16,6 @@ const Projects = () => {
 
   useHash({ setIsAnimate });
 
-  // Handle wheel scrolling
   useEffect(() => {
     if (!isAnimate) return;
 
@@ -24,7 +23,6 @@ const Projects = () => {
 
     const handleWheel = (e) => {
       if (contentRef.current.scrollHeight > contentRef.current.clientHeight) {
-        // Allow default scrolling if content is scrollable
         e.preventDefault();
         window.scrollTo(0, initialScrollY);
       }
@@ -34,7 +32,6 @@ const Projects = () => {
     return () => window.removeEventListener("wheel", handleWheel);
   }, [isAnimate]);
 
-  // Handle touch/drag scrolling
   const handleTouchStart = (e) => {
     if (!isAnimate) return;
     setIsDragging(true);
@@ -54,7 +51,6 @@ const Projects = () => {
 
   const progressPercentage = (scrollPosition / (window.innerHeight * 4)) * 100;
 
-  // Reset state when component unmounts
   useEffect(() => {
     const handlePopState = () => {
       setIsAnimate(false);

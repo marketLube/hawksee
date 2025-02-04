@@ -2888,6 +2888,7 @@ a {
   background-color: black;
   transition: transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
   -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
 }
 .projects__content {
   padding: 5rem;

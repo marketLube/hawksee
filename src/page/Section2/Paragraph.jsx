@@ -38,7 +38,7 @@ export const Paragraph = () => {
             className="paragraph__imageDiv__image2"
             aria-label="Image representing the brand's vision"
             style={{
-              transform: isInView ? "translateY(0%)" : "translateY(100%)",
+              transform: isInView ? "translateY(0%)" : "translateY(200%)",
               opacity: isInView ? "0.2" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
@@ -49,7 +49,7 @@ export const Paragraph = () => {
             className="paragraph__imageDiv__image3"
             aria-label="Image representing the brand's journey"
             style={{
-              transform: isInView ? "translateY(0%)" : "translateY(100%)",
+              transform: isInView ? "translateY(0%)" : "translateY(400%)",
               opacity: isInView ? "0.2" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}

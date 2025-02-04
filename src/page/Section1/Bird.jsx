@@ -131,30 +131,29 @@ export const Bird = ({ isNavScrolling }) => {
       <div className="caption" aria-label="Caption for the bird section">
         <h1>Every Brand Needs Hawksee</h1>
       </div>
-      <div className="bird-container" aria-label="Container for the bird image">
-        <img
-          className="bird-image"
-          alt="A stylized bird representing Hawksee"
-          src={
-            "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738574941/birdImg_jaomgz.svg"
-          }
-          aria-label="Stylized bird representing Hawksee"
-          style={{
-            transform: `translate3d(${
-              -offset * getTranslateMultiplier().x
-            }px, ${-offset * getTranslateMultiplier().y}px, 0) scale(${
-              (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
-            })`,
-            transformOrigin: "center center",
-            transition: `${
-              scrollDirection === "up"
-                ? "transform 0.5s cubic-bezier(.73,.58,.83,.67)"
-                : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)"
-            }`,
-            willChange: "transform",
-          }}
-        />
-      </div>
+
+      <img
+        className="bird-image"
+        alt="A stylized bird representing Hawksee"
+        src={
+          "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738574941/birdImg_jaomgz.svg"
+        }
+        aria-label="Stylized bird representing Hawksee"
+        style={{
+          transform: `translate3d(${-offset * getTranslateMultiplier().x}px, ${
+            -offset * getTranslateMultiplier().y
+          }px, 0) scale(${
+            (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
+          })`,
+          transformOrigin: "center center",
+          transition: `${
+            scrollDirection === "up"
+              ? "transform 0.5s cubic-bezier(.73,.58,.83,.67)"
+              : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)"
+          }`,
+          willChange: "transform",
+        }}
+      />
     </section>
   );
 };

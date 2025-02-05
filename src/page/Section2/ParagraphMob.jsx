@@ -75,12 +75,9 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
             }}
           />
         </div>
-        <div
-          className="paragraph__textDiv"
-          aria-label="Text container"
-          ref={paraRef}
-        >
+        <div className="paragraph__textDiv" aria-label="Text container">
           <p
+            ref={paraRef}
             aria-label="Text content for the brand's message"
             style={
               isInView

@@ -198,3 +198,9 @@
 .no-transition {
   transition: none !important;
 }
+.paraMobo {
+  @include responsive.respond(smallPhone) {
+    position: absolute;
+    bottom: -10rem;
+  }
+}

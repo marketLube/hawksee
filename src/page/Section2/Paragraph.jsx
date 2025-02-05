@@ -1,12 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
-export const Paragraph = ({ isTesterHundered, paraRef }) => {
+export const Paragraph = ({ isTesterHundered, style }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
+  const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
 
   return (
-    <section id="about" aria-label="About section">
+    <section
+      id="about"
+      aria-label="About section"
+      className="paraMobo"
+      style={style}
+    >
       <div
         className="paragraph"
         style={{
@@ -60,12 +67,12 @@ export const Paragraph = ({ isTesterHundered, paraRef }) => {
               isInView
                 ? {
                     transform: "translateY(0)",
-                    transition: "all 1s",
+                    transition: "all 1.3s cubic-bezier(.73,.58,.83,.67)",
                   }
                 : {
                     transform: "translateY(-10rem)",
                     opacity: "0",
-                    transition: "all 1s",
+                    transition: "all 1.3s cubic-bezier(.73,.58,.83,.67)",
                   }
             }
           >

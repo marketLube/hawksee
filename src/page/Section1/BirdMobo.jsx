@@ -1,4 +1,12 @@
+import { Paragraph } from "../Section2/Paragraph";
+
 export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
+  const style = {
+    opacity: !isTesterHundered ? "1" : "0",
+    transition: "all .8s",
+    transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
+  };
+
   return (
     <section id="bird" className="birdMobo" aria-label="Bird section">
       <div className="captionMobo" aria-label="Caption for the bird section">
@@ -27,6 +35,12 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
           "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
         }
         aria-label="Stylized bird representing Hawksee"
+      />
+
+      <Paragraph
+        aria-label="Paragraph section"
+        isTesterHundered={isTesterHundered}
+        style={style}
       />
     </section>
   );

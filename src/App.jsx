@@ -25,15 +25,6 @@ function App() {
   const isTesterVisible = useInView(testerRef);
   const paraRef = useRef(null);
 
-  useEffect(() => {
-    if (!isTesterHundered) {
-      const aboutSection = document.getElementById("about"); // Assuming you have an element with id="about"
-      if (aboutSection) {
-        aboutSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [isTesterHundered]);
-
   return (
     <>
       <header aria-label="Main navigation header">
@@ -60,11 +51,13 @@ function App() {
             aria-label="Desktop bird section"
           />
         )}
-        <Paragraph
-          aria-label="Paragraph section"
-          isTesterHundered={isTesterHundered}
-          paraRef={paraRef}
-        />
+        {!isMobile && (
+          <Paragraph
+            aria-label="Paragraph section"
+            isTesterHundered={isTesterHundered}
+            paraRef={paraRef}
+          />
+        )}
         {isAir ? (
           <ServiceMobo aria-label="Mobile service section" />
         ) : (

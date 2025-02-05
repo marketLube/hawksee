@@ -3,7 +3,7 @@ import { Paragraph } from "../Section2/Paragraph";
 export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
   const style = {
     opacity: !isTesterHundered ? "1" : "0",
-    transition: "all .8s",
+    transition: "all .5s",
     transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
   };
 

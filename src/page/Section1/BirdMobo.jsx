@@ -10,9 +10,15 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
       <img
         style={
           !isTesterHundered
-            ? { transform: "scale(10) translate(-0rem, -3rem)" }
+            ? {
+                transform: "scale(20) translate(8rem, -3rem)",
+                transition: "transform 1.3s cubic-bezier(.73,.58,.83,.67)",
+              }
             : isTesterVisible
-            ? { transform: "scale(1) translate(0, 0)" }
+            ? {
+                transform: "scale(1) translate(0, 0)",
+                transition: "transform .5s cubic-bezier(0,.87,.63,.85)",
+              }
             : {}
         }
         className="bird-imageMobo"

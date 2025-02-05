@@ -1,11 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
 
 export const Paragraph = ({ isTesterHundered, paraRef }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
-  const isSmallMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
 
   return (
     <section id="about" aria-label="About section">
@@ -62,8 +60,13 @@ export const Paragraph = ({ isTesterHundered, paraRef }) => {
               isInView
                 ? {
                     transform: "translateY(0)",
+                    transition: "all 1s",
                   }
-                : { transform: "translateY(-10rem)", opacity: "0" }
+                : {
+                    transform: "translateY(-10rem)",
+                    opacity: "0",
+                    transition: "all 1s",
+                  }
             }
           >
             Every Brand Needs Hawksee, Because We <strong>See</strong>! First,

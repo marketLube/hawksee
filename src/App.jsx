@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Nav } from "./components/Nav";
 import { Bird } from "./page/Section1/Bird";
@@ -13,11 +13,19 @@ import { GetInTouch } from "./page/Section9/GetInTouch";
 import Projects from "./page/Projects/Projects";
 import ServiceMobo from "./page/Service/serviceMobo";
 import ServiceSCroll from "./page/Service/ServiceSCroll";
+import { useInView } from "framer-motion";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
   const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
   const isAir = useMediaQuery({ query: "(max-width: 820px)" });
+
+  const testerRef = useRef(null);
+  const isTesterHundered = useInView(testerRef, { amount: 1 });
+  const isTesterVisible = useInView(testerRef);
+
+  console.log(isTesterHundered, "hundered");
+  console.log(isTesterVisible, "visible");
 
   return (
     <>
@@ -29,6 +37,7 @@ function App() {
         />
       </header>
       <main aria-label="Main content area">
+        <div ref={testerRef} className="tester"></div>
         {isMobile ? (
           <BirdMobo
             isNavScrolling={isNavScrolling}

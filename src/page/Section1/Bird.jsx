@@ -121,6 +121,17 @@ export const Bird = ({ isNavScrolling }) => {
     return { x: 0.5, y: 0.315 };
   };
 
+  const getCaptionStyle = () => {
+    const translateY = -Math.min(offset * 0.5, window.innerHeight * 0.5);
+    const opacity = Math.max(1 - offset / (window.innerHeight * 0.8), 0);
+
+    return {
+      transform: `translateY(${translateY}px)`,
+      opacity,
+      transition: "transform 0.3s ease-out, opacity 0.3s ease-out",
+    };
+  };
+
   return (
     <section
       id="bird"
@@ -128,32 +139,37 @@ export const Bird = ({ isNavScrolling }) => {
       ref={birdSectionRef}
       aria-label="Bird section"
     >
-      <div className="caption" aria-label="Caption for the bird section">
+      <div
+        className="caption"
+        style={getCaptionStyle()}
+        aria-label="Caption for the bird section"
+      >
         <h1>Every Brand Needs Hawksee</h1>
       </div>
-
-      <img
-        className="bird-image"
-        alt="A stylized bird representing Hawksee"
-        src={
-          "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738574941/birdImg_jaomgz.svg"
-        }
-        aria-label="Stylized bird representing Hawksee"
-        style={{
-          transform: `translate3d(${-offset * getTranslateMultiplier().x}px, ${
-            -offset * getTranslateMultiplier().y
-          }px, 0) scale(${
-            (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
-          })`,
-          transformOrigin: "center center",
-          transition: `${
-            scrollDirection === "up"
-              ? "transform 0.5s cubic-bezier(.73,.58,.83,.67)"
-              : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)"
-          }`,
-          willChange: "transform",
-        }}
-      />
+      <div className="bird-container" aria-label="Container for the bird image">
+        <img
+          className="bird-image"
+          alt="A stylized bird representing Hawksee"
+          src={
+            "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738574941/birdImg_jaomgz.svg"
+          }
+          aria-label="Stylized bird representing Hawksee"
+          style={{
+            transform: `translate3d(${
+              -offset * getTranslateMultiplier().x
+            }px, ${-offset * getTranslateMultiplier().y}px, 0) scale(${
+              (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
+            })`,
+            transformOrigin: "center center",
+            transition: `${
+              scrollDirection === "up"
+                ? "transform 0.5s cubic-bezier(.73,.58,.83,.67)"
+                : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)"
+            }`,
+            willChange: "transform",
+          }}
+        />
+      </div>
     </section>
   );
 };

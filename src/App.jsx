@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Nav } from "./components/Nav";
 import { Bird } from "./page/Section1/Bird";
@@ -23,6 +23,16 @@ function App() {
   const testerRef = useRef(null);
   const isTesterHundered = useInView(testerRef);
   const isTesterVisible = useInView(testerRef);
+  const paraRef = useRef(null);
+
+  useEffect(() => {
+    if (!isTesterHundered) {
+      const aboutSection = document.getElementById("about"); // Assuming you have an element with id="about"
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [isTesterHundered]);
 
   return (
     <>
@@ -53,6 +63,7 @@ function App() {
         <Paragraph
           aria-label="Paragraph section"
           isTesterHundered={isTesterHundered}
+          paraRef={paraRef}
         />
         {isAir ? (
           <ServiceMobo aria-label="Mobile service section" />

@@ -508,8 +508,7 @@ a {
 }
 @media only screen and (max-width: 575.98px) {
   .paragraph {
-    height: fit-content;
-    padding-bottom: 10rem;
+    margin-bottom: -10rem;
   }
 }
 .paragraph__imageDiv__image1 {
@@ -1557,6 +1556,7 @@ a {
 .birdMobo {
   height: 100vh;
   overflow: hidden;
+  position: sticky;
   align-items: center;
   justify-content: center;
   display: flex;

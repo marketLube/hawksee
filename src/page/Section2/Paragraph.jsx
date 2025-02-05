@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
-export const Paragraph = ({ isTesterHundered }) => {
+export const Paragraph = ({ isTesterHundered, paraRef }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
   const isSmallMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
@@ -12,7 +12,7 @@ export const Paragraph = ({ isTesterHundered }) => {
       <div
         className="paragraph"
         style={{
-          backgroundColor: isSmallMobile ? "black" : "transparent",
+          backgroundColor: "transparent",
         }}
         aria-label="Paragraph section"
       >

@@ -9,6 +9,7 @@
   justify-content: center;
   display: flex;
   position: sticky;
+
   top: 0;
   scroll-snap-align: start;
   background-color: rgb(255, 255, 255);
@@ -130,6 +131,7 @@
 .birdMobo {
   height: 100vh;
   overflow: hidden;
+  position: sticky;
   align-items: center;
   justify-content: center;
   display: flex;

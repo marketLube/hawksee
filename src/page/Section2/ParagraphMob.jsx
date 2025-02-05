@@ -1,24 +1,26 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
 export const ParagraphMob = ({ isTesterHundered, style }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
-  const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
-  const [shouldAnimate, setShouldAnimate] = useState(true);
+
+  const paraRef = useRef(null);
+  const paraInView = useInView(paraRef);
 
   useEffect(() => {
-    if (isInView) {
-      const timer = setTimeout(() => {
-        setShouldAnimate(false);
-      }, 2000);
+    if (paraInView) {
+      document.body.style.overflow = "hidden";
 
-      return () => clearTimeout(timer);
-    } else {
-      setShouldAnimate(true);
+      setTimeout(() => {
+        document.body.style.overflow = "auto";
+      }, 1000);
+      return () => {
+        document.body.style.overflow = "auto";
+      };
     }
-  }, [isInView]);
+  }, [paraInView]);
 
   return (
     <section
@@ -45,11 +47,8 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
             className="paragraph__imageDiv__image1"
             aria-label="Image representing the brand's potential"
             style={{
-              transform:
-                isInView && shouldAnimate
-                  ? "translateY(0%)"
-                  : "translateY(100%)",
-              opacity: isInView && shouldAnimate ? "0.2" : "0",
+              transform: isInView ? "translateY(0%)" : "translateY(100%)",
+
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
           />
@@ -59,11 +58,8 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
             className="paragraph__imageDiv__image2"
             aria-label="Image representing the brand's vision"
             style={{
-              transform:
-                isInView && shouldAnimate
-                  ? "translateY(0%)"
-                  : "translateY(200%)",
-              opacity: isInView && shouldAnimate ? "0.2" : "0",
+              transform: isInView ? "translateY(0%)" : "translateY(200%)",
+              opacity: isInView ? "0.2" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
           />
@@ -73,23 +69,24 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
             className="paragraph__imageDiv__image3"
             aria-label="Image representing the brand's journey"
             style={{
-              transform:
-                isInView && shouldAnimate
-                  ? "translateY(0%)"
-                  : "translateY(400%)",
-              opacity: isInView && shouldAnimate ? "0.2" : "0",
+              transform: isInView ? "translateY(0%)" : "translateY(400%)",
+              opacity: isInView ? "0.2" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
           />
         </div>
-        <div className="paragraph__textDiv" aria-label="Text container">
+        <div
+          className="paragraph__textDiv"
+          aria-label="Text container"
+          ref={paraRef}
+        >
           <p
             aria-label="Text content for the brand's message"
             style={
-              isInView && shouldAnimate
+              isInView
                 ? {
                     transform: "translateY(0)",
-                    transition: "all 1.3s",
+                    transition: "all 1.3",
                   }
                 : {
                     transform: "translateY(-5rem)",

@@ -21,11 +21,8 @@ function App() {
   const isAir = useMediaQuery({ query: "(max-width: 820px)" });
 
   const testerRef = useRef(null);
-  const isTesterHundered = useInView(testerRef, { amount: 1 });
+  const isTesterHundered = useInView(testerRef);
   const isTesterVisible = useInView(testerRef);
-
-  console.log(isTesterHundered, "hundered");
-  console.log(isTesterVisible, "visible");
 
   return (
     <>
@@ -43,6 +40,8 @@ function App() {
             isNavScrolling={isNavScrolling}
             setIsNavScrolling={setIsNavScrolling}
             aria-label="Mobile bird section"
+            isTesterHundered={isTesterHundered}
+            isTesterVisible={isTesterVisible}
           />
         ) : (
           <Bird
@@ -51,7 +50,10 @@ function App() {
             aria-label="Desktop bird section"
           />
         )}
-        <Paragraph aria-label="Paragraph section" />
+        <Paragraph
+          aria-label="Paragraph section"
+          isTesterHundered={isTesterHundered}
+        />
         {isAir ? (
           <ServiceMobo aria-label="Mobile service section" />
         ) : (

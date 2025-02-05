@@ -12,7 +12,9 @@
   position: relative;
 
   @include responsive.respond(smallPhone) {
-    margin-bottom: -10rem;
+    // margin-bottom: -10rem;
+    height: fit-content;
+    padding-bottom: 10rem;
   }
 
   &__imageDiv {

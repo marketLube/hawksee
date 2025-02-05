@@ -53,6 +53,20 @@ export default function ProjectsShowAllBody({
         "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039791/dubai_gold_and_diamonds_2396372525_pqsxk8.mp4",
         "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039801/ayumanthra_2395873315_ivlkov.mp4",
       ],
+      thumbnails: [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409867/thum1_mdvzi7.png",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409872/thumb3_auq2g7.png",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409869/thum2_obznoi.png",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb6_s3yzvs.png",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409867/thumb4_agsgnu.png",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb5_jz7kak.png",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb7_jkphur.png",
+      ],
     },
   ];
 
@@ -83,6 +97,7 @@ export default function ProjectsShowAllBody({
                 <video
                   src={val}
                   aria-label={`Project video ${i + 1}`}
+                  poster={content[2]?.thumbnails[i]}
                   style={{
                     height: "100%",
                     width: "100%",
@@ -111,6 +126,7 @@ export default function ProjectsShowAllBody({
           ) : activeIndex === 1 ? (
             <video
               src={val}
+              poster={content[0]?.thumbnails[i]}
               aria-label={`Project video ${i + 1}`}
               onMouseEnter={(e) => {
                 e.target.controls = true;

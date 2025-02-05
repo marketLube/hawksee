@@ -1,11 +1,24 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
-export const Paragraph = ({ isTesterHundered, style }) => {
+export const ParagraphMob = ({ isTesterHundered, style }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
   const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
+  const [shouldAnimate, setShouldAnimate] = useState(true);
+
+  useEffect(() => {
+    if (isInView) {
+      const timer = setTimeout(() => {
+        setShouldAnimate(false);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    } else {
+      setShouldAnimate(true);
+    }
+  }, [isInView]);
 
   return (
     <section
@@ -32,8 +45,11 @@ export const Paragraph = ({ isTesterHundered, style }) => {
             className="paragraph__imageDiv__image1"
             aria-label="Image representing the brand's potential"
             style={{
-              transform: isInView ? "translateY(0%)" : "translateY(100%)",
-              opacity: isInView ? "0.2" : "0",
+              transform:
+                isInView && shouldAnimate
+                  ? "translateY(0%)"
+                  : "translateY(100%)",
+              opacity: isInView && shouldAnimate ? "0.2" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
           />
@@ -43,8 +59,11 @@ export const Paragraph = ({ isTesterHundered, style }) => {
             className="paragraph__imageDiv__image2"
             aria-label="Image representing the brand's vision"
             style={{
-              transform: isInView ? "translateY(0%)" : "translateY(200%)",
-              opacity: isInView ? "0.2" : "0",
+              transform:
+                isInView && shouldAnimate
+                  ? "translateY(0%)"
+                  : "translateY(200%)",
+              opacity: isInView && shouldAnimate ? "0.2" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
           />
@@ -54,8 +73,11 @@ export const Paragraph = ({ isTesterHundered, style }) => {
             className="paragraph__imageDiv__image3"
             aria-label="Image representing the brand's journey"
             style={{
-              transform: isInView ? "translateY(0%)" : "translateY(400%)",
-              opacity: isInView ? "0.2" : "0",
+              transform:
+                isInView && shouldAnimate
+                  ? "translateY(0%)"
+                  : "translateY(400%)",
+              opacity: isInView && shouldAnimate ? "0.2" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
           />
@@ -64,10 +86,10 @@ export const Paragraph = ({ isTesterHundered, style }) => {
           <p
             aria-label="Text content for the brand's message"
             style={
-              isInView
+              isInView && shouldAnimate
                 ? {
                     transform: "translateY(0)",
-                    transition: "all 1.3",
+                    transition: "all 1.3s",
                   }
                 : {
                     transform: "translateY(-5rem)",

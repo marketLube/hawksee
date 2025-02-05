@@ -1,9 +1,11 @@
 import { Paragraph } from "../Section2/Paragraph";
+import { ParagraphMob } from "../Section2/ParagraphMob";
 
 export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
   const style = {
     opacity: !isTesterHundered ? "1" : "0",
-    transition: "all .5s",
+    display: isTesterHundered ? "none" : "block",
+    transition: "all s",
     transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
   };
 
@@ -20,7 +22,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
           !isTesterHundered
             ? {
                 transform: "scale(20) translate(8rem, -3rem)",
-                transition: "transform 1.3s cubic-bezier(.73,.58,.83,.67)",
+                transition: "transform 1.3s ease",
               }
             : isTesterVisible
             ? {
@@ -37,7 +39,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
         aria-label="Stylized bird representing Hawksee"
       />
 
-      <Paragraph
+      <ParagraphMob
         aria-label="Paragraph section"
         isTesterHundered={isTesterHundered}
         style={style}

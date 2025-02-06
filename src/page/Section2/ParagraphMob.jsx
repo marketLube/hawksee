@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
 
 export const ParagraphMob = ({ isTesterHundered, style }) => {
   const ref = useRef(null);
@@ -48,8 +47,8 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
             aria-label="Image representing the brand's potential"
             style={{
               transform: isInView ? "translateY(0%)" : "translateY(100%)",
-
-              transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
+              opacity: isInView ? "0.2" : "0",
+              transition: "transform 1s ease-out, opacity 2s ease-out",
             }}
           />
           <img
@@ -58,9 +57,9 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
             className="paragraph__imageDiv__image2"
             aria-label="Image representing the brand's vision"
             style={{
-              transform: isInView ? "translateY(0%)" : "translateY(200%)",
+              transform: isInView ? "translateY(0%)" : "translateY(700%)",
               opacity: isInView ? "0.2" : "0",
-              transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
+              transition: "transform 1s ease-out, opacity 2s ease-out",
             }}
           />
           <img
@@ -71,7 +70,7 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
             style={{
               transform: isInView ? "translateY(0%)" : "translateY(400%)",
               opacity: isInView ? "0.2" : "0",
-              transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
+              transition: "transform 1s ease-out, opacity 2s ease-out",
             }}
           />
         </div>
@@ -83,12 +82,12 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
               isInView
                 ? {
                     transform: "translateY(0)",
-                    transition: "all 1.3",
+                    transition: "all 2",
                   }
                 : {
                     transform: "translateY(-5rem)",
                     opacity: "0",
-                    transition: "all 1.3s",
+                    transition: "all 2s",
                   }
             }
           >

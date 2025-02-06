@@ -1,11 +1,9 @@
-import { Paragraph } from "../Section2/Paragraph";
 import { ParagraphMob } from "../Section2/ParagraphMob";
 
 export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
   const style = {
     opacity: !isTesterHundered ? "1" : "0",
     display: isTesterHundered ? "none" : "block",
-    transition: "all s",
     transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
   };
 
@@ -22,7 +20,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
           !isTesterHundered
             ? {
                 transform: "scale(20) translate(8rem, -3rem)",
-                transition: "transform 1.3s ease",
+                transition: "transform 1.3s cubic-bezier(.76,.18,.92,.53)",
               }
             : isTesterVisible
             ? {

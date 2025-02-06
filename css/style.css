@@ -1448,7 +1448,7 @@ a {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 90vh;
+  top: 97vh;
   right: -45%;
   display: flex;
   justify-content: flex-end;
@@ -1460,30 +1460,29 @@ a {
     height: 20vh;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 770px) and (max-height: 1024px) {
+  .bird-container {
+    top: 30vh;
+    right: -20rem;
+  }
+}
+@media screen and (min-width: 820px) and (max-width: 825px) and (max-height: 1180px) {
+  .bird-container {
+    top: 30vh;
+    right: -20rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
+  .bird-container {
+    top: 30vh;
+    right: -20rem;
+  }
+}
 .bird-image {
   height: auto;
   width: 100%;
   object-fit: cover;
   z-index: 0;
-}
-@media screen and (min-width: 768px) and (max-width: 770px) and (max-height: 1024px) {
-  .bird-image {
-    top: -10rem !important;
-    right: -40rem;
-  }
-}
-@media screen and (min-width: 820px) and (max-width: 825px) and (max-height: 1180px) {
-  .bird-image {
-    top: -5rem;
-    right: -40rem;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
-  .bird-image {
-    top: -15rem !important;
-    right: -25rem !important;
-    scale: 1.5;
-  }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .bird-image {

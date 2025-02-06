@@ -9,7 +9,6 @@
   justify-content: center;
   display: flex;
   position: sticky;
-
   top: 0;
   scroll-snap-align: start;
   background-color: rgb(255, 255, 255);
@@ -34,7 +33,7 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
-    top: 90vh;
+    top: 97vh;
     right: -45%;
     display: flex;
     justify-content: flex-end;
@@ -42,6 +41,19 @@
     z-index: 1;
     @include responsive.respond(smallPhone) {
       height: 20vh;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 770px) and (max-height: 1024px) {
+      top: 30vh;
+      right: -20rem;
+    }
+    @media screen and (min-width: 820px) and (max-width: 825px) and (max-height: 1180px) {
+      top: 30vh;
+      right: -20rem;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
+      top: 30vh;
+      right: -20rem;
     }
   }
 
@@ -52,19 +64,19 @@
     z-index: 0;
 
     @media screen and (min-width: 768px) and (max-width: 770px) and (max-height: 1024px) {
-      top: -10rem !important;
-      right: -40rem;
+      // top: -10rem !important;
+      // right: -40rem;
     }
 
     @media screen and (min-width: 820px) and (max-width: 825px) and (max-height: 1180px) {
-      top: -5rem;
-      right: -40rem;
+      // top: -5rem;
+      // right: -40rem;
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
-      top: -15rem !important;
-      right: -25rem !important;
-      scale: 1.5;
+      // top: -15rem !important;
+      // right: -25rem !important;
+      // scale: 1.5;
     }
 
     @include responsive.respond(bigDesktop) {

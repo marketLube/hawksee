@@ -4,6 +4,7 @@
 .paragraph {
   height: 100vh;
   width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,5 +202,17 @@
   @include responsive.respond(smallPhone) {
     position: absolute;
     bottom: -10rem;
+  }
+}
+
+@keyframes paraInView {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

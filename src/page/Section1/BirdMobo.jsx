@@ -5,7 +5,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
   const style = {
     opacity: !isTesterHundered ? "1" : "0",
     display: isTesterHundered ? "none" : "block",
-    transition: "all s",
+    transition: "all 1s cubic-bezier(.76,.18,.83,.67)",
     transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
   };
 
@@ -22,7 +22,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
           !isTesterHundered
             ? {
                 transform: "scale(20) translate(8rem, -3rem)",
-                transition: "transform 1.3s ease",
+                transition: "transform 1s cubic-bezier(.76,.18,.83,.67)",
               }
             : isTesterVisible
             ? {

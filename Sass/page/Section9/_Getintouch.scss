@@ -2,20 +2,28 @@
 @use "../../base/responsive" as responsive;
 
 .get-in-touch {
-  height: 90vh !important;
+  height: fit-content !important;
   background-color: #f5f5f5;
   display: flex;
   position: relative;
   flex-direction: column;
 
+  @include responsive.respond(bigDesktop) {
+    height: fit-content !important;
+  }
+
+  @include responsive.respond(desktop) {
+    height: fit-content !important;
+  }
+
   @include responsive.respond(bigTablets) {
-    height: 50vh !important;
+    height: fit-content !important;
   }
   @include responsive.respond(tablets) {
-    height: 45vh !important;
+    height: fit-content !important;
   }
   @include responsive.respond(phone) {
-    height: 60vh !important;
+    height: fit-content !important;
   }
   @include responsive.respond(smallPhone) {
     height: fit-content !important;
@@ -39,7 +47,7 @@
   &__title {
     font-size: 12.5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
     text-align: right;
     @include responsive.respond(bigDesktop) {
       font-size: 12rem;
@@ -49,13 +57,16 @@
     }
     @include responsive.respond(bigTablets) {
       font-size: 8rem;
+      margin-bottom: 2rem;
     }
     @include responsive.respond(tablets) {
       font-size: 6rem;
+      margin-bottom: 2rem;
     }
     @include responsive.respond(phone) {
       font-size: 5rem;
       text-align: center;
+      margin-bottom: 2rem;
     }
     @include responsive.respond(smallPhone) {
       font-size: 3.5rem;
@@ -104,7 +115,7 @@
     padding-left: -3rem;
 
     img {
-      width: 600px;
+      width: 550px;
       height: auto;
       position: relative;
 

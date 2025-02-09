@@ -7,9 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   position: relative;
-
+  overflow-x: hidden !important;
   @include responsive.respond(smallPhone) {
   }
 
@@ -197,6 +197,7 @@
   transition: none !important;
 }
 .paraMobo {
+  overflow-x: hidden !important;
   @include responsive.respond(smallPhone) {
     position: absolute;
     bottom: -10rem;

@@ -12,6 +12,7 @@
 body {
   font-family: "Inter", serif;
   overflow-x: hidden !important;
+  background-color: black;
 }
 
 a {
@@ -1554,6 +1555,7 @@ a {
   margin-bottom: 5rem;
   font-weight: 100;
   z-index: 2;
+  background-color: white;
 }
 .caption h1 {
   font-size: 3rem;
@@ -1585,6 +1587,7 @@ a {
   scroll-snap-align: start;
   overflow: hidden;
   width: 100vw;
+  background-color: white;
 }
 .birdMobo-containerMobo {
   width: 100%;
@@ -1602,6 +1605,7 @@ a {
 
 .captionMobo {
   position: absolute;
+  background-color: white;
   top: 0;
   left: 0;
   height: 100vh;

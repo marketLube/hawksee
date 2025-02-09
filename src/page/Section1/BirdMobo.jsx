@@ -19,7 +19,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
         style={
           !isTesterHundered
             ? {
-                transform: "scale(20) translate(8rem, -3rem)",
+                transform: "scale(25) translate(8rem, -3rem)",
                 transition: "transform 1.3s cubic-bezier(.76,.18,.92,.53)",
               }
             : isTesterVisible

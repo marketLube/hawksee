@@ -128,7 +128,7 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
                   }
             }
           >
-            <span ref={paraRef}>Every</span> Brand Needs Hawksee, Because We{" "}
+            <span ref={paraRef}>Every</span> Brand Needs Hawksee, Because We
             <strong>See</strong>! First,
             <br /> We <strong>See</strong> The Brand&apos;s Potential, Customer
             Needs, and the Gap. <br />

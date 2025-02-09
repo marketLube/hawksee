@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "./../assets/image.svg";
 
-export const Nav = ({ setIsNavScrolling, isTesterHundered }) => {
+export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isChecked, setIsChecked] = useState(false);
@@ -63,7 +63,7 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered }) => {
       className={`headerNav ${isHidden ? "hidden" : ""}`}
       aria-label="Main navigation"
       style={
-        !isTesterHundered
+        !isTesterHundered && isMobile
           ? { transform: "translateY(-100%)" }
           : { transform: "translateY(0)" }
       }

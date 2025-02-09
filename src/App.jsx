@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Nav } from "./components/Nav";
 import { Bird } from "./page/Section1/Bird";
@@ -19,7 +19,6 @@ function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
   const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
   const isAir = useMediaQuery({ query: "(max-width: 820px)" });
-
   const testerRef = useRef(null);
   const isTesterHundered = useInView(testerRef);
   const isTesterVisible = useInView(testerRef);
@@ -33,6 +32,7 @@ function App() {
           setIsNavScrolling={setIsNavScrolling}
           aria-label="Main navigation"
           isTesterHundered={isTesterHundered}
+          isMobile={isMobile}
         />
       </header>
       <main aria-label="Main content area">

@@ -9,36 +9,52 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
   const paraInView = useInView(paraRef);
 
   useEffect(() => {
-    // Only run if paraInView is true
     if (!paraInView) return;
 
     // Store current position
     const scrollY = window.scrollY;
 
-    // Apply lock
+    // Prevent any scroll movement
+    const preventDefault = (e) => {
+      e.preventDefault();
+    };
+
+    // Apply all possible scroll prevention methods
     document.documentElement.style.setProperty("--scroll-y", `${scrollY}px`);
     document.body.style.position = "fixed";
     document.body.style.width = "100%";
     document.body.style.top = `-${scrollY}px`;
 
-    // Release lock after delay and restore scroll
+    // Add event listeners to prevent any kind of scroll
+    document.addEventListener("wheel", preventDefault, { passive: false });
+    document.addEventListener("touchmove", preventDefault, { passive: false });
+    document.addEventListener("scroll", preventDefault, { passive: false });
+
+    // Release everything after delay
     const timer = setTimeout(() => {
       document.body.style.position = "";
       document.body.style.width = "";
       document.body.style.top = "";
       window.scrollTo(0, scrollY);
+
+      // Remove event listeners
+      document.removeEventListener("wheel", preventDefault);
+      document.removeEventListener("touchmove", preventDefault);
+      document.removeEventListener("scroll", preventDefault);
     }, 1000);
 
-    // Cleanup function - this will only run if component unmounts
-    // or if paraInView changes before the timeout
     return () => {
       clearTimeout(timer);
-      // Only reset if we're still in fixed position
       if (document.body.style.position === "fixed") {
         document.body.style.position = "";
         document.body.style.width = "";
         document.body.style.top = "";
         window.scrollTo(0, scrollY);
+
+        // Remove event listeners in cleanup too
+        document.removeEventListener("wheel", preventDefault);
+        document.removeEventListener("touchmove", preventDefault);
+        document.removeEventListener("scroll", preventDefault);
       }
     };
   }, [paraInView]);

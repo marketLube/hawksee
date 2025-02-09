@@ -32,6 +32,7 @@ function App() {
           isNavScrolling={isNavScrolling}
           setIsNavScrolling={setIsNavScrolling}
           aria-label="Main navigation"
+          isTesterHundered={isTesterHundered}
         />
       </header>
       <main aria-label="Main content area">

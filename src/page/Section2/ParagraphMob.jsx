@@ -114,7 +114,6 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
         </div>
         <div className="paragraph__textDiv" aria-label="Text container">
           <p
-            ref={paraRef}
             aria-label="Text content for the brand's message"
             style={
               isInView
@@ -129,7 +128,8 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
                   }
             }
           >
-            Every Brand Needs Hawksee, Because We <strong>See</strong>! First,
+            <span ref={paraRef}>Every Brand Needs Hawksee, Because We</span>{" "}
+            <strong>See</strong>! First,
             <br /> We <strong>See</strong> The Brand&apos;s Potential, Customer
             Needs, and the Gap. <br />
             Then, We Act to <strong>Show</strong> Results.

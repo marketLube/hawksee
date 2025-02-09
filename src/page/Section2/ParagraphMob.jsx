@@ -9,16 +9,38 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
   const paraInView = useInView(paraRef);
 
   useEffect(() => {
-    if (paraInView) {
-      document.body.style.overflow = "hidden";
+    // Only run if paraInView is true
+    if (!paraInView) return;
 
-      setTimeout(() => {
-        document.body.style.overflow = "auto";
-      }, 1000);
-      return () => {
-        document.body.style.overflow = "auto";
-      };
-    }
+    // Store current position
+    const scrollY = window.scrollY;
+
+    // Apply lock
+    document.documentElement.style.setProperty("--scroll-y", `${scrollY}px`);
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
+    document.body.style.top = `-${scrollY}px`;
+
+    // Release lock after delay and restore scroll
+    const timer = setTimeout(() => {
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      window.scrollTo(0, scrollY);
+    }, 1000);
+
+    // Cleanup function - this will only run if component unmounts
+    // or if paraInView changes before the timeout
+    return () => {
+      clearTimeout(timer);
+      // Only reset if we're still in fixed position
+      if (document.body.style.position === "fixed") {
+        document.body.style.position = "";
+        document.body.style.width = "";
+        document.body.style.top = "";
+        window.scrollTo(0, scrollY);
+      }
+    };
   }, [paraInView]);
 
   return (

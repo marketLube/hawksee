@@ -21,9 +21,16 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
 
     // Apply all possible scroll prevention methods
     document.documentElement.style.setProperty("--scroll-y", `${scrollY}px`);
+
+    // Add vendor prefixes for iOS
     document.body.style.position = "fixed";
+    document.body.style["-webkit-position"] = "fixed"; // iOS Safari prefix
     document.body.style.width = "100%";
     document.body.style.top = `-${scrollY}px`;
+
+    // Prevent overscroll/bounce effect on iOS
+    document.body.style.overscrollBehavior = "none";
+    document.body.style["-webkit-overflow-scrolling"] = "auto"; // Disable momentum scrolling
 
     // Add event listeners to prevent any kind of scroll
     document.addEventListener("wheel", preventDefault, { passive: false });
@@ -33,8 +40,11 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
     // Release everything after delay
     const timer = setTimeout(() => {
       document.body.style.position = "";
+      document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
       document.body.style.width = "";
       document.body.style.top = "";
+      document.body.style.overscrollBehavior = "";
+      document.body.style["-webkit-overflow-scrolling"] = "";
       window.scrollTo(0, scrollY);
 
       // Remove event listeners
@@ -47,8 +57,11 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
       clearTimeout(timer);
       if (document.body.style.position === "fixed") {
         document.body.style.position = "";
+        document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
         document.body.style.width = "";
         document.body.style.top = "";
+        document.body.style.overscrollBehavior = "";
+        document.body.style["-webkit-overflow-scrolling"] = "";
         window.scrollTo(0, scrollY);
 
         // Remove event listeners in cleanup too

@@ -20,12 +20,12 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
           !isTesterHundered
             ? {
                 transform: "scale(25) translate(8rem, -3rem)",
-                transition: "transform 1.3s cubic-bezier(.76,.18,.92,.53)",
+                transition: "transform 1.3s ease",
               }
             : isTesterVisible
             ? {
                 transform: "scale(1) translate(0, 0)",
-                transition: "transform .5s cubic-bezier(0,.87,.63,.85)",
+                transition: "transform .5s ease",
               }
             : {}
         }

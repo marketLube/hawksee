@@ -51,7 +51,7 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
       document.removeEventListener("wheel", preventDefault);
       document.removeEventListener("touchmove", preventDefault);
       document.removeEventListener("scroll", preventDefault);
-    }, 500);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);

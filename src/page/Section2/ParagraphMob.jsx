@@ -37,7 +37,7 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
     document.addEventListener("touchmove", preventDefault, { passive: false });
     document.addEventListener("scroll", preventDefault, { passive: false });
 
-    // Release everything after delay
+    // Release everything after 1 second
     const timer = setTimeout(() => {
       document.body.style.position = "";
       document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
@@ -51,8 +51,9 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
       document.removeEventListener("wheel", preventDefault);
       document.removeEventListener("touchmove", preventDefault);
       document.removeEventListener("scroll", preventDefault);
-    }, 2000);
+    }, 1000); // 1000ms = 1 second
 
+    // Cleanup function
     return () => {
       clearTimeout(timer);
       if (document.body.style.position === "fixed") {
@@ -131,13 +132,13 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
             style={
               isInView
                 ? {
-                    transform: "translateY(0)",
-                    transition: "all 1s",
+                    transform: "translateY(.2)",
+                    transition: "all 1s ease",
                   }
                 : {
                     transform: "translateY(-5rem)",
                     opacity: "0",
-                    transition: "all 1s",
+                    transition: "all 1s ease",
                   }
             }
           >

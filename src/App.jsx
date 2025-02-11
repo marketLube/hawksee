@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Nav } from "./components/Nav";
 import { Bird } from "./page/Section1/Bird";
@@ -23,6 +23,24 @@ function App() {
   const isTesterHundered = useInView(testerRef);
   const isTesterVisible = useInView(testerRef);
   const paraRef = useRef(null);
+
+  const preventScroll = useCallback((e) => {
+    const scrollDelta = e.deltaY;
+
+    console.log("Scroll delta:", scrollDelta);
+
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("wheel", preventScroll, { passive: false });
+
+    return () => {
+      document.removeEventListener("wheel", preventScroll);
+    };
+  }, [preventScroll]);
 
   return (
     <>

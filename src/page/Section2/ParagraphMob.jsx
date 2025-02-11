@@ -8,51 +8,100 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
   const paraRef = useRef(null);
   const paraInView = useInView(paraRef);
 
+  // useEffect(() => {
+  //   // Store current position
+  //   const scrollY = window.scrollY;
+  //   let timer;
+
+  //   if (!paraInView) {
+  //     clearTimeout(timer);
+  //     return;
+  //   }
+  //   // Add vendor prefixes for iOS
+  //   document.body.style.position = "fixed";
+  //   document.body.style["-webkit-position"] = "fixed";
+  //   document.body.style.width = "100%";
+  //   document.body.style.top = `-${scrollY}px`;
+
+  //   // Prevent overscroll/bounce effect on iOS
+  //   document.body.style.overscrollBehavior = "none";
+  //   document.body.style["-webkit-overflow-scrolling"] = "auto";
+
+  //   // Release everything after 1 second
+  //   timer = setTimeout(() => {
+  //     document.body.style.position = "";
+  //     document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
+  //     document.body.style.width = "";
+  //     document.body.style.top = "";
+  //     document.body.style.overscrollBehavior = "";
+  //     document.body.style["-webkit-overflow-scrolling"] = "";
+  //     window.scrollTo(0, scrollY);
+  //   }, 1000);
+
+  //   // Cleanup function
+  //   return () => {
+  //     clearTimeout(timer);
+  //     if (document.body.style.position === "fixed") {
+  //       document.body.style.position = "";
+  //       document.body.style["-webkit-position"] = "";
+  //       document.body.style.width = "";
+  //       document.body.style.top = "";
+  //       document.body.style.overscrollBehavior = "";
+  //       document.body.style["-webkit-overflow-scrolling"] = "";
+  //       window.scrollTo(0, scrollY);
+  //     }
+  //   };
+  // }, [paraInView]);
+
+
+
   useEffect(() => {
-    // Store current position
     const scrollY = window.scrollY;
     let timer;
+
+    const lockScroll = () => {
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+      
+      document.body.style.cssText = `
+        position: fixed;
+        -webkit-position: fixed;
+        width: 100%;
+        top: -${scrollY}px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding-right: ${scrollBarWidth}px;
+        overscroll-behavior: none;
+        -webkit-overflow-scrolling: touch;
+        touch-action: none;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        -webkit-user-select: none;
+      `;
+    };
+
+    const unlockScroll = () => {
+      document.body.style.cssText = '';
+      requestAnimationFrame(() => {
+        window.scrollTo(0, scrollY);
+      });
+    };
 
     if (!paraInView) {
       clearTimeout(timer);
       return;
     }
-    // Add vendor prefixes for iOS
-    document.body.style.position = "fixed";
-    document.body.style["-webkit-position"] = "fixed";
-    document.body.style.width = "100%";
-    document.body.style.top = `-${scrollY}px`;
 
-    // Prevent overscroll/bounce effect on iOS
-    document.body.style.overscrollBehavior = "none";
-    document.body.style["-webkit-overflow-scrolling"] = "auto";
+    lockScroll();
+    timer = setTimeout(unlockScroll, 1000);
 
-    // Release everything after 1 second
-    timer = setTimeout(() => {
-      document.body.style.position = "";
-      document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
-      document.body.style.width = "";
-      document.body.style.top = "";
-      document.body.style.overscrollBehavior = "";
-      document.body.style["-webkit-overflow-scrolling"] = "";
-      window.scrollTo(0, scrollY);
-    }, 1000);
-
-    // Cleanup function
     return () => {
       clearTimeout(timer);
-      if (document.body.style.position === "fixed") {
-        document.body.style.position = "";
-        document.body.style["-webkit-position"] = "";
-        document.body.style.width = "";
-        document.body.style.top = "";
-        document.body.style.overscrollBehavior = "";
-        document.body.style["-webkit-overflow-scrolling"] = "";
-        window.scrollTo(0, scrollY);
+      if (document.body.style.position === 'fixed') {
+        unlockScroll();
       }
     };
   }, [paraInView]);
-
   return (
     <section
       id="about"

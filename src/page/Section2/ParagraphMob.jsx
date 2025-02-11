@@ -9,57 +9,45 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
   const paraInView = useInView(paraRef);
 
   useEffect(() => {
-    // Store current position and viewport height
+    // Store current position
     const scrollY = window.scrollY;
-    const vh = window.innerHeight;
     let timer;
 
     if (!paraInView) {
       clearTimeout(timer);
       return;
     }
-
-    // Save the current body height and overflow settings
-    const originalHeight = document.body.style.height;
-    const originalOverflow = document.body.style.overflow;
-    
-    // Lock scrolling - iOS friendly approach
-    document.documentElement.style.height = '100%';
-    document.body.style.height = '100%';
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
+    // Add vendor prefixes for iOS
+    document.body.style.position = "fixed";
+    document.body.style["-webkit-position"] = "fixed";
+    document.body.style.width = "100%";
     document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = '100%';
-    
-    // Additional iOS specific settings
-    document.body.style.touchAction = 'none';
-    document.documentElement.style.overflow = 'hidden';
+
+    // Prevent overscroll/bounce effect on iOS
+    document.body.style.overscrollBehavior = "none";
+    document.body.style["-webkit-overflow-scrolling"] = "auto";
 
     // Release everything after 1 second
     timer = setTimeout(() => {
-      document.documentElement.style.height = '';
-      document.body.style.height = originalHeight;
-      document.body.style.overflow = originalOverflow;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      document.body.style.touchAction = '';
-      document.documentElement.style.overflow = '';
+      document.body.style.position = "";
+      document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
+      document.body.style.width = "";
+      document.body.style.top = "";
+      document.body.style.overscrollBehavior = "";
+      document.body.style["-webkit-overflow-scrolling"] = "";
       window.scrollTo(0, scrollY);
     }, 1000);
 
     // Cleanup function
     return () => {
       clearTimeout(timer);
-      if (document.body.style.position === 'fixed') {
-        document.documentElement.style.height = '';
-        document.body.style.height = originalHeight;
-        document.body.style.overflow = originalOverflow;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        document.body.style.touchAction = '';
-        document.documentElement.style.overflow = '';
+      if (document.body.style.position === "fixed") {
+        document.body.style.position = "";
+        document.body.style["-webkit-position"] = "";
+        document.body.style.width = "";
+        document.body.style.top = "";
+        document.body.style.overscrollBehavior = "";
+        document.body.style["-webkit-overflow-scrolling"] = "";
         window.scrollTo(0, scrollY);
       }
     };

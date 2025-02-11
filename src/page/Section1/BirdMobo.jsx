@@ -1,41 +1,11 @@
-import { useEffect } from "react";
 import { ParagraphMob } from "../Section2/ParagraphMob";
 
 export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
   const style = {
     opacity: !isTesterHundered ? "1" : "0",
+    display: isTesterHundered ? "none" : "block",
     transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
   };
-
-  useEffect(() => {
-    const handleScrollUp = (event) => {
-      if (window.scrollY > window.innerHeight) return;
-      if (event.deltaY > 0) {
-        window.scrollTo({
-          top: window.innerHeight + 5 * 16,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    const handleScrollDown = (event) => {
-      if (window.scrollY > window.innerHeight) return;
-      if (event.deltaY < 0) {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    window.addEventListener("wheel", handleScrollUp);
-    window.addEventListener("wheel", handleScrollDown);
-
-    return () => {
-      window.removeEventListener("wheel", handleScrollUp);
-      window.removeEventListener("wheel", handleScrollDown);
-    };
-  }, []);
 
   return (
     <section id="bird" className="birdMobo" aria-label="Bird section">
@@ -49,19 +19,21 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
         style={
           !isTesterHundered
             ? {
-                transform: "scale(15) translate(8rem, -3rem)",
-                transition: "transform 1s ease",
+                transform: "scale(25) translate(8rem, -3rem)",
+                transition: "transform 1.3s cubic-bezier(.76,.18,.92,.53)",
               }
             : isTesterVisible
             ? {
                 transform: "scale(1) translate(0, 0)",
-                transition: "transform .5s ease",
+                transition: "transform .5s cubic-bezier(0,.87,.63,.85)",
               }
             : {}
         }
         className="bird-imageMobo"
         alt="A stylized bird representing Hawksee"
-        src="https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
+        src={
+          "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
+        }
         aria-label="Stylized bird representing Hawksee"
       />
 

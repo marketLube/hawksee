@@ -7,21 +7,35 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
     transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
   };
 
-  console.log(isTesterHundered, "isTesterHundered");
-
   useEffect(() => {
-    if (!isTesterHundered) {
-      window.scrollTo({
-        top: window.innerHeight,
-        behavior: "smooth",
-      });
-    } else {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  }, [isTesterHundered]);
+    const handleScrollUp = (event) => {
+      if (window.scrollY > window.innerHeight) return;
+      if (event.deltaY > 0) {
+        window.scrollTo({
+          top: window.innerHeight + 5 * 16,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    const handleScrollDown = (event) => {
+      if (window.scrollY > window.innerHeight) return;
+      if (event.deltaY < 0) {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    window.addEventListener("wheel", handleScrollUp);
+    window.addEventListener("wheel", handleScrollDown);
+
+    return () => {
+      window.removeEventListener("wheel", handleScrollUp);
+      window.removeEventListener("wheel", handleScrollDown);
+    };
+  }, []);
 
   return (
     <section id="bird" className="birdMobo" aria-label="Bird section">

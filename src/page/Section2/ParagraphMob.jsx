@@ -55,53 +55,53 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
 
 
 
-  useEffect(() => {
-    const scrollY = window.scrollY;
-    let timer;
+  // useEffect(() => {
+  //   const scrollY = window.scrollY;
+  //   let timer;
 
-    const lockScroll = () => {
-      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+  //   const lockScroll = () => {
+  //     const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
       
-      document.body.style.cssText = `
-        position: fixed;
-        -webkit-position: fixed;
-        width: 100%;
-        top: -${scrollY}px;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        padding-right: ${scrollBarWidth}px;
-        overscroll-behavior: none;
-        -webkit-overflow-scrolling: touch;
-        touch-action: none;
-        -webkit-tap-highlight-color: transparent;
-        user-select: none;
-        -webkit-user-select: none;
-      `;
-    };
+  //     document.body.style.cssText = `
+  //       position: fixed;
+  //       -webkit-position: fixed;
+  //       width: 100%;
+  //       top: -${scrollY}px;
+  //       right: 0;
+  //       left: 0;
+  //       bottom: 0;
+  //       padding-right: ${scrollBarWidth}px;
+  //       overscroll-behavior: none;
+  //       -webkit-overflow-scrolling: touch;
+  //       touch-action: none;
+  //       -webkit-tap-highlight-color: transparent;
+  //       user-select: none;
+  //       -webkit-user-select: none;
+  //     `;
+  //   };
 
-    const unlockScroll = () => {
-      document.body.style.cssText = '';
-      requestAnimationFrame(() => {
-        window.scrollTo(0, scrollY);
-      });
-    };
+  //   const unlockScroll = () => {
+  //     document.body.style.cssText = '';
+  //     requestAnimationFrame(() => {
+  //       window.scrollTo(0, scrollY);
+  //     });
+  //   };
 
-    if (!paraInView) {
-      clearTimeout(timer);
-      return;
-    }
+  //   if (!paraInView) {
+  //     clearTimeout(timer);
+  //     return;
+  //   }
 
-    lockScroll();
-    timer = setTimeout(unlockScroll, 1000);
+  //   lockScroll();
+  //   timer = setTimeout(unlockScroll, 1000);
 
-    return () => {
-      clearTimeout(timer);
-      if (document.body.style.position === 'fixed') {
-        unlockScroll();
-      }
-    };
-  }, [paraInView]);
+  //   return () => {
+  //     clearTimeout(timer);
+  //     if (document.body.style.position === 'fixed') {
+  //       unlockScroll();
+  //     }
+  //   };
+  // }, [paraInView]);
   return (
     <section
       id="about"

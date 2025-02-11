@@ -9,14 +9,17 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
   const paraInView = useInView(paraRef);
 
   useEffect(() => {
-    if (!paraInView) return;
-
     // Store current position
     const scrollY = window.scrollY;
+    let timer;
 
+    if (!paraInView) {
+      clearTimeout(timer);
+      return;
+    }
     // Add vendor prefixes for iOS
     document.body.style.position = "fixed";
-    document.body.style["-webkit-position"] = "fixed"; // iOS Safari prefix
+    document.body.style["-webkit-position"] = "fixed";
     document.body.style.width = "100%";
     document.body.style.top = `-${scrollY}px`;
 
@@ -25,7 +28,7 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
     document.body.style["-webkit-overflow-scrolling"] = "auto";
 
     // Release everything after 1 second
-    const timer = setTimeout(() => {
+    timer = setTimeout(() => {
       document.body.style.position = "";
       document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
       document.body.style.width = "";

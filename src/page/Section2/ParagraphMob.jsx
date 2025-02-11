@@ -8,78 +8,47 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
   const paraRef = useRef(null);
   const paraInView = useInView(paraRef);
 
-  // useEffect(() => {
-  //   if (!paraInView) return;
-
-  //   // Store current position
-  //   const scrollY = window.scrollY;
-
-  //   // Apply all possible scroll prevention methods
-  //   // document.documentElement.style.setProperty("--scroll-y", `${scrollY}px`);
-
-  //   // Add vendor prefixes for iOS
-  //   document.body.style.position = "fixed";
-  //   document.body.style["-webkit-position"] = "fixed"; // iOS Safari prefix
-  //   document.body.style.width = "100%";
-  //   document.body.style.top = `-${scrollY}px`;
-
-  //   // Prevent overscroll/bounce effect on iOS
-  //   document.body.style.overscrollBehavior = "none";
-  //   document.body.style["-webkit-overflow-scrolling"] = "auto";
-
-  //   // Release everything after 1 second
-  //   const timer = setTimeout(() => {
-  //     document.body.style.position = "";
-  //     document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
-  //     document.body.style.width = "";
-  //     document.body.style.top = "";
-  //     document.body.style.overscrollBehavior = "";
-  //     document.body.style["-webkit-overflow-scrolling"] = "";
-  //     window.scrollTo(0, scrollY);
-  //   }, 1000);
-
-  //   // Cleanup function
-  //   return () => {
-  //     clearTimeout(timer);
-  //     if (document.body.style.position === "fixed") {
-  //       document.body.style.position = "";
-  //       document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
-  //       document.body.style.width = "";
-  //       document.body.style.top = "";
-  //       document.body.style.overscrollBehavior = "";
-  //       document.body.style["-webkit-overflow-scrolling"] = "";
-  //       window.scrollTo(0, scrollY);
-  //     }
-  //   };
-  // }, [paraInView]);
-
-  const throttleScroll = useCallback((e) => {
-    if (e.deltaY < 0) return;
-
-    e.preventDefault();
-
-    const currentTime = Date.now();
-    if (
-      !throttleScroll.lastTime ||
-      currentTime - throttleScroll.lastTime >= 50
-    ) {
-      // 50ms throttle
-      const delta = Math.max(-100, Math.min(100, e.deltaY)); // Limit scroll to ±100px
-      window.scrollBy({
-        top: delta,
-        behavior: "smooth",
-      });
-      throttleScroll.lastTime = currentTime;
-    }
-  }, []);
-
   useEffect(() => {
-    document.addEventListener("wheel", throttleScroll, { passive: false });
+    if (!paraInView) return;
 
+    // Store current position
+    const scrollY = window.scrollY;
+
+    // Add vendor prefixes for iOS
+    document.body.style.position = "fixed";
+    document.body.style["-webkit-position"] = "fixed"; // iOS Safari prefix
+    document.body.style.width = "100%";
+    document.body.style.top = `-${scrollY}px`;
+
+    // Prevent overscroll/bounce effect on iOS
+    document.body.style.overscrollBehavior = "none";
+    document.body.style["-webkit-overflow-scrolling"] = "auto";
+
+    // Release everything after 1 second
+    const timer = setTimeout(() => {
+      document.body.style.position = "";
+      document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
+      document.body.style.width = "";
+      document.body.style.top = "";
+      document.body.style.overscrollBehavior = "";
+      document.body.style["-webkit-overflow-scrolling"] = "";
+      window.scrollTo(0, scrollY);
+    }, 1000);
+
+    // Cleanup function
     return () => {
-      document.removeEventListener("wheel", throttleScroll);
+      clearTimeout(timer);
+      if (document.body.style.position === "fixed") {
+        document.body.style.position = "";
+        document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
+        document.body.style.width = "";
+        document.body.style.top = "";
+        document.body.style.overscrollBehavior = "";
+        document.body.style["-webkit-overflow-scrolling"] = "";
+        window.scrollTo(0, scrollY);
+      }
     };
-  }, [throttleScroll]);
+  }, [paraInView]);
 
   return (
     <section
@@ -159,47 +128,3 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
     </section>
   );
 };
-// useEffect(() => {
-//   if (!paraInView) return;
-
-//   // Store current position
-//   const scrollY = window.scrollY;
-
-//   // Apply all possible scroll prevention methods
-//   // document.documentElement.style.setProperty("--scroll-y", `${scrollY}px`);
-
-//   // Add vendor prefixes for iOS
-//   document.body.style.position = "fixed";
-//   document.body.style["-webkit-position"] = "fixed"; // iOS Safari prefix
-//   document.body.style.width = "100%";
-//   document.body.style.top = `-${scrollY}px`;
-
-//   // Prevent overscroll/bounce effect on iOS
-//   document.body.style.overscrollBehavior = "none";
-//   document.body.style["-webkit-overflow-scrolling"] = "auto";
-
-//   // Release everything after 1 second
-//   const timer = setTimeout(() => {
-//     document.body.style.position = "";
-//     document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
-//     document.body.style.width = "";
-//     document.body.style.top = "";
-//     document.body.style.overscrollBehavior = "";
-//     document.body.style["-webkit-overflow-scrolling"] = "";
-//     window.scrollTo(0, scrollY);
-//   }, 1000);
-
-//   // Cleanup function
-//   return () => {
-//     clearTimeout(timer);
-//     if (document.body.style.position === "fixed") {
-//       document.body.style.position = "";
-//       document.body.style["-webkit-position"] = ""; // Clear iOS Safari prefix
-//       document.body.style.width = "";
-//       document.body.style.top = "";
-//       document.body.style.overscrollBehavior = "";
-//       document.body.style["-webkit-overflow-scrolling"] = "";
-//       window.scrollTo(0, scrollY);
-//     }
-//   };
-// }, [paraInView]);

@@ -24,32 +24,6 @@ function App() {
   const isTesterVisible = useInView(testerRef);
   const paraRef = useRef(null);
 
-  const throttleScroll = useCallback((e) => {
-    e.preventDefault();
-
-    const currentTime = Date.now();
-    if (
-      !throttleScroll.lastTime ||
-      currentTime - throttleScroll.lastTime >= 50
-    ) {
-      // 50ms throttle
-      const delta = Math.max(-100, Math.min(100, e.deltaY)); // Limit scroll to ±100px
-      window.scrollBy({
-        top: delta,
-        behavior: "smooth",
-      });
-      throttleScroll.lastTime = currentTime;
-    }
-  }, []);
-
-  useEffect(() => {
-    document.addEventListener("wheel", throttleScroll, { passive: false });
-
-    return () => {
-      document.removeEventListener("wheel", throttleScroll);
-    };
-  }, [throttleScroll]);
-
   return (
     <>
       <header aria-label="Main navigation header">

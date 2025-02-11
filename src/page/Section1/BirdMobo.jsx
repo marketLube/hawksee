@@ -1,11 +1,27 @@
+import { useEffect } from "react";
 import { ParagraphMob } from "../Section2/ParagraphMob";
 
 export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
   const style = {
     opacity: !isTesterHundered ? "1" : "0",
-    display: isTesterHundered ? "none" : "block",
     transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
   };
+
+  console.log(isTesterHundered, "isTesterHundered");
+
+  useEffect(() => {
+    if (!isTesterHundered) {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [isTesterHundered]);
 
   return (
     <section id="bird" className="birdMobo" aria-label="Bird section">
@@ -31,9 +47,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
         }
         className="bird-imageMobo"
         alt="A stylized bird representing Hawksee"
-        src={
-          "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
-        }
+        src="https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
         aria-label="Stylized bird representing Hawksee"
       />
 

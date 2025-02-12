@@ -146,7 +146,7 @@
 .birdMobo {
   height: 100vh;
   overflow: hidden;
-  position: relative;
+  position: sticky;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -204,6 +204,7 @@
     right: -20rem;
   }
 }
+
 @media (max-width: 575.98px) {
   .captionMobo p {
     text-align: center;

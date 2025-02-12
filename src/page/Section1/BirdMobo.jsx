@@ -19,13 +19,13 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
         style={
           !isTesterHundered
             ? {
-                transform: "scale(25) translate(8rem, -3rem)",
-                transition: "transform 1.3s cubic-bezier(.76,.18,.92,.53)",
+                transform: "scale(20) translate(8rem, -3rem)",
+                transition: "transform 1s ease-in-out",
               }
             : isTesterVisible
             ? {
                 transform: "scale(1) translate(0, 0)",
-                transition: "transform .5s cubic-bezier(0,.87,.63,.85)",
+                transition: "transform .5s ease-in-out",
               }
             : {}
         }
@@ -37,11 +37,13 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
         aria-label="Stylized bird representing Hawksee"
       />
 
-      <ParagraphMob
+      {/* <ParagraphMob
         aria-label="Paragraph section"
         isTesterHundered={isTesterHundered}
         style={style}
-      />
+      /> */}
     </section>
   );
 };
+// cubic - bezier(0.76, 0.18, 0.92, 0.53);
+// cubic-bezier(0,.87,.63,.85)

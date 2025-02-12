@@ -14,6 +14,7 @@ import Projects from "./page/Projects/Projects";
 import ServiceMobo from "./page/Service/serviceMobo";
 import ServiceSCroll from "./page/Service/ServiceSCroll";
 import { useInView } from "framer-motion";
+import { ParagraphMob } from "./page/Section2/ParagraphMob";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
@@ -52,11 +53,17 @@ function App() {
             aria-label="Desktop bird section"
           />
         )}
-        {!isMobile && (
+        {!isMobile ? (
           <Paragraph
             aria-label="Paragraph section"
             isTesterHundered={isTesterHundered}
             paraRef={paraRef}
+          />
+        ) : (
+          <ParagraphMob
+            aria-label="Paragraph section"
+            isTesterHundered={isTesterHundered}
+            // style={style}
           />
         )}
         {isAir ? (

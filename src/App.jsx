@@ -26,8 +26,6 @@ function App() {
   const paraRef = useRef(null);
   const paraInView = useInView(paraRef);
 
-  console.log(isTesterVisible, "visi");
-
   return (
     <>
       <header aria-label="Main navigation header" id="header">

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { ParagraphMob } from "../Section2/ParagraphMob";
 
 export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -7,14 +6,21 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
 
   const [styles, setStyles] = useState({
     transform: "scale(1) translate(0, 0)",
-    transition: "transform .5s ease-in-out",
+    transition: "all .5s ease-in-out",
   });
 
   useEffect(() => {
-    if (scrollDirection === "down" && !isTesterHundered && lastScrollY < 100) {
+    if (window.scrollY > 300) {
       setStyles({
         transform: "scale(20) translate(8rem, -3rem)",
         transition: "all 1s ease-in-out",
+      });
+    }
+
+    if (scrollDirection === "down" && !isTesterHundered && lastScrollY < 100) {
+      setStyles({
+        transform: "scale(20) translate(8rem, -3rem)",
+        transition: "all 1s cubic-bezier(0.76, 0.18, 0.92, 0.53)",
       });
 
       const para = document.getElementById("about");
@@ -23,7 +29,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
       if (isTesterVisible) {
         setStyles({
           transform: "scale(1) translate(0, 0)",
-          transition: "all .5s ease-in-out",
+          transition: "all 1s cubic-bezier(0,.87,.63,.85)",
         });
 
         window.scrollTo({ top: 0 });

@@ -24,6 +24,7 @@ function App() {
   const isTesterHundered = useInView(testerRef);
   const isTesterVisible = useInView(testerRef, { margin: "500px" });
   const paraRef = useRef(null);
+  const paraInView = useInView(paraRef);
 
   console.log(isTesterVisible, "visi");
 
@@ -47,6 +48,7 @@ function App() {
             aria-label="Mobile bird section"
             isTesterHundered={isTesterHundered}
             isTesterVisible={isTesterVisible}
+            paraInView={paraInView}
           />
         ) : (
           <Bird
@@ -66,6 +68,7 @@ function App() {
             aria-label="Paragraph section"
             isTesterHundered={isTesterHundered}
             // style={style}
+            paraRef={paraRef}
           />
         )}
         {isAir ? (

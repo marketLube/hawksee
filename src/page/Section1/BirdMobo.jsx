@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ParagraphMob } from "../Section2/ParagraphMob";
 
-export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
+export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("none");
   const [styles, setStyles] = useState({
@@ -10,13 +10,16 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
   });
 
   useEffect(() => {
-    if (scrollDirection === "down" && isTesterHundered) {
+    if (scrollDirection === "down" && !isTesterHundered) {
       setStyles({
         transform: "scale(20) translate(8rem, -3rem)",
         transition: "transform 1s ease-in-out",
       });
-      const para = document.getElementById("about");
-      para.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      if (!paraInView) {
+        const para = document.getElementById("about");
+        para.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     } else {
       if (isTesterVisible) {
         setStyles({

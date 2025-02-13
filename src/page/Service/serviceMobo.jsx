@@ -8,7 +8,7 @@ const serviceMobo = () => {
       title: "Social Media Management",
       description:
         "Strategically managing and growing your brand’s presence across social platforms.",
-      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314849/medium-shot-men-holding-smartphone_1_1_g4xoqb.jpg",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739448455/1_srtdne.jpg",
     },
     {
       title: "Performance Marketing",
@@ -19,49 +19,49 @@ const serviceMobo = () => {
       title: "Content Creation ",
       description:
         "High-quality visuals, videos, and graphics to enhance brand storytelling.",
-      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314736/side-view-woman-using-computer-laptop_2_jm2kju.jpg",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739448624/3_mut2lz.jpg",
     },
     {
       title: "Video Production",
       description:
         "Professional video shoots and edits tailored to your brand’s message.",
-      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314191/pexels-bertellifotografia-2608519_qyt9rk.jpg",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739448455/4_y7k6i5.jpg",
     },
     {
       title: "Branding & Design",
       description:
         "Crafting unique brand identities with logos, collaterals, and design assets.",
-      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314188/pexels-knownasovan-57690_lprrdo.jpg",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739448454/5_w9vp9j.jpg",
     },
     {
       title: "Website Development",
       description:
         "User-friendly, conversion-optimized websites for businesses of all sizes.",
-      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314191/pexels-divinetechygirl-1181359_obar07.jpg",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739448866/0_1_jmwqfc.jpg",
     },
     {
       title: "SEO & Digital Strategy",
       description:
         "Enhancing online visibility with tailored SEO and digital growth strategies.",
-      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314188/32010_wacweg.jpg",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739448454/7_uxaltl.jpg",
     },
     {
       title: "Influencer Marketing",
       description:
         "Connecting brands with the right influencers for authentic engagement.",
-      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314280/influencer-posting-social-media_1_yi3qqt.jpg",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739448453/8_syuy5b.jpg",
     },
     {
       title: "Reels Marketing",
       description:
         "Engaging short-form video strategies to boost brand awareness and reach.",
-      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314185/5140568_u1ugv7.jpg",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739448453/9_y2xcun.jpg",
     },
     {
       title: "Outdoor & Print Advertising",
       description:
         "Designing and printing leaflets, brochures, hoardings, and other marketing materials.",
-      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738314187/pexels-valeriiamiller-3752659_ct5hxe.jpg",
+      img: "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739449175/00_oxksgi.jpg",
     },
   ];
 

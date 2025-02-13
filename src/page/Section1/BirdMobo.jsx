@@ -60,7 +60,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
       </div>
 
       <div>
-        {/* <img
+        <img
           style={styles}
           className="bird-imageMobo"
           alt="A stylized bird representing Hawksee"
@@ -68,7 +68,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
             "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
           }
           aria-label="Stylized bird representing Hawksee"
-        /> */}
+        />
       </div>
       {/* 
       <ParagraphMob

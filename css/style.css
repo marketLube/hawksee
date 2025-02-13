@@ -526,7 +526,6 @@ a {
     background-color: black !important;
     overflow: hidden;
     position: relative;
-    display: flex;
   }
 }
 .paragraph__imageDiv__image1 {

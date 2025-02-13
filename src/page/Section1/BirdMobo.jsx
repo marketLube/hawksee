@@ -32,7 +32,10 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
           transition: "all .5s cubic-bezier(0,.87,.63,.85)",
         });
 
-        window.scrollTo({ top: 0 });
+        // Add a small delay before scrolling to top to prevent flickering
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 50);
       }
     }
   }, [scrollDirection, isTesterVisible, isTesterHundered, lastScrollY]);
@@ -41,16 +44,23 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
+      // Add a threshold to prevent tiny scroll fluctuations
+      const scrollThreshold = 5;
+
+      if (currentScrollY > lastScrollY + scrollThreshold) {
         setScrollDirection("down");
-      } else if (currentScrollY < lastScrollY) {
+      } else if (currentScrollY < lastScrollY - scrollThreshold) {
         setScrollDirection("up");
       }
 
-      setLastScrollY(currentScrollY);
+      // Debounce the scroll position update
+      requestAnimationFrame(() => {
+        setLastScrollY(currentScrollY);
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Use passive scroll listener for better performance
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);

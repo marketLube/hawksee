@@ -40,7 +40,9 @@ window.addEventListener(
   "wheel",
   (event) => {
     event.preventDefault();
-    smoothScroll(event.deltaY);
+    if (window.innerWidth < 767.98) {
+      smoothScroll(event.deltaY);
+    }
   },
   { passive: false }
 );

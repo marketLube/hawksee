@@ -23,10 +23,8 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
           transform: "scale(1) translate(0, 0)",
           transition: "transform .5s ease-in-out",
         });
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
+        const header = document.getElementById("header");
+        header.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
   }, [scrollDirection, isTesterVisible]);

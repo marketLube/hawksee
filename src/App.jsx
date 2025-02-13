@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <header aria-label="Main navigation header">
+      <header aria-label="Main navigation header" id="header">
         <Nav
           isNavScrolling={isNavScrolling}
           setIsNavScrolling={setIsNavScrolling}

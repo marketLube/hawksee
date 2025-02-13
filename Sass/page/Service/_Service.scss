@@ -1,6 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @use "../../base/responsive" as responsive;
 
 .scroll-container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   background-color: #ffffff;
@@ -8,9 +17,15 @@
 
 .serviceMain {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: rgb(0, 0, 0);
 
   padding-left: 20rem;
@@ -45,15 +60,24 @@
   }
 
   &__image-container {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     overflow: hidden;
     border-radius: 1.5rem;
     &__image-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       overflow-y: auto;
       height: 100%;
       gap: 1rem;
+      -webkit-transition: opacity 2s ease-in-out;
+      -o-transition: opacity 2s ease-in-out;
       transition: opacity 2s ease-in-out;
     }
 
@@ -61,8 +85,10 @@
       width: 80%;
       height: 80%;
       border-radius: 10px;
-      object-fit: fill;
-      object-position: bottom;
+      -o-object-fit: fill;
+         object-fit: fill;
+      -o-object-position: bottom;
+         object-position: bottom;
 
       @include responsive.respond(tablets) {
         width: 100%;
@@ -72,12 +98,23 @@
   }
 
   &__text-container {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     height: auto;
     padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    // justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    height: -webkit-fit-content;
+
+    height: -moz-fit-content;
+
     height: fit-content;
     position: relative;
 
@@ -96,12 +133,10 @@
     }
 
     @media only screen and (min-width: 768px) and (max-width: 875px) {
-      // margin-bottom: 2rem;
+
     }
 
-    // @include responsive.respond(tablets) {
-    //   margin-bottom: 3rem;
-    // }
+
   }
 
   &__main-subtitle {
@@ -155,6 +190,8 @@
     font-size: 1rem;
     color: #ccc;
     opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     @include responsive.respond(bigDesktop) {
       font-size: 1rem;
@@ -242,7 +279,17 @@
 }
 
 .fade-in-image {
-  animation: fadeIn 0.5s ease-in-out;
+  -webkit-animation: fadeIn 0.5s ease-in-out;
+          animation: fadeIn 0.5s ease-in-out;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
@@ -256,7 +303,8 @@
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn 0.5s forwards;
+  -webkit-animation: fadeIn 0.5s forwards;
+          animation: fadeIn 0.5s forwards;
 }
 
 @keyframes fadeIn {
@@ -266,7 +314,18 @@
 }
 
 .blinking-effect img {
-  animation: blink 0.4s linear;
+  -webkit-animation: blink 0.4s linear;
+          animation: blink 0.4s linear;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes blink {
@@ -294,6 +353,8 @@
 .mob-work-section {
   background-color: rgb(0, 0, 0) !important;
   padding: 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   z-index: 10000;
 
@@ -309,8 +370,15 @@
     top: 2rem;
     background-color: black;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 2rem;
     border-radius: 1rem;
     &-image-container {
@@ -323,8 +391,10 @@
       & img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
         border-radius: 1rem;
       }
     }
@@ -352,6 +422,8 @@
     font-size: 0.9rem;
     color: white;
     opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     @include responsive.respond(tablets) {
       font-size: 1.4rem;
@@ -360,12 +432,19 @@
 
   & .work-section__linktag {
     font-size: 0.8rem !important;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-top: 1rem;
   }
   &__item-pills {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 0.1rem;
     border-radius: 0.5rem;
     padding: 1rem;
@@ -381,27 +460,37 @@
 .buttondivPortfolioSer {
   text-align: left;
   margin-top: 8rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 
   @include responsive.respond(smallPhone) {
     padding: 1rem;
     margin-top: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 
   @include responsive.respond(phone) {
     margin-top: 0;
     padding: 6rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 
   @include responsive.respond(tablets) {
     padding: 1rem;
     margin-top: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 
   @include responsive.respond(bigTablets) {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
 

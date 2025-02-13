@@ -1,12 +1,17 @@
-// Sass/page/Section1/_bird.scss
 @use "./../../abstract/variables";
 @use "../../base/responsive";
 
 .bird {
   height: 350vh;
   background-color: variables.$color-primery-light;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: sticky;
   top: 0;
@@ -35,8 +40,14 @@
     position: absolute;
     top: 97vh;
     right: -45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     z-index: 1;
     @include responsive.respond(smallPhone) {
@@ -62,23 +73,17 @@
   &-image {
     height: auto;
     width: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
     z-index: 0;
 
     @media screen and (min-width: 768px) and (max-width: 770px) and (max-height: 1024px) {
-      // top: -10rem !important;
-      // right: -40rem;
     }
 
     @media screen and (min-width: 820px) and (max-width: 825px) and (max-height: 1180px) {
-      // top: -5rem;
-      // right: -40rem;
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1025px) and (max-height: 1366px) {
-      // top: -15rem !important;
-      // right: -25rem !important;
-      // scale: 1.5;
     }
 
     @include responsive.respond(bigDesktop) {
@@ -118,8 +123,14 @@
   left: 0;
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 5rem;
   font-weight: 100;
@@ -147,8 +158,14 @@
   height: 100vh;
   overflow: hidden;
   position: sticky;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   top: 0;
   scroll-snap-align: start;
@@ -160,8 +177,14 @@
     width: 100%;
     height: 100vh;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     @include responsive.respond(smallPhone) {
       height: 20vh;
@@ -174,8 +197,14 @@
   left: 0;
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 5rem;
   font-weight: 100 !important;
@@ -190,6 +219,7 @@
   position: relative;
   height: 600px;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: 0;
   top: 19rem;

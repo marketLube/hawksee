@@ -1,11 +1,24 @@
 @use "./../../abstract/variables";
 @use "../../base/responsive";
 
-@keyframes slide {
+@-webkit-keyframes slide {
   from {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
 }
@@ -45,19 +58,27 @@
   }
 
   &-rot {
+    -webkit-transform: skew(0.02turn, -5deg);
+    -ms-transform: skew(0.02turn, -5deg);
     transform: skew(0.02turn, -5deg);
     padding-top: 6rem;
     padding-bottom: 5rem;
 
     @include responsive.respond(tablets) {
+      -webkit-transform: none;
+      -ms-transform: none;
       transform: none;
       padding-top: 4rem;
     }
     @include responsive.respond(phone) {
+      -webkit-transform: none;
+      -ms-transform: none;
       transform: none;
       padding-top: 2rem;
     }
     @include responsive.respond(smallPhone) {
+      -webkit-transform: none;
+      -ms-transform: none;
       transform: none;
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -65,34 +86,48 @@
   }
 }
 .realstories-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
   width: calc(200% + 3rem);
+  -webkit-animation: slide 30s linear infinite;
   animation: slide 30s linear infinite;
 
   &:hover {
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
   }
 
   @include responsive.respond(tablets) {
+    -webkit-animation: none;
     animation: none;
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
   @include responsive.respond(phone) {
+    -webkit-animation: none;
     animation: none;
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
   @include responsive.respond(smallPhone) {
+    -webkit-animation: none;
     animation: none;
     width: 100%;
-    // width: calc(300% + 3rem);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 }
 
 .realstories-slide video {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 20rem;
   background-color: rgb(255, 255, 255);
@@ -100,10 +135,17 @@
   border-radius: 5px;
   text-align: center;
   font-size: 1rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   border: 2px solid black;
+  -o-object-fit: cover;
   object-fit: cover;
   &:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
 

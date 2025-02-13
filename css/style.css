@@ -522,7 +522,6 @@ a {
     height: fit-content;
     padding: 10rem 0;
     z-index: 10000000;
-    background-color: green;
   }
 }
 .paragraph__imageDiv__image1 {
@@ -694,7 +693,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(244, 244, 244);
   text-align: center;
   z-index: 100000000000000;
   font-weight: 200;
@@ -704,7 +703,8 @@ a {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
-  overflow: visible;
+  overflow: hidden;
+  display: none;
 }
 .paragraph__textDiv div {
   -webkit-transition: all 1s ease;
@@ -726,6 +726,7 @@ a {
     line-height: normal;
     padding: 0rem;
     min-width: 550px;
+    opacity: 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {

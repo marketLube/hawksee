@@ -105,18 +105,18 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
         <div className="paragraph__textDiv" aria-label="Text container">
           <p
             aria-label="Text content for the brand's message"
-            style={
-              isInView
-                ? {
-                    transform: "translateY(.2)",
-                    transition: "all 1s ease",
-                  }
-                : {
-                    transform: "translateY(-5rem)",
-                    opacity: "0",
-                    transition: "all 1s ease",
-                  }
-            }
+            // style={
+            //   isInView
+            //     ? {
+            //         transform: "translateY(.2)",
+            //         transition: "all 1s ease",
+            //       }
+            //     : {
+            //         transform: "translateY(-5rem)",
+            //         opacity: "0",
+            //         transition: "all 1s ease",
+            //       }
+            // }
           >
             <span ref={paraRef}>Every</span> Brand Needs Hawksee, Because We
             <strong>See</strong>! First,

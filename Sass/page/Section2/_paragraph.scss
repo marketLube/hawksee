@@ -15,11 +15,11 @@
   align-items: center;
   position: relative;
   overflow-x: hidden !important;
+
   @include responsive.respond(smallPhone) {
     height: fit-content;
     padding: 10rem 0;
     z-index: 10000000;
-    background-color: green;
   }
 
   &__imageDiv {
@@ -158,7 +158,7 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(244, 244, 244);
     text-align: center;
     z-index: 100000000000000;
     font-weight: 200;
@@ -168,7 +168,8 @@
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
-    overflow: visible;
+    overflow: hidden;
+    display: none;
 
     & div {
       -webkit-transition: all 1s ease;
@@ -189,6 +190,7 @@
       line-height: normal;
       padding: 0rem;
       min-width: 550px;
+      opacity: 0;
     }
 
     @include responsive.respond(tablets) {
@@ -233,7 +235,5 @@
 .paraMobo {
   background-color: black;
   @include responsive.respond(smallPhone) {
-    // bottom: -15rem;
-    // padding-bottom: 10rem;
   }
 }

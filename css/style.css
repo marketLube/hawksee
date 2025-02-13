@@ -522,6 +522,7 @@ a {
     height: fit-content;
     padding: 10rem 0;
     z-index: 10000000;
+    background-color: black !important;
   }
 }
 .paragraph__imageDiv__image1 {
@@ -1833,7 +1834,7 @@ a {
 }
 
 .bird-imageMobo {
-  position: sticky;
+  position: relative;
   height: 600px;
   width: 100%;
   -o-object-fit: cover;

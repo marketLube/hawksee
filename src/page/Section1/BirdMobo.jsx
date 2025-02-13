@@ -4,7 +4,7 @@ import { ParagraphMob } from "../Section2/ParagraphMob";
 export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("none");
-  const [scrollPara, setScrollPara] = useState(false);
+
   const [styles, setStyles] = useState({
     transform: "scale(1) translate(0, 0)",
     transition: "transform .5s ease-in-out",
@@ -23,7 +23,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
       if (isTesterVisible) {
         setStyles({
           transform: "scale(1) translate(0, 0)",
-          transition: "transform .5s ease-in-out",
+          transition: "all .5s ease-in-out",
         });
         const header = document.getElementById("header");
         header.scrollIntoView({ behavior: "smooth", block: "start" });

@@ -15,7 +15,6 @@
   align-items: center;
   position: relative;
   overflow-x: hidden !important;
-  background-color: red !important;
 
   @include responsive.respond(smallPhone) {
     height: fit-content;

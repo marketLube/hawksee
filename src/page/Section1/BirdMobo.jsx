@@ -4,22 +4,23 @@ import { ParagraphMob } from "../Section2/ParagraphMob";
 export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("none");
+  const [scrollPara, setScrollPara] = useState(false);
   const [styles, setStyles] = useState({
     transform: "scale(1) translate(0, 0)",
     transition: "transform .5s ease-in-out",
   });
 
   useEffect(() => {
-    if (scrollDirection === "down" && !isTesterHundered) {
+    if (scrollDirection === "down" && !isTesterHundered && lastScrollY < 100) {
       setStyles({
-        transform: "scale(20) translate(8rem, -3rem)",
-        transition: "transform 1s ease-in-out",
+        transform: "translate(8rem, -3rem)",
+        transition: "all 1s ease-in-out",
+        height: "1000vh",
+        width: "1000vw",
       });
 
-      // if (!paraInView) {
-      //   const para = document.getElementById("about");
-      //   para.scrollIntoView({ behavior: "smooth", block: "center" });
-      // }
+      const para = document.getElementById("about");
+      para.scrollIntoView({ behavior: "smooth", block: "center" });
     } else if (scrollDirection === "up") {
       if (isTesterVisible) {
         setStyles({
@@ -30,7 +31,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
         header.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
-  }, [scrollDirection, isTesterVisible, isTesterHundered]);
+  }, [scrollDirection, isTesterVisible, isTesterHundered, lastScrollY]);
 
   useEffect(() => {
     const handleScroll = () => {

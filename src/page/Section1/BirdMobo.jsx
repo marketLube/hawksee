@@ -10,7 +10,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
   });
 
   useEffect(() => {
-    if (scrollDirection === "down") {
+    if (scrollDirection === "down" && isTesterHundered) {
       setStyles({
         transform: "scale(20) translate(8rem, -3rem)",
         transition: "transform 1s ease-in-out",
@@ -27,7 +27,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
         header.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
-  }, [scrollDirection, isTesterVisible]);
+  }, [scrollDirection, isTesterVisible, isTesterHundered]);
 
   useEffect(() => {
     const handleScroll = () => {

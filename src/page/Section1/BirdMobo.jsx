@@ -5,8 +5,8 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scrollDirection, setScrollDirection] = useState("none");
   const [styles, setStyles] = useState({
-    transform: "scale(20) translate(8rem, -3rem)",
-    transition: "transform 1s ease-in-out",
+    transform: "scale(1) translate(0, 0)",
+    transition: "transform .5s ease-in-out",
   });
 
   useEffect(() => {

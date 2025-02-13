@@ -15,6 +15,8 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
         transform: "scale(20) translate(8rem, -3rem)",
         transition: "transform 1s ease-in-out",
       });
+      const para = document.getElementById("about");
+      para.scrollIntoView({ behavior: "smooth", block: "center" });
     } else {
       if (isTesterVisible) {
         setStyles({

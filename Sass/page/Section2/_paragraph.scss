@@ -19,6 +19,7 @@
     height: fit-content;
     padding: 10rem 0;
     z-index: 10000000;
+    background-color: green;
   }
 
   &__imageDiv {
@@ -167,6 +168,7 @@
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
+    overflow: visible;
 
     & div {
       -webkit-transition: all 1s ease;

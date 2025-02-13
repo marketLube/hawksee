@@ -522,6 +522,7 @@ a {
     height: fit-content;
     padding: 10rem 0;
     z-index: 10000000;
+    background-color: green;
   }
 }
 .paragraph__imageDiv__image1 {
@@ -703,6 +704,7 @@ a {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  overflow: visible;
 }
 .paragraph__textDiv div {
   -webkit-transition: all 1s ease;

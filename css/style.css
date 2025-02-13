@@ -1833,7 +1833,7 @@ a {
 }
 
 .bird-imageMobo {
-  position: relative;
+  position: sticky;
   height: 600px;
   width: 100%;
   -o-object-fit: cover;

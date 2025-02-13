@@ -523,7 +523,7 @@ a {
     min-height: 100vh;
     padding: 5rem 0;
     z-index: 10000000;
-    background-color: black !important;
+    background-color: transparent;
     overflow: hidden;
     position: relative;
   }

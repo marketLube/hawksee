@@ -22,7 +22,7 @@ function App() {
   const isAir = useMediaQuery({ query: "(max-width: 820px)" });
   const testerRef = useRef(null);
   const isTesterHundered = useInView(testerRef);
-  const isTesterVisible = useInView(testerRef, { amount: 0.8 });
+  const isTesterVisible = useInView(testerRef, { margin: "500px" });
   const paraRef = useRef(null);
 
   console.log(isTesterVisible, "visi");

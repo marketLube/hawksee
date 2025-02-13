@@ -1,11 +1,53 @@
+import { useEffect, useState } from "react";
 import { ParagraphMob } from "../Section2/ParagraphMob";
 
 export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
-  // const style = {
-  //   opacity: !isTesterHundered ? "1" : "0",
-  //   display: isTesterHundered ? "none" : "block",
-  //   transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
-  // };
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState("none");
+  const [styles, setStyles] = useState({
+    transform: "scale(20) translate(8rem, -3rem)",
+    transition: "transform 1s ease-in-out",
+  });
+
+  useEffect(() => {
+    if (scrollDirection === "down") {
+      setStyles({
+        transform: "scale(20) translate(8rem, -3rem)",
+        transition: "transform 1s ease-in-out",
+      });
+    } else {
+      if (isTesterVisible) {
+        setStyles({
+          transform: "scale(1) translate(0, 0)",
+          transition: "transform .5s ease-in-out",
+        });
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [scrollDirection, isTesterVisible]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else if (currentScrollY < lastScrollY) {
+        setScrollDirection("up");
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
     <section id="bird" className="birdMobo" aria-label="Bird section">
@@ -16,21 +58,8 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
       </div>
 
       <div>
-        {" "}
         <img
-          style={
-            !isTesterHundered
-              ? {
-                  transform: "scale(20) translate(8rem, -3rem)",
-                  transition: "transform 1s ease-in-out",
-                }
-              : isTesterVisible
-              ? {
-                  transform: "scale(1) translate(0, 0)",
-                  transition: "transform .5s ease-in-out",
-                }
-              : {}
-          }
+          style={styles}
           className="bird-imageMobo"
           alt="A stylized bird representing Hawksee"
           src={
@@ -39,8 +68,8 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
           aria-label="Stylized bird representing Hawksee"
         />
       </div>
-
-      {/* <ParagraphMob
+      {/* 
+      <ParagraphMob
         aria-label="Paragraph section"
         isTesterHundered={isTesterHundered}
         style={style}

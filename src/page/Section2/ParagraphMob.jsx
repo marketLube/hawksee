@@ -3,8 +3,7 @@ import { useInView } from "framer-motion";
 
 export const ParagraphMob = ({ isTesterHundered, style }) => {
   const ref = useRef(null);
-  // const isInView = useInView(ref, { amount: 0.2 });
-  let isInView = true;
+  const isInView = useInView(ref, { amount: 0.2 });
 
   const paraRef = useRef(null);
   const paraInView = useInView(paraRef);

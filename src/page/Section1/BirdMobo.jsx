@@ -13,10 +13,8 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
   useEffect(() => {
     if (scrollDirection === "down" && !isTesterHundered && lastScrollY < 100) {
       setStyles({
-        transform: "translate(8rem, -3rem)",
+        transform: "scale(20) translate(8rem, -3rem)",
         transition: "all 1s ease-in-out",
-        height: "1000vh",
-        width: "1000vw",
       });
 
       const para = document.getElementById("about");

@@ -1,6 +1,5 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import "./../css/style.css";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

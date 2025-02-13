@@ -29,7 +29,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
       if (isTesterVisible) {
         setStyles({
           transform: "scale(1) translate(0, 0)",
-          transition: "all 1s cubic-bezier(0,.87,.63,.85)",
+          transition: "all .5s cubic-bezier(0,.87,.63,.85)",
         });
 
         window.scrollTo({ top: 0 });

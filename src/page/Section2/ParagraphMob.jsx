@@ -57,11 +57,7 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
       className="paraMobo"
       style={style}
     >
-      <div
-        className="paragraph"
-        style={{ backgroundColor: "transparent" }}
-        aria-label="Paragraph section"
-      >
+      <div className="paragraph" aria-label="Paragraph section">
         <div
           className="paragraph__imageDiv"
           ref={ref}

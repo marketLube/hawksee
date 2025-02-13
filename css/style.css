@@ -516,14 +516,17 @@ a {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  overflow-x: hidden !important;
 }
 @media only screen and (max-width: 575.98px) {
   .paragraph {
-    height: fit-content;
-    padding: 10rem 0;
+    height: auto;
+    min-height: 100vh;
+    padding: 5rem 0;
     z-index: 10000000;
     background-color: black !important;
+    overflow: hidden;
+    position: relative;
+    display: flex;
   }
 }
 .paragraph__imageDiv__image1 {
@@ -783,6 +786,8 @@ a {
 
 .paraMobo {
   background-color: black;
+  height: fit-content;
+  overflow: hidden;
 }
 @-webkit-keyframes slide {
   from {

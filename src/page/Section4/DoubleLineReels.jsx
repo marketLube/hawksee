@@ -15,16 +15,19 @@ export const DoubleLineReels = () => {
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738039828/WhatsApp_Image_2025-01-19_at_14.13.21_zosyku.jpg",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739427751/nationalHospitalHawksee_wniwun.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738231033/intimate_tiles_tcsjgs.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986962/hawPara1_cc6pa2.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738039828/WhatsApp_Image_2025-01-19_at_14.13.21_zosyku.jpg",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739427751/nationalHospitalHawksee_wniwun.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738231033/intimate_tiles_tcsjgs.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986962/hawPara1_cc6pa2.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
     "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738039828/WhatsApp_Image_2025-01-19_at_14.13.21_zosyku.jpg",
+    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739427751/nationalHospitalHawksee_wniwun.png",
   ];
 
   const videos = [

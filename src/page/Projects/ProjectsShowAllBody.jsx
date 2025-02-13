@@ -35,6 +35,7 @@ export default function ProjectsShowAllBody({
         "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
         "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
         "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738039828/WhatsApp_Image_2025-01-19_at_14.13.21_zosyku.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739427751/nationalHospitalHawksee_wniwun.png",
       ],
     },
     {
@@ -45,6 +46,7 @@ export default function ProjectsShowAllBody({
         "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
         "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
         "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738039828/WhatsApp_Image_2025-01-19_at_14.13.21_zosyku.jpg",
+        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739427751/nationalHospitalHawksee_wniwun.png",
         "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039784/thechoiceschoolkochi_2396992194_chpkzz.mp4",
         "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039784/eventiamiddleeast_2397100622_eivznr.mp4",
         "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039784/thechoiceschoolkochi_2396868545_adnwse.mp4",

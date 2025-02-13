@@ -112,12 +112,12 @@ export const ParagraphMob = ({ isTesterHundered, style }) => {
               isInView
                 ? {
                     transform: "translateY(.2)",
-                    transition: "transform 1s ease",
+                    transition: "all 1s ease",
                   }
                 : {
                     transform: "translateY(-5rem)",
                     opacity: "0",
-                    transition: "transform 1s ease",
+                    transition: "all 1s ease",
                   }
             }
           >

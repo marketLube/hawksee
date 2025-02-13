@@ -4,16 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite --host\" \"npm run watch:css\"",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "compile:sass": "sass Sass/main.scss css/sassStyle.css",
-    "sass": "sass --watch Sass/main.scss:css/style.css",
-    "prefix:css": "postcss css/style.css --use autoprefixer -o css/style.prefix.css --watch",
-    "compress:css": "sass css/style.prefix.css css/style.min.css --style=compressed",
-    "concat:css": "npx concat -o css/style.concated.css css/icon-font.css css/style.min.css",
-    "watch:css": "concurrently \"npm run sass\" \"npm run compile:sass\" \"npm run prefix:css\" \"npm run compress:css\" \"npm run concat:css\""
+    "sass": "sass --watch Sass/main.scss:css/style.css -w"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",

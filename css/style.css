@@ -517,6 +517,11 @@ a {
   position: relative;
   overflow-x: hidden !important;
 }
+@media only screen and (max-width: 575.98px) {
+  .paragraph {
+    height: 80vh;
+  }
+}
 .paragraph__imageDiv__image1 {
   width: 350px;
   height: 350px;
@@ -706,7 +711,7 @@ a {
   .paragraph__textDiv {
     font-size: 1.4rem;
     line-height: 2.3rem;
-    top: 50%;
+    top: 40%;
     padding: 0rem;
     min-width: 350px;
   }
@@ -769,13 +774,6 @@ a {
 .paraMobo {
   background-color: black;
 }
-@media only screen and (max-width: 575.98px) {
-  .paraMobo {
-    bottom: -15rem;
-    padding-bottom: 10rem;
-  }
-}
-
 @-webkit-keyframes slide {
   from {
     -webkit-transform: translateX(0);

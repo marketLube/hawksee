@@ -1,11 +1,11 @@
 import { ParagraphMob } from "../Section2/ParagraphMob";
 
 export const BirdMobo = ({ isTesterHundered, isTesterVisible }) => {
-  const style = {
-    opacity: !isTesterHundered ? "1" : "0",
-    display: isTesterHundered ? "none" : "block",
-    transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
-  };
+  // const style = {
+  //   opacity: !isTesterHundered ? "1" : "0",
+  //   display: isTesterHundered ? "none" : "block",
+  //   transform: isTesterHundered ? "translateY(10rem)" : "translateY(0)",
+  // };
 
   return (
     <section id="bird" className="birdMobo" aria-label="Bird section">

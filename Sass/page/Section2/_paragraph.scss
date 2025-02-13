@@ -16,6 +16,7 @@
   position: relative;
   overflow-x: hidden !important;
   @include responsive.respond(smallPhone) {
+    height: 80vh;
   }
 
   &__imageDiv {
@@ -174,7 +175,7 @@
     @include responsive.respond(smallPhone) {
       font-size: 1.4rem;
       line-height: 2.3rem;
-      top: 50%;
+      top: 40%;
       padding: 0rem;
       min-width: 350px;
     }
@@ -228,7 +229,7 @@
 .paraMobo {
   background-color: black;
   @include responsive.respond(smallPhone) {
-    bottom: -15rem;
-    padding-bottom: 10rem;
+    // bottom: -15rem;
+    // padding-bottom: 10rem;
   }
 }

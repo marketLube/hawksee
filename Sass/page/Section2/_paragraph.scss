@@ -6,6 +6,7 @@
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -27,6 +28,7 @@
     &__image1 {
       width: 350px;
       height: 350px;
+      -webkit-object-fit: cover;
       -o-object-fit: cover;
       object-fit: cover;
       opacity: 0.5;
@@ -68,6 +70,7 @@
       bottom: 15rem;
       margin-left: 12rem;
       margin-right: 12rem;
+      -webkit-object-fit: cover;
       -o-object-fit: cover;
       object-fit: cover;
       opacity: 0.5;
@@ -117,6 +120,7 @@
     &__image3 {
       width: 350px;
       height: 350px;
+      -webkit-object-fit: cover;
       -o-object-fit: cover;
       object-fit: cover;
       opacity: 0.5;
@@ -166,6 +170,7 @@
     padding: 2rem;
     font-size: 2.5rem;
     line-height: 70px;
+    -webkit-min-width: fit-content;
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;

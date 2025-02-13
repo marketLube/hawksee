@@ -15,25 +15,28 @@
   }
 
   @media screen and (width: 1024px) and (height: 1366px) {
-    min-height: 70vh;
+    min-height: 65vh;
   }
 
   @include responsive.respond(tablets) {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;
+    padding-bottom: 2rem;
   }
 
   @include responsive.respond(phone) {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;
+    padding-bottom: 2rem;
   }
 
   @include responsive.respond(smallPhone) {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;
+    padding-bottom: 2rem;
   }
 
   &-head {
@@ -103,7 +106,7 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 
   @media screen and (max-width: 400px) {
@@ -174,7 +177,7 @@
   }
 
   @include responsive.respond(smallPhone) {
-    min-height: 20rem;
+    min-height: 15rem;
   }
 }
 
@@ -231,7 +234,8 @@
     }
 
     @include responsive.respond(smallPhone) {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      white-space: nowrap;
     }
   }
 }

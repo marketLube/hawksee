@@ -2511,7 +2511,7 @@ a {
 }
 @media screen and (width: 1024px) and (height: 1366px) {
   .meet {
-    min-height: 70vh;
+    min-height: 65vh;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -2519,6 +2519,7 @@ a {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;
+    padding-bottom: 2rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -2526,6 +2527,7 @@ a {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;
+    padding-bottom: 2rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
@@ -2533,6 +2535,7 @@ a {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;
+    padding-bottom: 2rem;
   }
 }
 .meet-head {
@@ -2616,7 +2619,7 @@ a {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 }
 @media screen and (max-width: 400px) {
@@ -2690,7 +2693,7 @@ a {
 }
 @media only screen and (max-width: 575.98px) {
   .team-member {
-    min-height: 20rem;
+    min-height: 15rem;
   }
 }
 
@@ -2748,7 +2751,8 @@ a {
 }
 @media only screen and (max-width: 575.98px) {
   .swiper-slide p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
 }
 

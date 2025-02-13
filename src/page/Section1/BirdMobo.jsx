@@ -16,11 +16,11 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
         transition: "transform 1s ease-in-out",
       });
 
-      if (!paraInView) {
-        const para = document.getElementById("about");
-        para.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    } else {
+      // if (!paraInView) {
+      //   const para = document.getElementById("about");
+      //   para.scrollIntoView({ behavior: "smooth", block: "center" });
+      // }
+    } else if (scrollDirection === "up") {
       if (isTesterVisible) {
         setStyles({
           transform: "scale(1) translate(0, 0)",

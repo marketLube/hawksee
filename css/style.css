@@ -2856,7 +2856,7 @@ a {
 }
 .logos-title {
   font-size: 10rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 2rem;
   text-align: right;
   color: white;
@@ -3427,7 +3427,7 @@ a {
 }
 .projects__title {
   font-size: 10rem;
-  font-weight: 500;
+  font-weight: 700;
   color: white;
   -webkit-animation: fadeIn2 1s ease-in-out forwards;
   animation: fadeIn2 1s ease-in-out forwards;
@@ -4264,9 +4264,9 @@ a {
   -ms-flex: 1;
   flex: 1;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 200;
   color: white;
 }
 

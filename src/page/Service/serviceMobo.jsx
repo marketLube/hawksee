@@ -111,13 +111,14 @@ const serviceMobo = () => {
               </h4>
               <h1
                 className="work-section__heading-style"
-                style={{ fontWeight: "500" }}
+                style={{ fontWeight: "700" }}
                 aria-label={`Title for ${item.title}`}
               >
                 {item.title}
               </h1>
               <p
                 className="work-section__para-style"
+                style={{ fontWeight: "200" }}
                 aria-label={`Description for ${item.title}`}
               >
                 {item.description}

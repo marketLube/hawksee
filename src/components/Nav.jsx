@@ -79,7 +79,7 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
           onClick={() => scrollToSection("about")}
           aria-label="Navigate to About us section"
         >
-          About us
+          About Us
         </li>
         <li
           onClick={() => scrollToSection("works")}
@@ -138,7 +138,7 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
                 }}
                 aria-label="Navigate to About us section"
               >
-                About us
+                About Us
               </a>
             </li>
             <li className="navigation__item">

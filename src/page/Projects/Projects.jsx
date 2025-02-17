@@ -123,7 +123,11 @@ const Projects = () => {
           >
             <FiArrowLeft size={20} color="white" />
           </button>
-          <h2 className="projects__title" aria-label="Projects title">
+          <h2
+            className="projects__title"
+            aria-label="Projects title"
+            style={{ fontWeight: 700 }}
+          >
             Projects
           </h2>
           <ProjectsNav

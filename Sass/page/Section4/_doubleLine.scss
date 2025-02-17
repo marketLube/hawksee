@@ -4,44 +4,44 @@
 @-webkit-keyframes slideRight {
   from {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   to {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 @keyframes slideRight {
   from {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   to {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 @-webkit-keyframes slideLeft {
   from {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   to {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
 @keyframes slideLeft {
   from {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   to {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -88,7 +88,7 @@
 
   &-title {
     font-size: 10rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 2rem;
     text-align: right;
     color: white;
@@ -124,8 +124,8 @@
 
     &-text.animate {
       -webkit-transform: translateY(10rem);
-          -ms-transform: translateY(10rem);
-              transform: translateY(10rem);
+      -ms-transform: translateY(10rem);
+      transform: translateY(10rem);
     }
 
     & div {
@@ -139,16 +139,16 @@
 
   &-rot {
     -webkit-transform: skew(0.02turn, -5deg);
-        -ms-transform: skew(0.02turn, -5deg);
-            transform: skew(0.02turn, -5deg);
+    -ms-transform: skew(0.02turn, -5deg);
+    transform: skew(0.02turn, -5deg);
     padding-top: 7rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     gap: 4rem;
 
     @include responsive.respond(smallPhone) {
@@ -170,31 +170,31 @@
   gap: 1rem;
   width: calc(200% + 3rem);
   -webkit-animation: slideRight 30s linear infinite;
-          animation: slideRight 30s linear infinite;
+  animation: slideRight 30s linear infinite;
 
   &:hover {
     -webkit-animation-play-state: paused;
-            animation-play-state: paused;
+    animation-play-state: paused;
   }
 
   &.reverse {
     -webkit-animation: slideRight 30s linear infinite;
-            animation: slideRight 30s linear infinite;
+    animation: slideRight 30s linear infinite;
     &:hover {
       -webkit-animation-play-state: paused;
-              animation-play-state: paused;
+      animation-play-state: paused;
     }
   }
 }
 
 .logo-slide img {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   height: 19rem;
   width: 19rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
@@ -234,8 +234,8 @@
 
   &:hover {
     -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 
@@ -247,8 +247,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
   @include responsive.respond(smallPhone) {
     margin-top: auto;
@@ -326,8 +326,8 @@
 
 .doubleline-slide video {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 20rem;
   margin-top: 2rem;
   border-radius: 5px;
@@ -340,11 +340,11 @@
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   border: 2px solid black;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   &:hover {
     -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
 
   @include responsive.respond(bigTablets) {
@@ -367,27 +367,27 @@
 }
 .slider-item {
   -webkit-animation: slideLinear 30s linear infinite;
-          animation: slideLinear 30s linear infinite; /* Adjust duration as needed */
+  animation: slideLinear 30s linear infinite; /* Adjust duration as needed */
 }
 
 @-webkit-keyframes slideLinear {
   0% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%); /* Adjust based on the number of items */
+    transform: translateX(-100%); /* Adjust based on the number of items */
   }
 }
 
 @keyframes slideLinear {
   0% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%); /* Adjust based on the number of items */
+    transform: translateX(-100%); /* Adjust based on the number of items */
   }
 }

@@ -54,7 +54,7 @@ export const GetInTouch = () => {
                   aria-label="Navigate to About Us section"
                   href="#about"
                 >
-                  About us
+                  About Us
                 </a>
                 <a
                   style={{ cursor: "pointer" }}

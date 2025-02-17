@@ -151,9 +151,9 @@
       -ms-flex: 1;
       flex: 1;
       text-align: left;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       line-height: 1.5;
-      font-weight: 300;
+      font-weight: 200;
       color: white;
     }
   }
@@ -224,7 +224,6 @@
       @include responsive.respond(smallPhone) {
         font-size: 2.8rem;
         width: 75%;
-
         font-weight: 400;
       }
       @include responsive.respond(bigTablets) {

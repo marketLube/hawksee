@@ -108,8 +108,10 @@ export default function ProjectsShowAllBody({
                   }}
                   onMouseEnter={(e) => {
                     e.target.controls = true;
+                    e.target.play();
                   }}
                   onMouseLeave={(e) => {
+                    e.target.pause();
                     e.target.controls = false;
                   }}
                 />
@@ -132,9 +134,11 @@ export default function ProjectsShowAllBody({
               poster={content[0]?.thumbnails[i]}
               aria-label={`Project video ${i + 1}`}
               onMouseEnter={(e) => {
+                e.target.play();
                 e.target.controls = true;
               }}
               onMouseLeave={(e) => {
+                e.target.pause();
                 e.target.controls = false;
               }}
               style={{

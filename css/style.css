@@ -4132,19 +4132,19 @@ a {
   overflow: hidden;
   width: 90%;
   color: white;
-  font-size: 6.5rem;
-  font-weight: 500;
+  font-size: 6rem;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 2rem;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .about .home-text {
-    font-size: 6.5rem;
+    font-size: 6rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .about .home-text {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -4266,6 +4266,7 @@ a {
   text-align: left;
   font-size: 1.3rem;
   line-height: 1.5;
+  font-weight: 300;
   color: white;
 }
 

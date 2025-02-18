@@ -68,12 +68,22 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
           : { transform: "translateY(0)" }
       }
     >
-      <img
-        src={logo}
-        alt="Hawksee logo"
-        className="headerNav-hawlogo"
-        aria-label="Hawksee logo"
-      />
+      <div
+        onClick={() => {
+          window.location.hash = "#home";
+          setIsNavScrolling(false);
+        }}
+        style={{ cursor: "pointer" }}
+        role="button"
+        aria-label="Go to home page"
+      >
+        <img
+          src={logo}
+          alt="Hawksee logo"
+          className="headerNav-hawlogo"
+          aria-label="Hawksee logo"
+        />
+      </div>
       <ul className="headerNav-right" aria-label="Navigation links">
         <li
           onClick={() => scrollToSection("about")}

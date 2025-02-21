@@ -65,27 +65,27 @@ a {
   transform: translateY(-100%);
 }
 .headerNav-hawlogo {
-  width: 200px;
+  width: fit-content;
   height: 4rem;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .headerNav-hawlogo {
-    width: 280px;
+    width: fit-content;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .headerNav-hawlogo {
-    width: 280px;
+    width: fit-content;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .headerNav-hawlogo {
-    width: 240px;
+    width: 200px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .headerNav-hawlogo {
-    width: 220px;
+    width: 200px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -4195,7 +4195,7 @@ a {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 5rem;
-  padding: 13rem 0;
+  padding: 0;
 }
 .about-scroll-container-right-content {
   display: -webkit-box;

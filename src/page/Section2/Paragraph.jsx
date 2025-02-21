@@ -33,7 +33,7 @@ export const Paragraph = ({ isTesterHundered, style }) => {
             aria-label="Image representing the brand's potential"
             style={{
               transform: isInView ? "translateY(0%)" : "translateY(100%)",
-              opacity: isInView ? "0.4" : "0",
+              opacity: isInView ? "0.3" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
           />
@@ -44,7 +44,7 @@ export const Paragraph = ({ isTesterHundered, style }) => {
             aria-label="Image representing the brand's vision"
             style={{
               transform: isInView ? "translateY(0%)" : "translateY(200%)",
-              opacity: isInView ? "0.4" : "0",
+              opacity: isInView ? "0.3" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
           />
@@ -55,7 +55,7 @@ export const Paragraph = ({ isTesterHundered, style }) => {
             aria-label="Image representing the brand's journey"
             style={{
               transform: isInView ? "translateY(0%)" : "translateY(400%)",
-              opacity: isInView ? "0.4" : "0",
+              opacity: isInView ? "0.3" : "0",
               transition: "transform 0.7s ease-out, opacity 0.7s ease-out",
             }}
           />

@@ -70,7 +70,7 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
             aria-label="Image representing the brand's potential"
             style={{
               transform: isInView ? "translateY(0%)" : "translateY(100%)",
-              opacity: isInView ? "0.4" : "0",
+              opacity: isInView ? "0.3" : "0",
               transition: "transform 1s ease-out, opacity 2s ease-out",
             }}
           />
@@ -81,7 +81,7 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
             aria-label="Image representing the brand's vision"
             style={{
               transform: isInView ? "translateY(0%)" : "translateY(700%)",
-              opacity: isInView ? "0.4" : "0",
+              opacity: isInView ? "0.3" : "0",
               transition: "transform 1s ease-out, opacity 2s ease-out",
             }}
           />
@@ -92,7 +92,7 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
             aria-label="Image representing the brand's journey"
             style={{
               transform: isInView ? "translateY(0%)" : "translateY(400%)",
-              opacity: isInView ? "0.4" : "0",
+              opacity: isInView ? "0.3" : "0",
               transition: "transform 1s ease-out, opacity 2s ease-out",
             }}
           />
@@ -114,7 +114,8 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
                   }
             }
           >
-            <span ref={paraRef}>Every</span> Brand Needs Hawksee, Because We
+            <span ref={paraRef}>Every</span> Brand Needs Hawksee, Because We{" "}
+            {""}
             <strong>See</strong>! First,
             <br /> We <strong>See</strong> The Brand&apos;s Potential, Customer
             Needs, and the Gap. <br />

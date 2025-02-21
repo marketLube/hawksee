@@ -40,19 +40,19 @@
   }
 
   &-hawlogo {
-    width: 200px;
+    width: fit-content;
     height: 4rem;
     @include responsive.respond(bigDesktop) {
-      width: 280px;
+      width: fit-content;
     }
     @include responsive.respond(desktop) {
-      width: 280px;
+      width: fit-content;
     }
     @include responsive.respond(bigTablets) {
-      width: 240px;
+      width: 200px;
     }
     @include responsive.respond(tablets) {
-      width: 220px;
+      width: 200px;
     }
     @include responsive.respond(phone) {
       width: 200px;

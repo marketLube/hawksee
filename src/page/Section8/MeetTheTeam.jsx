@@ -106,6 +106,8 @@ export const MeetTheTeam = () => {
             delay: 1500,
             disableOnInteraction: false,
           }}
+          touchRatio={1.5}
+          touchAngle={30}
           breakpoints={{
             320: {
               slidesPerView: 1,
@@ -120,8 +122,8 @@ export const MeetTheTeam = () => {
               spaceBetween: 10,
             },
             768: {
-              slidesPerView: 2,
-              spaceBetween: 40,
+              slidesPerView: 3,
+              spaceBetween: 20,
             },
             992: {
               slidesPerView: 3,

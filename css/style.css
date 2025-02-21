@@ -419,7 +419,7 @@ a {
   padding: 40px;
   position: relative;
   padding-top: 10rem;
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
 }
 @media (max-width: 768px) {
   .logo-grid {

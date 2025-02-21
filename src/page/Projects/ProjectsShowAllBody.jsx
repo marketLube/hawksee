@@ -101,6 +101,7 @@ export default function ProjectsShowAllBody({
                   src={val}
                   aria-label={`Project video ${i + 1}`}
                   poster={content[2]?.thumbnails[i]}
+                  controls
                   style={{
                     height: "100%",
                     width: "100%",
@@ -108,13 +109,11 @@ export default function ProjectsShowAllBody({
                     transition: "transform 0.3s, opacity 0.3s",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.controls = true;
                     e.target.play();
                     e.target.style.transform = "scale(1.07)";
                   }}
                   onMouseLeave={(e) => {
                     e.target.pause();
-                    e.target.controls = false;
                     e.target.style.transform = "scale(1)";
                     e.target.style.opacity = "1";
                   }}
@@ -145,14 +144,13 @@ export default function ProjectsShowAllBody({
               src={val}
               poster={content[0]?.thumbnails[i]}
               aria-label={`Project video ${i + 1}`}
+              controls
               onMouseEnter={(e) => {
                 e.target.play();
-                e.target.controls = true;
                 e.target.style.transform = "scale(1.07)";
               }}
               onMouseLeave={(e) => {
                 e.target.pause();
-                e.target.controls = false;
                 e.target.style.transform = "scale(1)";
                 e.target.style.opacity = "1";
               }}

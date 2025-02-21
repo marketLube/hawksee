@@ -105,14 +105,18 @@ export default function ProjectsShowAllBody({
                     height: "100%",
                     width: "100%",
                     objectFit: "contain",
+                    transition: "transform 0.3s, opacity 0.3s",
                   }}
                   onMouseEnter={(e) => {
                     e.target.controls = true;
                     e.target.play();
+                    e.target.style.transform = "scale(1.07)";
                   }}
                   onMouseLeave={(e) => {
                     e.target.pause();
                     e.target.controls = false;
+                    e.target.style.transform = "scale(1)";
+                    e.target.style.opacity = "1";
                   }}
                 />
               ) : (
@@ -124,6 +128,14 @@ export default function ProjectsShowAllBody({
                     height: "100%",
                     width: "100%",
                     objectFit: "contain",
+                    transition: "transform 0.3s, opacity 0.3s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = "scale(1.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = "scale(1)";
+                    e.target.style.opacity = "1";
                   }}
                 />
               )}
@@ -136,15 +148,19 @@ export default function ProjectsShowAllBody({
               onMouseEnter={(e) => {
                 e.target.play();
                 e.target.controls = true;
+                e.target.style.transform = "scale(1.07)";
               }}
               onMouseLeave={(e) => {
                 e.target.pause();
                 e.target.controls = false;
+                e.target.style.transform = "scale(1)";
+                e.target.style.opacity = "1";
               }}
               style={{
                 height: "100%",
                 width: "100%",
                 objectFit: "contain",
+                transition: "transform 0.3s, opacity 0.3s",
               }}
             />
           ) : (
@@ -156,6 +172,14 @@ export default function ProjectsShowAllBody({
                 height: "100%",
                 width: "100%",
                 objectFit: "contain",
+                transition: "transform 0.3s, opacity 0.3s",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = "scale(1.1)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = "scale(1)";
+                e.target.style.opacity = "1";
               }}
             />
           )}

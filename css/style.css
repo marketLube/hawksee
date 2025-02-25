@@ -4135,7 +4135,7 @@ a {
   font-size: 6rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .about .home-text {

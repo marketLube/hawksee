@@ -246,3 +246,24 @@
   @include responsive.respond(smallPhone) {
   }
 }
+
+.aboutbutton {
+  margin-top: 2rem;
+  width: fit-content;
+  margin-inline: auto;
+  font-size: large;
+
+  button {
+    padding: 1rem 2.5rem;
+
+    @include responsive.respond(smallPhone) {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+    }
+
+    @include responsive.respond(bigDesktop) {
+      padding: 1.2rem 3rem;
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -1,9 +1,13 @@
 import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
+import { Button } from "../../components/Button";
+import { useNavigate } from "react-router-dom";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   // Store current position
@@ -121,6 +125,9 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
             Needs, and the Gap. <br />
             Then, We Act to <strong>Show</strong> Results.
           </p>
+          <div className="aboutbutton">
+            <Button onClick={() => navigate("/about")}>About us</Button>
+          </div>
         </div>
       </div>
     </section>

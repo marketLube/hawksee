@@ -278,12 +278,7 @@ const ServiceDetails = () => {
             ← Previous
           </button>
           <div className="nav-spacer"></div>
-          <button
-            className="nav-btn next"
-            // onClick={() => handleNavigation("next")}
-          >
-            Next →
-          </button>
+          <button className="nav-btn next">Next →</button>
         </div>
       </div>
     </div>

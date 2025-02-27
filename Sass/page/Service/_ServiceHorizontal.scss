@@ -18,10 +18,10 @@
     align-items: center;
     justify-content: space-around;
     gap: 4rem;
-    background-image: url("/UpdatedUIsky-17.svg");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-image: url("/UpdatedUIsky-17.svg");
+    // background-position: bottom;
+    // background-repeat: no-repeat;
+    // background-size: cover;
 
     @include responsive.respond(smallPhone) {
       height: 100vh;

@@ -20,6 +20,13 @@ import PojectImg3 from "../../assets/About/hawPara2.png";
 import PojectImg4 from "../../assets/About/hawPara3.png";
 import PojectImg5 from "../../assets/About/nationalhospital.png";
 import PojectImg6 from "../../assets/About/intimatetiles.png";
+import Thumb1 from "../../assets/vdo/thum1.png";
+import Thumb2 from "../../assets/vdo/thumb2.png";
+import Thumb3 from "../../assets/vdo/thumb3.png";
+import Thumb4 from "../../assets/vdo/thum4.png";
+import Thumb5 from "../../assets/vdo/thum5.png";
+import Thumb6 from "../../assets/vdo/thumb6.png";
+import Thumb7 from "../../assets/vdo/thumb7.png";
 
 export const DoubleLineReels = () => {
   const images = [
@@ -47,15 +54,7 @@ export const DoubleLineReels = () => {
 
   const videos = [VDO1, VDO2, VDO3, VDO4, VDO5, VDO6, VDO7];
 
-  const thumbnails = [
-    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409867/thum1_mdvzi7.png",
-    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409872/thumb3_auq2g7.png",
-    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409869/thum2_obznoi.png",
-    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb6_s3yzvs.png",
-    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409867/thumb4_agsgnu.png",
-    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb5_jz7kak.png",
-    "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb7_jkphur.png",
-  ];
+  const thumbnails = [Thumb1, Thumb2, Thumb3, Thumb4, Thumb5, Thumb6, Thumb7];
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 

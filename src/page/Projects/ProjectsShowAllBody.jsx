@@ -15,6 +15,14 @@ import VDO5 from "../../assets/vdo/vdo5.mp4";
 import VDO6 from "../../assets/vdo/vdo6.mp4";
 import VDO7 from "../../assets/vdo/vdo7.mp4";
 
+import Thumb1 from "../../assets/vdo/thum1.png";
+import Thumb2 from "../../assets/vdo/thumb2.png";
+import Thumb3 from "../../assets/vdo/thumb3.png";
+import Thumb4 from "../../assets/vdo/thum4.png";
+import Thumb5 from "../../assets/vdo/thum5.png";
+import Thumb6 from "../../assets/vdo/thumb6.png";
+import Thumb7 from "../../assets/vdo/thumb7.png";
+
 export default function ProjectsShowAllBody({
   isAnimate,
   activeIndex,
@@ -24,15 +32,7 @@ export default function ProjectsShowAllBody({
     {
       type: "video",
       items: [VDO1, VDO2, VDO3, VDO4, VDO5, VDO6, VDO7],
-      thumbnails: [
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409867/thum1_mdvzi7.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409872/thumb3_auq2g7.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409869/thum2_obznoi.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb6_s3yzvs.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409867/thumb4_agsgnu.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb5_jz7kak.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb7_jkphur.png",
-      ],
+      thumbnails: [Thumb1, Thumb2, Thumb3, Thumb4, Thumb5, Thumb6, Thumb7],
     },
     {
       type: "social",
@@ -69,13 +69,13 @@ export default function ProjectsShowAllBody({
         "",
         "",
         "",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409867/thum1_mdvzi7.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409872/thumb3_auq2g7.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409869/thum2_obznoi.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb6_s3yzvs.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409867/thumb4_agsgnu.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb5_jz7kak.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409866/thumb7_jkphur.png",
+        Thumb1,
+        Thumb2,
+        Thumb3,
+        Thumb4,
+        Thumb5,
+        Thumb6,
+        Thumb7,
       ],
     },
   ];

@@ -15,7 +15,7 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
     },
     {
       id: 2,
-      navTitle: "Blog",
+      navTitle: "Blogs",
     },
     {
       id: 3,
@@ -197,9 +197,11 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
               whileTap={{ scale: 0.95 }}
               key={navItem.id}
               onClick={() => {
-                window.location.hash = `#${navItem.navTitle
-                  .toLowerCase()
-                  .trim()}`;
+                const hashValue =
+                  navItem.navTitle === "Our Work"
+                    ? "works"
+                    : navItem.navTitle.toLowerCase().trim();
+                window.location.hash = `#${hashValue}`;
                 setMobileNavOpen(false);
               }}
             >

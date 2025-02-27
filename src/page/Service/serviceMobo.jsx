@@ -5,63 +5,34 @@ import { FiArrowUpRight } from "react-icons/fi";
 const serviceMobo = () => {
   const items = [
     {
-      title: "Social Media Management",
+      title: "Branding & Identity",
       description:
-        "Strategically managing and growing your brand’s presence across social platforms.",
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-01_wczbap.webp",
-    },
-    {
-      title: "Performance Marketing",
-      description: "Data-driven ad campaigns to maximize conversions and ROI.",
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-02_yv8ubf.webp",
-    },
-    {
-      title: "Content Creation ",
-      description:
-        "High-quality visuals, videos, and graphics to enhance brand storytelling.",
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-05_fqv7yy.webp",
-    },
-    {
-      title: "Video Production",
-      description:
-        "Professional video shoots and edits tailored to your brand’s message.",
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-04_htxnpe.webp",
-    },
-    {
-      title: "Branding & Design",
-      description:
-        "Crafting unique brand identities with logos, collaterals, and design assets.",
+        "Creating distinctive brand identities through innovative logos, marketing materials, and comprehensive design solutions.",
       img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-03_s18foa.webp",
     },
     {
-      title: "Website Development",
+      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-01_wczbap.webp",
+      title: "Social Media & Content Marketing",
       description:
-        "User-friendly, conversion-optimized websites for businesses of all sizes.",
+        "Expertly curating and expanding your brand's visibility and engagement on various social media platforms.",
+    },
+    {
+      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-04_htxnpe.webp",
+      title: "Creative Content & Video Production",
+      description:
+        "Delivering exceptional visuals, engaging videos, and compelling graphics to elevate brand storytelling.",
+    },
+    {
       img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-06_dqikyl.webp",
+      title: "Website Development & SEO",
+      description:
+        "User-friendly, conversion-optimized websites for businesses of all sizes and SEO strategies to boost online visibility.",
     },
     {
-      title: "SEO & Digital Strategy",
-      description:
-        "Enhancing online visibility with tailored SEO and digital growth strategies.",
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-07_v1tvb0.webp",
-    },
-    {
-      title: "Influencer Marketing",
-      description:
-        "Connecting brands with the right influencers for authentic engagement.",
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-08_mdp7e5.webp",
-    },
-    {
-      title: "Reels Marketing",
-      description:
-        "Engaging short-form video strategies to boost brand awareness and reach.",
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-09_y1yjqy.webp",
-    },
-    {
-      title: "Outdoor & Print Advertising",
-      description:
-        "Designing and printing leaflets, brochures, hoardings, and other marketing materials.",
       img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-10_xdqwt7.webp",
+      title: "Influencer & Outdoor Marketing",
+      description:
+        "Creating impactful marketing campaigns with a focus on high-quality printed materials, including brochures, flyers, and outdoor advertising.",
     },
   ];
 

@@ -97,6 +97,36 @@
     transition: all 1s ease;
     margin-left: auto;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    .question-top {
+      font-size: 1.5rem;
+      font-weight: 100;
+      text-align: center;
+      color: #fff;
+      opacity: 0.7;
+      order: -1;
+      align-self: center;
+      margin-left: 9rem;
+
+      @include responsive.respond(bigDesktop) {
+        font-size: 1.5rem;
+      }
+
+      @include responsive.respond(desktop) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .answer {
+      font-size: 1.5rem;
+      font-weight: 100;
+      align-self: flex-end;
+      color: #fff;
+      opacity: 0.7;
+    }
 
     & h2 {
       -webkit-transition: -webkit-transform 0.5s ease-out;
@@ -107,6 +137,8 @@
       font-size: 9rem;
       font-weight: 700;
       color: #fff;
+      margin: 1rem 0;
+      text-align: right;
       @include responsive.respond(bigDesktop) {
         font-size: 8rem;
       }
@@ -286,7 +318,6 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-
   @include responsive.respond(smallPhone) {
   }
   @include responsive.respond(phone) {

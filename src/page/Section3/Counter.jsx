@@ -9,8 +9,8 @@ export const Counter = () => {
   const ref = useRef(null);
 
   const stats = [
-    { value: 1000, label: "Projects Done" },
-    { value: 500, label: "Happy Clients" },
+    { value: 1000, label: "Projects Done", suffix: "+" },
+    { value: 500, label: "Happy Clients", suffix: "+" },
     { value: 12, label: "Business", suffix: "CR+" },
     { value: 4.6, label: "Rated on google", decimals: 1 },
   ];
@@ -31,6 +31,7 @@ export const Counter = () => {
         <div className="title-container" aria-label="Title container">
           <h1 className="counterup" aria-label="Counter title">
             <div className="counterup-text" aria-label="Counterup text">
+              <span className="question-top">The Essential Question</span>
               <h2
                 style={
                   animate
@@ -44,6 +45,7 @@ export const Counter = () => {
               >
                 Does it work?
               </h2>
+              <span className="answer">(in short, yep...)</span>
             </div>
           </h1>
         </div>

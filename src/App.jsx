@@ -15,6 +15,8 @@ import ServiceMobo from "./page/Service/serviceMobo";
 import ServiceSCroll from "./page/Service/ServiceSCroll";
 import { useInView } from "framer-motion";
 import { ParagraphMob } from "./page/Section2/ParagraphMob";
+import ServiceHorizontal from "./page/Service/serviceHorizontal";
+import ServiceDetails from "./page/Service/serviceComponets/serviceDetails";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
@@ -65,16 +67,16 @@ function App() {
           <ParagraphMob
             aria-label="Paragraph section"
             isTesterHundered={isTesterHundered}
-            // style={style}
             paraRef={paraRef}
           />
         )}
         {isAir ? (
           <ServiceMobo aria-label="Mobile service section" />
         ) : (
-          <ServiceSCroll aria-label="Scroll service section" />
+          <ServiceHorizontal aria-label="Service horizontal section" />
         )}
         <Projects aria-label="Projects section" />
+        <ServiceDetails aria-label="Service details section" />
         <Counter aria-label="Counter section" />
         <DoubleLineReels aria-label="Double line reels section" />
         <Research aria-label="Research section" />

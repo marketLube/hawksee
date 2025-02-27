@@ -1,60 +1,135 @@
 import React, { useState, useEffect } from "react";
 import logo from "./../assets/image.svg";
+import { motion } from "framer-motion";
 
 export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
   const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isChecked, setIsChecked] = useState(false);
+  const MOBILE_NAV_ITEMS = [
+    {
+      id: 0,
+      navTitle: "Home",
+    },
+    {
+      id: 1,
+      navTitle: "About",
+    },
+    {
+      id: 2,
+      navTitle: "Blog",
+    },
+    {
+      id: 3,
+      navTitle: "Our Work",
+    },
+    {
+      id: 4,
+      navTitle: "Contact",
+    },
+  ];
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const multiplier = window.innerWidth < 768 ? 0.1 : 1.9;
-      const viewportHeight = window.innerHeight * multiplier;
-
-      if (currentScrollY > viewportHeight) {
-        setIsHidden(true);
-      } else {
-        setIsHidden(false);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    document.body.classList.toggle("no-scroll", isChecked);
-  }, [isChecked]);
-
-  useEffect(() => {
-    if (isChecked) {
+    if (mobileNavOpen) {
       document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
     }
 
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
     };
-  }, [isChecked]);
+  }, [mobileNavOpen]);
 
-  const scrollToSection = (sectionId) => {
-    if (sectionId !== "about") {
-      setIsNavScrolling(true);
-    }
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      window.history.pushState(null, "", `#${sectionId}`);
-    } else {
-      console.error(`Element with ID ${sectionId} not found`);
-    }
-    setTimeout(() => setIsNavScrolling(false), 1000);
+  const hideNavItemsVariant = {
+    opened: {
+      opacity: 0,
+      y: "-100%",
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+    closed: {
+      opacity: 1,
+      y: "0%",
+      transition: {
+        delay: 1.1,
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const mobileMenuVariant = {
+    opened: {
+      y: "0%",
+      transition: {
+        duration: 0,
+        ease: [0, 0, 0, 0],
+      },
+    },
+    closed: {
+      y: "-100%",
+      transition: {
+        duration: 0.4,
+        ease: [0.8, 0, 0.1, 1],
+      },
+    },
+  };
+
+  const fadeInVariant = {
+    opened: {
+      opacity: 1,
+      transition: {
+        duration: 0,
+      },
+    },
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0,
+      },
+    },
+  };
+
+  const ulVariant = {
+    opened: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+    closed: {
+      transition: {
+        staggerChildren: 0.05,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  const liVariant = {
+    opened: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+    closed: {
+      opacity: 0,
+      y: 80,
+      transition: {
+        duration: 0.1,
+        ease: "easeIn",
+      },
+    },
   };
 
   return (
@@ -84,101 +159,55 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
           aria-label="Hawksee logo"
         />
       </div>
-      <ul className="headerNav-right" aria-label="Navigation links">
-        <li
-          onClick={() => scrollToSection("about")}
-          aria-label="Navigate to About us section"
-        >
-          About Us
-        </li>
-        <li
-          onClick={() => scrollToSection("works")}
-          aria-label="Navigate to Our Works section"
-        >
-          Our Works
-        </li>
-        <li>
-          <a
-            href="https://wa.me/919995000123"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              backgroundColor: "black",
-              color: "white",
-              padding: "0.5rem 1rem",
-              borderRadius: "3rem",
-            }}
-            aria-label="Contact us via WhatsApp"
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
+      <button
+        className="hamburger-menu"
+        aria-label="Toggle menu"
+        onClick={() => setMobileNavOpen(true)}
+      >
+        <span className="hamburger-line"></span>
+        <span className="hamburger-line"></span>
+      </button>
 
-      <div className="navigation" aria-label="Navigation menu">
-        <input
-          checked={isChecked}
-          onChange={() => setIsChecked(!isChecked)}
-          type="checkbox"
-          className="navigation__checkbox"
-          id="navi__toggle"
-          aria-label="Toggle navigation"
-        />
-        <label
-          htmlFor="navi__toggle"
-          className="navigation__btn"
-          aria-controls="navigationMenu"
-          aria-label="Toggle navigation menu"
+      <motion.div
+        variants={mobileMenuVariant}
+        initial="closed"
+        animate={mobileNavOpen ? "opened" : "closed"}
+        className="mobile-menu"
+      >
+        <motion.button
+          variants={fadeInVariant}
+          onClick={() => setMobileNavOpen(false)}
+          className="close-button"
+          aria-label="Close menu"
+          style={{ backgroundColor: "white" }}
         >
-          <span className="navigation__icon">&nbsp;</span>
-        </label>
-
-        <nav
-          className="navigation__nav"
-          id="navigationMenu"
-          aria-label="Main navigation"
+          <div className="close-icon">
+            <span className="close-line"></span>
+            <span className="close-line"></span>
+          </div>
+        </motion.button>
+        <motion.ul
+          variants={ulVariant}
+          initial="closed"
+          animate={mobileNavOpen ? "opened" : "closed"}
         >
-          <ul className="navigation__list" aria-label="Main navigation links">
-            <li className="navigation__item">
-              <a
-                href="#about"
-                onClick={() => {
-                  scrollToSection("about");
-                  setIsChecked(false);
-                }}
-                aria-label="Navigate to About us section"
-              >
-                About Us
-              </a>
-            </li>
-            <li className="navigation__item">
-              <a
-                href="#works"
-                onClick={() => {
-                  scrollToSection("works");
-                  setIsChecked(false);
-                }}
-                aria-label="Navigate to Our Works section"
-              >
-                Our Works
-              </a>
-            </li>
-            <li className="navigation__item">
-              <a
-                href="https://wa.me/919995000123"
-                target="_blank"
-                onClick={() => {
-                  scrollToSection("contact");
-                  setIsChecked(false);
-                }}
-                aria-label="Contact us via WhatsApp"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+          {MOBILE_NAV_ITEMS.map((navItem) => (
+            <motion.li
+              variants={liVariant}
+              whileTap={{ scale: 0.95 }}
+              key={navItem.id}
+              onClick={() => {
+                window.location.hash = `#${navItem.navTitle
+                  .toLowerCase()
+                  .trim()}`;
+                setMobileNavOpen(false);
+              }}
+            >
+              <motion.div variants={liVariant}>{navItem.navTitle}</motion.div>
+            </motion.li>
+          ))}
+        </motion.ul>
+      </motion.div>
     </nav>
   );
 };

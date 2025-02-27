@@ -2931,9 +2931,7 @@ a {
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 .logos-rot {
-  -webkit-transform: skew(0.02turn, -5deg);
-  -ms-transform: skew(0.02turn, -5deg);
-  transform: skew(0.02turn, -5deg);
+  transform: rotateZ(-5deg);
   padding-top: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;

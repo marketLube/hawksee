@@ -138,9 +138,9 @@
   }
 
   &-rot {
-    -webkit-transform: skew(0.02turn, -5deg);
-    -ms-transform: skew(0.02turn, -5deg);
-    transform: skew(0.02turn, -5deg);
+    // -webkit-transform: skew(0.02turn, -5deg);
+    // -ms-transform: translateZ(0);
+    transform: rotateZ(-5deg);
     padding-top: 7rem;
     display: -webkit-box;
     display: -ms-flexbox;

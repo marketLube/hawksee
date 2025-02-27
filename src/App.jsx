@@ -17,6 +17,7 @@ import { useInView } from "framer-motion";
 import { ParagraphMob } from "./page/Section2/ParagraphMob";
 import ServiceHorizontal from "./page/Service/serviceHorizontal";
 import ServiceDetails from "./page/Service/serviceComponets/serviceDetails";
+import Blogslist from "./page/Section11/Blogslist";
 
 function App() {
   const [isNavScrolling, setIsNavScrolling] = useState(null);
@@ -82,6 +83,7 @@ function App() {
         <Research aria-label="Research section" />
         <Grid aria-label="Grid section" />
         <MeetTheTeam aria-label="Meet the team section" />
+        <Blogslist aria-label="Blog section" />
       </main>
       <footer aria-label="Footer section">
         <GetInTouch aria-label="Get in touch section" />

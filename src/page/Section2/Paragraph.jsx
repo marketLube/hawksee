@@ -4,12 +4,15 @@ import { useMediaQuery } from "react-responsive";
 import paraImg1 from "../../assets/newAssets/hawPara1.png";
 import paraImg2 from "../../assets/newAssets/hawPara2.png";
 import paraImg3 from "../../assets/newAssets/hawPara3.png";
+import { Button } from "../../components/Button";
+import { useNavigate } from "react-router-dom";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export const Paragraph = ({ isTesterHundered, style }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
   const isMobile = useMediaQuery({ query: "(max-width: 767.98px)" });
-
+  const navigate = useNavigate();
   return (
     <section
       id="about"
@@ -84,6 +87,16 @@ export const Paragraph = ({ isTesterHundered, style }) => {
             Needs, and the Gap. <br />
             Then, We Act to <strong>Show</strong> Results.
           </p>
+          <div className="aboutbutton">
+            <Button
+              onClick={() => {
+                window.scrollTo(0, 0);
+                navigate("/about");
+              }}
+            >
+              About Us <FiArrowUpRight />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

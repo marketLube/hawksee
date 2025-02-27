@@ -1,5 +1,20 @@
 import React from "react";
 
+import PojectImg1 from "../../assets/About/hawkgrid.png";
+import PojectImg2 from "../../assets/About/hawPara1.png";
+import PojectImg3 from "../../assets/About/hawPara2.png";
+import PojectImg4 from "../../assets/About/hawPara3.png";
+import PojectImg5 from "../../assets/About/nationalhospital.png";
+import PojectImg6 from "../../assets/About/intimatetiles.png";
+
+import VDO1 from "../../assets/vdo/vdo1.mp4";
+import VDO2 from "../../assets/vdo/vdo2.mp4";
+import VDO3 from "../../assets/vdo/vdo3.mp4";
+import VDO4 from "../../assets/vdo/vdo4.mp4";
+import VDO5 from "../../assets/vdo/vdo5.mp4";
+import VDO6 from "../../assets/vdo/vdo6.mp4";
+import VDO7 from "../../assets/vdo/vdo7.mp4";
+
 export default function ProjectsShowAllBody({
   isAnimate,
   activeIndex,
@@ -8,15 +23,7 @@ export default function ProjectsShowAllBody({
   const content = [
     {
       type: "video",
-      items: [
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039784/thechoiceschoolkochi_2396992194_chpkzz.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039784/eventiamiddleeast_2397100622_eivznr.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039784/thechoiceschoolkochi_2396868545_adnwse.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039785/eventiamiddleeast_2397179228_g27agw.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039796/_hawkspot__2396281520_tdk7bn.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039791/dubai_gold_and_diamonds_2396372525_pqsxk8.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039801/ayumanthra_2395873315_ivlkov.mp4",
-      ],
+      items: [VDO1, VDO2, VDO3, VDO4, VDO5, VDO6, VDO7],
       thumbnails: [
         "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409867/thum1_mdvzi7.png",
         "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738409872/thumb3_auq2g7.png",
@@ -30,30 +37,30 @@ export default function ProjectsShowAllBody({
     {
       type: "social",
       items: [
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738231033/intimate_tiles_tcsjgs.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986962/hawPara1_cc6pa2.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738039828/WhatsApp_Image_2025-01-19_at_14.13.21_zosyku.jpg",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739427751/nationalHospitalHawksee_wniwun.png",
+        PojectImg6,
+        PojectImg2,
+        PojectImg3,
+        PojectImg4,
+        PojectImg1,
+        PojectImg5,
       ],
     },
     {
       type: "all",
       items: [
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738231033/intimate_tiles_tcsjgs.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986962/hawPara1_cc6pa2.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738039828/WhatsApp_Image_2025-01-19_at_14.13.21_zosyku.jpg",
-        "https://res.cloudinary.com/ddp7f64w0/image/upload/v1739427751/nationalHospitalHawksee_wniwun.png",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039784/thechoiceschoolkochi_2396992194_chpkzz.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039784/eventiamiddleeast_2397100622_eivznr.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039784/thechoiceschoolkochi_2396868545_adnwse.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039785/eventiamiddleeast_2397179228_g27agw.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039796/_hawkspot__2396281520_tdk7bn.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039791/dubai_gold_and_diamonds_2396372525_pqsxk8.mp4",
-        "https://res.cloudinary.com/ddp7f64w0/video/upload/v1738039801/ayumanthra_2395873315_ivlkov.mp4",
+        PojectImg6,
+        PojectImg2,
+        PojectImg3,
+        PojectImg4,
+        PojectImg1,
+        PojectImg5,
+        VDO1,
+        VDO2,
+        VDO3,
+        VDO4,
+        VDO5,
+        VDO6,
+        VDO7,
       ],
       thumbnails: [
         "",

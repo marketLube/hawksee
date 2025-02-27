@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BirdImg from "../../assets/birdForMobile.svg";
 
 export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -81,12 +82,13 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
           className="bird-imageMobo"
           alt="A stylized bird representing Hawksee"
           src={
-            "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
+            // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
+            BirdImg
           }
           aria-label="Stylized bird representing Hawksee"
         />
       </div>
-      {/* 
+      {/*
       <ParagraphMob
         aria-label="Paragraph section"
         isTesterHundered={isTesterHundered}

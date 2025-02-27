@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import paraImg1 from "../../assets/newAssets/hawPara1.png";
+import paraImg2 from "../../assets/newAssets/hawPara2.png";
+import paraImg3 from "../../assets/newAssets/hawPara3.png";
 
 export const Paragraph = ({ isTesterHundered, style }) => {
   const ref = useRef(null);
@@ -27,7 +30,7 @@ export const Paragraph = ({ isTesterHundered, style }) => {
           aria-label="Image container"
         >
           <img
-            src="https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara2_aollbn.png"
+            src={paraImg1}
             alt="Image 1"
             className="paragraph__imageDiv__image1"
             aria-label="Image representing the brand's potential"
@@ -38,7 +41,7 @@ export const Paragraph = ({ isTesterHundered, style }) => {
             }}
           />
           <img
-            src="https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986961/hawPara3_hvxfuk.png"
+            src={paraImg3}
             alt="Image 2"
             className="paragraph__imageDiv__image2"
             aria-label="Image representing the brand's vision"
@@ -49,7 +52,7 @@ export const Paragraph = ({ isTesterHundered, style }) => {
             }}
           />
           <img
-            src="https://res.cloudinary.com/ddp7f64w0/image/upload/v1737986962/hawPara1_cc6pa2.png"
+            src={paraImg2}
             alt="Image 3"
             className="paragraph__imageDiv__image3"
             aria-label="Image representing the brand's journey"

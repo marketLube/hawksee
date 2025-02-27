@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import BirdImg from "../../assets/birdImg.svg";
 
 export const Bird = ({ isNavScrolling }) => {
   const [offset, setOffset] = useState(0);
@@ -151,7 +152,8 @@ export const Bird = ({ isNavScrolling }) => {
           className="bird-image"
           alt="A stylized bird representing Hawksee"
           src={
-            "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738574941/birdImg_jaomgz.svg"
+            // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738574941/birdImg_jaomgz.svg"
+            BirdImg
           }
           aria-label="Stylized bird representing Hawksee"
           style={{

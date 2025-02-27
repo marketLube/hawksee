@@ -1883,17 +1883,17 @@ a {
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .counterSection {
-    height: 100vh;
+    height: fit-content;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .counterSection {
-    height: 100vh;
+    height: fit-content;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .counterSection {
-    height: 90vh;
+    height: fit-content;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -1961,7 +1961,7 @@ a {
   color: #fff;
   margin: 0;
   padding: 0;
-  text-align: right;
+  text-align: center;
   padding-bottom: 6rem;
   line-height: 1;
   overflow: hidden;
@@ -1975,34 +1975,112 @@ a {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
+  height: 16.25rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .counterup-text {
+    height: 8.25rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .counterup-text {
+    height: 12.25rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .counterup-text {
+    height: 13.25rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .counterup-text {
+    height: 15.25rem;
+  }
 }
 .counterup-text .question-top {
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
   color: #fff;
   opacity: 0.7;
   order: -1;
   align-self: center;
-  margin-left: 9rem;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .counterup-text .question-top {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .counterup-text .question-top {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .counterup-text .question-top {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .counterup-text .question-top {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .counterup-text .question-top {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .counterup-text .question-top {
+    font-size: 0.9rem;
   }
 }
 .counterup-text .answer {
   font-size: 1.5rem;
-  font-weight: 100;
-  align-self: flex-end;
+  font-weight: 400;
   color: #fff;
   opacity: 0.7;
+  align-self: flex-end;
+  margin-right: 2rem;
+  position: absolute;
+  bottom: -4rem;
+  right: 0;
+  transform: rotate(-10deg);
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .counterup-text .answer {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .counterup-text .answer {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .counterup-text .answer {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .counterup-text .answer {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .counterup-text .answer {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .counterup-text .answer {
+    font-size: 0.9rem;
+    bottom: -2rem;
+    margin-right: 0.5rem;
+  }
 }
 .counterup-text h2 {
   -webkit-transition: -webkit-transform 0.5s ease-out;
@@ -2014,7 +2092,7 @@ a {
   font-weight: 700;
   color: #fff;
   margin: 1rem 0;
-  text-align: right;
+  text-align: center;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .counterup-text h2 {
@@ -2045,9 +2123,10 @@ a {
 }
 @media only screen and (max-width: 575.98px) {
   .counterup-text h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
     line-height: 1.2;
+    margin: 0.5rem 0;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -2074,7 +2153,7 @@ a {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .counterup {
     font-size: 6rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     padding-top: 4rem;
     text-align: center;
   }
@@ -2113,7 +2192,12 @@ a {
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .stats-section {
-    padding: 2rem;
+    padding: 0rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .stats-section {
+    padding: 1rem 3rem 6rem 3rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -2215,6 +2299,16 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+@media only screen and (max-width: 575.98px) {
+  .buttondivCounter {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .buttondivCounter {
+    margin-top: 5rem;
+  }
 }
 .buttondivCounter .portfolio-btn {
   background: rgba(255, 255, 255, 0.1);

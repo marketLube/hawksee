@@ -17,15 +17,15 @@
   justify-content: space-around;
   padding: 2rem;
   @include responsive.respond(bigDesktop) {
-    height: 100vh;
+    height: fit-content;
   }
 
   @include responsive.respond(desktop) {
-    height: 100vh;
+    height: fit-content;
   }
 
   @include responsive.respond(bigTablets) {
-    height: 90vh;
+    height: fit-content;
   }
 
   @include responsive.respond(tablets) {
@@ -86,7 +86,7 @@
   color: #fff;
   margin: 0;
   padding: 0;
-  text-align: right;
+  text-align: center;
   padding-bottom: 6rem;
   line-height: 1;
   overflow: hidden;
@@ -99,33 +99,94 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
+    height: 16.25rem;
+
+    @include responsive.respond(smallPhone) {
+      height: 8.25rem;
+    }
+    @include responsive.respond(phone) {
+      height: 12.25rem;
+    }
+    @include responsive.respond(tablets) {
+      height: 13.25rem;
+    }
+    @include responsive.respond(bigTablets) {
+      height: 15.25rem;
+    }
 
     .question-top {
       font-size: 1.5rem;
-      font-weight: 100;
+      font-weight: 400;
       text-align: center;
       color: #fff;
       opacity: 0.7;
       order: -1;
       align-self: center;
-      margin-left: 9rem;
+      text-transform: uppercase;
 
       @include responsive.respond(bigDesktop) {
-        font-size: 1.5rem;
+        font-size: 2rem; // Increased for larger screens
       }
 
       @include responsive.respond(desktop) {
-        font-size: 1.5rem;
+        font-size: 1.8rem; // Slightly larger for desktop
+      }
+
+      @include responsive.respond(bigTablets) {
+        font-size: 1.6rem; // Adjusted for big tablets
+      }
+
+      @include responsive.respond(tablets) {
+        font-size: 1.4rem; // Adjusted for tablets
+      }
+
+      @include responsive.respond(phone) {
+        font-size: 1.2rem; // Smaller for phones
+      }
+
+      @include responsive.respond(smallPhone) {
+        font-size: 0.9rem;
       }
     }
 
     .answer {
       font-size: 1.5rem;
-      font-weight: 100;
-      align-self: flex-end;
+      font-weight: 400;
       color: #fff;
       opacity: 0.7;
+      align-self: flex-end;
+      margin-right: 2rem;
+      position: absolute;
+      bottom: -4rem;
+      right: 0;
+      transform: rotate(-10deg);
+
+      @include responsive.respond(bigDesktop) {
+        font-size: 2rem; // Increased for larger screens
+      }
+
+      @include responsive.respond(desktop) {
+        font-size: 1.8rem; // Slightly larger for desktop
+      }
+
+      @include responsive.respond(bigTablets) {
+        font-size: 1.6rem; // Adjusted for big tablets
+      }
+
+      @include responsive.respond(tablets) {
+        font-size: 1.4rem; // Adjusted for tablets
+      }
+
+      @include responsive.respond(phone) {
+        font-size: 1.2rem; // Smaller for phones
+      }
+
+      @include responsive.respond(smallPhone) {
+        font-size: 0.9rem;
+        bottom: -2rem;
+        margin-right: 0.5rem;
+      }
     }
 
     & h2 {
@@ -138,7 +199,7 @@
       font-weight: 700;
       color: #fff;
       margin: 1rem 0;
-      text-align: right;
+      text-align: center;
       @include responsive.respond(bigDesktop) {
         font-size: 8rem;
       }
@@ -162,9 +223,10 @@
       }
 
       @include responsive.respond(smallPhone) {
-        font-size: 2.5rem;
+        font-size: 3rem;
         text-align: center;
         line-height: 1.2;
+        margin: 0.5rem 0;
       }
     }
   }
@@ -189,7 +251,7 @@
 
   @include responsive.respond(tablets) {
     font-size: 6rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     padding-top: 4rem;
     text-align: center;
   }
@@ -225,7 +287,11 @@
   height: 50%;
 
   @include responsive.respond(tablets) {
-    padding: 2rem;
+    padding: 0rem;
+  }
+
+  @include responsive.respond(bigTablets) {
+    padding: 1rem 3rem 6rem 3rem;
   }
 
   @include responsive.respond(phone) {
@@ -319,10 +385,12 @@
   -ms-flex-pack: center;
   justify-content: center;
   @include responsive.respond(smallPhone) {
+    margin-top: 3rem;
   }
   @include responsive.respond(phone) {
   }
   @include responsive.respond(tablets) {
+    margin-top: 5rem;
   }
 
   .portfolio-btn {

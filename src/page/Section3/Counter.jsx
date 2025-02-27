@@ -44,8 +44,8 @@ export const Counter = () => {
                 aria-label="Does it work text"
               >
                 Does it work?
+                <span className="answer">(in short, yep...)</span>
               </h2>
-              <span className="answer">(in short, yep...)</span>
             </div>
           </h1>
         </div>

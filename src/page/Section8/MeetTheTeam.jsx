@@ -15,7 +15,7 @@ import Team7 from "../../assets/team/safnaAccounts.jpg";
 import Team8 from "../../assets/team/sheethalCrm.jpg";
 import Team9 from "../../assets/team/shahalContentCreator.jpg";
 import Team10 from "../../assets/team/shahidGraphicDesigner.jpg";
-import Team11 from "../../assets/team/nikhilSrGraphicDesigner.jpg";
+import Team11 from "../../assets/team/nikhilsrGraphicDesigner.jpg";
 
 export const MeetTheTeam = () => {
   const teamMembers = [

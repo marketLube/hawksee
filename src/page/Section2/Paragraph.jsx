@@ -90,7 +90,7 @@ export const Paragraph = ({ isTesterHundered, style }) => {
                 navigate("/about");
               }}
             >
-              About us
+              About Us
             </Button>
           </div>
         </div>

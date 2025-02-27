@@ -63,12 +63,11 @@ function Aboutus() {
 
             <div className={`additional-content ${showMore ? "show" : ""}`}>
               <p>
-                From branding and content marketing to social media strategies
-                and video production, we help businesses stand out in a crowded
-                digital world. Our in-house production wing, HawkSpot, crafts
-                high-quality video content, while DocsPro focuses exclusively on
-                healthcare marketing. Over the years, we have expanded
-                operations and now serve clients across the Middle East.
+                What makes us different? We stay ahead of trends, understand
+                customer pain points, and ensure every campaign delivers real
+                ROI. Our team of strategists, designers, and content creators
+                works together like a well-oiled machine, turning ideas into
+                marketing that matters.
               </p>
               <p>
                 At HAWKSEE, we believe in smart, creative, and result-driven

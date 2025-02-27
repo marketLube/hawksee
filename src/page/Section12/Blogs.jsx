@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import blogImage from "../../assets/Blog/blogcardimage.png"; // Make sure to import your image
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { useHash } from "../Projects/useHash";
+import { blogPosts } from "../../Data/blogPosts";
+import { useNavigate } from "react-router-dom";
 
 function Blogs() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -11,6 +13,7 @@ function Blogs() {
   const [startY, setStartY] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const navigate = useNavigate();
   useHash({ setIsAnimate });
 
   useEffect(() => {
@@ -57,73 +60,6 @@ function Blogs() {
 
   const filters = ["All", "Marketing", "Branding", "Website", "SEO"];
 
-  const blogPosts = [
-    {
-      id: 1,
-      image: blogImage,
-      categories: ["Marketing", "Branding"],
-      title: "Digital Marketing during Lockdown!",
-      description:
-        "Digital marketing sector, a new marketing strategy has witnessed a steady growth in its graph",
-    },
-    {
-      id: 2,
-      image: blogImage,
-      categories: ["Marketing", "Branding"],
-      title: "Digital Marketing during Lockdown!",
-      description:
-        "Digital marketing sector, a new marketing strategy has witnessed a steady growth in its graph",
-    },
-    {
-      id: 3,
-      image: blogImage,
-      categories: ["Marketing", "Branding"],
-      title: "Digital Marketing during Lockdown!",
-      description:
-        "Digital marketing sector, a new marketing strategy has witnessed a steady growth in its graph",
-    },
-    {
-      id: 4,
-      image: blogImage,
-      categories: ["Marketing", "Branding"],
-      title: "Digital Marketing during Lockdown!",
-      description:
-        "Digital marketing sector, a new marketing strategy has witnessed a steady growth in its graph",
-    },
-    {
-      id: 5,
-      image: blogImage,
-      categories: ["Marketing", "Branding"],
-      title: "Digital Marketing during Lockdown!",
-      description:
-        "Digital marketing sector, a new marketing strategy has witnessed a steady growth in its graph",
-    },
-    {
-      id: 6,
-      image: blogImage,
-      categories: ["Marketing", "Branding"],
-      title: "Digital Marketing during Lockdown!",
-      description:
-        "Digital marketing sector, a new marketing strategy has witnessed a steady growth in its graph",
-    },
-    {
-      id: 7,
-      image: blogImage,
-      categories: ["Marketing", "Branding"],
-      title: "Digital Marketing during Lockdown!",
-      description:
-        "Digital marketing sector, a new marketing strategy has witnessed a steady growth in its graph",
-    },
-    {
-      id: 8,
-      image: blogImage,
-      categories: ["Marketing", "Branding"],
-      title: "Digital Marketing during Lockdown!",
-      description:
-        "Digital marketing sector, a new marketing strategy has witnessed a steady growth in its graph",
-    },
-  ];
-
   const filteredPosts =
     activeFilter === "All"
       ? blogPosts
@@ -158,7 +94,7 @@ function Blogs() {
         <div className="blogs__content">
           <button
             className="back-button"
-            onClick={() => window.history.back()}
+            onClick={() => navigate("/#blogs")}
             style={{
               borderRadius: "50%",
               background: "transparent",
@@ -189,13 +125,20 @@ function Blogs() {
             ))}
           </div>
 
+          <hr />
+
           <div className="blogs__grid">
             {filteredPosts.map((post) => (
-              <div key={post.id} className="blog-card">
+              <div
+                key={post.id}
+                className="blog-card"
+                style={{ filter: "none" }}
+              >
                 <img
                   src={post.image}
                   alt={post.title}
                   className="blog-card__image"
+                  style={{ filter: "none" }}
                 />
                 <div className="blog-card__categories">
                   {post.categories.map((category, index) => (
@@ -203,10 +146,17 @@ function Blogs() {
                   ))}
                 </div>
                 <h3 className="blog-card__title">{post.title}</h3>
-                <p className="blog-card__description">{post.description}</p>
-                <a href={`/blog/${post.id}`} className="blog-card__link">
+                <p className="blog-card__description">
+                  {post.description.slice(0, 200)}...
+                </p>
+                <span
+                  onClick={() =>
+                    navigate(`/blogs/${post.name.replace(/\s+/g, "-")}`)
+                  }
+                  className="blog-card__link"
+                >
                   Read more <FiArrowRight />
-                </a>
+                </span>
               </div>
             ))}
           </div>

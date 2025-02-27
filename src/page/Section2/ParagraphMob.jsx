@@ -126,7 +126,7 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
             Then, We Act to <strong>Show</strong> Results.
           </p>
           <div className="aboutbutton">
-            <Button onClick={() => navigate("/about")}>About us</Button>
+            <Button onClick={() => navigate("/about")}>About Us</Button>
           </div>
         </div>
       </div>

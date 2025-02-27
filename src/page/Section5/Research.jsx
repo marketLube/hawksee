@@ -1,105 +1,86 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Button } from "../../components/Button";
-import { FiArrowDownRight } from "react-icons/fi";
+import React, { useEffect } from "react";
 
 export const Research = () => {
-  const textArray = ["Preparation", "Execution", "Analysis", "Optimization"];
-
-  const paraArray = [
-    "Market research, brain storming for result oriented strategy development",
-    "Execute the marketing strategy in the most impactful ways to reach the target customers",
-    "Performance monitoring and analysis of the marketing activities.",
-    "Optimization based on results to create the maximum results.",
-  ];
-
-  const [headingText, setHeadingText] = useState(textArray[0]);
-  const [paraText, setParaText] = useState(paraArray[0]);
-  const [animate, setAnimate] = useState(true);
-  const containerRef = useRef(null);
-  const lastIndex = useRef(0);
-
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    setAnimate(true);
-
     const handleScroll = () => {
-      const rect = container.getBoundingClientRect();
-      if (rect.top <= 0) {
-        const scrolledPastTop = Math.abs(rect.top);
-        const viewportHeight = window.innerHeight;
-        const scrollMultiplier = 2;
-        const scrollSegment =
-          (viewportHeight / textArray.length) * scrollMultiplier;
+      const numbers = document.querySelectorAll(".research__step-number");
+      const scrollPosition = window.scrollY;
 
-        const index = Math.min(
-          Math.floor(scrolledPastTop / scrollSegment),
-          textArray.length - 1
-        );
+      numbers.forEach((number) => {
+        // Get the number's position relative to the viewport
+        const rect = number.getBoundingClientRect();
+        const elementCenter = rect.top + rect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
 
-        if (index !== lastIndex.current) {
-          lastIndex.current = index;
-          setHeadingText(textArray[index]);
-          setParaText(paraArray[index]);
+        // Calculate the distance from the center of the viewport
+        const distanceFromCenter = elementCenter - viewportCenter;
+        const movement = distanceFromCenter * 0.1; // Reduced speed for subtler effect
 
-          setAnimate(false);
-          setTimeout(() => setAnimate(true), 0);
-        }
-      } else {
-        if (lastIndex.current !== 0) {
-          lastIndex.current = 0;
-          setHeadingText(textArray[0]);
-          setParaText(paraArray[0]);
-
-          setAnimate(false);
-          setTimeout(() => setAnimate(true), 0);
-        }
-      }
+        // Apply the transform
+        number.style.transform = `translate(-50%, calc(-50% + ${movement}px))`;
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    // Initial call to set positions
     handleScroll();
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [textArray, paraArray]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const steps = [
+    {
+      number: "1",
+      title: "Preparation",
+      description:
+        "Market research, brain storming for result oriented strategy development",
+    },
+    {
+      number: "2",
+      title: "Execution",
+      description:
+        "Execute the marketing strategy in the most impactful ways to reach the target customers",
+    },
+    {
+      number: "3",
+      title: "Analysis",
+      description:
+        "Performance monitoring and analysis of the marketing activities.",
+    },
+    {
+      number: "4",
+      title: "Optimization  ",
+      description:
+        "Optimization based on results to create the maximum results.",
+    },
+  ];
 
   return (
-    <div
-      id="research"
-      className="research"
-      ref={containerRef}
-      aria-label="Research section"
-    >
-      <div className="research-scrol" aria-label="Research scroll section">
-        <div className="research-bttn" aria-label="Research button section">
-          <Button aria-label="Research button" href="#research">
-            The Process <FiArrowDownRight />
-          </Button>
-        </div>
-        <h3
-          className={`research-head gradient-text ${animate ? "animate" : ""}`}
-          style={{
-            background:
-              "linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.212) 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-            color: "transparent",
-          }}
-          aria-label="Research heading"
-        >
-          {headingText}
-        </h3>
+    <div className="research">
+      <div className="research__header">
+        {/* <p className="research__subtitle">OUR PROCESS</p>
+        <h2 className="research__title">Easy as 1, 2, 3.</h2> */}
+      </div>
 
-        <p
-          className={`research-para ${animate ? "animate" : ""}`}
-          aria-label="Research paragraph"
-        >
-          {paraText}
-        </p>
+      <div className="research__steps">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className={`research__step ${
+              index % 2 === 0 ? "research__step--left" : "research__step--right"
+            }`}
+          >
+            <div className="research__step-number">{step.number}</div>
+            <div className="research__step-content">
+              <h3 className="research__step-title">
+                <span> {step.number}</span>
+                <span> {step.title}</span>
+              </h3>
+              <p className="research__step-description">{step.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

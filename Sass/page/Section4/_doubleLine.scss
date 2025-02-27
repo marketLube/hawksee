@@ -242,7 +242,7 @@
 .buttondivPortfolio {
   margin-top: 10rem;
   text-align: center;
-  padding-bottom: 4rem;
+  padding: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,7 +252,7 @@
 
   @include responsive.respond(smallPhone) {
     margin-top: auto;
-    padding: 5rem;
+    padding: 2rem;
     button {
       font-size: 0.8rem;
       padding: 0.5rem 1rem;
@@ -262,7 +262,7 @@
   @include responsive.respond(phone) {
     margin-top: auto;
 
-    padding: 6rem;
+    padding: 2rem;
     button {
       font-size: 0.9rem;
       padding: 0.6rem 1.2rem;
@@ -272,7 +272,7 @@
   @include responsive.respond(tablets) {
     margin-top: auto;
 
-    padding: 8rem;
+    padding: 4rem;
     button {
       font-size: 1rem;
       padding: 0.7rem 1.4rem;
@@ -282,19 +282,18 @@
   @include responsive.respond(bigTablets) {
     margin-top: auto;
 
-    padding: 9rem;
+    padding: 4rem;
   }
 
   @include responsive.respond(desktop) {
     margin-top: auto;
 
-    padding: 10rem;
+    padding: 5rem;
   }
 
   @include responsive.respond(bigDesktop) {
     margin-top: auto;
-
-    padding: 12rem;
+    padding: 8rem;
   }
 }
 

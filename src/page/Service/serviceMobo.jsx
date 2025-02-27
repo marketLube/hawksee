@@ -36,12 +36,16 @@ const serviceMobo = () => {
     },
   ];
 
-  const handleClick = () => {
-    window.location.hash = "#projects";
-    window.scrollTo({
-      top: window.scrollY + 100,
-      behavior: "smooth",
-    });
+  const handleClick = (title, index) => {
+    window.location.hash = "serviceDetails";
+
+    sessionStorage.setItem(
+      "selectedService",
+      JSON.stringify({
+        title: title,
+        index: index,
+      })
+    );
   };
   return (
     <div
@@ -100,10 +104,10 @@ const serviceMobo = () => {
               aria-label="Button to view all projects"
             >
               <Button
-                onClick={handleClick}
+                onClick={() => handleClick(item.title, index)}
                 aria-label="View all projects button"
               >
-                View All <FiArrowUpRight />
+                View service <FiArrowUpRight />
               </Button>
             </div>
           </div>

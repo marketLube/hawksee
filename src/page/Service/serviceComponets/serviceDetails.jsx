@@ -18,11 +18,11 @@ const ServiceDetails = () => {
       subtitle: "Make Your Brand Unforgettable",
 
       descPara1:
-        "Your brand is more than just a logo—it's your voice, personality, and first impression. We craft brands that stand out and stay memorable with the perfect mix of design, strategy, and storytelling.",
+        "Your brand is more than just a logo—it’s your voice, personality, and first impression. We craft brands that stand out and stay memorable with the perfect mix of design, strategy, and storytelling.",
       descPara2:
-        "From logos, color palettes, and typography to brand positioning and messaging, we ensure every element reflects who you are and what you stand for.",
+        "From logos, color palettes, and typography to brand positioning and messaging, we ensure every element reflects who you are and what you stand for. Whether you’re starting fresh or rebranding, we help build a strong, consistent identity that connects with your audience and leaves a lasting impact.",
       descPara3:
-        "Whether you're starting fresh or rebranding, we help build a strong, consistent identity that connects with your audience and leaves a lasting impact.",
+        "Because branding isn’t just about looking good—it’s about being recognized, remembered, and trusted.",
       image:
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-03_s18foa.webp",
     },
@@ -32,11 +32,11 @@ const ServiceDetails = () => {
       subtitle: "Get Noticed, Get Engaged",
 
       descPara1:
-        "Social media is more than just posts and likes—it's about creating real connections. We craft scroll-stopping content and data-driven strategies that keep your audience hooked and engaged.",
+        "Social media is more than just posts and likes—it’s about creating real connections. We craft scroll-stopping content and data-driven strategies that keep your audience hooked and engaged.",
       descPara2:
-        "From viral reels and engaging posts to performance-driven ad campaigns, we ensure your brand is always in front of the right people.",
+        "From viral reels and engaging posts to performance-driven ad campaigns, we ensure your brand is always in front of the right people. Whether it’s Instagram, LinkedIn, Facebook, or TikTok, we create content that speaks your audience’s language.",
       descPara3:
-        "Whether it's Instagram, LinkedIn, Facebook, or TikTok, we create content that speaks your audience's language.",
+        "No more posting just for the sake of it—we turn your social media into a powerhouse for growth and engagement.",
       image:
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-01_wczbap.webp",
     },
@@ -46,11 +46,11 @@ const ServiceDetails = () => {
       subtitle: "Make an Impact",
 
       descPara1:
-        "Boring content doesn't sell. Great content tells a story, sparks interest, and drives action. Our team at HawkSpot creates high-quality videos, reels, and motion graphics that demand attention.",
+        "Boring content doesn’t sell. Great content tells a story, sparks interest, and drives action. Our team at HawkSpot creates high-quality videos, reels, and motion graphics that demand attention..",
       descPara2:
-        "From brand stories and product promos to trendy reels and engaging ads, we make sure your content doesn't just get seen—it gets remembered.",
+        "From brand stories and product promos to trendy reels and engaging ads, we make sure your content doesn’t just get seen—it gets remembered.",
       descPara3:
-        "In the age of short-form content, standing out is everything. Let's create content that entertains, informs, and converts.l",
+        "In the age of short-form content, standing out is everything. Let’s create content that entertains, informs, and converts.",
       image:
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-04_htxnpe.webp",
     },
@@ -62,7 +62,7 @@ const ServiceDetails = () => {
       descPara1:
         "A slow, outdated website is a business killer. We design and develop SEO-powered, high-performance websites that load fast, look great, and turn visitors into customers.",
       descPara2:
-        "But a great site isn't enough—you need to be searchable. Our SEO strategies make sure your brand ranks higher on Google, bringing in more traffic, leads, and conversions organically.",
+        "But a great site isn’t enough—you need to be searchable. Our SEO strategies make sure your brand ranks higher on Google, bringing in more traffic, leads, and conversions organically.",
       descPara3:
         "Your website should be your hardest-working sales tool—we make sure it does the job.",
       image:
@@ -75,11 +75,11 @@ const ServiceDetails = () => {
       subtitle: "Real Voices, Real Impact",
 
       descPara1:
-        "People trust authentic content more than ads. That's why UGC (User-Generated Content) is the new marketing gold. We help brands leverage real customer stories, testimonials, and organic brand interactions to build credibility and trust.",
+        "People trust authentic content more than ads. That’s why UGC (User-Generated Content) is the new marketing gold. We help brands leverage real customer stories, testimonials, and organic brand interactions to build credibility and trust.",
       descPara2:
-        "Beyond digital, we also take your brand to the streets—billboards, events, activations—making sure you're seen where it matters.",
+        "Beyond digital, we also take your brand to the streets—billboards, events, activations—making sure you’re seen where it matters. Whether it’s a trending UGC campaign or an eye-catching outdoor promotion, we put your brand in the spotlight.",
       descPara3:
-        "Whether it's a trending UGC campaign or an eye-catching outdoor promotion, we put your brand in the spotlight.",
+        "Because when real people talk about your brand, people listen.",
       image:
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-10_xdqwt7.webp",
     },
@@ -190,7 +190,6 @@ const ServiceDetails = () => {
     window.history.back();
   };
 
-  // Find the current service based on the index
   const currentService = servicesData[serviceData.index] || {
     title: "",
     subtitle: "",
@@ -251,21 +250,40 @@ const ServiceDetails = () => {
         </div>
 
         <div className="service-details-container">
-          <h1 className="service-title">{currentService.title}</h1>
-          <h2 className="service-subtitle">{currentService.subtitle}</h2>
-          <div className="service-content-wrapper">
-            <div className="service-image">
-              <img src={currentService.image} alt={currentService.title} />
+          <div className="service-details-container__content">
+            <div>
+              <h1 className="service-title">{currentService.title}</h1>
+              <p className="service-subtitle">{currentService.subtitle}</p>
             </div>
-
-            <div className="service-content">
-              {["descPara1", "descPara2", "descPara3"].map((para, index) => (
-                <p key={index} className="service-paragraph">
-                  {currentService[para]}
-                </p>
-              ))}
+            <div className="service-description-container">
+              <p className="service-description1">{currentService.descPara1}</p>
+              <p className="service-description2">{currentService.descPara2}</p>
+              <p className="service-description3">{currentService.descPara3}</p>
             </div>
           </div>
+          <div className="service-details-container__image">
+            <img
+              className="service-image"
+              src={currentService.image}
+              alt={currentService.title}
+            />
+          </div>
+        </div>
+
+        <div className="blog__navigation">
+          <button
+            className="nav-btn prev"
+            // onClick={() => handleNavigation("prev")}
+          >
+            ← Previous
+          </button>
+          <div className="nav-spacer"></div>
+          <button
+            className="nav-btn next"
+            // onClick={() => handleNavigation("next")}
+          >
+            Next →
+          </button>
         </div>
       </div>
     </div>

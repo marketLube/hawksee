@@ -121,7 +121,6 @@
     }
   }
 }
-
 .country-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,12 +138,11 @@
   gap: 2rem;
   padding: 0 2rem;
   transition: all 0.3s ease-out;
-  opacity: 0.8;
+  opacity: 1;
 
   @include responsive.respond(smallPhone) {
     gap: 0.5rem;
   }
-
   img {
     width: 500px;
     height: 400px;
@@ -190,7 +188,6 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       border: 2px solid rgb(255, 255, 255);
     }
-
     p {
       font-weight: 600;
     }

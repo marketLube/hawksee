@@ -1,5 +1,5 @@
 import DigitalMarketing from "../assets/Blog/DigitalMarketing.jpg";
-import SocialMediaMarketing from "../assets/Blog/SocialMediaMarketing.jpg";
+import SocialMediaMarketing from "../assets/Blog/socialmediamarketing.jpg";
 import SEO from "../assets/Blog/SEO.jpg";
 
 export const blogPosts = [
@@ -10,7 +10,7 @@ export const blogPosts = [
     categories: ["Marketing"],
     title: "Digital Marketing during Lockdown!",
     description: `   Digital marketing sector, a new marketing strategy has witnessed a steady growth in its graph. The number of people using the internet in India increased by 47 million between 2020 and 2021, which can be the perfect explanation for the boom in this sector. Unlike older times access to internet and availability of smart gadgets became common to everybody.
-      During the beginning months of the year 2020, the whole world was under the curb of a pandemic. Everyone was forced to stay indoors and it paused the business around the world. This pandemic catalysed an increase in the rate of people using internet in India. Spending more time on internet increased the screentime, hence it paved the way for marketing to reach out to people digitally. As a result, many business who relied heavily on traditional marketing started leaning towards the idea of digitalisation. 
+      During the beginning months of the year 2020, the whole world was under the curb of a pandemic. Everyone was forced to stay indoors and it paused the business around the world. This pandemic catalysed an increase in the rate of people using internet in India. Spending more time on internet increased the screentime, hence it paved the way for marketing to reach out to people digitally. As a result, many business who relied heavily on traditional marketing started leaning towards the idea of digitalisation.
       Digital marketing is a very convenient mode of marketing reaches to the target audience directly than traditional methods. Digital marketing benefits both the consumers and the business equally. The more people spending time online means more audience, gives more results at lesser cost.
 
 
@@ -31,7 +31,7 @@ Tags: Branding, Business, content marketing, Digital, digital marketing, Hawksee
 
 Yes, to a great extent, social media is where artists trawl for inspiration. But social media marketing is not just about good designs, it has never been. When it comes to brands, it is about the personality, the stories they tell, the values they hold, and how well they treat their customers – both existing and prospective. Intelligent. right content matter. “Content is king” is not just a mere statement. It is how things work in the digital world. HOW you present your brand/ business also matters. IDEAS, how you plan to reach your audience matter.
 
-Pinterest is synonymous with inspiration; Instagram is so full of life; Twitter is where you get all the latest news (and gossip) from; Facebook is where we connect with our family and friends, and it is also where most brands put all their marketing efforts on. 
+Pinterest is synonymous with inspiration; Instagram is so full of life; Twitter is where you get all the latest news (and gossip) from; Facebook is where we connect with our family and friends, and it is also where most brands put all their marketing efforts on.
 
 It is important to make sure your goal is achieved through social media marketing. It is never recommended to convey what your values and goals are to the audience, it is all about executing the right strategies. Be it to maximize your brand enquiries, convert them into your own customers, or be it to increase your walk-in customers – each and every goal will need a customized, effective marketing strategy and executing these with the right content on the right platform will do the trick. Social medium is just a platform to reach to your existing and prospective customers. With other digital marketing strategies such as offpage SEO, link building etc., your website will reach more audience.
 

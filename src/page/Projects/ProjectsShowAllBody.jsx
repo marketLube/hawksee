@@ -106,6 +106,7 @@ export default function ProjectsShowAllBody({
               {val.endsWith(".mp4") ? (
                 <video
                   src={val}
+                  muted
                   aria-label={`Project video ${i + 1}`}
                   poster={content[2]?.thumbnails[i]}
                   controls
@@ -149,6 +150,7 @@ export default function ProjectsShowAllBody({
           ) : activeIndex === 1 ? (
             <video
               src={val}
+              muted
               poster={content[0]?.thumbnails[i]}
               aria-label={`Project video ${i + 1}`}
               controls

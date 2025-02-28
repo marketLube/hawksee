@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import BirdImg from "../../assets/birdImg.svg";
 
-export const Bird = ({ isNavScrolling }) => {
+export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
   const [offset, setOffset] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -38,14 +38,20 @@ export const Bird = ({ isNavScrolling }) => {
           setHasScrolled(false);
         }
 
-        if (!hasScrolled && window.scrollY > 50) {
+        if (
+          !hasScrolled &&
+          window.scrollY > 50 &&
+          window.scrollY < window.innerHeight
+        ) {
           setHasScrolled(true);
+          setIsNavScrolling(false);
           const targetHeight =
             window.innerWidth <= 1199.98
               ? window.innerHeight * 2
               : window.innerHeight * 3.3;
+          console.log(isNavScrolling, "test 1");
 
-          if (isNavScrolling === null || isNavScrolling === false) {
+          if (!isNavScrolling) {
             smoothScrollTo(targetHeight);
           }
         }

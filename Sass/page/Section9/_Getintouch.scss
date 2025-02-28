@@ -125,7 +125,7 @@
       gap: 15rem;
     }
     @include responsive.respond(bigTablets) {
-      gap: 10rem;
+      gap: 7rem;
     }
     @include responsive.respond(tablets) {
       gap: 0rem;

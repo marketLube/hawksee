@@ -14,9 +14,10 @@ export const Research = () => {
 
         // Calculate the distance from the center of the viewport
         const distanceFromCenter = elementCenter - viewportCenter;
-        const movement = distanceFromCenter * 0.1; // Reduced speed for subtler effect
+        const movement = distanceFromCenter * 0.1;
 
-        // Apply the transform
+        // Apply the transform with cubic-bezier transition
+        number.style.transition = "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
         number.style.transform = `translate(-50%, calc(-50% + ${movement}px))`;
       });
     };

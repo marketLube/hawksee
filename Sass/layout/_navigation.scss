@@ -454,22 +454,23 @@
     justify-content: center;
     padding: 0;
     margin: 0;
-    height: 65vh;
+    height: fit-content;
     list-style: none;
-    padding-right: 45px;
+    padding-right: 6.5rem;
     gap: 0;
 
     @include responsive.respond(phone) {
-      padding-right: 20px;
+      padding-right: 2.7rem;
       justify-content: flex-start;
     }
 
     @include responsive.respond(smallPhone) {
-      padding-right: 20px;
+      padding-right: 1.8rem;
       justify-content: flex-start;
     }
 
     @include responsive.respond(tablets) {
+      padding-right: 2.75rem;
       justify-content: flex-start;
     }
 

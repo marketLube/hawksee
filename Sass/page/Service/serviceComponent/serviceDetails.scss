@@ -237,6 +237,10 @@
   width: 100%;
   justify-content: space-between;
 
+  @include responsive.respond(desktop) {
+    gap: 3rem;
+  }
+
   @media (max-width: 1200px) {
     gap: 4rem;
     padding: 2rem 5rem;
@@ -269,13 +273,25 @@
     display: flex;
     align-items: flex-start;
     justify-content: end;
-    // flex: 1;
     width: fit-content;
+
+    @include responsive.respond(tablets) {
+      justify-content: center;
+      width: 100%;
+    }
+    @include responsive.respond(phone) {
+      justify-content: center;
+      width: 100%;
+    }
+    @include responsive.respond(smallPhone) {
+      justify-content: center;
+      width: 100%;
+    }
   }
 }
 
 .service-title {
-  font-size: 4.8rem;
+  font-size: 4.5rem;
   text-align: left;
   line-height: 1.2;
 
@@ -289,18 +305,19 @@
 
   @include responsive.respond(tablets) {
     font-size: 3rem;
+    text-align: center;
   }
 
   @include responsive.respond(bigTablets) {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 
   @include responsive.respond(desktop) {
-    font-size: 3.8rem;
+    font-size: 2.8rem;
   }
 
   @include responsive.respond(bigDesktop) {
-    font-size: 4.8rem;
+    font-size: 4rem;
   }
 }
 
@@ -325,11 +342,9 @@
   border-radius: 8px;
   object-fit: cover;
   @include responsive.respond(smallPhone) {
-    max-width: 200px;
   }
 
   @include responsive.respond(phone) {
-    max-width: 300px;
   }
 
   @include responsive.respond(tablets) {
@@ -337,11 +352,11 @@
   }
 
   @include responsive.respond(bigTablets) {
-    max-width: 500px;
+    max-width: 400px;
   }
 
   @include responsive.respond(desktop) {
-    max-width: 600px;
+    max-width: 400px;
   }
 
   @include responsive.respond(bigDesktop) {
@@ -370,7 +385,7 @@
 .service-description2,
 .service-description3 {
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-  line-height: 1.6;
+  line-height: 1.4;
   letter-spacing: -0.4px;
   text-align: justify;
   text-justify: inter-word;
@@ -378,8 +393,34 @@
   opacity: 0.9;
   font-weight: 100;
 
-  @media (max-width: 576px) {
-    text-align: left;
+  @include responsive.respond(smallPhone) {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  @include responsive.respond(phone) {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  @include responsive.respond(tablets) {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  @include responsive.respond(bigTablets) {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  @include responsive.respond(desktop) {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  @include responsive.respond(bigDesktop) {
+    font-size: 1.3rem;
+    line-height: 1.2;
   }
 }
 

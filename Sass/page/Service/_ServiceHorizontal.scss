@@ -18,10 +18,6 @@
     align-items: center;
     justify-content: space-around;
     gap: 4rem;
-    // background-image: url("/UpdatedUIsky-17.svg");
-    // background-position: bottom;
-    // background-repeat: no-repeat;
-    // background-size: cover;
 
     @include responsive.respond(smallPhone) {
       height: 100vh;
@@ -32,6 +28,10 @@
       gap: 2rem;
     }
     @include responsive.respond(tablets) {
+      height: 50vh;
+      gap: 2rem;
+    }
+    @include responsive.respond(bigTablets) {
       height: 100vh;
       gap: 2rem;
     }
@@ -58,7 +58,7 @@
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 0;
     gap: calc(5vw);
     transition: transform 0.3s ease-out;
 
@@ -73,8 +73,24 @@
     padding-left: 5rem;
 
     .header-content {
-      max-width: 900px;
+      max-width: 950px;
       text-align: left;
+
+      @include responsive.respond(tablets) {
+        max-width: 500px;
+      }
+
+      @include responsive.respond(bigTablets) {
+        max-width: 600px;
+      }
+
+      @include responsive.respond(desktop) {
+        max-width: 700px;
+      }
+
+      @include responsive.respond(bigDesktop) {
+        max-width: 800px;
+      }
     }
 
     h2 {
@@ -86,16 +102,16 @@
       text-align: left;
 
       @include responsive.respond(tablets) {
-        font-size: 3.5rem;
+        font-size: 3rem;
       }
       @include responsive.respond(bigTablets) {
-        font-size: 4rem;
+        font-size: 3.5rem;
       }
       @include responsive.respond(desktop) {
-        font-size: 4.5rem;
+        font-size: 4rem;
       }
       @include responsive.respond(bigDesktop) {
-        font-size: 5rem;
+        font-size: 4rem;
       }
     }
 
@@ -107,16 +123,16 @@
       text-align: left;
 
       @include responsive.respond(tablets) {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
       @include responsive.respond(bigTablets) {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
       }
       @include responsive.respond(desktop) {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
       @include responsive.respond(bigDesktop) {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
     }
   }

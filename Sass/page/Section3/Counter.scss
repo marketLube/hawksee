@@ -19,7 +19,6 @@
   @include responsive.respond(bigDesktop) {
     height: fit-content;
   }
-
   @include responsive.respond(desktop) {
     height: fit-content;
   }
@@ -32,7 +31,7 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin-top: -12rem;
+    // margin-top: -12rem;
   }
 
   @include responsive.respond(phone) {
@@ -100,19 +99,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 16.25rem;
+    height: 18rem;
 
     @include responsive.respond(smallPhone) {
-      height: 8.25rem;
+      height: 9.25rem;
     }
     @include responsive.respond(phone) {
-      height: 12.25rem;
-    }
-    @include responsive.respond(tablets) {
       height: 13.25rem;
     }
+    @include responsive.respond(tablets) {
+      height: 14.25rem;
+    }
     @include responsive.respond(bigTablets) {
-      height: 15.25rem;
+      height: 16.25rem;
     }
 
     .question-top {
@@ -126,23 +125,23 @@
       text-transform: uppercase;
 
       @include responsive.respond(bigDesktop) {
-        font-size: 2rem; // Increased for larger screens
+        font-size: 2rem;
       }
 
       @include responsive.respond(desktop) {
-        font-size: 1.8rem; // Slightly larger for desktop
+        font-size: 1.8rem;
       }
 
       @include responsive.respond(bigTablets) {
-        font-size: 1.6rem; // Adjusted for big tablets
+        font-size: 1.6rem;
       }
 
       @include responsive.respond(tablets) {
-        font-size: 1.4rem; // Adjusted for tablets
+        font-size: 1.4rem;
       }
 
       @include responsive.respond(phone) {
-        font-size: 1.2rem; // Smaller for phones
+        font-size: 1.2rem;
       }
 
       @include responsive.respond(smallPhone) {
@@ -163,23 +162,23 @@
       transform: rotate(-10deg);
 
       @include responsive.respond(bigDesktop) {
-        font-size: 2rem; // Increased for larger screens
+        font-size: 2rem;
       }
 
       @include responsive.respond(desktop) {
-        font-size: 1.8rem; // Slightly larger for desktop
+        font-size: 1.8rem;
       }
 
       @include responsive.respond(bigTablets) {
-        font-size: 1.6rem; // Adjusted for big tablets
+        font-size: 1.6rem;
       }
 
       @include responsive.respond(tablets) {
-        font-size: 1.4rem; // Adjusted for tablets
+        font-size: 1.4rem;
       }
 
       @include responsive.respond(phone) {
-        font-size: 1.2rem; // Smaller for phones
+        font-size: 1.2rem;
       }
 
       @include responsive.respond(smallPhone) {
@@ -195,17 +194,17 @@
       -o-transition: transform 0.5s ease-out;
       transition: transform 0.5s ease-out;
       transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
-      font-size: 9rem;
+      font-size: 10rem;
       font-weight: 700;
       color: #fff;
       margin: 1rem 0;
       text-align: center;
       @include responsive.respond(bigDesktop) {
-        font-size: 8rem;
+        font-size: 9rem;
       }
 
       @include responsive.respond(desktop) {
-        font-size: 7.5rem;
+        font-size: 8rem;
       }
 
       @include responsive.respond(bigTablets) {

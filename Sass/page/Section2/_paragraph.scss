@@ -160,7 +160,7 @@
   }
   &__textDiv {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -202,32 +202,32 @@
     }
 
     @include responsive.respond(tablets) {
-      font-size: 2.7rem;
+      font-size: 2.3rem;
       line-height: normal;
       padding: 0rem;
-      min-width: 650px;
+      min-width: 700px;
     }
 
     @include responsive.respond(bigTablets) {
-      font-size: 3rem;
+      font-size: 2.3rem;
       line-height: normal;
       padding: 0rem;
-      min-width: 850px;
+      min-width: 1000px;
     }
     @include responsive.respond(desktop) {
-      font-size: 3rem;
+      font-size: 2.2rem;
       line-height: normal;
       padding: 0rem;
       min-width: 1000px;
     }
     @include responsive.respond(bigDesktop) {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       line-height: normal;
       padding: 0rem;
       min-width: 1200px;
     }
     @media (min-width: 1600px) {
-      font-size: 3rem;
+      font-size: 2.5rem;
       line-height: normal;
       padding: 0rem;
       min-width: 1800px;
@@ -258,8 +258,9 @@
     padding: 0rem 2rem;
 
     @include responsive.respond(smallPhone) {
-      padding: 0rem 2rem !important;
-      font-size: 1rem;
+      padding: 0.5rem 1.6rem !important;
+
+      font-size: 0.8rem !important;
       margin: 1rem;
     }
 

@@ -57,10 +57,52 @@ export default function StudyIn() {
   }, []);
 
   const getFlagsTransform = () => {
-    return [
-      `calc(50vw - ${100 / 4}vw)`,
-      `calc(-${(countries.length - 2) * (100 / 2.8)}vw)`,
-    ];
+    if (screenWidth >= 1600) {
+      return [
+        `calc(50vw - ${100 / 4}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 2.8)}vw)`,
+      ];
+    } else if (screenWidth >= 1400) {
+      return [
+        `calc(50vw - ${100 / 3}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 2.1)}vw)`,
+      ];
+    } else if (screenWidth >= 1200) {
+      return [
+        `calc(50vw - ${100 / 3.5}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 1.9)}vw)`,
+      ];
+    } else if (screenWidth >= 1100) {
+      return [
+        `calc(50vw - ${100 / 3.2}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 1.9)}vw)`,
+      ];
+    } else if (screenWidth >= 1024) {
+      return [
+        `calc(50vw - ${100 / 3.2}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 1.7)}vw)`,
+      ];
+    } else if (screenWidth >= 768) {
+      return [
+        `calc(50vw - ${100 / 3.5}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 1.3)}vw)`,
+      ];
+    } else if (screenWidth >= 992) {
+      return [
+        `calc(50vw - ${100 / 3.2}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 1)}vw)`,
+      ];
+    } else if (screenWidth >= 800) {
+      return [
+        `calc(50vw - ${100 / 3.2}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 1)}vw)`,
+      ];
+    } else {
+      return [
+        `calc(50vw - ${100 / 3}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 2)}vw)`,
+      ];
+    }
   };
 
   const flagsX = useTransform(scrollYProgress, [0, 1], getFlagsTransform());

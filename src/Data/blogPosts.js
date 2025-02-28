@@ -26,7 +26,7 @@ Tags: Branding, Business, content marketing, Digital, digital marketing, Hawksee
     name: "Why Social Media Marketing is not Just About Posting Designs.",
     image: SocialMediaMarketing,
     categories: ["Marketing", "Branding"],
-    title: "Why Social Media Marketing is not Just About Posting Designs.?",
+    title: "Why Social Media Marketing is not Just About Posting Designs?",
     description: `“Every great design begins with an even better story.” – Lorinda Mamo, designer
 
 Yes, to a great extent, social media is where artists trawl for inspiration. But social media marketing is not just about good designs, it has never been. When it comes to brands, it is about the personality, the stories they tell, the values they hold, and how well they treat their customers – both existing and prospective. Intelligent. right content matter. “Content is king” is not just a mere statement. It is how things work in the digital world. HOW you present your brand/ business also matters. IDEAS, how you plan to reach your audience matter.

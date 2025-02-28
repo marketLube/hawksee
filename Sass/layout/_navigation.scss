@@ -412,12 +412,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   background-color: black;
+  // justify-content: space-between;
   gap: 3rem;
   transition: transform 0.8s cubic-bezier(0.33, 0.74, 0.33, 0.74);
   button {
@@ -476,8 +477,6 @@
 
     li {
       text-align: right;
-      margin: 8px 0;
-      padding: 5px 0;
       overflow-y: hidden;
       user-select: none;
 

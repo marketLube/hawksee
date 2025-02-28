@@ -98,6 +98,8 @@
     @include responsive.respond(smallPhone) {
       font-size: 4rem;
       padding-top: 1.5rem;
+      text-align: center;
+      padding-right: 0;
     }
 
     @include responsive.respond(phone) {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "./../assets/image.svg";
+import LogoTop from "./../assets/HawkseeLogoTop.svg";
 import { motion } from "framer-motion";
 
 export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
@@ -153,7 +154,7 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
         aria-label="Go to home page"
       >
         <img
-          src={logo}
+          src={LogoTop}
           alt="Hawksee logo"
           className="headerNav-hawlogo"
           aria-label="Hawksee logo"

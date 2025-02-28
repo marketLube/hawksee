@@ -132,9 +132,24 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
             Results.
           </p>
           <div className="aboutbutton">
-            <Button onClick={() => navigate("/about")}>
+            <button
+              style={{
+                border: "none",
+                outline: "none",
+                cursor: "pointer",
+                backgroundColor: "#3e3d3c",
+                borderRadius: "35px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "1rem 2rem",
+                color: "#fff",
+                fontSize: "1rem",
+              }}
+              onClick={() => navigate("/about")}
+            >
               About Us <FiArrowUpRight />
-            </Button>
+            </button>
           </div>
         </div>
       </div>

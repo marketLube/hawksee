@@ -1,3 +1,4 @@
+@use "../../base/responsive" as responsive;
 .blog-section {
   background: #fff;
   padding: 60px 50px 120px 50px;
@@ -6,6 +7,10 @@
   justify-content: center;
   align-items: center;
   position: relative;
+
+  // @include responsive.respond(smallPhone) {
+  //   padding: 2rem;
+  // }
 
   &__title {
     font-size: 2rem;
@@ -27,7 +32,14 @@
 
   @media (max-width: 1080px) {
     padding: 40px 20px;
-    padding-top: 80px;
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 565px) {
+    padding: 0px 20px 40px 20px;
 
     &__grid {
       grid-template-columns: 1fr;

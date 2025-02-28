@@ -478,7 +478,7 @@
   }
 
   @include responsive.respond(tablets) {
-    padding: 1rem;
+    padding: 1rem 0 0 0;
     margin-top: 0;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -486,6 +486,8 @@
   }
 
   @include responsive.respond(bigTablets) {
+    padding: 1rem 0 0 0;
+
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;

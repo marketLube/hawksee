@@ -62,8 +62,11 @@ function Blog() {
       <div className="blog" key={currentPost.name}>
         <div className="blog__container">
           <div className="blog__tags">
-            {currentPost.categories.map((category) => (
-              <span key={category}>{category}</span>
+            {currentPost.categories.map((category, index) => (
+              <span key={category}>
+                {category}
+                {index < currentPost.categories.length - 1 && " | "}
+              </span>
             ))}
           </div>
 
@@ -79,6 +82,8 @@ function Blog() {
                 href="https://www.facebook.com/hawkseedigital"
                 className="social-link"
                 style={{ "--index": 1 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaFacebookF />
               </a>
@@ -86,6 +91,8 @@ function Blog() {
                 href="https://www.instagram.com/hawkseedigital/"
                 className="social-link"
                 style={{ "--index": 2 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaInstagram />
               </a>
@@ -93,6 +100,8 @@ function Blog() {
                 href="https://www.linkedin.com/company/hawksee-digital-marketing/"
                 className="social-link"
                 style={{ "--index": 3 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
               </a>
@@ -100,6 +109,8 @@ function Blog() {
                 href="https://www.youtube.com/@hawkseedigitalmarketing2411"
                 className="social-link"
                 style={{ "--index": 3 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaYoutube />
               </a>
@@ -116,6 +127,8 @@ function Blog() {
                 href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiABBiiBDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIHCAQQABjvBdIBCDE5OTlqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=Kau3A0W0XqY7MUKaQxUUDVZk&daddr=5/639R,+1st+Floor,City+Gate+Building,Sales+tax+Office+Road,+Mini+Bypass+Rd,+Eranhippalam,+Kozhikode,+Kerala+673006"
                 className="social-link"
                 style={{ "--index": 5 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaMapMarkerAlt />
               </a>

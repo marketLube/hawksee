@@ -1,3 +1,4 @@
+@use "../../base/responsive" as responsive;
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -111,9 +112,19 @@
     animation: slideUp 0.8s ease-out forwards;
     animation-delay: 0.2s;
 
+    @include responsive.respond(smallPhone) {
+      font-size: 0.8rem;
+      line-height: 1.3;
+      text-align: unset;
+    }
+
     p {
       margin-bottom: 2rem;
       max-width: 1240px;
+
+      @include responsive.respond(smallPhone) {
+        margin-bottom: 1rem;
+      }
     }
 
     .quote {
@@ -167,7 +178,7 @@
     }
 
     &__container {
-      padding: 2rem 0;
+      padding: 2rem;
     }
 
     h1 {

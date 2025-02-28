@@ -123,13 +123,18 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
           >
             <span ref={paraRef}>Every</span> Brand Needs Hawksee, Because We{" "}
             {""}
-            <strong>See</strong>! First,
-            <br /> We <strong>See</strong> The Brand&apos;s Potential, Customer
-            Needs, and the Gap. <br />
-            Then, We Act to <strong>Show</strong> Results.
+            <strong style={{ fontWeight: 600 }}>See</strong>! First,
+            <br /> We <strong style={{ fontWeight: 600 }}>See</strong> The
+            Brand&apos;s Potential, Customer Needs, and the Gap. <br />
+            Then, We Act to <strong style={{ fontWeight: 600 }}>
+              Show
+            </strong>{" "}
+            Results.
           </p>
           <div className="aboutbutton">
-            <Button onClick={() => navigate("/about")}>About Us</Button>
+            <Button onClick={() => navigate("/about")}>
+              About Us <FiArrowUpRight />
+            </Button>
           </div>
         </div>
       </div>

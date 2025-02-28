@@ -251,60 +251,71 @@ const ServiceDetails = () => {
         aria-label="serviceDetail body section"
       >
         <div
-          className="serviceDetail__content"
-          aria-label="serviceDetail content section"
+          className="serviceDetail-body-scroll"
+          style={{ height: "100vh", overflowY: "scroll" }}
         >
-          <button
-            className="back-button"
-            onClick={handleBackClick}
-            style={{
-              borderRadius: "50%",
-              background: "transparent",
-              border: "1px solid white",
-              cursor: "pointer",
-              zIndex: 100,
-              width: "40px",
-              height: "40px",
-            }}
-            aria-label="Go back to the previous page"
+          <div
+            className="serviceDetail__content"
+            aria-label="serviceDetail content section"
           >
-            <FiArrowLeft size={20} color="white" />
-          </button>
-          <h2 className="serviceDetail__title">Service</h2>
-        </div>
+            <button
+              className="back-button"
+              onClick={handleBackClick}
+              style={{
+                borderRadius: "50%",
+                background: "transparent",
+                border: "1px solid white",
+                cursor: "pointer",
+                zIndex: 100,
+                width: "40px",
+                height: "40px",
+              }}
+              aria-label="Go back to the previous page"
+            >
+              <FiArrowLeft size={20} color="white" />
+            </button>
+            {/* <h2 className="serviceDetail__title">Service</h2> */}
+          </div>
 
-        <div className="service-details-container">
-          <div className="service-details-container__content">
-            <div>
-              <h1 className="service-title">{currentService.title}</h1>
-              <p className="service-subtitle">{currentService.subtitle}</p>
+          <div className="service-details-container">
+            <div className="service-details-container__content">
+              <div>
+                <h1 className="service-title">{currentService.title}</h1>
+                <p className="service-subtitle">{currentService.subtitle}</p>
+              </div>
+              <div className="service-description-container">
+                <p className="service-description1">
+                  {currentService.descPara1}
+                </p>
+                <p className="service-description2">
+                  {currentService.descPara2}
+                </p>
+                <p className="service-description3">
+                  {currentService.descPara3}
+                </p>
+              </div>
             </div>
-            <div className="service-description-container">
-              <p className="service-description1">{currentService.descPara1}</p>
-              <p className="service-description2">{currentService.descPara2}</p>
-              <p className="service-description3">{currentService.descPara3}</p>
+            <div className="service-details-container__image">
+              <img
+                className="service-image"
+                src={currentService.image}
+                alt={currentService.title}
+              />
             </div>
           </div>
-          <div className="service-details-container__image">
-            <img
-              className="service-image"
-              src={currentService.image}
-              alt={currentService.title}
-            />
+          <div className="service__navigation">
+            {serviceData.index > 0 && (
+              <button className="nav-btn prev" onClick={handlePrevService}>
+                ← Previous
+              </button>
+            )}
+            <div className="nav-spacer"></div>
+            {serviceData.index < servicesData.length - 1 && (
+              <button className="nav-btn next" onClick={handleNextService}>
+                Next →
+              </button>
+            )}
           </div>
-        </div>
-        <div className="service__navigation">
-          {serviceData.index > 0 && (
-            <button className="nav-btn prev" onClick={handlePrevService}>
-              ← Previous
-            </button>
-          )}
-          <div className="nav-spacer"></div>
-          {serviceData.index < servicesData.length - 1 && (
-            <button className="nav-btn next" onClick={handleNextService}>
-              Next →
-            </button>
-          )}
         </div>
       </div>
     </div>

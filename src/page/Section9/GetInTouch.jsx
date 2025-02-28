@@ -83,11 +83,11 @@ export const GetInTouch = () => {
                 <span
                   className="get-in-touch__email"
                   onClick={() => {
-                    window.open("mailto:hello@hawksee.org", "_blank");
+                    window.open("mailto:info@hawksee.in", "_blank");
                   }}
                   aria-label="Email address for contact"
                 >
-                  hello@hawksee.org
+                  info@hawksee.in
                 </span>
               </div>
 

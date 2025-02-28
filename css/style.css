@@ -673,7 +673,7 @@ a {
   transform: translate(-50%, -50%);
   color: rgb(244, 244, 244);
   text-align: center;
-  z-index: 100000000000000;
+  z-index: 1000;
   font-weight: 200;
   padding: 2rem;
   font-size: 2.5rem;
@@ -683,7 +683,7 @@ a {
   min-width: -moz-fit-content;
   min-width: fit-content;
   overflow: hidden;
-  font-weight: 400;
+  font-weight: 300;
 }
 .paragraph__textDiv div {
   -webkit-transition: all 1s ease;
@@ -767,12 +767,13 @@ a {
   font-size: large;
 }
 .aboutbutton button {
-  padding: 1rem 2.5rem;
+  padding: 0rem 2rem;
 }
 @media only screen and (max-width: 575.98px) {
   .aboutbutton button {
-    padding: 0.8rem 2rem;
+    padding: 0rem 2rem !important;
     font-size: 1rem;
+    margin: 1rem;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
@@ -3010,7 +3011,7 @@ a {
 }
 
 .buttondivPortfolio {
-  margin-top: 10rem;
+  margin-top: 6rem;
   text-align: center;
   padding: 7rem;
   display: -webkit-box;
@@ -3380,6 +3381,7 @@ a {
   top: 0;
   left: 0;
   background-color: black;
+  z-index: 100000000;
   -webkit-transition: -webkit-transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
   transition: -webkit-transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
   -o-transition: transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
@@ -3398,6 +3400,8 @@ a {
   transition: opacity 0.5s ease-in-out;
   max-height: 100vh;
   overflow-y: auto;
+  z-index: 100000000;
+  background-color: black;
 }
 @media (max-width: 1200px) {
   .projects__content {
@@ -3586,6 +3590,22 @@ a {
   -webkit-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
+}
+
+.back-button-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+@media (max-width: 768px) {
+  .back-button-project {
+    top: 1rem;
+    left: 1rem;
+  }
+}
+.back-button-project:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /*
@@ -4668,6 +4688,7 @@ a {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 100000000;
   background-color: black;
   -webkit-transition: -webkit-transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
   transition: -webkit-transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
@@ -4678,6 +4699,7 @@ a {
   min-height: 100vh;
 }
 .serviceDetail__content {
+  width: 100%;
   padding: 3rem 3rem 0 3rem;
   position: relative;
   opacity: 0;
@@ -4685,8 +4707,9 @@ a {
   -webkit-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  max-height: 100vh;
-  overflow-y: auto;
+  max-height: fit-content;
+  z-index: 100000000;
+  background-color: black;
 }
 .serviceDetail__title {
   font-size: 5rem;
@@ -4858,7 +4881,8 @@ a {
   color: white;
   display: flex;
   padding: 2rem 7.5rem;
-  gap: 8rem;
+  width: 100%;
+  justify-content: space-between;
 }
 @media (max-width: 1200px) {
   .service-details-container {
@@ -4887,31 +4911,56 @@ a {
   gap: 2rem;
   flex: 1;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .service-details-container__content {
+    flex: 0.9;
+  }
+}
 .service-details-container__image {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  flex: 1;
+  justify-content: end;
+  width: fit-content;
 }
 
 .service-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: 4.8rem;
   text-align: left;
   line-height: 1.2;
 }
-@media (max-width: 768px) {
-  .service-title {
-    font-size: 2.5rem;
-  }
-}
-@media (max-width: 576px) {
+@media only screen and (max-width: 575.98px) {
   .service-title {
     font-size: 2rem;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .service-title {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .service-title {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .service-title {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .service-title {
+    font-size: 3.8rem;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .service-title {
+    font-size: 4.8rem;
+  }
+}
 
 .service-subtitle {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 100;
   text-align: left;
@@ -4931,6 +4980,36 @@ a {
   border-radius: 8px;
   object-fit: cover;
 }
+@media only screen and (max-width: 575.98px) {
+  .service-image {
+    max-width: 200px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .service-image {
+    max-width: 300px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .service-image {
+    max-width: 400px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .service-image {
+    max-width: 500px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .service-image {
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .service-image {
+    max-width: 450px;
+  }
+}
 
 .service-content {
   padding: 2rem;
@@ -4947,7 +5026,7 @@ a {
 .service-description-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.3rem;
   max-width: 800px;
 }
 
@@ -4983,6 +5062,7 @@ a {
   animation: slideUp 0.8s ease-out forwards;
   animation-delay: 0.5s;
   padding: 2rem 7.5rem;
+  width: 100%;
 }
 @media (max-width: 1200px) {
   .service__navigation {
@@ -5011,6 +5091,15 @@ a {
 }
 .service__navigation .nav-btn:hover {
   color: #fff;
+}
+
+.serviceDetail-body-scroll {
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .about-container {
@@ -5224,10 +5313,11 @@ a {
 }
 @media (max-width: 1300px) {
   .hero-section {
-    padding: 10px 20px;
+    margin-top: 2rem;
+    padding: 10px 80px;
   }
   .story-section {
-    padding: 20px;
+    padding: 20px 80px;
   }
   .story-content {
     flex-direction: column;
@@ -5244,7 +5334,7 @@ a {
   }
   .vision-section {
     flex-direction: column-reverse;
-    padding: 30px 20px;
+    padding: 30px 80px;
   }
   .vision-content {
     padding-right: 0;
@@ -5254,7 +5344,7 @@ a {
   }
 }
 .back-button {
-  position: fixed;
+  position: sticky;
   top: 2rem;
   left: 2rem;
   display: flex;
@@ -5309,7 +5399,7 @@ a {
 
 .blog-section {
   background: #fff;
-  padding: 120px 60px;
+  padding: 60px 50px 120px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -5325,6 +5415,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 .blog-section__footer {
   display: flex;
@@ -5443,7 +5534,7 @@ a {
   transition: transform 0.5s ease;
 }
 .blogs__content {
-  padding: 80px 100px;
+  padding: 0rem 7rem 3rem 7rem;
   height: 100%;
   overflow-y: auto;
   position: relative;
@@ -5452,10 +5543,8 @@ a {
   gap: 2rem;
 }
 .blogs__title {
-  font-size: 2.5rem;
+  font-size: 5.25rem;
   color: #fff;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 .blogs h1 {
   font-size: 3.5rem;
@@ -5545,10 +5634,6 @@ a {
     padding: 40px 20px;
     padding-top: 80px;
   }
-  .blogs .back-button {
-    top: 20px;
-    left: 20px;
-  }
   .blogs__title {
     font-size: 2rem;
   }
@@ -5575,12 +5660,10 @@ a {
   color: #fff;
   min-height: 100vh;
   position: relative;
-  padding: 0 20px;
 }
 .blog__container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 4rem 7rem;
   animation: slideUp 0.8s ease-out forwards;
 }
 .blog__content-container {
@@ -5687,7 +5770,7 @@ a {
   border: none;
   color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   padding: 0;
   transition: color 0.3s;
 }

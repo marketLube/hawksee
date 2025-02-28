@@ -9,6 +9,7 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
+import { FaLinkedinIn, FaMapMarkerAlt } from "react-icons/fa";
 
 function Blog() {
   const { name } = useParams();
@@ -74,20 +75,49 @@ function Blog() {
 
           <div className="blog__content-container">
             <div className="blog__social-sidebar">
-              <a href="#" className="social-link" style={{ "--index": 0 }}>
-                <FaXTwitter />
-              </a>
-              <a href="#" className="social-link" style={{ "--index": 1 }}>
+              <a
+                href="https://www.facebook.com/hawkseedigital"
+                className="social-link"
+                style={{ "--index": 1 }}
+              >
                 <FaFacebookF />
               </a>
-              <a href="#" className="social-link" style={{ "--index": 2 }}>
+              <a
+                href="https://www.instagram.com/hawkseedigital/"
+                className="social-link"
+                style={{ "--index": 2 }}
+              >
                 <FaInstagram />
               </a>
-              <a href="#" className="social-link" style={{ "--index": 3 }}>
+              <a
+                href="https://www.linkedin.com/company/hawksee-digital-marketing/"
+                className="social-link"
+                style={{ "--index": 3 }}
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://www.youtube.com/@hawkseedigitalmarketing2411"
+                className="social-link"
+                style={{ "--index": 3 }}
+              >
                 <FaYoutube />
               </a>
-              <a href="#" className="social-link" style={{ "--index": 4 }}>
+              <a
+                href="https://wa.me/9995000123"
+                className="social-link"
+                style={{ "--index": 4 }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaWhatsapp />
+              </a>
+              <a
+                href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiABBiiBDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIHCAQQABjvBdIBCDE5OTlqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=Kau3A0W0XqY7MUKaQxUUDVZk&daddr=5/639R,+1st+Floor,City+Gate+Building,Sales+tax+Office+Road,+Mini+Bypass+Rd,+Eranhippalam,+Kozhikode,+Kerala+673006"
+                className="social-link"
+                style={{ "--index": 5 }}
+              >
+                <FaMapMarkerAlt />
               </a>
             </div>
 

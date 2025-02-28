@@ -108,7 +108,7 @@ const Projects = () => {
           aria-label="Projects content section"
         >
           <button
-            className="back-button"
+            className="back-button-project"
             onClick={() => window.history.back()}
             style={{
               borderRadius: "50%",

@@ -22,6 +22,7 @@
     top: 0;
     left: 0;
     background-color: black;
+    z-index: 100000000;
     -webkit-transition: -webkit-transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
     transition: -webkit-transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
     -o-transition: transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
@@ -42,6 +43,8 @@
     transition: opacity 0.5s ease-in-out;
     max-height: 100vh;
     overflow-y: auto;
+    z-index: 100000000;
+    background-color: black;
 
     @media (max-width: 1200px) {
       padding: 4rem;
@@ -229,4 +232,23 @@
   -webkit-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
+}
+
+.back-button-project {
+  // position: fixed;
+  // top: 2rem;
+  // left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }

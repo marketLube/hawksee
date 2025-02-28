@@ -91,24 +91,23 @@ function Blogs() {
           pointerEvents: "auto",
         }}
       >
+        <button
+          className="back-button"
+          onClick={() => navigate("/#blogs")}
+          style={{
+            borderRadius: "50%",
+            background: "transparent",
+            border: "1px solid white",
+            cursor: "pointer",
+            zIndex: 100,
+            width: "40px",
+            height: "40px",
+          }}
+          aria-label="Go back to the previous page"
+        >
+          <FiArrowLeft size={20} color="white" />
+        </button>
         <div className="blogs__content">
-          <button
-            className="back-button"
-            onClick={() => navigate("/#blogs")}
-            style={{
-              borderRadius: "50%",
-              background: "transparent",
-              border: "1px solid white",
-              cursor: "pointer",
-              zIndex: 100,
-              width: "40px",
-              height: "40px",
-            }}
-            aria-label="Go back to the previous page"
-          >
-            <FiArrowLeft size={20} color="white" />
-          </button>
-
           <h2 className="blogs__title" style={{ fontWeight: 700 }}>
             Blogs
           </h2>

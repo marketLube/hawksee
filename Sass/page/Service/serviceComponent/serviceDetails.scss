@@ -6,7 +6,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-
   -webkit-transform-origin: bottom;
   -ms-transform-origin: bottom;
   transform-origin: bottom;
@@ -16,9 +15,6 @@
   &--active {
     .serviceDetail__content {
       opacity: 1;
-      // display: flex;
-      // gap: 1.5rem;
-      // align-items: center;
     }
   }
 
@@ -26,6 +22,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 100000000;
     background-color: black;
     -webkit-transition: -webkit-transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
     transition: -webkit-transform 1s cubic-bezier(0, 1.08, 0.69, 0.97);
@@ -38,6 +35,7 @@
   }
 
   &__content {
+    width: 100%;
     padding: 3rem 3rem 0 3rem;
     position: relative;
     opacity: 0;
@@ -45,8 +43,22 @@
     -webkit-transition: opacity 0.5s ease-in-out;
     -o-transition: opacity 0.5s ease-in-out;
     transition: opacity 0.5s ease-in-out;
-    max-height: 100vh;
-    overflow-y: auto;
+    max-height: fit-content;
+    z-index: 100000000;
+    background-color: black;
+
+    @include responsive.respond(smallPhone) {
+    }
+    @include responsive.respond(phone) {
+    }
+    @include responsive.respond(tablets) {
+    }
+    @include responsive.respond(bigTablets) {
+    }
+    @include responsive.respond(desktop) {
+    }
+    @include responsive.respond(bigDesktop) {
+    }
   }
 
   &__title {
@@ -221,7 +233,9 @@
   color: white;
   display: flex;
   padding: 2rem 7.5rem;
-  gap: 8rem;
+  // gap: 8rem;
+  width: 100%;
+  justify-content: space-between;
 
   @media (max-width: 1200px) {
     gap: 4rem;
@@ -246,32 +260,52 @@
     justify-content: start;
     gap: 2rem;
     flex: 1;
+    @include responsive.respond(bigDesktop) {
+      flex: 0.9;
+    }
   }
 
   &__image {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    flex: 1;
+    justify-content: end;
+    // flex: 1;
+    width: fit-content;
   }
 }
 
 .service-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: 4.8rem;
   text-align: left;
   line-height: 1.2;
 
-  @media (max-width: 768px) {
+  @include responsive.respond(smallPhone) {
+    font-size: 2rem;
+  }
+
+  @include responsive.respond(phone) {
     font-size: 2.5rem;
   }
 
-  @media (max-width: 576px) {
-    font-size: 2rem;
+  @include responsive.respond(tablets) {
+    font-size: 3rem;
+  }
+
+  @include responsive.respond(bigTablets) {
+    font-size: 3.5rem;
+  }
+
+  @include responsive.respond(desktop) {
+    font-size: 3.8rem;
+  }
+
+  @include responsive.respond(bigDesktop) {
+    font-size: 4.8rem;
   }
 }
 
 .service-subtitle {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 100;
   text-align: left;
@@ -290,6 +324,29 @@
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  @include responsive.respond(smallPhone) {
+    max-width: 200px;
+  }
+
+  @include responsive.respond(phone) {
+    max-width: 300px;
+  }
+
+  @include responsive.respond(tablets) {
+    max-width: 400px;
+  }
+
+  @include responsive.respond(bigTablets) {
+    max-width: 500px;
+  }
+
+  @include responsive.respond(desktop) {
+    max-width: 600px;
+  }
+
+  @include responsive.respond(bigDesktop) {
+    max-width: 450px;
+  }
 }
 
 .service-content {
@@ -306,7 +363,7 @@
 .service-description-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.3rem;
   max-width: 800px;
 }
 .service-description1,
@@ -338,6 +395,7 @@
   animation: slideUp 0.8s ease-out forwards;
   animation-delay: 0.5s;
   padding: 2rem 7.5rem;
+  width: 100%;
 
   @media (max-width: 1200px) {
     padding: 2rem 5rem;
@@ -365,4 +423,12 @@
       color: #fff;
     }
   }
+}
+.serviceDetail-body-scroll {
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }

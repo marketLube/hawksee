@@ -117,13 +117,17 @@ export default function ProjectsShowAllBody({
                     transition: "transform 0.3s, opacity 0.3s",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.play();
-                    e.target.style.transform = "scale(1.07)";
+                    if (window.matchMedia("(hover: hover)").matches) {
+                      e.target.play();
+                      e.target.style.transform = "scale(1.07)";
+                    }
                   }}
                   onMouseLeave={(e) => {
-                    e.target.pause();
-                    e.target.style.transform = "scale(1)";
-                    e.target.style.opacity = "1";
+                    if (window.matchMedia("(hover: hover)").matches) {
+                      e.target.pause();
+                      e.target.style.transform = "scale(1)";
+                      e.target.style.opacity = "1";
+                    }
                   }}
                 />
               ) : (
@@ -138,11 +142,15 @@ export default function ProjectsShowAllBody({
                     transition: "transform 0.3s, opacity 0.3s",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.transform = "scale(1.1)";
+                    if (window.matchMedia("(hover: hover)").matches) {
+                      e.target.style.transform = "scale(1.1)";
+                    }
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.transform = "scale(1)";
-                    e.target.style.opacity = "1";
+                    if (window.matchMedia("(hover: hover)").matches) {
+                      e.target.style.transform = "scale(1)";
+                      e.target.style.opacity = "1";
+                    }
                   }}
                 />
               )}
@@ -155,13 +163,17 @@ export default function ProjectsShowAllBody({
               aria-label={`Project video ${i + 1}`}
               controls
               onMouseEnter={(e) => {
-                e.target.play();
-                e.target.style.transform = "scale(1.07)";
+                if (window.matchMedia("(hover: hover)").matches) {
+                  e.target.play();
+                  e.target.style.transform = "scale(1.07)";
+                }
               }}
               onMouseLeave={(e) => {
-                e.target.pause();
-                e.target.style.transform = "scale(1)";
-                e.target.style.opacity = "1";
+                if (window.matchMedia("(hover: hover)").matches) {
+                  e.target.pause();
+                  e.target.style.transform = "scale(1)";
+                  e.target.style.opacity = "1";
+                }
               }}
               style={{
                 height: "100%",
@@ -182,11 +194,15 @@ export default function ProjectsShowAllBody({
                 transition: "transform 0.3s, opacity 0.3s",
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = "scale(1.1)";
+                if (window.matchMedia("(hover: hover)").matches) {
+                  e.target.style.transform = "scale(1.1)";
+                }
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = "scale(1)";
-                e.target.style.opacity = "1";
+                if (window.matchMedia("(hover: hover)").matches) {
+                  e.target.style.transform = "scale(1)";
+                  e.target.style.opacity = "1";
+                }
               }}
             />
           )}

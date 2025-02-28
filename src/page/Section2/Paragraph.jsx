@@ -82,10 +82,14 @@ export const Paragraph = ({ isTesterHundered, style }) => {
                   }
             }
           >
-            Every Brand Needs Hawksee, Because We <strong>See</strong>! First,
-            <br /> We <strong>See</strong> The Brand&apos;s Potential, Customer
-            Needs, and the Gap. <br />
-            Then, We Act to <strong>Show</strong> Results.
+            Every Brand Needs Hawksee, Because We{" "}
+            <strong style={{ fontWeight: 600 }}>See</strong>! First,
+            <br /> We <strong style={{ fontWeight: 600 }}>See</strong> The
+            Brand&apos;s Potential, Customer Needs, and the Gap. <br />
+            Then, We Act to <strong style={{ fontWeight: 600 }}>
+              Show
+            </strong>{" "}
+            Results.
           </p>
           <div className="aboutbutton">
             <Button

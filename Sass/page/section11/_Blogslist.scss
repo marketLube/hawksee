@@ -1,6 +1,6 @@
 .blog-section {
   background: #fff;
-  padding: 120px 60px;
+  padding: 60px 50px 120px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +17,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 2rem;
+    width: 100%;
   }
 
   &__footer {

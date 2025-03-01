@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import Aboutbanner from "../../assets/About/Aboutbanner.jpg";
 import About from "../../assets/About/About.jpg";
 import { FiArrowLeft } from "react-icons/fi";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Aboutus() {
   const [isAnimate, setIsAnimate] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsAnimate(true);
@@ -22,7 +23,7 @@ function Aboutus() {
     >
       <button
         className="back-button"
-        onClick={() => window.history.back()}
+        onClick={() => navigate("/")}
         style={{
           borderRadius: "50%",
           background: "transparent",

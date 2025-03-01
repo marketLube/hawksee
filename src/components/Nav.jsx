@@ -12,7 +12,7 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
     },
     {
       id: 1,
-      navTitle: "About",
+      navTitle: "About Us",
     },
     {
       id: 2,
@@ -133,6 +133,22 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
     },
   };
 
+  const handleNavItemClick = (navTitle) => {
+    if (navTitle === "About Us") {
+      window.location.href = "/about";
+    } else if (navTitle === "Blogs") {
+      window.location.href = "/blogs";
+    } else if (navTitle === "Our Work") {
+      window.location.hash = "projects";
+    } else if (navTitle === "Contact") {
+      window.open("https://wa.me/919995000123", "_blank");
+    } else {
+      const hashValue = navTitle.toLowerCase().trim();
+      window.location.hash = `#${hashValue}`;
+    }
+    setMobileNavOpen(false);
+  };
+
   return (
     <nav
       id="nav"
@@ -197,14 +213,7 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
               variants={liVariant}
               whileTap={{ scale: 0.95 }}
               key={navItem.id}
-              onClick={() => {
-                const hashValue =
-                  navItem.navTitle === "Our Work"
-                    ? "works"
-                    : navItem.navTitle.toLowerCase().trim();
-                window.location.hash = `#${hashValue}`;
-                setMobileNavOpen(false);
-              }}
+              onClick={() => handleNavItemClick(navItem.navTitle)}
             >
               <motion.div variants={liVariant}>{navItem.navTitle}</motion.div>
             </motion.li>

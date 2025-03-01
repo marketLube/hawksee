@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import blogImage from "../../assets/Blog/blogcardimage.png"; // Make sure to import your image
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { useHash } from "../Projects/useHash";
 import { blogPosts } from "../../Data/blogPosts";
@@ -93,7 +92,7 @@ function Blogs() {
       >
         <button
           className="back-button"
-          onClick={() => navigate("/#blogs")}
+          onClick={() => navigate("/")}
           style={{
             borderRadius: "50%",
             background: "transparent",

@@ -1,3 +1,4 @@
+@use "../../base/responsive" as responsive;
 .about-container {
   max-width: 100%;
   background-color: rgba(0, 0, 0, 0.95);
@@ -46,11 +47,18 @@
 .story-section {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 100px;
   padding: 40px 120px;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+
+  @include responsive.respond(bigDesktop) {
+    gap: 80px;
+  }
+  @include responsive.respond(desktop) {
+    gap: 80px;
+  }
 }
 
 .story-content {
@@ -62,6 +70,16 @@
 .story-content h2 {
   font-size: 32px;
   width: 40rem;
+  font-weight: 500;
+
+  @include responsive.respond(bigDesktop) {
+    // width: 100%;
+    font-size: 28px;
+  }
+  @include responsive.respond(desktop) {
+    // width: 100%;
+    font-size: 28px;
+  }
 }
 
 .story-content p {
@@ -69,6 +87,15 @@
   line-height: 1.4;
   margin-bottom: 0.6rem;
   color: rgba(255, 255, 255, 0.9);
+
+  @include responsive.respond(bigDesktop) {
+    // width: 100%;
+    font-size: 1.1rem;
+  }
+  @include responsive.respond(desktop) {
+    // width: 100%;
+    font-size: 1rem;
+  }
 }
 
 .story-image {
@@ -80,10 +107,10 @@
 
 .vision-section {
   display: flex;
-  gap: 40px;
+  gap: 80px;
   padding: 40px 120px;
   background-color: #000;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -92,7 +119,7 @@
 .vision-image {
   flex: 1;
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -156,19 +183,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
+  // max-width: 1200px;
+  // margin: 0 auto;
 }
 
 .mission-card {
   padding: 20px;
-  border-top: 1px solid #eee;
+  border-top: 2px solid #eee;
 }
 
 .mission-card p {
   font-size: 18px;
   line-height: 1.8;
-  color: #333;
+  color: #6e6e6e;
 }
 
 @media (max-width: 768px) {
@@ -236,6 +263,7 @@
     width: 100%;
     max-width: 40rem;
   }
+
   .story-image {
     height: 35rem;
   }
@@ -243,14 +271,33 @@
   .vision-section {
     flex-direction: column-reverse;
     padding: 30px 80px;
+    align-items: center;
+    justify-content: center;
   }
 
   .vision-content {
     padding-right: 0;
   }
+  .vision-content h2 {
+    text-align: center;
+  }
 
+  .vision-subtitle h3 {
+    text-align: center;
+  }
   .vision-image {
     height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 20px 20px;
+  }
+  .story-section {
+    padding: 20px 20px;
+  }
+  .vision-section {
+    padding: 20px 20px;
   }
 }
 

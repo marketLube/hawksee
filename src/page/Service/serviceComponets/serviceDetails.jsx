@@ -248,7 +248,7 @@ const ServiceDetails = () => {
             aria-label="serviceDetail content section"
           >
             <button
-              className={`back-button ${
+              className={`back-button-service ${
                 isAnimate
                   ? "animate-slide-up show-animation"
                   : "animate-slide-up"

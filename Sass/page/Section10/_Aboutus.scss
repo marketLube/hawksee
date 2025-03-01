@@ -58,7 +58,7 @@
 
   @media (max-width: 768px) {
     font-size: 48px;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -121,6 +121,9 @@
   height: 40rem;
   object-fit: cover;
   border-radius: 8px;
+  @include responsive.respond(smallPhone) {
+    height: auto;
+  }
 }
 
 .vision-section {
@@ -179,6 +182,11 @@
   max-width: 100%;
   box-sizing: border-box;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mission-section {
+    padding: 40px 80px;
+  }
+}
 
 .mission-header {
   text-align: center;
@@ -201,8 +209,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  // max-width: 1200px;
-  // margin: 0 auto;
 }
 
 .mission-card {
@@ -212,7 +218,7 @@
 
 .mission-card p {
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.6;
   color: #6e6e6e;
 }
 
@@ -220,7 +226,6 @@
   .story-content p {
     font-size: 16px;
     line-height: 1.5;
-    // margin-bottom: 0.6rem;
   }
 
   .vision-content p {
@@ -259,6 +264,19 @@
     font-size: 24px;
   }
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mission-card p {
+    font-size: 18px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-section {
+    margin-top: 0rem !important;
+    padding: 10px 80px;
+  }
+}
 
 @media (max-width: 1300px) {
   .hero-section {
@@ -283,7 +301,7 @@
   }
 
   .story-image {
-    height: 35rem;
+    height: auto;
   }
 
   .vision-section {
@@ -309,6 +327,7 @@
 }
 @media (max-width: 768px) {
   .hero-section {
+    margin-top: 0;
     padding: 20px 20px;
   }
   .story-section {

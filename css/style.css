@@ -4964,7 +4964,7 @@ a {
 }
 @media (max-width: 576px) {
   .service-details-container {
-    padding: 2rem 1.5rem;
+    padding: 0rem 1.5rem;
     gap: 2rem;
   }
 }
@@ -5217,6 +5217,18 @@ a {
   justify-content: space-between;
 }
 
+.back-button-service {
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+}
+@media (max-width: 768px) {
+  .back-button-service {
+    top: -1.7rem;
+    left: -2rem;
+  }
+}
+
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -5275,7 +5287,7 @@ a {
 @media (max-width: 768px) {
   .hero-section h1 {
     font-size: 48px;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -5344,6 +5356,11 @@ a {
   object-fit: cover;
   border-radius: 8px;
 }
+@media only screen and (max-width: 575.98px) {
+  .story-image {
+    height: auto;
+  }
+}
 
 .vision-section {
   display: flex;
@@ -5402,6 +5419,11 @@ a {
   box-sizing: border-box;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mission-section {
+    padding: 40px 80px;
+  }
+}
 .mission-header {
   text-align: center;
   margin-bottom: 40px;
@@ -5432,7 +5454,7 @@ a {
 
 .mission-card p {
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.6;
   color: #6e6e6e;
 }
 
@@ -5471,6 +5493,18 @@ a {
     font-size: 24px;
   }
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mission-card p {
+    font-size: 18px;
+    line-height: 1;
+  }
+}
+@media (max-width: 575px) {
+  .hero-section {
+    margin-top: 0rem !important;
+    padding: 10px 80px;
+  }
+}
 @media (max-width: 1300px) {
   .hero-section {
     margin-top: 2rem;
@@ -5490,7 +5524,7 @@ a {
     max-width: 40rem;
   }
   .story-image {
-    height: 35rem;
+    height: auto;
   }
   .vision-section {
     flex-direction: column-reverse;
@@ -5513,6 +5547,7 @@ a {
 }
 @media (max-width: 768px) {
   .hero-section {
+    margin-top: 0;
     padding: 20px 20px;
   }
   .story-section {
@@ -5782,9 +5817,19 @@ a {
   flex-direction: column;
   gap: 2rem;
 }
+@media (max-width: 768px) {
+  .blogs__content {
+    gap: 1rem;
+  }
+}
 .blogs__title {
   font-size: 5.25rem;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .blogs__title {
+    font-size: 3.5rem;
+  }
 }
 .blogs h1 {
   font-size: 3.5rem;
@@ -5874,7 +5919,7 @@ a {
     padding: 10px 20px;
   }
   .blogs__title {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .blogs__filters {
     flex-wrap: wrap;
@@ -5895,8 +5940,8 @@ a {
 }
 @media (max-width: 768px) {
   .back-button-blogs {
-    top: 1rem;
-    left: 1rem;
+    top: 0.5rem;
+    left: 0.01rem;
   }
 }
 .back-button-blogs:hover {

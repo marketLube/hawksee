@@ -51,17 +51,17 @@ export const GetInTouch = () => {
               >
                 <a
                   style={{ cursor: "pointer" }}
-                  onClick={() => scrollToSection("about")}
+                  onClick={() => (window.location.href = "/about")}
                   aria-label="Navigate to About Us section"
-                  href="#about"
+                  href="/about"
                 >
                   About Us
                 </a>
                 <a
                   style={{ cursor: "pointer" }}
-                  onClick={() => scrollToSection("works")}
+                  // onClick={() => scrollToSection("works")}
                   aria-label="Navigate to Our Works section"
-                  href="#works"
+                  href="#projects"
                 >
                   Our Works
                 </a>

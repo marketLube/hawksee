@@ -93,7 +93,7 @@ export const Paragraph = ({ isTesterHundered, style }) => {
           </p>
           <div className="aboutbutton">
             <Button
-              onClick={() => window.history.back()}
+              onClick={() => navigate("/about")}
               style={{
                 padding: "0rem 2rem !important",
               }}

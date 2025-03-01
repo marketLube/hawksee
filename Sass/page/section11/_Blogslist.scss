@@ -13,6 +13,19 @@
     margin-bottom: 3rem;
     text-align: start;
     width: 100%;
+
+    @include responsive.respond(bigTablets) {
+      font-size: 6rem;
+    }
+
+    @include responsive.respond(desktop) {
+      font-size: 5rem;
+    }
+
+    @include responsive.respond(tablets) {
+      font-size: 4.5rem;
+      text-align: center;
+    }
     @include responsive.respond(smallPhone) {
       font-size: 2rem;
       text-align: center;
@@ -25,6 +38,18 @@
     gap: 2rem;
     margin-bottom: 2rem;
     width: 100%;
+    @include responsive.respond(smallPhone) {
+      grid-template-columns: 1fr;
+    }
+
+    @include responsive.respond(phone) {
+      grid-template-columns: repeat(1fr);
+    }
+
+    @include responsive.respond(tablets) {
+      grid-template-columns: 1fr;
+      // margin: 0 auto;
+    }
   }
 
   &__footer {

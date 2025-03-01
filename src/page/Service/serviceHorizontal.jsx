@@ -194,7 +194,7 @@ export default function StudyIn() {
                     activeIndex === index ? "active" : ""
                   }`}
                   animate={{
-                    opacity: activeIndex === index ? 1 : 0.8,
+                    opacity: activeIndex === index ? 1 : 1,
                   }}
                   transition={{ duration: 0.3 }}
                 >

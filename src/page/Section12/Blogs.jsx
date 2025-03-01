@@ -57,7 +57,7 @@ function Blogs() {
 
   const progressPercentage = (scrollPosition / (window.innerHeight * 4)) * 100;
 
-  const filters = ["All", "Marketing", "Branding", "Website", "SEO"];
+  const filters = ["All", "Marketing", "Branding", "SEO"];
 
   const filteredPosts =
     activeFilter === "All"

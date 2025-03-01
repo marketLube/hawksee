@@ -150,25 +150,15 @@ const ServiceDetails = () => {
   useEffect(() => {
     const handleHashChange = () => {
       if (window.location.hash === "#serviceDetails") {
-        setIsAnimate(true);
-      }
-    };
-
-    handleHashChange();
-
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      if (window.location.hash === "#serviceDetails") {
-        setIsAnimate(true);
-        // Get the stored data
-        const storedData = sessionStorage.getItem("selectedService");
-        if (storedData) {
-          setServiceData(JSON.parse(storedData));
-        }
+        // Add a small delay to ensure the component is mounted
+        setTimeout(() => {
+          setIsAnimate(true);
+          // Get the stored data
+          const storedData = sessionStorage.getItem("selectedService");
+          if (storedData) {
+            setServiceData(JSON.parse(storedData));
+          }
+        }, 100);
       }
     };
 
@@ -177,7 +167,6 @@ const ServiceDetails = () => {
     window.addEventListener("hashchange", handleHashChange);
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
-      // Clean up stored data when component unmounts
       sessionStorage.removeItem("selectedService");
     };
   }, []);
@@ -259,7 +248,11 @@ const ServiceDetails = () => {
             aria-label="serviceDetail content section"
           >
             <button
-              className="back-button"
+              className={`back-button ${
+                isAnimate
+                  ? "animate-slide-up show-animation"
+                  : "animate-slide-up"
+              }`}
               onClick={handleBackClick}
               style={{
                 borderRadius: "50%",
@@ -269,6 +262,7 @@ const ServiceDetails = () => {
                 zIndex: 100,
                 width: "40px",
                 height: "40px",
+                animationDelay: "0.1s",
               }}
               aria-label="Go back to the previous page"
             >
@@ -280,30 +274,79 @@ const ServiceDetails = () => {
           <div className="service-details-container">
             <div className="service-details-container__content">
               <div>
-                <h1 className="service-title">{currentService.title}</h1>
-                <p className="service-subtitle">{currentService.subtitle}</p>
+                <h1
+                  className={`service-title ${
+                    isAnimate
+                      ? "animate-slide-up show-animation"
+                      : "animate-slide-up"
+                  }`}
+                  style={{ animationDelay: "0.2s" }}
+                >
+                  {currentService.title}
+                </h1>
+                <p
+                  className={`service-subtitle ${
+                    isAnimate
+                      ? "animate-slide-up show-animation"
+                      : "animate-slide-up"
+                  }`}
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  {currentService.subtitle}
+                </p>
               </div>
               <div className="service-description-container">
-                <p className="service-description1">
+                <p
+                  className={`service-description1 ${
+                    isAnimate
+                      ? "animate-slide-up show-animation"
+                      : "animate-slide-up"
+                  }`}
+                  style={{ animationDelay: "0.4s" }}
+                >
                   {currentService.descPara1}
                 </p>
-                <p className="service-description2">
+                <p
+                  className={`service-description2 ${
+                    isAnimate
+                      ? "animate-slide-up show-animation"
+                      : "animate-slide-up"
+                  }`}
+                  style={{ animationDelay: "0.5s" }}
+                >
                   {currentService.descPara2}
                 </p>
-                <p className="service-description3">
+                <p
+                  className={`service-description3 ${
+                    isAnimate
+                      ? "animate-slide-up show-animation"
+                      : "animate-slide-up"
+                  }`}
+                  style={{ animationDelay: "0.6s" }}
+                >
                   {currentService.descPara3}
                 </p>
               </div>
             </div>
             <div className="service-details-container__image">
               <img
-                className="service-image"
+                className={`service-image ${
+                  isAnimate
+                    ? "animate-slide-up show-animation"
+                    : "animate-slide-up"
+                }`}
                 src={currentService.image}
                 alt={currentService.title}
+                style={{ animationDelay: "0.7s" }}
               />
             </div>
           </div>
-          <div className="service__navigation">
+          <div
+            className={`service__navigation ${
+              isAnimate ? "animate-slide-up show-animation" : "animate-slide-up"
+            }`}
+            style={{ animationDelay: "0.8s" }}
+          >
             {serviceData.index > 0 && (
               <button className="nav-btn prev" onClick={handlePrevService}>
                 ← Previous

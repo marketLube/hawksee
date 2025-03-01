@@ -91,7 +91,7 @@ function Blogs() {
         }}
       >
         <button
-          className="back-button"
+          className="back-button animate-slide-up"
           onClick={() => navigate("/")}
           style={{
             borderRadius: "50%",
@@ -101,17 +101,24 @@ function Blogs() {
             zIndex: 100,
             width: "40px",
             height: "40px",
+            animationDelay: "0.1s",
           }}
           aria-label="Go back to the previous page"
         >
           <FiArrowLeft size={20} color="white" />
         </button>
         <div className="blogs__content">
-          <h2 className="blogs__title" style={{ fontWeight: 700 }}>
+          <h2
+            className="blogs__title animate-slide-up"
+            style={{ fontWeight: 700, animationDelay: "0.2s" }}
+          >
             Blogs
           </h2>
 
-          <div className="blogs__filters">
+          <div
+            className="blogs__filters animate-slide-up"
+            style={{ animationDelay: "0.3s" }}
+          >
             {filters.map((filter) => (
               <button
                 key={filter}
@@ -123,14 +130,17 @@ function Blogs() {
             ))}
           </div>
 
-          <hr />
+          <hr className="animate-slide-up" style={{ animationDelay: "0.4s" }} />
 
           <div className="blogs__grid">
-            {filteredPosts.map((post) => (
+            {filteredPosts.map((post, index) => (
               <div
                 key={post.id}
-                className="blog-card"
-                style={{ filter: "none" }}
+                className="blog-card animate-slide-up"
+                style={{
+                  filter: "none",
+                  animationDelay: `${0.5 + index * 0.1}s`,
+                }}
               >
                 <img
                   src={post.image}

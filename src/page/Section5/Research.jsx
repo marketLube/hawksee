@@ -72,7 +72,7 @@ export const Research = () => {
               index % 2 === 0 ? "research__step--left" : "research__step--right"
             }`}
           >
-            <div className="research__step-number">{step.number}</div>
+            {/* <div className="research__step-number">{step.number}</div> */}
             <div className="research__step-content">
               <h3 className="research__step-title">
                 <span> {step.number}</span>

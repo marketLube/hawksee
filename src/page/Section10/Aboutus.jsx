@@ -22,7 +22,7 @@ function Aboutus() {
       }`}
     >
       <button
-        className="back-button"
+        className="back-button animate-slide-up"
         onClick={() => navigate("/")}
         style={{
           borderRadius: "50%",
@@ -32,20 +32,26 @@ function Aboutus() {
           zIndex: 100,
           width: "40px",
           height: "40px",
+          animationDelay: "0.1s",
         }}
         aria-label="Go back to the previous page"
       >
         <FiArrowLeft size={20} color="white" />
       </button>
+
       <section className="hero-section">
-        <h1>About Us</h1>
+        <h1 className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          About Us
+        </h1>
       </section>
 
       <section className="story-section">
         <div className="story-content">
-          <h2>The Hawksee Story </h2>
+          <h2 className="animate-slide-up" style={{ animationDelay: "0.3s" }}>
+            The Hawksee Story
+          </h2>
           <div className="story-paragraphs">
-            <p>
+            <p className="animate-slide-up" style={{ animationDelay: "0.4s" }}>
               At HAWKSEE Digital Solutions, we don't just market—we create
               experiences that connect, engage, and convert. Established in
               2017, we started as a group of passionate marketers and
@@ -53,7 +59,7 @@ function Aboutus() {
               strategic, data-driven, and impactful.
             </p>
 
-            <p>
+            <p className="animate-slide-up" style={{ animationDelay: "0.5s" }}>
               From branding and content marketing to social media strategies and
               video production, we help businesses stand out in a crowded
               digital world. Our in-house production wing, HawkSpot, crafts
@@ -63,14 +69,20 @@ function Aboutus() {
             </p>
 
             <div className={`additional-content ${showMore ? "show" : ""}`}>
-              <p>
+              <p
+                className="animate-slide-up"
+                style={{ animationDelay: "0.6s" }}
+              >
                 What makes us different? We stay ahead of trends, understand
                 customer pain points, and ensure every campaign delivers real
                 ROI. Our team of strategists, designers, and content creators
                 works together like a well-oiled machine, turning ideas into
                 marketing that matters.
               </p>
-              <p>
+              <p
+                className="animate-slide-up"
+                style={{ animationDelay: "0.7s" }}
+              >
                 At HAWKSEE, we believe in smart, creative, and result-driven
                 marketing—because your brand deserves nothing less. Let's build
                 something amazing together.
@@ -78,8 +90,9 @@ function Aboutus() {
             </div>
 
             <button
-              className="read-more-btn"
+              className="read-more-btn animate-slide-up"
               onClick={() => setShowMore(!showMore)}
+              style={{ animationDelay: "0.8s" }}
             >
               {showMore ? "Read Less" : "Read More"}
             </button>
@@ -88,19 +101,31 @@ function Aboutus() {
         <img
           src={Aboutbanner}
           alt="Hawksee team at work"
-          className="story-image"
+          className="story-image animate-slide-up"
+          style={{ animationDelay: "0.9s" }}
         />
       </section>
 
       <section className="vision-section">
-        <img src={About} alt="Modern office space" className="vision-image" />
+        <img
+          src={About}
+          alt="Modern office space"
+          className="vision-image animate-slide-up"
+          style={{ animationDelay: "1s" }}
+        />
         <div className="vision-content">
-          <h2>Our Vision</h2>
+          <h2 className="animate-slide-up" style={{ animationDelay: "1.1s" }}>
+            Our Vision
+          </h2>
           <div className="vision-subtitle">
-            <h3>Your Success,</h3>
-            <h3>Digitally Transformed</h3>
+            <h3 className="animate-slide-up" style={{ animationDelay: "1.2s" }}>
+              Your Success,
+            </h3>
+            <h3 className="animate-slide-up" style={{ animationDelay: "1.3s" }}>
+              Digitally Transformed
+            </h3>
           </div>
-          <p>
+          <p className="animate-slide-up" style={{ animationDelay: "1.4s" }}>
             To consistently deliver passionate and tailored-fit services to
             clients for their individual business needs by leveraging
             transformative and holistic digital marketing solutions using our

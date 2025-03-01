@@ -164,8 +164,8 @@
 
   @media (max-width: 768px) {
     &__content {
-      padding: 40px 20px;
-      padding-top: 80px;
+      padding: 10px 20px;
+      // padding-top: 80px;
     }
 
     .back-button {
@@ -184,5 +184,23 @@
     &__grid {
       grid-template-columns: 1fr;
     }
+  }
+}
+.back-button-blogs {
+  position: relative;
+  top: 2rem;
+  left: -5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 }

@@ -5640,6 +5640,7 @@ a {
   }
   .blog-section__grid {
     grid-template-columns: 1fr;
+    width: auto;
   }
 }
 @media (max-width: 565px) {
@@ -5865,8 +5866,7 @@ a {
 }
 @media (max-width: 768px) {
   .blogs__content {
-    padding: 40px 20px;
-    padding-top: 80px;
+    padding: 10px 20px;
   }
   .blogs__title {
     font-size: 2rem;
@@ -5877,6 +5877,25 @@ a {
   .blogs__grid {
     grid-template-columns: 1fr;
   }
+}
+
+.back-button-blogs {
+  position: relative;
+  top: 2rem;
+  left: -5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+@media (max-width: 768px) {
+  .back-button-blogs {
+    top: 1rem;
+    left: 1rem;
+  }
+}
+.back-button-blogs:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 @keyframes slideUp {

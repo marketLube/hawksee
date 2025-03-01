@@ -115,7 +115,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
     if (width <= 991.98) return 0.08;
     if (width <= 1199.98) return 0.015;
     if (width <= 1399.98) return 0.0012;
-    return 0.001;
+    return 0.002;
   };
 
   const getTranslateMultiplier = () => {

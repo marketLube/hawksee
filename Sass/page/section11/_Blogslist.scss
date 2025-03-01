@@ -48,6 +48,7 @@
 
     @include responsive.respond(tablets) {
       grid-template-columns: 1fr;
+
       // margin: 0 auto;
     }
   }
@@ -62,6 +63,7 @@
 
     &__grid {
       grid-template-columns: 1fr;
+      width: auto;
     }
   }
 

@@ -13,14 +13,14 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
   useEffect(() => {
     if (window.scrollY > 300) {
       setStyles({
-        transform: "scale(20) translate(8rem, -3rem)",
+        transform: "scale(30) translate(8rem, -3rem)",
         transition: "all 1s ease-in-out",
       });
     }
 
     if (scrollDirection === "down" && !isTesterHundered && lastScrollY < 100) {
       setStyles({
-        transform: "scale(20) translate(8rem, -3rem)",
+        transform: "scale(30) translate(8rem, -3rem)",
         transition: "all 1s cubic-bezier(0.76, 0.18, 0.92, 0.53)",
       });
 

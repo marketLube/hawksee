@@ -90,31 +90,37 @@ function Blogs() {
           pointerEvents: "auto",
         }}
       >
-        <button
-          className="back-button animate-slide-up"
-          onClick={() => navigate("/")}
-          style={{
-            borderRadius: "50%",
-            background: "transparent",
-            border: "1px solid white",
-            cursor: "pointer",
-            zIndex: 100,
-            width: "40px",
-            height: "40px",
-            animationDelay: "0.1s",
-          }}
-          aria-label="Go back to the previous page"
-        >
-          <FiArrowLeft size={20} color="white" />
-        </button>
         <div className="blogs__content">
+          <div
+            style={{
+              height: "50px",
+            }}
+          >
+            <button
+              className="back-button-blogs animate-slide-up"
+              onClick={() => navigate("/")}
+              style={{
+                borderRadius: "50%",
+                background: "transparent",
+                border: "1px solid white",
+                cursor: "pointer",
+                zIndex: 100,
+                width: "40px",
+                height: "40px",
+
+                animationDelay: "0.1s",
+              }}
+              aria-label="Go back to the previous page"
+            >
+              <FiArrowLeft size={20} color="white" />
+            </button>
+          </div>
           <h2
             className="blogs__title animate-slide-up"
             style={{ fontWeight: 700, animationDelay: "0.2s" }}
           >
             Blogs
           </h2>
-
           <div
             className="blogs__filters animate-slide-up"
             style={{ animationDelay: "0.3s" }}
@@ -129,9 +135,7 @@ function Blogs() {
               </button>
             ))}
           </div>
-
           <hr className="animate-slide-up" style={{ animationDelay: "0.4s" }} />
-
           <div className="blogs__grid">
             {filteredPosts.map((post, index) => (
               <div

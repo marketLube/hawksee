@@ -111,7 +111,7 @@
 
   @media screen and (max-width: 400px) {
     width: 100%;
-    height: 60vh !important;
+    height: fit-content !important;
   }
 }
 
@@ -154,6 +154,7 @@
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  background-color: #fde6de;
   img {
     position: absolute;
     top: 0;
@@ -162,6 +163,9 @@
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    @include responsive.respond(smallPhone) {
+      object-fit: contain;
+    }
   }
 
   @include responsive.respond(bigTablets) {
@@ -177,7 +181,8 @@
   }
 
   @include responsive.respond(smallPhone) {
-    min-height: 15rem;
+    min-height: 7rem;
+    width: 80%;
   }
 }
 

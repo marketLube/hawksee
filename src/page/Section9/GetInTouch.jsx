@@ -125,7 +125,7 @@ export const GetInTouch = () => {
                 </p>
 
                 <a
-                  href="tel:0495290199"
+                  href="tel:+919995000123"
                   className="get-in-touch__phone"
                   aria-label="Phone number for contact"
                 >
@@ -138,19 +138,17 @@ export const GetInTouch = () => {
               aria-label="Social media contact information"
             >
               <a
-                onClick={() =>
-                  window.open("mailto:hello@hawksee.org", "_blank")
-                }
+                onClick={() => window.open("mailto:info@hawksee.in", "_blank")}
                 aria-label="Email contact for Hawksee"
-                href="mailto:hello@hawksee.org"
+                href="mailto:info@hawksee.in"
               >
                 info@hawksee.in
               </a>
 
               <a
-                onClick={() => window.open("tel:0495290199")}
+                onClick={() => window.open("tel:+919995000123")}
                 aria-label="Click to call the phone number +91 9995000123"
-                href="tel:0495290199"
+                href="tel:+919995000123"
               >
                 +91 9995000123
               </a>
@@ -212,7 +210,7 @@ export const GetInTouch = () => {
             <FaWhatsapp className="social-media-icon" />
           </a>
           <a
-            href="https://www.google.com/maps/place/Your+Location"
+            href="https://www.google.com/maps/dir//5%2F639R,+1st+Floor,City+Gate+Building,Sales+tax+Office+Road,+Mini+Bypass+Rd,+Eranhippalam,+Kozhikode,+Kerala+673006/@11.2731806,75.7049318,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba65eb44503b7ab:0x64560d1415439a42!2m2!1d75.7873337!2d11.273192?hl=en-IN&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="social-media-link"

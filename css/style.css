@@ -518,8 +518,8 @@ a {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .paragraph__imageDiv__image1 {
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -574,8 +574,8 @@ a {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .paragraph__imageDiv__image2 {
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
     margin-left: 3rem;
     margin-right: 3rem;
   }
@@ -634,8 +634,8 @@ a {
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .paragraph__imageDiv__image3 {
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -703,7 +703,7 @@ a {
     line-height: normal;
     padding: 0rem;
     min-width: 550px;
-    opacity: 0;
+    opacity: 1;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {

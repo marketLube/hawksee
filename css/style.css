@@ -5488,8 +5488,10 @@ a {
   position: relative;
 }
 .blog-section__title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 7rem;
+  margin-bottom: 3rem;
+  text-align: start;
+  width: 100%;
 }
 .blog-section__grid {
   display: grid;

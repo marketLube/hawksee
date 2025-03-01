@@ -99,7 +99,13 @@
     }
   }
 }
-
+@media (max-width: 768px) {
+  .research {
+    &__step {
+      width: 70%;
+    }
+  }
+}
 @media (max-width: 600px) {
   .research {
     padding: 0px 20px;

@@ -39,7 +39,11 @@ export const GetInTouch = () => {
             aria-label="Get in touch content"
           >
             <div className="get-in-touch__logo" aria-label="Get in touch logo">
-              <img src={hawksee} alt="Hawksee Logo" aria-label="Hawksee Logo" />
+              <img
+                src={LogoFoot}
+                alt="Hawksee Logo"
+                aria-label="Hawksee Logo"
+              />
             </div>
             <div
               className="get-in-touch-about"

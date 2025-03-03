@@ -22,45 +22,6 @@
   -ms-flex-direction: column;
   flex-direction: column;
 
-  @include responsive.respond(bigDesktop) {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-
-  @include responsive.respond(desktop) {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-
-  @include responsive.respond(bigTablets) {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-  @include responsive.respond(tablets) {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-  @include responsive.respond(phone) {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-  @include responsive.respond(smallPhone) {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-
-  @media (max-width: 399px) {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-
   &__container {
     width: 100%;
     margin: 0 auto;
@@ -94,7 +55,7 @@
     @include responsive.respond(phone) {
       font-size: 5rem;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     @include responsive.respond(smallPhone) {
       font-size: 3.5rem;
@@ -119,13 +80,13 @@
     width: 100%;
 
     @include responsive.respond(bigDesktop) {
-      gap: 20rem;
-    }
-    @include responsive.respond(desktop) {
       gap: 15rem;
     }
+    @include responsive.respond(desktop) {
+      gap: 5rem;
+    }
     @include responsive.respond(bigTablets) {
-      gap: 7rem;
+      gap: 0rem;
     }
     @include responsive.respond(tablets) {
       gap: 0rem;
@@ -151,43 +112,48 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     gap: 1rem;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
-    padding-left: -3rem;
-    // height: 500px;
-    // width: 500px;
+    padding: 8rem;
+    @include responsive.respond(bigDesktop) {
+      padding: 5rem;
+    }
+    @include responsive.respond(desktop) {
+      padding: 4rem;
+    }
+    @include responsive.respond(bigTablets) {
+      padding: 4rem;
+    }
+    @include responsive.respond(tablets) {
+      padding: 2rem;
+    }
+    @include responsive.respond(phone) {
+      padding: 0rem;
+      padding-bottom: 9rem;
+    }
+    @include responsive.respond(smallPhone) {
+      padding: 8rem 0rem 2rem 0rem;
+    }
 
     img {
-      width: 550px;
-      height: auto;
-      position: relative;
-
       @include responsive.respond(bigDesktop) {
-        width: 480px;
+        padding: 5rem;
       }
       @include responsive.respond(desktop) {
-        width: 420px;
+        padding: 4rem;
       }
       @include responsive.respond(bigTablets) {
-        width: 330px;
+        padding: 0rem;
       }
       @include responsive.respond(tablets) {
-        width: 250px;
-        bottom: 70px;
+        padding: 0rem;
+        height: 200px;
       }
       @include responsive.respond(phone) {
-        width: 300px;
-        bottom: 70px;
       }
       @include responsive.respond(smallPhone) {
-        width: 350px;
-        bottom: -30px;
+        height: 200px;
       }
     }
 

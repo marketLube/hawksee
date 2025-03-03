@@ -870,55 +870,6 @@ a {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
-  .get-in-touch {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
-  .get-in-touch {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .get-in-touch {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .get-in-touch {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767.98px) {
-  .get-in-touch {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-}
-@media only screen and (max-width: 575.98px) {
-  .get-in-touch {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-}
-@media (max-width: 399px) {
-  .get-in-touch {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-}
 .get-in-touch__container {
   width: 100%;
   margin: 0 auto;
@@ -962,7 +913,7 @@ a {
   .get-in-touch__title {
     font-size: 5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
@@ -989,17 +940,17 @@ a {
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .get-in-touch__content {
-    gap: 20rem;
+    gap: 15rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .get-in-touch__content {
-    gap: 15rem;
+    gap: 5rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .get-in-touch__content {
-    gap: 7rem;
+    gap: 0rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -1030,52 +981,66 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  padding-left: -3rem;
+  padding: 8rem;
 }
-.get-in-touch__logo img {
-  width: 550px;
-  height: auto;
-  position: relative;
+@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
+  .get-in-touch__logo {
+    padding: 5rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  .get-in-touch__logo {
+    padding: 4rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .get-in-touch__logo {
+    padding: 4rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .get-in-touch__logo {
+    padding: 2rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__logo {
+    padding: 0rem;
+    padding-bottom: 9rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__logo {
+    padding: 8rem 0rem 2rem 0rem;
+  }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .get-in-touch__logo img {
-    width: 480px;
+    padding: 5rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .get-in-touch__logo img {
-    width: 420px;
+    padding: 4rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .get-in-touch__logo img {
-    width: 330px;
+    padding: 0rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__logo img {
-    width: 250px;
-    bottom: 70px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767.98px) {
-  .get-in-touch__logo img {
-    width: 300px;
-    bottom: 70px;
+    padding: 0rem;
+    height: 200px;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__logo img {
-    width: 350px;
-    bottom: -30px;
+    height: 200px;
   }
 }
 .get-in-touch__logo span {
@@ -5744,6 +5709,7 @@ a {
   font-weight: 500;
   display: inline-block;
   margin-top: auto;
+  text-decoration: underline;
 }
 .blog-card__link:hover {
   text-decoration: underline;
@@ -5862,7 +5828,7 @@ a {
 .blogs .blog-card {
   background: transparent;
   border: none;
-  max-width: 25rem;
+  max-width: 100%;
 }
 .blogs .blog-card__image {
   width: 100%;
@@ -5905,6 +5871,7 @@ a {
   align-items: center;
   gap: 0.5rem;
   font-weight: 500;
+  text-decoration: underline;
 }
 .blogs .blog-card__link:hover {
   text-decoration: underline;
@@ -5926,6 +5893,16 @@ a {
   }
   .blogs__grid {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 992px) {
+  .blogs__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1199px) {
+  .blogs__grid {
+    grid-template-columns: 2fr;
   }
 }
 

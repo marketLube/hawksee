@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 
 export const Research = () => {
   useEffect(() => {
+    let scrollTimeout;
+
     const handleScroll = () => {
       const numbers = document.querySelectorAll(".research__step-number");
       const scrollPosition = window.scrollY;
@@ -14,12 +16,20 @@ export const Research = () => {
 
         // Calculate the distance from the center of the viewport
         const distanceFromCenter = elementCenter - viewportCenter;
-        const movement = distanceFromCenter * 0.1;
+        const movement = distanceFromCenter * 0.15;
 
-        // Apply the transform with cubic-bezier transition
-        number.style.transition = "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
+        // Remove transition during active scrolling for smoother movement
+        number.style.transition = "none";
         number.style.transform = `translate(-50%, calc(-50% + ${movement}px))`;
       });
+
+      // Add transition back after scroll ends
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        numbers.forEach((number) => {
+          number.style.transition = "transform 0.3s ease-out";
+        });
+      }, 150);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,7 +37,10 @@ export const Research = () => {
     // Initial call to set positions
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeout);
+    };
   }, []);
 
   const steps = [
@@ -72,7 +85,7 @@ export const Research = () => {
               index % 2 === 0 ? "research__step--left" : "research__step--right"
             }`}
           >
-            {/* <div className="research__step-number">{step.number}</div> */}
+            <div className="research__step-number">{step.number}</div>
             <div className="research__step-content">
               <h3 className="research__step-title">
                 <span> {step.number}</span>

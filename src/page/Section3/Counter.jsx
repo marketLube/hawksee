@@ -3,7 +3,7 @@ import ScrollTrigger from "react-scroll-trigger";
 import { Button } from "../../components/Button";
 import { FiArrowDownRight } from "react-icons/fi";
 import { useRef, useState } from "react";
-
+import portfolio from "./../../assets/Hawksee_Portfo.pdf";
 export const Counter = () => {
   const [animate, setAnimate] = useState(false);
   const ref = useRef(null);
@@ -23,6 +23,17 @@ export const Counter = () => {
     } else {
       console.error(`Element with ID ${sectionId} not found`);
     }
+  };
+
+  const handleDownload = () => {
+    const pdfUrl = portfolio;
+
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Hawksee_Portfolio.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -95,11 +106,10 @@ export const Counter = () => {
         <div className="buttondivCounter">
           <Button
             className="portfolio-btn"
-            onClick={() => handleButtonClick("works")}
             aria-label="View portfolio button"
-            href="#works"
+            onClick={handleDownload}
           >
-            View Portfolio <FiArrowDownRight />
+            Download Portfolio <FiArrowDownRight />
           </Button>
         </div>
       </div>

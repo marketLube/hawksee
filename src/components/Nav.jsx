@@ -16,7 +16,7 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
     },
     {
       id: 2,
-      navTitle: "Blogs",
+      navTitle: "Services",
     },
     {
       id: 3,
@@ -24,6 +24,10 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
     },
     {
       id: 4,
+      navTitle: "Blogs",
+    },
+    {
+      id: 5,
       navTitle: "Contact",
     },
   ];
@@ -142,6 +146,8 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
       window.location.hash = "projects";
     } else if (navTitle === "Contact") {
       window.open("https://wa.me/919995000123", "_blank");
+    } else if (navTitle === "Services") {
+      window.location.href = "#serviceDetails";
     } else {
       const hashValue = navTitle.toLowerCase().trim();
       window.location.hash = `#${hashValue}`;

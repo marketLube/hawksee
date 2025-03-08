@@ -128,7 +128,7 @@ export const MeetTheTeam = () => {
       swiperRef.current.autoplay.start();
     }
   };
-
+// a
   return (
     <div className="meet" aria-label="Meet the team section">
       <h2 className="meet-head" aria-label="Meet the team title">

@@ -128,7 +128,7 @@ export const MeetTheTeam = () => {
       swiperRef.current.autoplay.start();
     }
   };
-// a
+
   return (
     <div className="meet" aria-label="Meet the team section">
       <h2 className="meet-head" aria-label="Meet the team title">
@@ -161,11 +161,11 @@ export const MeetTheTeam = () => {
             },
             576: {
               slidesPerView: 2,
-              spaceBetween: 5,
+              spaceBetween: 10,
             },
             768: {
               slidesPerView: 3,
-              spaceBetween: 20,
+              spaceBetween: 10,
             },
             992: {
               slidesPerView: 3,

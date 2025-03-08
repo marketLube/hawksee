@@ -92,13 +92,26 @@
     }
 
     .swiper {
-      // padding: 0 20px;
+      padding: 0 20px;
       overflow: visible;
+     // Fix for center alignment issues
+     &-wrapper {
+      display: flex;
+      align-items: center;
+      box-sizing: content-box;
     }
-
+  }
     .swiper-slide {
       width: 60rem  !important;
       height: auto !important;
+      transition: all 0.4s ease;
+      // opacity: 0.5;
+      transform: scale(0.85);
+
+      &-active {
+        opacity: 1;
+        transform: scale(1);
+      }
 
       @include responsive.respond(bigTablets) {
         width: 50rem !important;
@@ -109,13 +122,16 @@
       }
 
       @include responsive.respond(phone) {
-        width: 34rem !important;
+        width: 26rem !important;
       }
 
       @include responsive.respond(smallPhone) {
-        width: 21.5rem !important;
+        width: 16.5rem !important;
       }
+
     }
+
+
 
     .swiper-pagination-fraction,
     .swiper-pagination-custom,
@@ -195,9 +211,9 @@
     }
 }
 
-  &:hover {
-    transform: translateY(-5px);
-  }
+  // &:hover {
+  //   transform: translateY(-5px);
+  // }
 
   &__image {
     width: 100%;
@@ -212,7 +228,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 2rem;
+      padding: 1.2rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -222,7 +238,7 @@
 
     @include responsive.respond(tablets) {
       height: 21rem;
-      padding: 0rem;
+      padding: 2rem;
     }
 
     @include responsive.respond(phone) {
@@ -233,7 +249,8 @@
 
     @include responsive.respond(smallPhone) {
       height: 13rem;
-      padding: 1rem;
+      padding: 0rem;
+width: 0px;
 
     }
   }

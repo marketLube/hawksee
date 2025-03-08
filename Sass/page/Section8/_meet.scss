@@ -3,20 +3,26 @@
 
 .meet {
   background-color: variables.$color-primery-light;
-  min-height: 80vh;
+  min-height: 60vh;
   position: relative;
 
   @include responsive.respond(desktop) {
-    min-height: 110vh;
+    min-height: 38vh;
   }
 
   @include responsive.respond(bigTablets) {
-    min-height: 100vh;
+    min-height: 38vh;
   }
 
+  // @include responsive.respond(bigTablets) {
+  //   min-height: 65vh;
+  // }
+
+
   @media screen and (width: 1024px) and (height: 1366px) {
-    min-height: 65vh;
+    min-height: 45vh;
   }
+
 
   @include responsive.respond(tablets) {
     min-height: -webkit-fit-content;
@@ -40,14 +46,14 @@
   }
 
   &-head {
-    font-size: 7rem;
+    font-size: 6rem;
     padding-left: 2rem;
     padding-top: 4rem;
     padding-bottom: 3rem;
 
     @include responsive.respond(bigTablets) {
       font-size: 5.5rem;
-      padding-left: 6rem;
+      // padding-left: 6rem;
     }
     @include responsive.respond(tablets) {
       font-size: 4.5rem;
@@ -57,7 +63,7 @@
     }
     @include responsive.respond(desktop) {
       font-size: 5.5rem;
-      padding-left: 6rem;
+      // padding-left: 6rem;
       padding-top: 3rem;
     }
 
@@ -80,21 +86,21 @@
   height: 100%;
   @include responsive.respond(desktop) {
     width: 90%;
-    height: 78vh;
+    height: 38vh;
   }
 
   @include responsive.respond(bigTablets) {
     width: 90%;
-    height: 75vh;
+    height: 35vh;
   }
 
   @media screen and (width: 1024px) and (height: 1366px) {
-    height: 45vh;
+    height: 30vh;
   }
 
   @include responsive.respond(tablets) {
     width: 95%;
-    height: 55vh;
+    height: 38vh;
   }
 
   @include responsive.respond(phone) {
@@ -146,7 +152,7 @@
   text-align: start;
   position: relative;
   // background-color: #fde6de;
-background: transparent;
+  background: transparent;
   transition: filter 0.3s ease;
 
   img {
@@ -188,8 +194,12 @@ background: transparent;
   }
 
   @include responsive.respond(smallPhone) {
-    min-height: 13rem;
-        width: 82%;
+    min-height: 14rem;
+    width: 82%;
+  }
+  @media (max-width: 376px) {
+    min-height: 9rem;
+    width: 82%;
   }
   @include responsive.respond(desktop) {
     min-height: 16rem;
@@ -200,20 +210,23 @@ background: transparent;
 
 .swiper-slide {
   text-align: start;
-
+height: auto;
 
   h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
     margin-top: -3rem;
 
 
     @include responsive.respond(tablets) {
-      font-size: 1.6rem;
+      font-size: 1rem;
+    }
+    @include responsive.respond(bigDesktop) {
+      font-size: 1.2rem;
     }
 
     @include responsive.respond(phone) {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       text-align: center;
     }
 
@@ -225,8 +238,8 @@ background: transparent;
   }
 
   p {
-    font-size: 1.2rem;
-    color: #000000;
+    font-size: 1rem;
+    color: #838383;
     // margin-top: 0.5rem;
 
     @include responsive.respond(tablets) {
@@ -251,6 +264,7 @@ background: transparent;
   &:hover {
     .team-member img {
       filter: grayscale(0%);
+      // scale: 1.1;
     }
 
     ~ .swiper-slide .team-member img {

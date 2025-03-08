@@ -11,35 +11,54 @@
   padding: 20px 0;
 
 
+
   &__title {
-    font-size: 7rem;
+    font-size: 6.5rem;
     margin-bottom: 3rem;
     text-align: start;
     width: 100%;
     padding-left: 30px;
+    margin-top: 4%;
 
     @include responsive.respond(bigTablets) {
       font-size: 6rem;
-    }
-
-    @include responsive.respond(desktop) {
+      // padding-left: 85px;
       font-size: 5rem;
     }
 
+    @include responsive.respond(desktop) {
+      font-size: 5.5rem;
+      // padding-left: 85px;
+
+    }
+
+    @include responsive.respond(bigDesktop) {
+      font-size: 4rem;
+    }
+
     @include responsive.respond(tablets) {
-      font-size: 4.5rem;
+      font-size: 4rem;
+     text-align: center;
+     margin-top: 0%;
+     margin-bottom: 2%;
+
+
     }
 
     @include responsive.respond(smallPhone) {
       margin-top: 1.5rem;
       font-size: 2rem;
       max-width: 100vw;
+     text-align: center;
+      // max-width: 2rem;
     }
+
     @include responsive.respond(phone) {
       font-size: 3.2rem;
       max-width: 120vw;
       padding-left: 5px;
       margin-top: 1.5rem;
+
     }
   }
 
@@ -114,11 +133,11 @@
       }
 
       @include responsive.respond(bigTablets) {
-        width: 50rem !important;
+        width: 48rem !important;
       }
 
       @include responsive.respond(tablets) {
-        width: 40rem !important;
+        width: 35rem !important;
       }
 
       @include responsive.respond(phone) {
@@ -128,7 +147,6 @@
       @include responsive.respond(smallPhone) {
         width: 16.5rem !important;
       }
-
     }
 
 
@@ -189,7 +207,7 @@
   margin: 0 0.9rem;
 
     &__title{
-  font-size: 1.6rem;
+    font-size: 1.6rem;
     margin-bottom: 0.75rem;
     font-weight: 100;
     max-width: 44rem;
@@ -237,7 +255,12 @@
     }
 
     @include responsive.respond(tablets) {
-      height: 21rem;
+      height: 19rem;
+      padding: 2rem;
+    }
+
+    @include responsive.respond(bigTablets) {
+      height: 24rem;
       padding: 2rem;
     }
 
@@ -250,7 +273,6 @@
     @include responsive.respond(smallPhone) {
       height: 13rem;
       padding: 0rem;
-width: 0px;
 
     }
   }

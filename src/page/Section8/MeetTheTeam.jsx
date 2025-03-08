@@ -21,7 +21,7 @@ export const MeetTheTeam = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "ASHRAF",
+      name: "Ashraf",
       position: "CEO",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987050/ashrafceo_n2bbx0.jpg",
@@ -37,7 +37,7 @@ export const MeetTheTeam = () => {
     },
     {
       id: 3,
-      name: "HIBA",
+      name: "Hiba",
       position: "PRODUCTION MANAGER",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987042/hibaProductionManager_skotsv.jpg",
@@ -45,7 +45,7 @@ export const MeetTheTeam = () => {
     },
     {
       id: 4,
-      name: "SHEETHAL",
+      name: "Sheethal",
       position: "CRM",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987041/sheethalCrm_idgo2q.jpg",
@@ -53,7 +53,7 @@ export const MeetTheTeam = () => {
     },
     {
       id: 5,
-      name: "ARUN",
+      name: "Arun",
       position: "CREATIVE HEAD",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987045/arunCreativeHead_poywrm.jpg",
@@ -61,7 +61,7 @@ export const MeetTheTeam = () => {
     },
     {
       id: 6,
-      name: "ASHIQ",
+      name: "Ashiq",
       position: "WEB DEVELOPER",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987069/ashiqWebdeveloper_whdfj4.jpg",
@@ -69,7 +69,7 @@ export const MeetTheTeam = () => {
     },
     {
       id: 7,
-      name: "SAFNA",
+      name: "Safna",
       position: "ACCOUNTS",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987072/safnaAccounts_trhozu.jpg",
@@ -77,7 +77,7 @@ export const MeetTheTeam = () => {
     },
     {
       id: 8,
-      name: "NIYAS",
+      name: "Niyas",
       position: "VIDEO EDITOR",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987066/niyasVideoEditor_k0ewdb.jpg",
@@ -86,7 +86,7 @@ export const MeetTheTeam = () => {
 
     {
       id: 9,
-      name: "NIKHIL",
+      name: "Nikhil",
       position: "SR. GRAPHIC DESIGHNER",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987044/nikhilsrGraphicDesigner_huq3tr.jpg",
@@ -95,7 +95,7 @@ export const MeetTheTeam = () => {
 
     {
       id: 10,
-      name: "SHAHAL",
+      name: "Shahal",
       position: "CONTENT CREATOR",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987045/shahalContentCreator_u8ic7h.jpg",
@@ -104,7 +104,7 @@ export const MeetTheTeam = () => {
 
     {
       id: 11,
-      name: "SHAHID",
+      name: "Shahid",
       position: "GRAPHIC DESIGNER",
       image:
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987042/shahidGraphicDesigner_idecbb.jpg",

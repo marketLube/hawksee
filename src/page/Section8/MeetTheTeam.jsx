@@ -112,6 +112,23 @@ export const MeetTheTeam = () => {
     },
   ];
 
+  const swiperRef = React.useRef(null);
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (swiperRef.current && swiperRef.current.autoplay) {
+      swiperRef.current.autoplay.stop();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    if (swiperRef.current && swiperRef.current.autoplay) {
+      swiperRef.current.autoplay.start();
+    }
+  };
+
   return (
     <div className="meet" aria-label="Meet the team section">
       <h2 className="meet-head" aria-label="Meet the team title">
@@ -119,6 +136,9 @@ export const MeetTheTeam = () => {
       </h2>
       <article className="swiper-container" aria-label="Swiper container">
         <Swiper
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
           slidesPerView={4}
           spaceBetween={100}
           pagination={{
@@ -141,7 +161,7 @@ export const MeetTheTeam = () => {
             },
             576: {
               slidesPerView: 2,
-              spaceBetween: 10,
+              spaceBetween: 5,
             },
             768: {
               slidesPerView: 3,
@@ -149,15 +169,15 @@ export const MeetTheTeam = () => {
             },
             992: {
               slidesPerView: 3,
-              spaceBetween: 50,
+              spaceBetween: 30,
             },
             1200: {
               slidesPerView: 3.5,
-              spaceBetween: 100,
+              spaceBetween: 20,
             },
             1300: {
               slidesPerView: 4,
-              spaceBetween: 50,
+              spaceBetween: 20,
             },
             1400: {
               slidesPerView: 5,
@@ -171,8 +191,13 @@ export const MeetTheTeam = () => {
             <SwiperSlide
               key={member.id}
               aria-label={`Team member ${member.name}`}
-            >
-              <div className="team-member" aria-label="Team member">
+             >
+              <div
+                className={`team-member ${isHovered ? 'can-hover' : ''}`}
+                aria-label="Team member"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
                 <img
                   src={member.image}
                   alt={member.name + " " + member.position}

@@ -77,7 +77,7 @@
 }
 .swiper {
   width: 85%;
-  height: 65vh;
+  height: 100%;
   @include responsive.respond(desktop) {
     width: 90%;
     height: 78vh;
@@ -102,7 +102,7 @@
   }
 
   @include responsive.respond(smallPhone) {
-    width: 100%;
+    width: 90%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -132,85 +132,80 @@
 }
 
 .team-member {
-  text-align: center;
+  // text-align: center;
   min-height: 20rem;
   width: 100%;
   margin: 0 auto;
-  border-radius: 2rem;
-  border: 3px solid #000;
+  border-radius: 0.8rem;
+  // border: 3px solid #000;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 4rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  justify-content: start;
+  text-align: start;
   position: relative;
-  background-color: #fde6de;
+  // background-color: #fde6de;
+background: transparent;
+  transition: filter 0.3s ease;
+
   img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+
     @include responsive.respond(smallPhone) {
       object-fit: contain;
+      // border-radius: 0.8rem;
+    }
+  }
+
+  &:hover {
+    img {
+      filter: grayscale(0%);
     }
   }
 
   @include responsive.respond(bigTablets) {
-    min-height: 28rem;
+    min-height: 20rem;
   }
 
   @include responsive.respond(tablets) {
-    min-height: 25rem;
+    min-height: 20rem;
+    // width: 82%;
+
   }
 
   @include responsive.respond(phone) {
-    min-height: 22rem;
+    min-height: 16rem;
+    width: 82%;
+// padding-left: 3rem;
   }
 
   @include responsive.respond(smallPhone) {
-    min-height: 7rem;
-    width: 80%;
+    min-height: 13rem;
+        width: 82%;
   }
+  @include responsive.respond(desktop) {
+    min-height: 16rem;
+        width: 100%;
+  }
+
 }
 
 .swiper-slide {
-  text-align: center;
-
-  @include responsive.respond(bigTablets) {
-  }
-
-  @include responsive.respond(tablets) {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-
-  @include responsive.respond(phone) {
-  }
-
-  @include responsive.respond(smallPhone) {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
+  text-align: start;
 
   h3 {
     font-size: 1.8rem;
     font-weight: 600;
-    margin-top: -2rem;
+    margin-top: -3rem;
+
 
     @include responsive.respond(tablets) {
       font-size: 1.6rem;
@@ -218,17 +213,20 @@
 
     @include responsive.respond(phone) {
       font-size: 1.4rem;
+      text-align: center;
     }
 
     @include responsive.respond(smallPhone) {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      margin-top: -4rem;
+      text-align: center;
     }
   }
 
   p {
     font-size: 1.2rem;
     color: #000000;
-    margin-top: 0.5rem;
+    // margin-top: 0.5rem;
 
     @include responsive.respond(tablets) {
       font-size: 1.1rem;
@@ -236,11 +234,34 @@
 
     @include responsive.respond(phone) {
       font-size: 1rem;
+      text-align: center;
     }
 
     @include responsive.respond(smallPhone) {
       font-size: 0.8rem;
       white-space: nowrap;
+      // margin-left: 2.8rem;
+      text-align: center;
+// margin-bottom: 4.2rem;
+// margin-top: 2rem;
     }
+  }
+
+  &:hover {
+    .team-member img {
+      filter: grayscale(0%);
+    }
+
+    ~ .swiper-slide .team-member img {
+      filter: grayscale(100%);
+    }
+  }
+
+  @include responsive.respond(tablets) {
+    height: fit-content;
+  }
+
+  @include responsive.respond(smallPhone) {
+    height: fit-content;
   }
 }

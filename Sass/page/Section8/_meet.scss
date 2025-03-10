@@ -85,14 +85,14 @@
   width: 85%;
   height: 100%;
   @include responsive.respond(desktop) {
-    width: 90%;
-    height: 38vh;
+    // width: 90%;
+    // height: 80%;
   }
 
-  @include responsive.respond(bigTablets) {
-    width: 90%;
-    height: 35vh;
-  }
+  // @include responsive.respond(bigTablets) {
+  //   width: 90%;
+  //   height: 35vh;
+  // }
 
   @media screen and (width: 1024px) and (height: 1366px) {
     height: 30vh;
@@ -100,7 +100,7 @@
 
   @include responsive.respond(tablets) {
     width: 95%;
-    height: 38vh;
+    // height: 38vh;
   }
 
   @include responsive.respond(phone) {
@@ -147,7 +147,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 0.5rem;
   justify-content: start;
   text-align: start;
   position: relative;
@@ -194,7 +194,7 @@
   }
 
   @include responsive.respond(smallPhone) {
-    min-height: 14rem;
+    min-height: 12rem;
     width: 82%;
   }
   @media (max-width: 376px) {
@@ -210,30 +210,38 @@
 
 .swiper-slide {
   text-align: start;
-height: auto;
+   height: 20rem;
+
 
   h3 {
     font-size: 1.2rem;
     font-weight: 500;
-    margin-top: -3rem;
+    // margin-top: -3rem;
 
 
     @include responsive.respond(tablets) {
       font-size: 1rem;
+      // margin-top: -5rem;
+
     }
     @include responsive.respond(bigDesktop) {
       font-size: 1.2rem;
     }
 
     @include responsive.respond(phone) {
-      font-size: 1.2rem;
+      font-size: 1rem;
       text-align: center;
     }
 
     @include responsive.respond(smallPhone) {
-      font-size: 1rem;
-      margin-top: -4rem;
+      font-size: 0.9rem;
+      // margin-top: -4rem;
       text-align: center;
+    }
+    @include responsive.respond(bigTablets) {
+      font-size: 1.2rem;
+      // margin-top: -6rem;
+
     }
   }
 
@@ -243,16 +251,16 @@ height: auto;
     // margin-top: 0.5rem;
 
     @include responsive.respond(tablets) {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     @include responsive.respond(phone) {
-      font-size: 1rem;
+      font-size: 0.8rem;
       text-align: center;
     }
 
     @include responsive.respond(smallPhone) {
-      font-size: 0.8rem;
+      font-size: 0.6rem;
       white-space: nowrap;
       // margin-left: 2.8rem;
       text-align: center;

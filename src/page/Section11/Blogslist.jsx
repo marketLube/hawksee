@@ -11,7 +11,6 @@ import { FiArrowUpRight } from "react-icons/fi";
 import React from "react";
 import { Button } from "../../components/Button";
 
-
 function Blog() {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -22,31 +21,31 @@ function Blog() {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   // Calculate slide width based on current window width
   const getSlideWidth = () => {
-    if (windowWidth < 576) return "90%"; // smallPhone - increased from 85% to reduce gap
-    if (windowWidth < 768) return "65%"; // phone
-    if (windowWidth < 992) return "60%"; // tablets
-    if (windowWidth < 1200) return "55%"; // bigTablets
-    if (windowWidth < 1400) return "50%"; // desktop
-    return "45%"; // bigDesktop
+    if (windowWidth < 576) return "95%"; // smallPhone - reduced for better side visibility
+    if (windowWidth < 768) return "55%"; // phone - reduced for better spacing
+    if (windowWidth < 992) return "50%"; // tablets - reduced for better spacing
+    if (windowWidth < 1200) return "45%"; // bigTablets - reduced for better spacing
+    if (windowWidth < 1400) return "40%"; // desktop - reduced for better spacing
+    return "35%"; // bigDesktop - reduced for better spacing
   };
 
   // Calculate offset for proper centering
   const getSlidesOffsetBefore = () => {
     // Add offset to ensure the left slide is fully visible
-    if (windowWidth < 576) return 10; // smallPhone - reduced from 15 to minimize gap
+    if (windowWidth < 576) return 2; // smallPhone - reduced from 15 to minimize gap
     if (windowWidth < 768) return 25; // phone
     if (windowWidth < 992) return 30; // tablets
     if (windowWidth < 1200) return 40; // bigTablets
     if (windowWidth < 1400) return 50; // desktop
-    return 60; // bigDesktop
+    return ; // bigDesktop
   };
 
   // Calculate number of visible slides
@@ -59,15 +58,16 @@ function Blog() {
     <div className="blog-section" id="blogs">
       <h2 className="blog-section__title">Thoughts & Updates</h2>
 
+      {/* <div className="gradient-left"></div>
+      <div className="gradient-right"></div> */}
+
       <div className="blog-section__grid">
         <Swiper
-          slidesPerView={getSlidesPerView()}
+          slidesPerView={"auto"}
           centeredSlides={true}
-          spaceBetween={windowWidth < 576 ? 2 : 8} // Reduced spacing from 4 to 2 for mobile
+          spaceBetween={0}
           loop={true}
-          loopedSlides={3}
           initialSlide={0}
-          slideToClickedSlide={true}
           pagination={{
             clickable: true,
           }}
@@ -83,12 +83,9 @@ function Blog() {
           className="mySwiper"
           wrapperClass="swiper-wrapper"
           cssMode={false}
-          // Ensure slides are positioned properly
-          loopFillGroupWithBlank={true}
-          loopAdditionalSlides={3} // Increased for smoother looping
-          centeredSlidesBounds={true}
-          slidesOffsetBefore={getSlidesOffsetBefore()} // Added offset for better alignment
-          slidesOffsetAfter={getSlidesOffsetBefore()} // Added matching end offset
+          loopFillGroupWithBlank={false}
+          loopAdditionalSlides={2}
+          centeredSlidesBounds={false}
         >
           {blogPosts.map((post) => (
             <SwiperSlide
@@ -96,16 +93,17 @@ function Blog() {
               aria-label={`Blog post ${post.title}`}
               style={{
                 width: getSlideWidth(),
-                transition: "all 0.4s ease"
+                margin: "0 10px",
               }}
+              onClick={() => navigate(`/blogs/${post.name}`)}
             >
               <div className="blog-card">
                 <div
                   className="blog-card__image"
                   style={{
                     background: `linear-gradient(180deg, rgba(0, 0, 0, 0.0) 55.67%, rgba(0, 0, 0, 0.35) 84.07%), url(${post.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }}
                 >
                   <div className="overlay-content">
@@ -113,17 +111,19 @@ function Blog() {
                       {post.categories.map((category, index) => (
                         <React.Fragment key={index}>
                           {category}
-                          {index < post.categories.length - 1 && <span className="separator">|</span>}
+                          {index < post.categories.length - 1 && (
+                            <span className="separator">|</span>
+                          )}
                         </React.Fragment>
                       ))}
                     </div>
                     <h3
                       className="blog-card__title"
                       style={{
-                        fontWeight: '400',
-                        textAlign: 'start',
-                        marginLeft: '0',
-                        marginTop: '-3rem'
+                        fontWeight: "400",
+                        textAlign: "start",
+                        marginLeft: "0",
+                        marginTop: "-3rem",
                       }}
                     >
                       {post.title}

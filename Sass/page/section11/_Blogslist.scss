@@ -93,7 +93,7 @@
     @include responsive.respond(phone) {
       font-size: 3.2rem;
       max-width: 120vw;
-      margin-top: 1.5rem;
+
       margin-bottom: 0;
 
 
@@ -105,7 +105,7 @@
     // overflow-x: hidden;
     overflow-x: auto;
 
-    margin-bottom: 1.8rem;
+    // margin-bottom: 1.8rem;
     // gap: 1rem;
     position: relative;
     background: transparent;
@@ -260,7 +260,8 @@
   &__footer {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin: 2rem;
+
   }
 
   // @media (max-width: 1080px) {

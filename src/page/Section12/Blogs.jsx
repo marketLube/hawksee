@@ -61,8 +61,10 @@ function Blogs() {
 
   const filteredPosts =
     activeFilter === "All"
-      ? blogPosts
-      : blogPosts.filter((post) => post.categories.includes(activeFilter));
+      ? blogPosts.slice(0, 3)
+      : blogPosts
+          .filter((post) => post.categories.includes(activeFilter))
+          .slice(0, 3);
 
   return (
     <div

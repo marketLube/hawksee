@@ -45,7 +45,7 @@ function Blog() {
     if (windowWidth < 992) return 30; // tablets
     if (windowWidth < 1200) return 40; // bigTablets
     if (windowWidth < 1400) return 50; // desktop
-    return ; // bigDesktop
+    return; // bigDesktop
   };
 
   // Calculate number of visible slides
@@ -53,6 +53,8 @@ function Blog() {
     // Use auto for automatic width calculation but with proper view
     return "auto";
   };
+
+  console.log(blogPosts, "asjdhjksdwdw");
 
   return (
     <div className="blog-section" id="blogs">

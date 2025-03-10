@@ -1,6 +1,6 @@
 import DigitalMarketing from "../assets/Blog/Blog_img.jpg";
 import SocialMediaMarketing from "../assets/Blog/marketing-black.jpg";
-import SEO from "../assets/Blog/SEO.jpg";
+import SEO from "../assets/Blog/seo-boost.jpg";
 
 export const blogPosts = [
   {
@@ -68,7 +68,6 @@ export const blogPosts = [
     description: `The COVID-19 pandemic has accelerated the growth of e-commerce, and this trend is expected to continue in the post-pandemic world. With more consumers shopping online than ever before, businesses need to adapt to the changing landscape. One of the key trends in e-commerce is the rise of mobile shopping. With the increasing use of smartphones, consumers are now able to shop from anywhere at any time. Another trend is the growing importance of social commerce, where consumers can purchase products directly through social media platforms. Personalization is also becoming a major focus in e-commerce, with businesses using data and AI to create personalized shopping experiences for their customers. As the e-commerce industry continues to evolve, businesses need to stay ahead of the curve by embracing new technologies and trends. Whether it’s through mobile optimization, social commerce, or personalized experiences, the future of e-commerce is all about meeting the needs of the modern consumer.`,
   },
 
-
   {
     id: 1,
     name: "Digital Marketing during Lockdown",
@@ -133,6 +132,4 @@ export const blogPosts = [
     title: "The Future of E-commerce in a Post-Pandemic World",
     description: `The COVID-19 pandemic has accelerated the growth of e-commerce, and this trend is expected to continue in the post-pandemic world. With more consumers shopping online than ever before, businesses need to adapt to the changing landscape. One of the key trends in e-commerce is the rise of mobile shopping. With the increasing use of smartphones, consumers are now able to shop from anywhere at any time. Another trend is the growing importance of social commerce, where consumers can purchase products directly through social media platforms. Personalization is also becoming a major focus in e-commerce, with businesses using data and AI to create personalized shopping experiences for their customers. As the e-commerce industry continues to evolve, businesses need to stay ahead of the curve by embracing new technologies and trends. Whether it’s through mobile optimization, social commerce, or personalized experiences, the future of e-commerce is all about meeting the needs of the modern consumer.`,
   },
-
-
 ];

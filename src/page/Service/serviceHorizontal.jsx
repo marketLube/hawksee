@@ -57,15 +57,20 @@ export default function StudyIn() {
   }, []);
 
   const getFlagsTransform = () => {
-    if (screenWidth >= 1600) {
+    if (screenWidth >= 1700) {
+      return [
+        `calc(50vw - ${100 / 4.5}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 2.45)}vw)`,
+      ];
+    } else if (screenWidth >= 1600) {
       return [
         `calc(50vw - ${100 / 4}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 2.8)}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 2.55)}vw)`,
       ];
     } else if (screenWidth >= 1400) {
       return [
         `calc(50vw - ${100 / 3}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 2.1)}vw)`,
+        `calc(-${(countries.length - 2) * (100 / 2.2)}vw)`,
       ];
     } else if (screenWidth >= 1200) {
       return [

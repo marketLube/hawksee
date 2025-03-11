@@ -93,11 +93,9 @@
     @include responsive.respond(phone) {
       font-size: 3.2rem;
       max-width: 120vw;
-
       margin-bottom: 0;
-
-
     }
+
   }
 
   &__grid {

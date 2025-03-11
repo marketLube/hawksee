@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import { blogPosts } from "../../Data/blogPosts";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FreeMode, Pagination, Autoplay } from "swiper/modules";
+import { FreeMode, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FiArrowUpRight } from "react-icons/fi";
 import React from "react";

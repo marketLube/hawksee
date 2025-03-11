@@ -17,13 +17,8 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 7%; // Adjust width as needed
-    background: linear-gradient(to right,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.95) 20%,
-      rgba(255, 255, 255, 0.7) 40%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    width: 5%; // Adjust width as needed
+    background: linear-gradient(to right, rgb(255, 255, 255) 24%, rgba(255, 255, 236, 97.95) 0%, rgba(255, 255, 255, 0.7) 37%, rgba(255, 255, 255, 0) 100%);
     z-index: 10;
     pointer-events: none;
   }
@@ -33,14 +28,8 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 7%; // Adjust width as needed
-    background: linear-gradient(to left,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.95) 20%,
-      rgba(255, 255, 255, 0.7) 40%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    z-index: 10;
+    width: 5%; // Adjust width as needed
+    background: linear-gradient(to left, rgb(255, 255, 319) 14%, rgba(255, 255, 255, 0.95) 18%, rgba(255, 255, 255, 0.8) 26%, rgba(255, 255, 255, 0) 100%);    z-index: 10;
     pointer-events: none;
   }
 
@@ -55,6 +44,7 @@
     padding-left: 2rem;
     padding-top: 4rem;
     padding-bottom: 3rem;
+    z-index: 11;
 
     @include responsive.respond(bigTablets) {
       font-size: 6rem;
@@ -111,50 +101,6 @@
     scrollbar-width: none;
     &::-webkit-scrollbar {
       display: none;
-    }
-
-    // Default gradient (desktop)
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 93%;
-      bottom: 0;
-      right: 0;
-      background: linear-gradient(to left,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.95) 20%,
-      rgba(255, 255, 255, 0.7) 40%,
-      rgba(255, 255, 255, 0) 100%
-    );
-      z-index: 10;
-      pointer-events: none;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 93%;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(to right,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.95) 20%,
-      rgba(255, 255, 255, 0.7) 40%,
-      rgba(255, 255, 255, 0) 100%
-    );
-      z-index: 10;
-      pointer-events: none;
-    }
-
-    @include responsive.respond(smallPhone) {
-      &::before {
-        left: 95%;
-      }
-      &::after {
-        right: 95%;
-      }
     }
 
 

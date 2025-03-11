@@ -64,6 +64,8 @@ function Blog() {
   return (
     <div className="blog-section" id="blogs">
       <h2 className="blog-section__title">Thoughts & Updates</h2>
+<div className="gradient-left"></div>
+<div className="gradient-right"></div>
 
       <div className="blog-section__grid">
         <Swiper
@@ -91,7 +93,7 @@ function Blog() {
           loopFillGroupWithBlank={true}
           loopAdditionalSlides={slidesData.length > 3 ? 2 : slidesData.length}
           centeredSlidesBounds={false}
-          grabCursor={true}
+          // grabCursor={true}
           watchSlidesProgress={true}
           observer={true}
           observeParents={true}

@@ -95,18 +95,16 @@
   }
 
   &-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 20rem;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 1rem;
+    width: 100%;
     list-style: none;
     margin: 4rem 0;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     & li {
       color: rgb(255, 255, 255);

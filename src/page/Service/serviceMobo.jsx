@@ -11,6 +11,11 @@ const serviceMobo = () => {
       img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-03_s18foa.webp",
     },
     {
+      title: "Performance Marketing",
+      description: "Data-driven ad campaigns to maximize conversions and ROI",
+      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-02_yv8ubf.webp",
+    },
+    {
       img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-01_wczbap.webp",
       title: "Social Media & Content Marketing",
       description:

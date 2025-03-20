@@ -3550,6 +3550,7 @@ a {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  white-space: nowrap;
 }
 .projects-nav li.active {
   background-color: rgb(255, 255, 255);
@@ -4729,14 +4730,20 @@ a {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .country-item img {
-    width: 450px;
-    height: 360px;
+    width: 430px;
+    height: 330px;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .country-item img {
+    width: 400px !important;
+    height: 320px !important;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .country-item img {
-    width: 500px;
-    height: 400px;
+    width: 460px;
+    height: 360px;
   }
 }
 .country-item p {

@@ -13,6 +13,11 @@ export default function StudyIn() {
         "Creating distinctive brand identities through innovative logos, marketing materials, and comprehensive design solutions.",
     },
     {
+      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-02_yv8ubf.webp",
+      title: "Performance Marketing",
+      description: "Data-driven ad campaigns to maximize conversions and ROI",
+    },
+    {
       img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-01_wczbap.webp",
       title: "Social Media & Content Marketing",
       description:
@@ -57,57 +62,27 @@ export default function StudyIn() {
   }, []);
 
   const getFlagsTransform = () => {
-    if (screenWidth >= 1700) {
-      return [
-        `calc(50vw - ${100 / 4.5}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 2.45)}vw)`,
-      ];
-    } else if (screenWidth >= 1600) {
-      return [
-        `calc(50vw - ${100 / 4}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 2.55)}vw)`,
-      ];
-    } else if (screenWidth >= 1400) {
-      return [
-        `calc(50vw - ${100 / 3}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 2.2)}vw)`,
-      ];
-    } else if (screenWidth >= 1200) {
-      return [
-        `calc(50vw - ${100 / 3.5}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 1.9)}vw)`,
-      ];
-    } else if (screenWidth >= 1100) {
-      return [
-        `calc(50vw - ${100 / 3.2}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 1.9)}vw)`,
-      ];
-    } else if (screenWidth >= 1024) {
-      return [
-        `calc(50vw - ${100 / 3.2}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 1.7)}vw)`,
-      ];
-    } else if (screenWidth >= 768) {
-      return [
-        `calc(50vw - ${100 / 3.5}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 1.3)}vw)`,
-      ];
-    } else if (screenWidth >= 992) {
-      return [
-        `calc(50vw - ${100 / 3.2}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 1)}vw)`,
-      ];
-    } else if (screenWidth >= 800) {
-      return [
-        `calc(50vw - ${100 / 3.2}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 1)}vw)`,
-      ];
-    } else {
-      return [
-        `calc(50vw - ${100 / 3}vw)`,
-        `calc(-${(countries.length - 2) * (100 / 2)}vw)`,
-      ];
-    }
+    const breakpoints = [
+      { width: 1700, divisor: 4.5, offsetDivisor: 2.95 },
+      { width: 1600, divisor: 4, offsetDivisor: 2.55 },
+      { width: 1400, divisor: 3, offsetDivisor: 2.42 },
+      { width: 1200, divisor: 3.5, offsetDivisor: 2.2 },
+      { width: 1100, divisor: 3.2, offsetDivisor: 1.9 },
+      { width: 1024, divisor: 3.2, offsetDivisor: 1.7 },
+      { width: 768, divisor: 3.5, offsetDivisor: 1.3 },
+      { width: 992, divisor: 3.2, offsetDivisor: 1 },
+      { width: 800, divisor: 3.2, offsetDivisor: 1 },
+      { width: 0, divisor: 3, offsetDivisor: 2 },
+    ];
+
+    const { divisor, offsetDivisor } = breakpoints.find(
+      (bp) => screenWidth >= bp.width
+    );
+
+    return [
+      `calc(50vw - ${100 / divisor}vw)`,
+      `calc(-${(countries.length - 2) * (100 / offsetDivisor)}vw)`,
+    ];
   };
 
   const flagsX = useTransform(scrollYProgress, [0, 1], getFlagsTransform());

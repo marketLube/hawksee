@@ -28,6 +28,19 @@ const ServiceDetails = () => {
     },
     {
       id: 2,
+      title: "Performance Marketing",
+      subtitle: "Data-driven ad campaigns to maximize conversions and ROI",
+      descPara1:
+        "We create data-driven ad campaigns that target the right audience, measure results, and optimize for maximum ROI.",
+      descPara2:
+        "From Google Ads to social media campaigns, we ensure your brand reaches the right people at the right time with the right message.",
+      descPara3:
+        "Our performance marketing strategies are designed to deliver measurable results, helping you achieve your business goals.",
+      image:
+        "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-02_yv8ubf.webp",
+    },
+    {
+      id: 3,
       title: "Social Media & Content Marketing",
       subtitle: "Get Noticed, Get Engaged",
 
@@ -41,7 +54,7 @@ const ServiceDetails = () => {
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-01_wczbap.webp",
     },
     {
-      id: 3,
+      id: 4,
       title: "Creative Content & Video Production",
       subtitle: "Make an Impact",
 
@@ -55,7 +68,7 @@ const ServiceDetails = () => {
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-04_htxnpe.webp",
     },
     {
-      id: 4,
+      id: 5,
       title: "Website Development & SEO",
       subtitle: "Be Found, Be Fast",
 
@@ -70,7 +83,7 @@ const ServiceDetails = () => {
     },
 
     {
-      id: 5,
+      id: 6,
       title: "UGC (User-Generated Content) & Outdoor Marketing",
       subtitle: "Real Voices, Real Impact",
 

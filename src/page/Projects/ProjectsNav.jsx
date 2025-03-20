@@ -5,7 +5,14 @@ export default function ProjectsNav({
   setActiveIndex,
   setSelectedNav,
 }) {
-  const navItems = ["Show All", "Videos", "Social Media"];
+  const navItems = [
+    "Show All",
+    "Reels",
+    "Perfomance Marketing",
+    "Branding",
+    "Creatives",
+    "Website",
+  ];
 
   return (
     <ul className="projects-nav" aria-label="Projects navigation section">

@@ -63,9 +63,22 @@ function Aboutus() {
               From branding and content marketing to social media strategies and
               video production, we help businesses stand out in a crowded
               digital world. Our in-house production wing, HawkSpot, crafts
-              high-quality video content, while DocsPro focuses exclusively on
-              healthcare marketing. Over the years, we have expanded operations
-              and now serve clients across the Middle East.
+              high-quality video content, while{" "}
+              <a
+                href="https://www.docspro.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "white",
+                  textDecoration: "underline",
+                  fontWeight: "bold",
+                }}
+              >
+                DocsPro
+              </a>{" "}
+              focuses exclusively on healthcare marketing. Over the years, we
+              have expanded operations and now serve clients across the Middle
+              East.
             </p>
 
             <div className={`additional-content ${showMore ? "show" : ""}`}>

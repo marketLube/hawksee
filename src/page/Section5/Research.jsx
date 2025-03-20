@@ -73,11 +73,13 @@ export const Research = () => {
   return (
     <div className="research">
       <div className="research__header">
-        {/* <p className="research__subtitle">OUR PROCESS</p>
-        <h2 className="research__title">Easy as 1, 2, 3.</h2> */}
+        <p className="research__title">OUR PROCESS</p>
+        {/* <h2 className="research__title">Easy as 1, 2, 3.</h2> */}
       </div>
 
       <div className="research__steps">
+        {/* <p className="research__title">OUR PROCESS</p> */}
+
         {steps.map((step, index) => (
           <div
             key={index}

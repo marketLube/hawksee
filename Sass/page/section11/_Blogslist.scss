@@ -10,15 +10,19 @@
   max-width: 100vw;
   // padding: 20px 0;
 
-
-
   .gradient-left {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     width: 5%; // Adjust width as needed
-    background: linear-gradient(to right, rgb(255, 255, 255) 24%, rgba(255, 255, 236, 97.95) 0%, rgba(255, 255, 255, 0.7) 37%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+      to right,
+      rgb(255, 255, 255) 24%,
+      rgba(255, 255, 236, 97.95) 0%,
+      rgba(255, 255, 255, 0.7) 37%,
+      rgba(255, 255, 255, 0) 100%
+    );
     z-index: 10;
     pointer-events: none;
   }
@@ -29,10 +33,16 @@
     right: 0;
     bottom: 0;
     width: 5%; // Adjust width as needed
-    background: linear-gradient(to left, rgb(255, 255, 319) 14%, rgba(255, 255, 255, 0.95) 18%, rgba(255, 255, 255, 0.8) 26%, rgba(255, 255, 255, 0) 100%);    z-index: 10;
+    background: linear-gradient(
+      to left,
+      rgb(255, 255, 319) 14%,
+      rgba(255, 255, 255, 0.95) 18%,
+      rgba(255, 255, 255, 0.8) 26%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    z-index: 10;
     pointer-events: none;
   }
-
 
   &__title {
     font-size: 6rem;
@@ -47,15 +57,12 @@
     z-index: 11;
 
     @include responsive.respond(bigTablets) {
-      font-size: 6rem;
-      // padding-left: 0.8rem;
-      font-size: 5rem;
+      font-size: 5.5rem;
     }
 
     @include responsive.respond(desktop) {
       font-size: 5.5rem;
       // padding-left: 85px;
-
     }
 
     @include responsive.respond(bigDesktop) {
@@ -64,14 +71,13 @@
 
     @include responsive.respond(tablets) {
       font-size: 4.5rem;
-     text-align: center;
-     margin-top: 0%;
-     padding-left: 0;
-     margin-bottom: 2%;
+      text-align: center;
+      margin-top: 0%;
+      padding-left: 0;
+      margin-bottom: 2%;
     }
 
     @include responsive.respond(smallPhone) {
-
       font-size: 2rem !important;
       padding-top: 1.5rem;
       padding-left: 0;
@@ -85,11 +91,10 @@
       max-width: 120vw;
       margin-bottom: 0;
     }
-
   }
 
   &__grid {
-    max-width:  100%;
+    max-width: 100%;
     // overflow-x: hidden;
     overflow-x: auto;
 
@@ -103,23 +108,22 @@
       display: none;
     }
 
-
     .swiper {
       padding: 0 20px;
       overflow: visible;
-     // Fix for center alignment issues
-     @include responsive.respond(smallPhone) {
-      padding-left: 0;
-      padding-right: 0;
+      // Fix for center alignment issues
+      @include responsive.respond(smallPhone) {
+        padding-left: 0;
+        padding-right: 0;
       }
-     &-wrapper {
-      display: flex;
-      align-items: center;
-      box-sizing: content-box;
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        box-sizing: content-box;
+      }
     }
-  }
     .swiper-slide {
-      width: 55rem  !important;
+      width: 55rem !important;
       height: auto !important;
       transition: all 0.4s ease;
       transform: scale(1) !important;
@@ -152,7 +156,7 @@
 
       @include responsive.respond(phone) {
         width: 34rem !important;
-       // margin-left: 3rem;
+        // margin-left: 3rem;
       }
 
       @include responsive.respond(smallPhone) {
@@ -164,7 +168,6 @@
         width: 22rem !important;
         // margin: 0 5px !important;
       }
-
     }
 
     .swiper-pagination-fraction,
@@ -182,11 +185,11 @@
       }
       @include responsive.respond(bigTablets) {
         bottom: -18px;
+      }
+      @media (max-width: 370px) {
+        padding: 40px 20px;
+      }
     }
-    @media (max-width: 370px) {
-      padding: 40px 20px;
-    }
-  }
 
     .swiper-pagination-bullet {
       width: 8px;
@@ -205,7 +208,6 @@
     display: flex;
     justify-content: center;
     margin: 2rem;
-
   }
 
   // @media (max-width: 1080px) {
@@ -226,12 +228,11 @@
   flex: 0 0 auto;
   margin: 0 0.9rem;
 
-
   @include responsive.respond(smallPhone) {
-    border-radius:  6.173px;
+    border-radius: 6.173px;
   }
 
-    &__title{
+  &__title {
     font-size: 1.6rem;
     margin-bottom: 0.75rem;
     font-weight: 100;
@@ -252,12 +253,11 @@
     @include responsive.respond(smallPhone) {
       font-size: 0.85rem;
     }
-}
+  }
 
   // &:hover {
   //   transform: translateY(-5px);
   // }
-
 
   &__image {
     width: 100%;
@@ -344,7 +344,6 @@
     width: 100%;
     white-space: normal;
     word-wrap: break-word;
-
 
     @include responsive.respond(bigTablets) {
       font-size: 1.4rem;

@@ -18,11 +18,9 @@
   //   min-height: 65vh;
   // }
 
-
   @media screen and (width: 1024px) and (height: 1366px) {
     min-height: 45vh;
   }
-
 
   @include responsive.respond(tablets) {
     min-height: -webkit-fit-content;
@@ -68,7 +66,7 @@
     }
 
     @include responsive.respond(phone) {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       padding-top: 2.5rem;
     }
 
@@ -197,19 +195,18 @@
   @include responsive.respond(tablets) {
     min-height: 20rem;
     // width: 82%;
-
   }
 
   @include responsive.respond(phone) {
     min-height: 16rem;
     width: 82%;
-// padding-left: 3rem;
+    // padding-left: 3rem;
   }
 
   @include responsive.respond(smallPhone) {
     min-height: 12rem;
     width: 88%;
-     border-radius: 0.8rem;
+    border-radius: 0.8rem;
   }
   @media (max-width: 376px) {
     min-height: 10rem;
@@ -217,26 +214,22 @@
   }
   @include responsive.respond(desktop) {
     min-height: 16rem;
-        width: 100%;
+    width: 100%;
   }
-
 }
 
 .swiper-slide {
   text-align: start;
-   height: 20rem;
-
+  height: 20rem;
 
   h3 {
     font-size: 1.2rem;
     font-weight: 500;
     // margin-top: -3rem;
 
-
     @include responsive.respond(tablets) {
       font-size: 1rem;
       // margin-top: -5rem;
-
     }
     @include responsive.respond(bigDesktop) {
       font-size: 1.2rem;
@@ -255,7 +248,6 @@
     @include responsive.respond(bigTablets) {
       font-size: 1.2rem;
       // margin-top: -6rem;
-
     }
   }
 
@@ -278,8 +270,8 @@
       white-space: nowrap;
       // margin-left: 2.8rem;
       text-align: center;
-// margin-bottom: 4.2rem;
-// margin-top: 2rem;
+      // margin-bottom: 4.2rem;
+      // margin-top: 2rem;
     }
   }
 

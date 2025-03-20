@@ -116,6 +116,7 @@ export const Grid = () => {
 
   return (
     <div className="logo-grid" aria-label="Logo grid section container">
+      <h2 className="logo-grid-title">Some of Our Major Clients</h2>
       <div className="logo-grid-section" aria-label="Logo grid section">
         {visibleLogos.map((logo) => (
           <div key={logo.id} className="logo-card" aria-label="Logo card">

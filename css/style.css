@@ -3538,7 +3538,7 @@ a {
 }
 @media (max-width: 768px) {
   .projects-nav {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 @media (max-width: 992px) {

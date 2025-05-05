@@ -14,12 +14,26 @@ import VDO4 from "../../assets/vdo/vdo4.mp4";
 import VDO5 from "../../assets/vdo/vdo5.mp4";
 import VDO6 from "../../assets/vdo/vdo6.mp4";
 import VDO7 from "../../assets/vdo/vdo7.mp4";
+import VDO8 from "../../assets/vdo/VDO8.mp4";
+import VDO9 from "../../assets/vdo/VDO9.mp4";
+import VDO10 from "../../assets/vdo/VDO10.mp4";
+import VDO11 from "../../assets/vdo/vdo11.mp4";
+import VDO12 from "../../assets/vdo/VDO12.mp4";
+import VDO13 from "../../assets/vdo/VDO13.mp4";
+import VDO14 from "../../assets/vdo/vdo14.mp4";
 import PojectImg1 from "../../assets/About/hawkgrid.png";
 import PojectImg2 from "../../assets/About/hawPara1.png";
 import PojectImg3 from "../../assets/About/hawPara2.png";
 import PojectImg4 from "../../assets/About/hawPara3.png";
 import PojectImg5 from "../../assets/About/nationalhospital.png";
 import PojectImg6 from "../../assets/About/intimatetiles.png";
+import Branding12 from "../../assets/Branding/dh8.png";
+import Branding13 from "../../assets/Branding/rewaq.png";
+import Branding14 from "../../assets/Branding/chiccone.png";
+import Branding15 from "../../assets/Branding/vitamin.png";
+import project8 from "../../assets/Branding/project8.png";
+import project9 from "../../assets/Branding/project9.png";
+
 import Thumb1 from "../../assets/vdo/thum1.png";
 import Thumb2 from "../../assets/vdo/thumb2.png";
 import Thumb3 from "../../assets/vdo/thumb3.png";
@@ -27,6 +41,13 @@ import Thumb4 from "../../assets/vdo/thum4.png";
 import Thumb5 from "../../assets/vdo/thum5.png";
 import Thumb6 from "../../assets/vdo/thumb6.png";
 import Thumb7 from "../../assets/vdo/thumb7.png";
+import Thumb8 from "../../assets/vdo/thum8.jpeg";
+import Thumb9 from "../../assets/vdo/thum9.jpeg";
+import Thumb10 from "../../assets/vdo/thum10.jpeg";
+import Thumb11 from "../../assets/vdo/thum11.jpeg";
+import Thumb12 from "../../assets/vdo/thum12.jpeg";
+import Thumb13 from "../../assets/vdo/thum13.jpeg";
+import Thumb14 from "../../assets/vdo/thum14.jpeg";
 
 export const DoubleLineReels = () => {
   const images = [
@@ -37,10 +58,14 @@ export const DoubleLineReels = () => {
     PojectImg5,
     PojectImg6,
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474939/choice3_igjcn5.jpg",
+    project8,
+    project9,
+    Branding12,
+    Branding13,
+    Branding14,
+    Branding15,
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474940/daya3_rbb5tb.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474941/dholi3_innmgq.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474942/dubai2_jm6kzc.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474942/gg-new-year_kec4n1.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/image_sifi2s.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/mashir1_wgk37r.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474944/mashir4_v9vgta.jpg",
@@ -74,9 +99,9 @@ export const DoubleLineReels = () => {
     PojectImg6,
   ];
 
-  const videos = [VDO1, VDO2, VDO3, VDO4, VDO5, VDO6, VDO7];
+  const videos = [VDO1, VDO2, VDO3, VDO4, VDO5, VDO6, VDO7, VDO8, VDO9, VDO10, VDO11, VDO12, VDO13, VDO14];
 
-  const thumbnails = [Thumb1, Thumb2, Thumb3, Thumb4, Thumb5, Thumb6, Thumb7];
+  const thumbnails = [Thumb1, Thumb2, Thumb3, Thumb4, Thumb5, Thumb6, Thumb7, Thumb8, Thumb9, Thumb10, Thumb11, Thumb12, Thumb13, Thumb14];
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 

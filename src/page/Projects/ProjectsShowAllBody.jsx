@@ -14,6 +14,15 @@ import VDO4 from "../../assets/vdo/vdo4.mp4";
 import VDO5 from "../../assets/vdo/vdo5.mp4";
 import VDO6 from "../../assets/vdo/vdo6.mp4";
 import VDO7 from "../../assets/vdo/vdo7.mp4";
+import VDO8 from "../../assets/vdo/VDO8.mp4";
+import VDO9 from "../../assets/vdo/VDO9.mp4";
+import VDO10 from "../../assets/vdo/VDO10.mp4";
+import VDO11 from "../../assets/vdo/vdo11.mp4";
+import VDO12 from "../../assets/vdo/VDO12.mp4";
+import VDO13 from "../../assets/vdo/VDO13.mp4";
+import VDO14 from "../../assets/vdo/vdo14.mp4";
+
+
 
 import Thumb1 from "../../assets/vdo/thum1.png";
 import Thumb2 from "../../assets/vdo/thumb2.png";
@@ -22,6 +31,14 @@ import Thumb4 from "../../assets/vdo/thum4.png";
 import Thumb5 from "../../assets/vdo/thum5.png";
 import Thumb6 from "../../assets/vdo/thumb6.png";
 import Thumb7 from "../../assets/vdo/thumb7.png";
+import Thumb8 from "../../assets/vdo/thum8.jpeg";
+import Thumb9 from "../../assets/vdo/thum9.jpeg";
+import Thumb10 from "../../assets/vdo/thum10.jpeg";
+import Thumb11 from "../../assets/vdo/thum11.jpeg";
+import Thumb12 from "../../assets/vdo/thum12.jpeg";
+import Thumb13 from "../../assets/vdo/thum13.jpeg";
+import Thumb14 from "../../assets/vdo/thum14.jpeg";
+
 
 import Branding1 from "../../assets/Branding/airavan.jpg";
 import Branding2 from "../../assets/Branding/artha.jpeg";
@@ -34,6 +51,10 @@ import Branding8 from "../../assets/Branding/odura.jpg";
 import Branding9 from "../../assets/Branding/painat.jpeg";
 import Branding10 from "../../assets/Branding/repairkada.jpeg";
 import Branding11 from "../../assets/Branding/stoneSmith.jpg";
+import Branding12 from "../../assets/Branding/dh8.png";
+import Branding13 from "../../assets/Branding/rewaq.png";
+import Branding14 from "../../assets/Branding/chiccone.png";
+import Branding15 from "../../assets/Branding/vitamin.png";
 
 export default function ProjectsShowAllBody({
   isAnimate,
@@ -43,16 +64,15 @@ export default function ProjectsShowAllBody({
   const content = [
     {
       type: "video",
-      items: [VDO1, VDO2, VDO3, VDO4, VDO5, VDO6, VDO7],
-      thumbnails: [Thumb1, Thumb2, Thumb3, Thumb4, Thumb5, Thumb6, Thumb7],
+      items: [VDO1, VDO2, VDO3, VDO4, VDO5, VDO6, VDO7, VDO8, VDO9, VDO10, VDO11, VDO12, VDO13, VDO14],
+      thumbnails: [Thumb1, Thumb2, Thumb3, Thumb4, Thumb5, Thumb6, Thumb7, Thumb8, Thumb9, Thumb10,Thumb11, Thumb12, Thumb13, Thumb14],
     },
     {
       type: "social",
       items: [
-        PojectImg6,
+    
         PojectImg2,
         PojectImg3,
-        PojectImg4,
         PojectImg1,
         PojectImg5,
       ],
@@ -134,10 +154,16 @@ export default function ProjectsShowAllBody({
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742475668/IMG-20171106-WA0053-1_zixhb9.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742475833/stone_fzx2mc.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476071/Mug-1-scaled_1_egcgda.jpg",
+        PojectImg6,
         Branding9,
         Branding2,
         Branding3,
         Branding4,
+        PojectImg4,
+        Branding12,
+        Branding13,
+        Branding14, 
+        Branding15,
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476381/7-1024x480_1_sbxp7e.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476462/5-1024x480_1_tfh7z3.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476559/IMG-20170428-WA0063_yzvozy.jpg",

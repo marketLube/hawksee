@@ -1,5 +1,4 @@
 import React from "react";
-import hawksee from "./../../assets/hawksee.svg";
 import LogoFoot from "./../../assets/LogoFoot.svg";
 import {
   FaFacebookF,

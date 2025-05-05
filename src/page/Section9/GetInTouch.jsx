@@ -1,5 +1,5 @@
 import React from "react";
-import LogoFoot from "./../../assets/LogoFoot.svg";
+import LogoFoot from "./../../assets/logofooter.svg";
 import {
   FaFacebookF,
   FaInstagram,
@@ -37,8 +37,13 @@ export const GetInTouch = () => {
             className="get-in-touch__content"
             aria-label="Get in touch content"
           >
-            <div className="get-in-touch__logo" aria-label="Get in touch logo">
+            <div
+              className="get-in-touch__logo"
+              aria-label="Get in touch logo"
+              style={{ padding: "0rem", height: "100%", width: "20rem" }}
+            >
               <img
+                style={{ width: "100%" }}
                 src={LogoFoot}
                 alt="Hawksee Logo"
                 aria-label="Hawksee Logo"

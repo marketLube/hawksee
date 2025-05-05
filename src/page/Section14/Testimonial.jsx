@@ -1,58 +1,63 @@
-import React from "react";
-import Testimonial1 from "../../assets/testimonial/testimonial.jfif";
+import React, { useRef } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import { Navigation } from "swiper/modules";
 import Quate from "../../assets/icon/double.svg";
 import ArrowLeft from "../../assets/icon/left.svg";
 import ArrowRight from "../../assets/icon/right.svg";
 
 export default function Testimonial() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   const testimonials = [
     {
-      name: "John Doe",
-      designation: "CEO, Company Name",
+      name: "Roshini",
+      designation: "Prime Skin and Laser",
       quote:
-        "Concepts exceeded our expectations with a beautifully designed website and insightful research that perfectly aligned with our brand. Their expertise has truly elevated our online presence. Highly recommended!",
-      image: Testimonial1,
-    },
-    {
-      name: "Jane Smith",
-      designation: "Marketing Director, Another Company",
-      quote:
-        "Working with Concepts was a game-changer for us. Their attention to detail and innovative approach helped us reach our target audience effectively. We couldn't be happier with the results! ",
+        "Working with Hawksee Digital Solutions has been a game-changer for our online presence. Their expertise in SEO and website design helped us build a robust online platform for Dr. Roshini's clinic, attracting more clients and boosting visibility. We're thrilled with the results and would highly recommend their services to anyone looking to enhance their digital footprint.",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1744369614/test1_ooiwou.jpg",
+        "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Capture_mkym7b.jpg",
     },
     {
-      name: "Alice Johnson",
-      designation: "Product Manager, Tech Innovations",
+      name: "Mufthi",
+      designation: "Little Gym",
       quote:
-        "The team at Concepts delivered beyond our expectations. Their research and design process was thorough and insightful, leading to a product that truly resonates with our users.",
+        "The team at Hawksee truly transformed the way we approach content. Their video production services were exceptional, creating engaging and professional videos that showcased Little Gym in the best possible light. Their attention to detail and creativity helped us connect with our audience in new and exciting ways. A big thanks to Hawksee for their outstanding work!",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1744369611/test6_zwsbra.jpg",
+        "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/435700088_10161261429140675_2188708708538902776_n_dqunnh.jpg",
     },
     {
-      name: "Michael Brown",
-      designation: "Founder, Startup Inc.",
+      name: "Uthara Ramakrishnan",
+      designation: "Personal Branding",
       quote:
-        "Concepts provided us with a stunning website that not only looks great but also performs exceptionally well. Their expertise in digital marketing has significantly boosted our online visibility.",
+        "Hawksee has been an integral part of building my personal brand. Their approach to content creation and strategy was tailored to highlight my strengths and values. The team's expertise in social media and branding has opened new doors for me professionally, and I’m excited about the future. Thanks to Hawksee for making my vision come to life!",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1744369612/test2_x1hzuu.jpg",
+        "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Utharamob_djbwk2.jpg",
     },
     {
-      name: "John Doe",
-      designation: "CEO, Company Name",
+      name: "Roshini",
+      designation: "Prime Skin and Laser",
       quote:
-        "Concepts exceeded our expectations with a beautifully designed website and insightful research that perfectly aligned with our brand. Their expertise has truly elevated our online presence. Highly recommended!",
-      image: Testimonial1,
-    },
-    {
-      name: "Jane Smith",
-      designation: "Marketing Director, Another Company",
-      quote:
-        "Working with Concepts was a game-changer for us. Their attention to detail and innovative approach helped us reach our target audience effectively. We couldn't be happier with the results! ",
+        "Working with Hawksee Digital Solutions has been a game-changer for our online presence. Their expertise in SEO and website design helped us build a robust online platform for Dr. Roshini's clinic, attracting more clients and boosting visibility. We're thrilled with the results and would highly recommend their services to anyone looking to enhance their digital footprint.",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1744369614/test1_ooiwou.jpg",
+        "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Capture_mkym7b.jpg",
+    },
+    {
+      name: "Mufthi",
+      designation: "Little Gym",
+      quote:
+        "The team at Hawksee truly transformed the way we approach content. Their video production services were exceptional, creating engaging and professional videos that showcased Little Gym in the best possible light. Their attention to detail and creativity helped us connect with our audience in new and exciting ways. A big thanks to Hawksee for their outstanding work!",
+      image:
+        "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/435700088_10161261429140675_2188708708538902776_n_dqunnh.jpg",
+    },
+    {
+      name: "Uthara Ramakrishnan",
+      designation: "Personal Branding",
+      quote:
+        "Hawksee has been an integral part of building my personal brand. Their approach to content creation and strategy was tailored to highlight my strengths and values. The team's expertise in social media and branding has opened new doors for me professionally, and I’m excited about the future. Thanks to Hawksee for making my vision come to life!",
+      image:
+        "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Utharamob_djbwk2.jpg",
     },
   ];
 
@@ -63,7 +68,21 @@ export default function Testimonial() {
           <h2>Testimonials</h2>
         </div>
         <div className="testimonial__container__content">
-          <Swiper spaceBetween={50} slidesPerView={3.5}>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={3.5}
+            modules={[Navigation]}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            onInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+          >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <div className="testimonial__container__content__card">
@@ -96,13 +115,30 @@ export default function Testimonial() {
                 </div>
               </SwiperSlide>
             ))}
+
+            {/* <div className="testimonial__container__video">
+              <video
+                src={
+                  "https://res.cloudinary.com/dznxxalrb/video/upload/v1746452632/testimonialvdo_qpjska.mp4"
+                }
+                autoPlay
+                muted
+                loop
+              />
+            </div> */}
           </Swiper>
 
           <div className="testimonial__container__content__card__body__button">
-            <button className="testimonial__container__content__card__body__button__prev">
+            <button
+              ref={prevRef}
+              className="testimonial__container__content__card__body__button__prev"
+            >
               <img src={ArrowLeft} alt="arrow-left" />
             </button>
-            <button className="testimonial__container__content__card__body__button__next">
+            <button
+              ref={nextRef}
+              className="testimonial__container__content__card__body__button__next"
+            >
               <img src={ArrowRight} alt="arrow-right" />
             </button>
           </div>

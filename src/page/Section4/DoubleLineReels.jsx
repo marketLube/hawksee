@@ -52,22 +52,25 @@ import Thumb14 from "../../assets/vdo/thum14.jpeg";
 export const DoubleLineReels = () => {
   const images = [
     PojectImg1,
+
     PojectImg2,
     PojectImg3,
     PojectImg4,
     PojectImg5,
     PojectImg6,
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474939/choice3_igjcn5.jpg",
-    project8,
-    project9,
+
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474940/daya3_rbb5tb.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474942/dubai2_jm6kzc.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/image_sifi2s.jpg",
     Branding12,
     Branding13,
     Branding14,
     Branding15,
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474940/daya3_rbb5tb.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474942/dubai2_jm6kzc.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/image_sifi2s.jpg",
+    project8,
+    project9,
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/mashir1_wgk37r.jpg",
+
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474944/mashir4_v9vgta.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/ony3_kol28y.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/PB-christmas_ouudls.jpg",
@@ -99,9 +102,39 @@ export const DoubleLineReels = () => {
     PojectImg6,
   ];
 
-  const videos = [VDO1, VDO2, VDO3, VDO4, VDO5, VDO6, VDO7, VDO8, VDO9, VDO10, VDO11, VDO12, VDO13, VDO14];
+  const videos = [
+    VDO1,
+    VDO2,
+    VDO3,
+    VDO4,
+    VDO5,
+    VDO6,
+    VDO7,
+    VDO8,
+    VDO9,
+    VDO10,
+    VDO11,
+    VDO12,
+    VDO13,
+    VDO14,
+  ];
 
-  const thumbnails = [Thumb1, Thumb2, Thumb3, Thumb4, Thumb5, Thumb6, Thumb7, Thumb8, Thumb9, Thumb10, Thumb11, Thumb12, Thumb13, Thumb14];
+  const thumbnails = [
+    Thumb1,
+    Thumb2,
+    Thumb3,
+    Thumb4,
+    Thumb5,
+    Thumb6,
+    Thumb7,
+    Thumb8,
+    Thumb9,
+    Thumb10,
+    Thumb11,
+    Thumb12,
+    Thumb13,
+    Thumb14,
+  ];
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 

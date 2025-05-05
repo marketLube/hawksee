@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "./../assets/image.svg";
-import LogoTop from "./../assets/HawkseeLogoTop.svg";
+import LogoTop from "./../assets/logofooter.svg";
+
 import { motion } from "framer-motion";
 
 export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {

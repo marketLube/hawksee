@@ -1,4 +1,3 @@
-
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -51,7 +50,7 @@ function Blog() {
       blogPosts.forEach((post, index) => {
         duplicatedPosts.push({
           ...post,
-          id: `${post.id}-copy-${i}-${index}` // Ensure unique key
+          id: `${post.id}-copy-${i}-${index}`, // Ensure unique key
         });
       });
     }
@@ -64,8 +63,8 @@ function Blog() {
   return (
     <div className="blog-section" id="blogs">
       <h2 className="blog-section__title">Thoughts & Updates</h2>
-<div className="gradient-left"></div>
-<div className="gradient-right"></div>
+      <div className="gradient-left"></div>
+      <div className="gradient-right"></div>
 
       <div className="blog-section__grid">
         <Swiper
@@ -73,7 +72,7 @@ function Blog() {
           centeredSlides={true}
           spaceBetween={0}
           loop={true}
-          loopedSlides={slidesData.length > 3 ? 3 : slidesData.length} // Adjust looped slides
+          loopedSlides={slidesData.length > 3 ? 3 : slidesData.length}
           initialSlide={0}
           pagination={{
             clickable: true,
@@ -93,7 +92,6 @@ function Blog() {
           loopFillGroupWithBlank={true}
           loopAdditionalSlides={slidesData.length > 3 ? 2 : slidesData.length}
           centeredSlidesBounds={false}
-          // grabCursor={true}
           watchSlidesProgress={true}
           observer={true}
           observeParents={true}

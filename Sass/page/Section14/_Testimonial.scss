@@ -1,3 +1,4 @@
+@use "../../base/responsive" as responsive;
 .testimonial {
   height: fit-content;
   background-color: #ffffff;
@@ -22,6 +23,28 @@
         padding-top: 4rem;
         padding-bottom: 3rem;
         z-index: 11;
+
+        @include responsive.respond(smallPhone) {
+          font-size: 2rem;
+          text-align: center;
+        }
+        @include responsive.respond(phone) {
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        @include responsive.respond(tablets) {
+          font-size: 4.5rem;
+          text-align: center;
+          margin-bottom: 0rem;
+          padding-bottom: 1.5rem;
+        }
+
+        @include responsive.respond(bigTablets) {
+          font-size: 5.5rem;
+          margin-bottom: 0rem;
+          padding-bottom: 1.5rem;
+        }
       }
     }
 
@@ -30,6 +53,18 @@
       flex-direction: column;
       padding: 2rem 0 2rem 100px;
 
+      @include responsive.respond(smallPhone) {
+        padding: 1rem;
+      }
+      @include responsive.respond(phone) {
+        padding: 1rem;
+      }
+
+      @include responsive.respond(bigTablets) {
+        gap: 2rem;
+        padding: 2rem;
+      }
+
       &__card {
         display: flex;
         width: 447px !important;
@@ -37,8 +72,21 @@
         padding: 16px;
         flex-direction: column;
         gap: 10% !important;
-        // align-items: end;
-        // border: 1px solid #000;
+
+        @include responsive.respond(tablets) {
+          width: 560px !important;
+        }
+
+        @include responsive.respond(smallPhone) {
+          width: fit-content !important;
+          height: fit-content !important;
+          gap: 10px;
+        }
+        @include responsive.respond(phone) {
+          width: fit-content !important;
+          height: fit-content !important;
+          gap: 10px;
+        }
 
         &__header {
           width: 100%;
@@ -68,7 +116,7 @@
             gap: 10px;
             h3 {
               color: #000;
-              font-size: 24px;
+              font-size: 23px;
               font-style: normal;
             }
             p {
@@ -82,23 +130,27 @@
           width: 100%;
           height: fit-content;
           position: relative;
-          &__quote {
-            // color: #000;
-            // // font-size: 160px;
-            // //     font-style: normal;
-            // //     font-weight: 400;
-            // //     line-height: normal;
-            // //     opacity: 0.3;
-            // //     z-index: 0;
 
+          @include responsive.respond(smallPhone) {
+            padding-top: 1rem;
+          }
+
+          
+          @include responsive.respond(phone) {
+            padding-top: 1rem;
+          }
+
+          &__quote {
             &__text {
               color: #000 !important;
               font-size: 20px !important;
               font-style: normal !important;
               font-weight: 400 !important;
-              line-height: 155% !important; /* 31px */
+              line-height: 155% !important;
               letter-spacing: 0.2px !important;
               text-indent: 3em !important;
+              @include responsive.respond(smallPhone) {
+              }
             }
           }
           &__button {
@@ -124,5 +176,26 @@
         }
       }
     }
+  }
+}
+
+.swiper-slide p {
+  @media screen and (max-width: 575px) {
+    white-space: inherit !important;
+    text-align: start !important;
+    font-size: 16.3px !important;
+  }
+}
+
+.swiper-slide h3 {
+  @media screen and (max-width: 575px) {
+    text-align: start !important;
+  }
+}
+
+.quate {
+  @media screen and (max-width: 575px) {
+    width: 42px !important;
+    height: 32px !important;
   }
 }

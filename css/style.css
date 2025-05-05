@@ -974,7 +974,7 @@ a {
   text-align: left;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: start;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1009,6 +1009,7 @@ a {
     flex-direction: column;
     gap: 0rem;
     padding: 0 1rem;
+    align-items: center;
   }
 }
 @media only screen and (max-width: 575.98px) {
@@ -1018,73 +1019,40 @@ a {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
   }
 }
 .get-in-touch__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
+  padding-top: 2%;
   gap: 1rem;
-  align-items: flex-start;
-  padding: 8rem;
-}
-@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
-  .get-in-touch__logo {
-    padding: 5rem;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
-  .get-in-touch__logo {
-    padding: 4rem;
-  }
+  width: 30rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .get-in-touch__logo {
-    padding: 4rem;
+    width: 23rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__logo {
-    padding: 2rem;
+    width: 18rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch__logo {
-    padding: 0rem;
-    padding-bottom: 9rem;
+    padding: 2rem 0 0 0;
+    width: 20rem;
+    padding-bottom: 10rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__logo {
-    padding: 8rem 0rem 2rem 0rem;
+    width: 18rem;
+    padding-bottom: 10%;
+    padding-top: 40%;
   }
 }
-@media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
-  .get-in-touch__logo img {
-    padding: 5rem;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
-  .get-in-touch__logo img {
-    padding: 4rem;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .get-in-touch__logo img {
-    padding: 0rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .get-in-touch__logo img {
-    padding: 0rem;
-    height: 200px;
-  }
-}
-@media only screen and (max-width: 575.98px) {
-  .get-in-touch__logo img {
-    height: 200px;
-  }
+.get-in-touch__logo img {
+  width: 100%;
 }
 .get-in-touch__logo span {
   font-size: 1.25rem;
@@ -1504,13 +1472,24 @@ a {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .social-media-container {
     height: auto;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .social-media-container {
+    height: auto;
+    padding: 1rem 0;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 .social-media-container__content {
@@ -1534,6 +1513,8 @@ a {
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .social-media-container__content {
     gap: 1.5rem;
+    padding: 0;
+    left: 0;
   }
 }
 @media only screen and (max-width: 575.98px) {
@@ -1617,6 +1598,19 @@ a {
   .get-in-touch__smContact span {
     font-size: 0.8rem;
   }
+}
+
+.market {
+  color: #fff;
+  padding-right: 2%;
+  font-size: 12px;
+}
+.market a {
+  color: rgba(255, 255, 255, 0.5725490196);
+  cursor: pointer;
+}
+.market a:hover {
+  color: blue;
 }
 
 .bird {
@@ -6407,10 +6401,53 @@ a {
   padding-bottom: 3rem;
   z-index: 11;
 }
+@media only screen and (max-width: 575.98px) {
+  .testimonial__container__header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .testimonial__container__header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testimonial__container__header h2 {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 0rem;
+    padding-bottom: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .testimonial__container__header h2 {
+    font-size: 5.5rem;
+    margin-bottom: 0rem;
+    padding-bottom: 1.5rem;
+  }
+}
 .testimonial__container__content {
   display: flex;
   flex-direction: column;
   padding: 2rem 0 2rem 100px;
+}
+@media only screen and (max-width: 575.98px) {
+  .testimonial__container__content {
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .testimonial__container__content {
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .testimonial__container__content {
+    gap: 2rem;
+    padding: 2rem;
+  }
 }
 .testimonial__container__content__card {
   display: flex;
@@ -6419,6 +6456,25 @@ a {
   padding: 16px;
   flex-direction: column;
   gap: 10% !important;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testimonial__container__content__card {
+    width: 560px !important;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .testimonial__container__content__card {
+    width: fit-content !important;
+    height: fit-content !important;
+    gap: 10px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .testimonial__container__content__card {
+    width: fit-content !important;
+    height: fit-content !important;
+    gap: 10px;
+  }
 }
 .testimonial__container__content__card__header {
   width: 100%;
@@ -6448,7 +6504,7 @@ a {
 }
 .testimonial__container__content__card__header__name h3 {
   color: #000;
-  font-size: 24px;
+  font-size: 23px;
   font-style: normal;
 }
 .testimonial__container__content__card__header__name p {
@@ -6461,12 +6517,22 @@ a {
   height: fit-content;
   position: relative;
 }
+@media only screen and (max-width: 575.98px) {
+  .testimonial__container__content__card__body {
+    padding-top: 1rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .testimonial__container__content__card__body {
+    padding-top: 1rem;
+  }
+}
 .testimonial__container__content__card__body__quote__text {
   color: #000 !important;
   font-size: 20px !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  line-height: 155% !important; /* 31px */
+  line-height: 155% !important;
   letter-spacing: 0.2px !important;
   text-indent: 3em !important;
 }
@@ -6489,6 +6555,27 @@ a {
 .testimonial__container__content__card__body__button button img {
   width: 20px;
   height: 20px;
+}
+
+@media screen and (max-width: 575px) {
+  .swiper-slide p {
+    white-space: inherit !important;
+    text-align: start !important;
+    font-size: 16.3px !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .swiper-slide h3 {
+    text-align: start !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .quate {
+    width: 42px !important;
+    height: 32px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -40,10 +40,8 @@ export const GetInTouch = () => {
             <div
               className="get-in-touch__logo"
               aria-label="Get in touch logo"
-              style={{ padding: "0rem", height: "100%", width: "20rem" }}
             >
               <img
-                style={{ width: "100%" }}
                 src={LogoFoot}
                 alt="Hawksee Logo"
                 aria-label="Hawksee Logo"
@@ -227,6 +225,7 @@ export const GetInTouch = () => {
             <FaMapMarkerAlt className="social-media-icon" />
           </a>
         </div>
+        <div className="market">Made by <a href="https://www.instagram.com/marketlube/" target="_blank">marketlube</a></div>
       </div>
     </>
   );

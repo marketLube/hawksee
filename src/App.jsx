@@ -84,7 +84,7 @@ function App() {
         <Research aria-label="Research section" />
         <Grid aria-label="Grid section" />
         <MeetTheTeam aria-label="Meet the team section" />
-        {/* <Testimonial aria-label="Testimonial section" /> */}
+        <Testimonial aria-label="Testimonial section" /> 
         <Blogslist aria-label="Blog section" />
       </main>
       <footer aria-label="Footer section">

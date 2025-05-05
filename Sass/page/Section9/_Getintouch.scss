@@ -72,7 +72,7 @@
     text-align: left;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: start;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -98,6 +98,7 @@
       flex-direction: column;
       gap: 0rem;
       padding: 0 1rem;
+      align-items: center;
     }
     @include responsive.respond(smallPhone) {
       -webkit-box-orient: vertical;
@@ -105,58 +106,33 @@
       -ms-flex-direction: column;
       flex-direction: column;
       gap: 1rem;
+      align-items: center;
     }
   }
 
   &__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
+    padding-top: 2%;
     gap: 1rem;
-    align-items: flex-start;
-    padding: 8rem;
-    @include responsive.respond(bigDesktop) {
-      padding: 5rem;
-    }
-    @include responsive.respond(desktop) {
-      padding: 4rem;
-    }
+    width: 30rem;
     @include responsive.respond(bigTablets) {
-      padding: 4rem;
+      width: 23rem;
     }
     @include responsive.respond(tablets) {
-      padding: 2rem;
+      width: 18rem;
     }
     @include responsive.respond(phone) {
-      padding: 0rem;
-      padding-bottom: 9rem;
+      padding: 2rem 0 0 0;
+      width: 20rem;
+      padding-bottom: 10rem;
     }
     @include responsive.respond(smallPhone) {
-      padding: 8rem 0rem 2rem 0rem;
+      width: 18rem;
+      padding-bottom: 10%;
+      padding-top: 40%;
     }
-
     img {
-      @include responsive.respond(bigDesktop) {
-        padding: 5rem;
-      }
-      @include responsive.respond(desktop) {
-        padding: 4rem;
-      }
-      @include responsive.respond(bigTablets) {
-        padding: 0rem;
-      }
-      @include responsive.respond(tablets) {
-        padding: 0rem;
-        height: 200px;
-      }
-      @include responsive.respond(phone) {
-      }
-      @include responsive.respond(smallPhone) {
-        height: 200px;
-      }
+      width: 100%;
     }
-
     span {
       font-size: 1.25rem;
       font-weight: 500;
@@ -533,12 +509,21 @@
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 
   @include responsive.respond(phone) {
     height: auto;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @include responsive.respond(smallPhone) {
+    height: auto;
+    padding: 1rem 0;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__content {
@@ -561,6 +546,8 @@
 
     @include responsive.respond(phone) {
       gap: 1.5rem;
+      padding: 0;
+      left: 0;
     }
     @include responsive.respond(smallPhone) {
       width: 100%;
@@ -635,6 +622,20 @@
     bottom: -0.5rem !important;
     span {
       font-size: 0.8rem;
+    }
+  }
+}
+
+.market {
+  color: #fff;
+  padding-right: 2%;
+  font-size: 12px;
+
+  a {
+    color: #ffffff92;
+    cursor: pointer;
+    &:hover {
+      color: blue;
     }
   }
 }

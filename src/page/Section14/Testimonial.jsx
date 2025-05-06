@@ -35,7 +35,15 @@ export default function Testimonial() {
         "Hawksee has been an integral part of building my personal brand. Their approach to content creation and strategy was tailored to highlight my strengths and values. The team's expertise in social media and branding has opened new doors for me professionally, and I'm excited about the future. Thanks to Hawksee for making my vision come to life!",
       image:
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Utharamob_djbwk2.jpg",
-    }
+    },
+    // {
+    //   name: "Uthara Ramakrishnan",
+    //   designation: "Personal Branding",
+    //   quote:
+    //     "Hawksee has been an integral part of building my personal brand. Their approach to content creation and strategy was tailored to highlight my strengths and values. The team's expertise in social media and branding has opened new doors for me professionally, and I'm excited about the future. Thanks to Hawksee for making my vision come to life!",
+    //   image:
+    //     "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Utharamob_djbwk2.jpg",
+    // }
   ];
 
 

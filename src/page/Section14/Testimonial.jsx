@@ -6,6 +6,8 @@ import { Navigation } from "swiper/modules";
 import Quate from "../../assets/icon/double.svg";
 import ArrowLeft from "../../assets/icon/left.svg";
 import ArrowRight from "../../assets/icon/right.svg";
+import Video from "../../assets/testimonial/testimonialvdo.mp4";
+import Thumbnail from "../../assets/testimonial/Capture.JPG?url";
 
 export default function Testimonial() {
   const prevRef = useRef(null);
@@ -36,14 +38,6 @@ export default function Testimonial() {
       image:
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Utharamob_djbwk2.jpg",
     },
-    // {
-    //   name: "Uthara Ramakrishnan",
-    //   designation: "Personal Branding",
-    //   quote:
-    //     "Hawksee has been an integral part of building my personal brand. Their approach to content creation and strategy was tailored to highlight my strengths and values. The team's expertise in social media and branding has opened new doors for me professionally, and I'm excited about the future. Thanks to Hawksee for making my vision come to life!",
-    //   image:
-    //     "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Utharamob_djbwk2.jpg",
-    // }
   ];
 
   useEffect(() => {
@@ -107,14 +101,82 @@ export default function Testimonial() {
               swiper.navigation.update();
             }}
           >
-            {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index}>
+            <SwiperSlide key={0}>
+              <div className="testimonial__container__content__card">
+                <div className="testimonial__container__content__card__header">
+                  <div className="testimonial__container__content__card__header__image">
+                    <img src={testimonials[0].image} alt="testimonial-1" />
+                  </div>
+                  <div className="testimonial__container__content__card__header__name">
+                    <h3 className="testimonial__container__content__card__header__name__name">
+                      {testimonials[0].name}
+                    </h3>
+                    <p className="testimonial__container__content__card__header__name__designation">
+                      {testimonials[0].designation}
+                    </p>
+                  </div>
+                </div>
+                <div className="testimonial__container__content__card__body">
+                  <div className="testimonial__container__content__card__body__quote">
+                    <img src={Quate} alt="quote" className="quate" />
+                  </div>
+                  <p className="testimonial__container__content__card__body__quote__text">
+                    {testimonials[0].quote}
+                    &quot;
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="video__testimonial">
+                <div className="video__testimonial__container">
+                  <div className="video__testimonial__container__video testimonialvido">
+                    <video
+                      className="video-controls"
+                      src={Video}
+                      muted
+                      loop
+                      controlsList="nodownload"
+                      onMouseEnter={(e) => {
+                        e.target.play();
+                        e.target.controls = true;
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.pause();
+                        e.target.controls = false;
+                      }}
+                      poster={Thumbnail}
+                    />
+                    <div className="vdoHeader">
+                      <div className="vdoHeader__image">
+                        <img src={testimonials[2].image} alt="testimonial-1" />
+                      </div>
+                      <div className="vdoHeader__name">
+                        <h3 className="vdoHeader__name__name">
+                          {testimonials[2].name}
+                        </h3>
+                        <p
+                          className="vdoHeader__name__designation"
+                          style={{ color: "#fff" }}
+                        >
+                          {testimonials[2].designation}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {testimonials.slice(1).map((testimonial, index) => (
+              <SwiperSlide key={index + 1}>
                 <div className="testimonial__container__content__card">
                   <div className="testimonial__container__content__card__header">
                     <div className="testimonial__container__content__card__header__image">
                       <img
                         src={testimonial.image}
-                        alt={`testimonial-${index + 1}`}
+                        alt={`testimonial-${index + 2}`}
                       />
                     </div>
                     <div className="testimonial__container__content__card__header__name">
@@ -126,7 +188,6 @@ export default function Testimonial() {
                       </p>
                     </div>
                   </div>
-
                   <div className="testimonial__container__content__card__body">
                     <div className="testimonial__container__content__card__body__quote">
                       <img src={Quate} alt="quote" className="quate" />
@@ -155,10 +216,6 @@ export default function Testimonial() {
               <img src={ArrowRight} alt="arrow-right" />
             </button>
           </div>
-
-          {/* <div className="video__testimonial ">
-
-          </div> */}
         </div>
       </div>
     </div>

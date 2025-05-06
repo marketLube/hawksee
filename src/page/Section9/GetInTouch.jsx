@@ -1,5 +1,5 @@
 import React from "react";
-import LogoFoot from "./../../assets/logofooter.svg";
+import LogoFoot from "./../../assets/hawkseelogoo.svg";
 import {
   FaFacebookF,
   FaInstagram,
@@ -37,10 +37,7 @@ export const GetInTouch = () => {
             className="get-in-touch__content"
             aria-label="Get in touch content"
           >
-            <div
-              className="get-in-touch__logo"
-              aria-label="Get in touch logo"
-            >
+            <div className="get-in-touch__logo" aria-label="Get in touch logo">
               <img
                 src={LogoFoot}
                 alt="Hawksee Logo"
@@ -225,7 +222,12 @@ export const GetInTouch = () => {
             <FaMapMarkerAlt className="social-media-icon" />
           </a>
         </div>
-        <div className="market">Made by <a href="https://www.instagram.com/marketlube/" target="_blank">marketlube</a></div>
+        <div className="market">
+          Made by{" "}
+          <a href="https://www.instagram.com/marketlube/" target="_blank">
+            marketlube
+          </a>
+        </div>
       </div>
     </>
   );

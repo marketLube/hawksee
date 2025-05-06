@@ -111,24 +111,26 @@
   }
 
   &__logo {
-    padding-top: 2%;
-    gap: 1rem;
-    width: 30rem;
+    width: 15rem;
+    height: 25rem;
     @include responsive.respond(bigTablets) {
-      width: 23rem;
+      width: 13rem;
+      height: 100%;
     }
     @include responsive.respond(tablets) {
-      width: 18rem;
+      width: 10rem;
+      height: 13rem;
     }
     @include responsive.respond(phone) {
-      padding: 2rem 0 0 0;
-      width: 20rem;
-      padding-bottom: 10rem;
+      height: 25rem !important;
+      padding-top: 0px !important;
+      width: 12rem !important;
     }
+
     @include responsive.respond(smallPhone) {
-      width: 18rem;
-      padding-bottom: 10%;
-      padding-top: 40%;
+      height: 25rem !important;
+      padding-top: 100px !important;
+      width: 12rem !important;
     }
     img {
       width: 100%;

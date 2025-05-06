@@ -34,6 +34,8 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
   ];
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
+  console.log("mobileNavOpen", mobileNavOpen);
+
   useEffect(() => {
     if (mobileNavOpen) {
       document.body.style.overflow = "hidden";
@@ -146,7 +148,9 @@ export const Nav = ({ setIsNavScrolling, isTesterHundered, isMobile }) => {
     } else if (navTitle === "Our Work") {
       window.location.hash = "projects";
     } else if (navTitle === "Contact") {
-      window.open("https://wa.me/919995000123", "_blank");
+      {
+        mobileNavOpen && window.open("https://wa.me/919995000123", "_blank");
+      }
     } else if (navTitle === "Services") {
       window.location.href = "#serviceDetails";
     } else {

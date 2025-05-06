@@ -136,12 +136,10 @@
 }
 
 .team-member {
-  // text-align: center;
   min-height: 20rem;
   width: 100%;
   margin: 0 auto;
   border-radius: 0.8rem;
-  // border: 3px solid #000;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -149,7 +147,6 @@
   justify-content: start;
   text-align: start;
   position: relative;
-  // background-color: #fde6de;
   background: transparent;
   transition: filter 0.3s ease;
 
@@ -170,16 +167,15 @@
     @include responsive.respond(smallPhone) {
       object-fit: contain;
       filter: none;
-      transition: none; // Remove transition effect
+      transition: none;
     }
 
     @include responsive.respond(phone) {
       filter: none;
-      transition: none; // Remove transition effect
+      transition: none;
     }
   }
 
-  // Only apply hover effect for larger screens
   @media (min-width: 768px) {
     &:hover {
       img {
@@ -194,7 +190,6 @@
 
   @include responsive.respond(tablets) {
     min-height: 20rem;
-    // width: 82%;
   }
 
   @include responsive.respond(phone) {
@@ -205,12 +200,12 @@
 
   @include responsive.respond(smallPhone) {
     min-height: 12rem;
-    width: 88%;
+    width: 100%;
     border-radius: 0.8rem;
   }
   @media (max-width: 376px) {
     min-height: 10rem;
-    width: 85%;
+    width: 100%;
   }
   @include responsive.respond(desktop) {
     min-height: 16rem;
@@ -225,11 +220,9 @@
   h3 {
     font-size: 1.2rem;
     font-weight: 500;
-    // margin-top: -3rem;
 
     @include responsive.respond(tablets) {
       font-size: 1rem;
-      // margin-top: -5rem;
     }
     @include responsive.respond(bigDesktop) {
       font-size: 1.2rem;
@@ -242,12 +235,10 @@
 
     @include responsive.respond(smallPhone) {
       font-size: 0.9rem;
-      // margin-top: -4rem;
       text-align: center;
     }
     @include responsive.respond(bigTablets) {
       font-size: 1.2rem;
-      // margin-top: -6rem;
     }
   }
 

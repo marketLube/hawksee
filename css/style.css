@@ -189,6 +189,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 6px;
+  z-index: 0;
 }
 .hamburger-menu:hover .hamburger-line:first-child {
   transform: translateY(9px);
@@ -2749,14 +2750,14 @@ a {
 @media only screen and (max-width: 575.98px) {
   .team-member {
     min-height: 12rem;
-    width: 88%;
+    width: 100%;
     border-radius: 0.8rem;
   }
 }
 @media (max-width: 376px) {
   .team-member {
     min-height: 10rem;
-    width: 85%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
@@ -6394,6 +6395,11 @@ a {
   padding-top: 5%;
   position: relative;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .testimonial {
+    padding-top: 0%;
+  }
+}
 .testimonial__container {
   height: 100%;
 }
@@ -6452,6 +6458,7 @@ a {
 @media only screen and (max-width: 575.98px) {
   .testimonial__container__content {
     padding: 1rem;
+    gap: 1rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -6611,6 +6618,11 @@ a {
   border-radius: 16px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 16.95%, rgba(0, 0, 0, 0) 100%), url(../../assets/testimonial/testimonialvdo.mp4) lightgray 50%/cover no-repeat;
 }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .testimonialvido {
+    width: 85% !important;
+  }
+}
 @media only screen and (max-width: 575.98px) {
   .testimonialvido {
     width: 100% !important;
@@ -6621,6 +6633,11 @@ a {
   .testimonialvido {
     width: 100% !important;
     gap: 10px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .testimonialvido {
+    height: 410px !important;
   }
 }
 .testimonialvido video {
@@ -6680,6 +6697,12 @@ a {
 
 .video-controls:hover::-webkit-media-controls {
   opacity: 1;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .swiper-wrapper {
+    height: fit-content !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

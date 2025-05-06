@@ -13,6 +13,8 @@ export default function Testimonial() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef(null);
+  const videoRef = useRef(null);
+
   const testimonials = [
     {
       name: "Roshini",
@@ -53,6 +55,16 @@ export default function Testimonial() {
       swiperRef.current.navigation.update();
     }
   }, []);
+
+  const toggleVideo = (videoEl) => {
+    if (videoEl.paused) {
+      videoEl.play();
+      videoEl.controls = true;
+    } else {
+      videoEl.pause();
+      videoEl.controls = false;
+    }
+  };
 
   return (
     <div className="testimonial">
@@ -133,20 +145,23 @@ export default function Testimonial() {
                 <div className="video__testimonial__container">
                   <div className="video__testimonial__container__video testimonialvido">
                     <video
+                      ref={videoRef}
                       className="video-controls"
                       src={Video}
                       muted
                       loop
                       controlsList="nodownload"
+                      poster={Thumbnail}
                       onMouseEnter={(e) => {
-                        e.target.play();
-                        e.target.controls = true;
+                        e.currentTarget.play();
+                        e.currentTarget.controls = true;
                       }}
                       onMouseLeave={(e) => {
-                        e.target.pause();
-                        e.target.controls = false;
+                        e.currentTarget.pause();
+                        e.currentTarget.controls = false;
                       }}
-                      poster={Thumbnail}
+                      onClick={(e) => toggleVideo(e.currentTarget)}
+                      onTouchStart={(e) => toggleVideo(e.currentTarget)}
                     />
                     <div className="vdoHeader">
                       <div className="vdoHeader__image">

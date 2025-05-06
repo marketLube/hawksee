@@ -371,6 +371,7 @@
   justify-content: center;
   align-items: center;
   gap: 6px;
+  z-index: 0;
 
   &:hover {
     .hamburger-line {

@@ -22,8 +22,6 @@ import VDO12 from "../../assets/vdo/VDO12.mp4";
 import VDO13 from "../../assets/vdo/VDO13.mp4";
 import VDO14 from "../../assets/vdo/vdo14.mp4";
 
-
-
 import Thumb1 from "../../assets/vdo/thum1.png";
 import Thumb2 from "../../assets/vdo/thumb2.png";
 import Thumb3 from "../../assets/vdo/thumb3.png";
@@ -38,7 +36,6 @@ import Thumb11 from "../../assets/vdo/thum11.jpeg";
 import Thumb12 from "../../assets/vdo/thum12.jpeg";
 import Thumb13 from "../../assets/vdo/thum13.jpeg";
 import Thumb14 from "../../assets/vdo/thum14.jpeg";
-
 
 import Branding1 from "../../assets/Branding/airavan.jpg";
 import Branding2 from "../../assets/Branding/artha.jpeg";
@@ -64,18 +61,42 @@ export default function ProjectsShowAllBody({
   const content = [
     {
       type: "video",
-      items: [VDO1, VDO2, VDO3, VDO4, VDO5, VDO6, VDO7, VDO8, VDO9, VDO10, VDO11, VDO12, VDO13, VDO14],
-      thumbnails: [Thumb1, Thumb2, Thumb3, Thumb4, Thumb5, Thumb6, Thumb7, Thumb8, Thumb9, Thumb10,Thumb11, Thumb12, Thumb13, Thumb14],
+      items: [
+        VDO1,
+        VDO2,
+        VDO3,
+        VDO4,
+        VDO5,
+        VDO6,
+        VDO7,
+        VDO8,
+        VDO9,
+        VDO10,
+        VDO11,
+        VDO12,
+        VDO13,
+        VDO14,
+      ],
+      thumbnails: [
+        Thumb1,
+        Thumb2,
+        Thumb3,
+        Thumb4,
+        Thumb5,
+        Thumb6,
+        Thumb7,
+        Thumb8,
+        Thumb9,
+        Thumb10,
+        Thumb11,
+        Thumb12,
+        Thumb13,
+        Thumb14,
+      ],
     },
     {
       type: "social",
-      items: [
-    
-        PojectImg2,
-        PojectImg3,
-        PojectImg1,
-        PojectImg5,
-      ],
+      items: [PojectImg2, PojectImg3, PojectImg1, PojectImg5],
     },
 
     {
@@ -92,6 +113,8 @@ export default function ProjectsShowAllBody({
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/image_sifi2s.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/mashir1_wgk37r.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474944/mashir4_v9vgta.jpg",
+        "https://res.cloudinary.com/dznxxalrb/image/upload/v1742475833/stone_fzx2mc.jpg",
+        PojectImg5,
         Branding9,
         Branding2,
         Branding3,
@@ -103,6 +126,10 @@ export default function ProjectsShowAllBody({
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474946/whitefield1_u9r7vu.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474947/artha2_ohsr6e.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474947/address2_wycxdy.jpg",
+        Branding12,
+        Branding13,
+        Branding14,
+        Branding15,
         PojectImg4,
         PojectImg1,
         VDO1,
@@ -112,6 +139,13 @@ export default function ProjectsShowAllBody({
         VDO5,
         VDO6,
         VDO7,
+        VDO8,
+        VDO9,
+        VDO10,
+        VDO11,
+        VDO12,
+        VDO13,
+        VDO14,
       ],
       thumbnails: [
         "",
@@ -138,6 +172,13 @@ export default function ProjectsShowAllBody({
         "",
         "",
         "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+
         Thumb1,
         Thumb2,
         Thumb3,
@@ -145,6 +186,13 @@ export default function ProjectsShowAllBody({
         Thumb5,
         Thumb6,
         Thumb7,
+        Thumb8,
+        Thumb9,
+        Thumb10,
+        Thumb11,
+        Thumb12,
+        Thumb13,
+        Thumb14,
       ],
     },
 
@@ -162,7 +210,7 @@ export default function ProjectsShowAllBody({
         PojectImg4,
         Branding12,
         Branding13,
-        Branding14, 
+        Branding14,
         Branding15,
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476381/7-1024x480_1_sbxp7e.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476462/5-1024x480_1_tfh7z3.jpg",

@@ -20,6 +20,8 @@ import Logo16 from "../../assets/logos/sma.png";
 import Logo17 from "../../assets/logos/tanza.png";
 import Logo18 from "../../assets/logos/artha.png";
 
+// girid
+
 export const Grid = () => {
   const logos = [
     {

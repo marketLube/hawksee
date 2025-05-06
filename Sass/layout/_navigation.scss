@@ -418,9 +418,13 @@
   flex-direction: column;
   align-items: flex-end;
   background-color: black;
-  // justify-content: space-between;
   gap: 3rem;
   transition: transform 0.8s cubic-bezier(0.33, 0.74, 0.33, 0.74);
+
+  @include responsive.respond(bigDesktop) {
+    gap: 0rem;
+  }
+
   button {
     margin: 60px 100px 0 0;
     outline: none;
@@ -444,6 +448,15 @@
 
     @include responsive.respond(tablets) {
       margin: 1.8rem 2.5rem 0 0 !important;
+    }
+
+    @include responsive.respond(bigTablets) {
+    }
+
+    @include responsive.respond(desktop) {
+    }
+
+    @include responsive.respond(bigDesktop) {
     }
   }
 
@@ -493,6 +506,10 @@
 
         @include responsive.respond(smallPhone) {
           font-size: 3rem;
+        }
+
+        @include responsive.respond(bigDesktop) {
+          font-size: 4.5rem;
         }
 
         &:hover {

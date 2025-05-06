@@ -46,7 +46,6 @@ export default function Testimonial() {
     // }
   ];
 
-
   useEffect(() => {
     if (
       swiperRef.current &&
@@ -78,28 +77,28 @@ export default function Testimonial() {
             breakpoints={{
               320: {
                 slidesPerView: 1,
-                spaceBetween: 20
+                spaceBetween: 20,
               },
               480: {
                 slidesPerView: 1.5,
-                spaceBetween: 30
+                spaceBetween: 30,
               },
               768: {
                 slidesPerView: 1,
-                spaceBetween: 30
+                spaceBetween: 30,
               },
               1024: {
                 slidesPerView: 2,
-                spaceBetween: 50
+                spaceBetween: 50,
               },
               1440: {
                 slidesPerView: 2.8,
-                spaceBetween: 50
+                spaceBetween: 50,
               },
               1600: {
                 slidesPerView: 3.5,
-                spaceBetween: 50
-              }
+                spaceBetween: 50,
+              },
             }}
             onInit={(swiper) => {
               swiper.params.navigation.prevEl = prevRef.current;
@@ -156,6 +155,10 @@ export default function Testimonial() {
               <img src={ArrowRight} alt="arrow-right" />
             </button>
           </div>
+
+          {/* <div className="video__testimonial ">
+
+          </div> */}
         </div>
       </div>
     </div>

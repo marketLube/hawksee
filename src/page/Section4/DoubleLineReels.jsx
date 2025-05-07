@@ -33,7 +33,6 @@ import Branding14 from "../../assets/Branding/chiccone.png";
 import Branding15 from "../../assets/Branding/vitamin.png";
 import project8 from "../../assets/Branding/project8.png";
 import project9 from "../../assets/Branding/project9.png";
-
 import Thumb1 from "../../assets/vdo/thum1.png";
 import Thumb2 from "../../assets/vdo/thumb2.png";
 import Thumb3 from "../../assets/vdo/thumb3.png";
@@ -51,15 +50,15 @@ import Thumb14 from "../../assets/vdo/thum14.jpeg";
 
 export const DoubleLineReels = () => {
   const images = [
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1746601616/Eventia_The-Scret-in-Detail_01_ky3ewm.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1746600376/Eventia_The-Scret-in-Detail_03_k36fhx.jpg",
     PojectImg1,
-
     PojectImg2,
     PojectImg3,
     PojectImg4,
     PojectImg5,
     PojectImg6,
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474939/choice3_igjcn5.jpg",
-
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474940/daya3_rbb5tb.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474942/dubai2_jm6kzc.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/image_sifi2s.jpg",
@@ -70,7 +69,6 @@ export const DoubleLineReels = () => {
     project8,
     project9,
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/mashir1_wgk37r.jpg",
-
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474944/mashir4_v9vgta.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/ony3_kol28y.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/PB-christmas_ouudls.jpg",
@@ -86,14 +84,12 @@ export const DoubleLineReels = () => {
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742475668/IMG-20171106-WA0053-1_zixhb9.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742475833/stone_fzx2mc.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476071/Mug-1-scaled_1_egcgda.jpg",
-
     PojectImg1,
     PojectImg2,
     PojectImg3,
     PojectImg4,
     PojectImg5,
     PojectImg6,
-
     PojectImg1,
     PojectImg2,
     PojectImg3,

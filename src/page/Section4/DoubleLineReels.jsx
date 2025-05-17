@@ -52,6 +52,7 @@ export const DoubleLineReels = () => {
   const images = [
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1746601616/Eventia_The-Scret-in-Detail_01_ky3ewm.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1746600376/Eventia_The-Scret-in-Detail_03_k36fhx.jpg",
+    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1747458866/roseapps_j4frwz.jpg",
     PojectImg1,
     PojectImg2,
     PojectImg3,

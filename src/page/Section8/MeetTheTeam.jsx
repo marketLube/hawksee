@@ -110,6 +110,20 @@ export const MeetTheTeam = () => {
         // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1737987042/shahidGraphicDesigner_idecbb.jpg",
         Team10,
     },
+    {
+      id: 12,
+      name: "Salman",
+      position: "GRAPHIC DESIGNER",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1747458515/Img2_z2osnc.png",
+    },
+    {
+      id: 13,
+      name: "Shehin",
+      position: "GRAPHIC DESIGNER",
+      image:
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1747458516/Img_e3mrfx.png",
+    },
   ];
 
   const swiperRef = React.useRef(null);
@@ -191,9 +205,9 @@ export const MeetTheTeam = () => {
             <SwiperSlide
               key={member.id}
               aria-label={`Team member ${member.name}`}
-             >
+            >
               <div
-                className={`team-member ${isHovered ? 'can-hover' : ''}`}
+                className={`team-member ${isHovered ? "can-hover" : ""}`}
                 aria-label="Team member"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}

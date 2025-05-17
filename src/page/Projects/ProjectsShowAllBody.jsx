@@ -104,6 +104,7 @@ export default function ProjectsShowAllBody({
       items: [
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1746601616/Eventia_The-Scret-in-Detail_01_ky3ewm.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1746600376/Eventia_The-Scret-in-Detail_03_k36fhx.jpg",
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1747458866/roseapps_j4frwz.jpg",
         Branding15,
         Branding13,
         Branding12,
@@ -227,6 +228,7 @@ export default function ProjectsShowAllBody({
       items: [
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1746601616/Eventia_The-Scret-in-Detail_01_ky3ewm.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1746600376/Eventia_The-Scret-in-Detail_03_k36fhx.jpg",
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1747458866/roseapps_j4frwz.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474939/choice3_igjcn5.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474940/daya3_rbb5tb.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474941/dholi3_innmgq.jpg",
@@ -243,6 +245,7 @@ export default function ProjectsShowAllBody({
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474947/artha2_ohsr6e.jpg",
         "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474947/address2_wycxdy.jpg",
         // "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474944/melco2_uyqaed.jpg",
+        "https://res.cloudinary.com/dzuqczvb7/image/upload/v1747458666/ross_dcawlr.jpg",
       ],
     },
 

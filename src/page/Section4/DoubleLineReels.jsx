@@ -50,10 +50,30 @@ import Thumb14 from "../../assets/vdo/thum14.jpeg";
 
 export const DoubleLineReels = () => {
   const images = [
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/mashir1_wgk37r.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474944/mashir4_v9vgta.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/ony3_kol28y.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/PB-christmas_ouudls.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/peppergrey1_lsg8p0.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474946/preethi1_fcoscq.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474946/whitefield1_u9r7vu.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474947/artha2_ohsr6e.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1746601616/Eventia_The-Scret-in-Detail_01_ky3ewm.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1746600376/Eventia_The-Scret-in-Detail_03_k36fhx.jpg",
     "https://res.cloudinary.com/dzuqczvb7/image/upload/v1747458866/roseapps_j4frwz.jpg",
     PojectImg1,
+    Branding15,
+    project8,
+    project9,
+    Branding13,
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474947/address2_wycxdy.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476381/7-1024x480_1_sbxp7e.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476462/5-1024x480_1_tfh7z3.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476559/IMG-20170428-WA0063_yzvozy.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476619/WhatsApp-Image-2020-09-23-at-20.41.15-1_ym84yp.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742475668/IMG-20171106-WA0053-1_zixhb9.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742475833/stone_fzx2mc.jpg",
+    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476071/Mug-1-scaled_1_egcgda.jpg",
     PojectImg2,
     PojectImg3,
     PojectImg4,
@@ -64,46 +84,14 @@ export const DoubleLineReels = () => {
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474942/dubai2_jm6kzc.jpg",
     "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/image_sifi2s.jpg",
     Branding12,
-    Branding13,
     Branding14,
-    Branding15,
-    project8,
-    project9,
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474943/mashir1_wgk37r.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474944/mashir4_v9vgta.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/ony3_kol28y.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/PB-christmas_ouudls.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474945/peppergrey1_lsg8p0.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474946/preethi1_fcoscq.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474946/whitefield1_u9r7vu.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474947/artha2_ohsr6e.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742474947/address2_wycxdy.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476381/7-1024x480_1_sbxp7e.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476462/5-1024x480_1_tfh7z3.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476559/IMG-20170428-WA0063_yzvozy.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476619/WhatsApp-Image-2020-09-23-at-20.41.15-1_ym84yp.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742475668/IMG-20171106-WA0053-1_zixhb9.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742475833/stone_fzx2mc.jpg",
-    "https://res.cloudinary.com/dznxxalrb/image/upload/v1742476071/Mug-1-scaled_1_egcgda.jpg",
-    PojectImg1,
-    PojectImg2,
-    PojectImg3,
-    PojectImg4,
-    PojectImg5,
-    PojectImg6,
-    PojectImg1,
-    PojectImg2,
-    PojectImg3,
-    PojectImg4,
-    PojectImg5,
-    PojectImg6,
   ];
 
   const videos = [
-    VDO1,
     VDO2,
-    VDO3,
     VDO4,
+    VDO1,
+    VDO3,
     VDO5,
     VDO6,
     VDO7,
@@ -117,10 +105,10 @@ export const DoubleLineReels = () => {
   ];
 
   const thumbnails = [
-    Thumb1,
     Thumb2,
-    Thumb3,
     Thumb4,
+    Thumb1,
+    Thumb3,
     Thumb5,
     Thumb6,
     Thumb7,
@@ -227,14 +215,6 @@ export const DoubleLineReels = () => {
           {images.map((image, index) => (
             <img
               key={`image-${index}`}
-              src={image}
-              alt={`Slide ${index}`}
-              aria-label={`Image slide ${index}`}
-            />
-          ))}
-          {images.map((image, index) => (
-            <img
-              key={`image-duplicate-${index}`}
               src={image}
               alt={`Slide ${index}`}
               aria-label={`Image slide ${index}`}

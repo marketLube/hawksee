@@ -12,7 +12,7 @@ import { MeetTheTeam } from "./page/Section8/MeetTheTeam";
 import { GetInTouch } from "./page/Section9/GetInTouch";
 import Projects from "./page/Projects/Projects";
 import ServiceMobo from "./page/Service/serviceMobo";
-import ServiceSCroll from "./page/Service/ServiceSCroll";
+// import ServiceSCroll from "./page/Service/ServiceSCroll";
 import { useInView } from "framer-motion";
 import { ParagraphMob } from "./page/Section2/ParagraphMob";
 import ServiceHorizontal from "./page/Service/serviceHorizontal";
@@ -84,7 +84,7 @@ function App() {
         <Research aria-label="Research section" />
         <Grid aria-label="Grid section" />
         <MeetTheTeam aria-label="Meet the team section" />
-        <Testimonial aria-label="Testimonial section" /> 
+        <Testimonial aria-label="Testimonial section" />
         <Blogslist aria-label="Blog section" />
       </main>
       <footer aria-label="Footer section">

@@ -22,7 +22,7 @@ export default function Testimonial() {
       quote:
         "Working with Hawksee Digital Solutions has been a game-changer for our online presence. Their expertise in SEO and website design helped us build a robust online platform for Dr. Roshini's clinic, attracting more clients and boosting visibility. We're thrilled with the results and would highly recommend their services to anyone looking to enhance their digital footprint.",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Capture_mkym7b.jpg",
+        "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/testimonial/Capture_mkym7b.jpg",
     },
     {
       name: "Mufthi",
@@ -30,7 +30,7 @@ export default function Testimonial() {
       quote:
         "The team at Hawksee truly transformed the way we approach content. Their video production services were exceptional, creating engaging and professional videos that showcased Little Gym in the best possible light. Their attention to detail and creativity helped us connect with our audience in new and exciting ways. A big thanks to Hawksee for their outstanding work!",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/435700088_10161261429140675_2188708708538902776_n_dqunnh.jpg",
+        "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/testimonial/435700088_10161261429140675_2188708708538902776_n_dqunnh.jpg",
     },
     {
       name: "Uthara Ramakrishnan",
@@ -38,7 +38,7 @@ export default function Testimonial() {
       quote:
         "Hawksee has been an integral part of building my personal brand. Their approach to content creation and strategy was tailored to highlight my strengths and values. The team's expertise in social media and branding has opened new doors for me professionally, and I'm excited about the future. Thanks to Hawksee for making my vision come to life!",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1746451963/Utharamob_djbwk2.jpg",
+        "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/testimonial/Utharamob_djbwk2.jpg",
     },
   ];
 

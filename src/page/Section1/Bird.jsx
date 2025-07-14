@@ -157,10 +157,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
         <img
           className="bird-image"
           alt="A stylized bird representing Hawksee"
-          src={
-            // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738574941/birdImg_jaomgz.svg"
-            BirdImg
-          }
+          src={BirdImg}
           aria-label="Stylized bird representing Hawksee"
           style={{
             transform: `translate3d(${

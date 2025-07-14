@@ -81,10 +81,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
           style={styles}
           className="bird-imageMobo"
           alt="A stylized bird representing Hawksee"
-          src={
-            // "https://res.cloudinary.com/ddp7f64w0/image/upload/v1738575060/birdForMobile_ipivoa.svg"
-            BirdImg
-          }
+          src={BirdImg}
           aria-label="Stylized bird representing Hawksee"
         />
       </div>

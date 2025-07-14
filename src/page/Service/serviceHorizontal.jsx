@@ -7,36 +7,36 @@ import { FiArrowUpRight } from "react-icons/fi";
 export default function StudyIn() {
   const countries = [
     {
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-03_s18foa.webp",
+      img: "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-03_s18foa.webp",
       title: "Branding & Identity",
       description:
         "Creating distinctive brand identities through innovative logos, marketing materials, and comprehensive design solutions.",
     },
     {
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-02_yv8ubf.webp",
+      img: "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-02_yv8ubf.webp",
       title: "Performance Marketing",
       description: "Data-driven ad campaigns to maximize conversions and ROI",
     },
     {
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-01_wczbap.webp",
+      img: "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-01_wczbap.webp",
       title: "Social Media & Content Marketing",
       description:
         "Expertly curating and expanding your brand's visibility and engagement on various social media platforms.",
     },
     {
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-04_htxnpe.webp",
+      img: "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-04_htxnpe.webp",
       title: "Creative Content & Video Production",
       description:
         "Delivering exceptional visuals, engaging videos, and compelling graphics to elevate brand storytelling.",
     },
     {
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-06_dqikyl.webp",
+      img: "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-06_dqikyl.webp",
       title: "Website Development & SEO",
       description:
         "User-friendly, conversion-optimized websites for businesses of all sizes and SEO strategies to boost online visibility.",
     },
     {
-      img: "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-10_xdqwt7.webp",
+      img: "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-10_xdqwt7.webp",
       title: "Influencer & Outdoor Marketing",
       description:
         "Creating impactful marketing campaigns with a focus on high-quality printed materials, including brochures, flyers, and outdoor advertising.",

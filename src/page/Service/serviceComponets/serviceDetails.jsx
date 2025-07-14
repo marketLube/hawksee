@@ -24,7 +24,7 @@ const ServiceDetails = () => {
       descPara3:
         "Because branding isn't just about looking good—it's about being recognized, remembered, and trusted.",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-03_s18foa.webp",
+        "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-03_s18foa.webp",
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ const ServiceDetails = () => {
       descPara3:
         "Our performance marketing strategies are designed to deliver measurable results, helping you achieve your business goals.",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-02_yv8ubf.webp",
+        "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-02_yv8ubf.webp",
     },
     {
       id: 3,
@@ -51,7 +51,7 @@ const ServiceDetails = () => {
       descPara3:
         "No more posting just for the sake of it—we turn your social media into a powerhouse for growth and engagement.",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-01_wczbap.webp",
+        "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-01_wczbap.webp",
     },
     {
       id: 4,
@@ -65,7 +65,7 @@ const ServiceDetails = () => {
       descPara3:
         "In the age of short-form content, standing out is everything. Let's create content that entertains, informs, and converts.",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-04_htxnpe.webp",
+        "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-04_htxnpe.webp",
     },
     {
       id: 5,
@@ -79,7 +79,7 @@ const ServiceDetails = () => {
       descPara3:
         "Your website should be your hardest-working sales tool—we make sure it does the job.",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779410/hawksee-06_dqikyl.webp",
+        "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-06_dqikyl.webp",
     },
 
     {
@@ -94,7 +94,7 @@ const ServiceDetails = () => {
       descPara3:
         "Because when real people talk about your brand, people listen.",
       image:
-        "https://res.cloudinary.com/dznxxalrb/image/upload/v1739779409/hawksee-10_xdqwt7.webp",
+        "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-10_xdqwt7.webp",
     },
   ];
 

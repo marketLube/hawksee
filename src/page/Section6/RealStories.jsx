@@ -27,13 +27,13 @@ export const RealStories = () => {
   ];
 
   const thumbnails = [
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028864/thum1_pw3c4d.png",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028865/thumb6_eewq7i.png",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028865/thum2_tdb0bv.png",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028865/thumb6_eewq7i.png",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028865/thumb4_wwwcks.png",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737028872/thumb5_orazze.png",
-    "https://res.cloudinary.com/dzuqczvb7/image/upload/v1737030315/thumb7_pbqfyo.png",
+    "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/realstories/thum1_pw3c4d.png",
+    "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/realstories/thumb6_eewq7i.png",
+    "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/realstories/thum2_tdb0bv.png",
+    "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/realstories/thumb6_eewq7i+(1).png",
+    "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/realstories/thumb4_wwwcks.png",
+    "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/realstories/thumb5_orazze.png",
+    "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/realstories/thumb7_pbqfyo.png",
   ];
 
   const settings = {

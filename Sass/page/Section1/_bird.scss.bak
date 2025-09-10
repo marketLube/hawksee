@@ -117,7 +117,6 @@
     }
   }
 }
-
 .caption {
   position: absolute;
   top: 0;
@@ -127,7 +126,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -143,10 +141,22 @@
     font-weight: 100;
     margin-top: -20vh;
     text-align: center;
-
-    .changing-word {
-      font-size: 3rem !important;
-      will-change: transform, opacity;
+    
+    .fixed-text {
+      display: inline;
+    }
+    
+    .cycling-word-container {
+      display: inline-block;
+      width: 8rem; // Fixed width to prevent layout shifts
+      text-align: left;
+      vertical-align: top;
+    }
+    
+    .cycling-word {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 100;
     }
 
     span {
@@ -159,6 +169,14 @@
     }
     @include responsive.respond(phone) {
       font-size: 2.5rem;
+      
+      .cycling-word {
+        font-size: 2.5rem;
+      }
+      
+      .cycling-word-container {
+        width: 7rem; // Slightly smaller for mobile
+      }
     }
   }
   // & .caption-span {

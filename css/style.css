@@ -1758,6 +1758,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1772,6 +1773,18 @@ a {
   font-size: 3rem;
   font-weight: 100;
   margin-top: -20vh;
+  text-align: center;
+}
+.caption h1 .changing-word {
+  font-size: 3rem !important;
+  will-change: transform, opacity;
+}
+.caption h1 span {
+  font-size: 1rem !important;
+  font-weight: 300;
+  display: block;
+  justify-content: center;
+  text-align: center;
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .caption h1 {

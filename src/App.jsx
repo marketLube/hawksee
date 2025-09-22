@@ -80,11 +80,12 @@ function App() {
         <Projects aria-label="Projects section" />
         <ServiceDetails aria-label="Service details section" />
         <Counter aria-label="Counter section" />
+        <Testimonial aria-label="Testimonial section" />
         <DoubleLineReels aria-label="Double line reels section" />
         <Research aria-label="Research section" />
         <Grid aria-label="Grid section" />
         <MeetTheTeam aria-label="Meet the team section" />
-        <Testimonial aria-label="Testimonial section" />
+        
         <Blogslist aria-label="Blog section" />
       </main>
       <footer aria-label="Footer section">

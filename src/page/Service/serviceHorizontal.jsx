@@ -8,7 +8,7 @@ export default function StudyIn() {
   const countries = [
     {
       img: "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-03_s18foa.webp",
-      title: "Branding & Identity",
+      title: "Why work with us",
       description:
         "Creating distinctive brand identities through innovative logos, marketing materials, and comprehensive design solutions.",
     },

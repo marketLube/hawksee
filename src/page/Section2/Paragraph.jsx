@@ -67,30 +67,30 @@ export const Paragraph = ({ isTesterHundered, style }) => {
           />
         </div>
         <div className="paragraph__textDiv" aria-label="Text container">
-          <p
-            aria-label="Text content for the brand's message"
-            style={
-              isInView
-                ? {
-                    transform: "translateY(0)",
-                    transition: "all 1.3",
-                  }
-                : {
-                    transform: "translateY(-5rem)",
-                    opacity: "0",
-                    transition: "all 1.3s",
-                  }
-            }
-          >
-            Every Brand Needs Hawksee, Because We{" "}
-            <strong style={{ fontWeight: 600 }}>See</strong>! First,
-            <br /> We <strong style={{ fontWeight: 600 }}>See</strong> The
-            Brand&apos;s Potential, Customer Needs, and the Gap. <br />
-            Then, We Act to <strong style={{ fontWeight: 600 }}>
-              Show
-            </strong>{" "}
-            Results.
-          </p>
+        <div
+  aria-label="Text content for the brand's message"
+  style={
+    isInView
+      ? {
+          transform: "translateY(0)",
+          transition: "all 1.3s",
+        }
+      : {
+          transform: "translateY(-5rem)",
+          opacity: "0",
+          transition: "all 1.3s",
+        }
+  }
+>
+  <h2 style={{ fontWeight: 600, marginBottom: "1rem" }}>
+    Get a team that's part of you
+  </h2>
+  <p style={{ fontSize: "2.25rem" }}>
+    We work with you as an extension of your team to deliver business impact 
+    with growth-ready systems, intent-driven strategies and insight-powered 
+    content – faster.
+  </p>
+</div>
           <div className="aboutbutton">
             <Button
               onClick={() => navigate("/about")}

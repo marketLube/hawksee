@@ -14,15 +14,30 @@ const ServiceDetails = () => {
   const servicesData = [
     {
       id: 1,
-      title: "Branding & Identity",
-      subtitle: "Make Your Brand Unforgettable",
-
-      descPara1:
-        "Your brand is more than just a logo—it's your voice, personality, and first impression. We craft brands that stand out and stay memorable with the perfect mix of design, strategy, and storytelling.",
-      descPara2:
-        "From logos, color palettes, and typography to brand positioning and messaging, we ensure every element reflects who you are and what you stand for. Whether you're starting fresh or rebranding, we help build a strong, consistent identity that connects with your audience and leaves a lasting impact.",
-      descPara3:
-        "Because branding isn't just about looking good—it's about being recognized, remembered, and trusted.",
+      title: "Why work with us",
+      subtitle: "", // Remove subtitle for ID 1
+      sections: [
+        {
+          heading: "Clarity:",
+          description: "We transform scattered insights into clear, actionable direction, so you know exactly where to move next and why."
+        },
+        {
+          heading: "Data-driven approach:",
+          description: "Dig deep into your market, your customers, and your competitors until the patterns become impossible to ignore and use the insights for ROI-driven business impact."
+        },
+        {
+          heading: "Business-focused strategy, powered by experts:",
+          description: "Build a scalable roadmap that fits the growing needs of your business, helmed by experienced marketing strategists."
+        },
+        {
+          heading: "Marketing that matches your ambition:",
+          description: "We align every post, pixel, and page with your long-term vision so nothing feels random or off-brand."
+        },
+        {
+          heading: "Speed and execution:",
+          description: "We connect the dots between goals, execution, and growth, so scale faster."
+        }
+      ],
       image:
         "https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/service/hawksee-03_s18foa.webp",
     },
@@ -297,48 +312,90 @@ const ServiceDetails = () => {
                 >
                   {currentService.title}
                 </h1>
-                <p
-                  className={`service-subtitle ${
-                    isAnimate
-                      ? "animate-slide-up show-animation"
-                      : "animate-slide-up"
-                  }`}
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  {currentService.subtitle}
-                </p>
+                {currentService.subtitle && (
+                  <p
+                    className={`service-subtitle ${
+                      isAnimate
+                        ? "animate-slide-up show-animation"
+                        : "animate-slide-up"
+                    }`}
+                    style={{ animationDelay: "0.3s" }}
+                  >
+                    {currentService.subtitle}
+                  </p>
+                )}
               </div>
-              <div className="service-description-container">
-                <p
-                  className={`service-description1 ${
-                    isAnimate
-                      ? "animate-slide-up show-animation"
-                      : "animate-slide-up"
-                  }`}
-                  style={{ animationDelay: "0.4s" }}
-                >
-                  {currentService.descPara1}
-                </p>
-                <p
-                  className={`service-description2 ${
-                    isAnimate
-                      ? "animate-slide-up show-animation"
-                      : "animate-slide-up"
-                  }`}
-                  style={{ animationDelay: "0.5s" }}
-                >
-                  {currentService.descPara2}
-                </p>
-                <p
-                  className={`service-description3 ${
-                    isAnimate
-                      ? "animate-slide-up show-animation"
-                      : "animate-slide-up"
-                  }`}
-                  style={{ animationDelay: "0.6s" }}
-                >
-                  {currentService.descPara3}
-                </p>
+              <div className="service-description-container" style={{fontWeight: "100" , fontSize: "1.3rem", lineHeight: "1.2"}}>
+                {currentService.sections ? (
+                  // Special rendering for ID 1 with sections
+                  currentService.sections.map((section, index) => (
+                    <div
+                      key={index}
+                      className={`service-section ${
+                        isAnimate
+                          ? "animate-slide-up show-animation"
+                          : "animate-slide-up"
+                      }`}
+                      style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                    >
+                      <h3 className="service-section-heading" style={{fontWeight: "400" , fontSize: "1.3rem", lineHeight: "1.2"}}>{section.heading}</h3>
+                      <p className="service-section-description" style={{fontWeight: "100" , fontSize: "1.2rem", lineHeight: "1.2"}}>{section.description}</p>
+                    </div>
+                  ))
+                ) : (
+                  // Regular rendering for other services
+                  <>
+                    <p
+                      className={`service-description1 ${
+                        isAnimate
+                          ? "animate-slide-up show-animation"
+                          : "animate-slide-up"
+                      }`}
+                      style={{ animationDelay: "0.4s" }}
+                      dangerouslySetInnerHTML={{ __html: currentService.descPara1 }}
+                    />
+                    <p
+                      className={`service-description2 ${
+                        isAnimate
+                          ? "animate-slide-up show-animation"
+                          : "animate-slide-up"
+                      }`}
+                      style={{ animationDelay: "0.5s" }}
+                      dangerouslySetInnerHTML={{ __html: currentService.descPara2 }}
+                    />
+                    <p
+                      className={`service-description3 ${
+                        isAnimate
+                          ? "animate-slide-up show-animation"
+                          : "animate-slide-up"
+                      }`}
+                      style={{ animationDelay: "0.6s" }}
+                      dangerouslySetInnerHTML={{ __html: currentService.descPara3 }}
+                    />
+                    {currentService.descPara4 && (
+                      <p
+                        className={`service-description4 ${
+                          isAnimate
+                            ? "animate-slide-up show-animation"
+                            : "animate-slide-up"
+                        }`}
+                        style={{ animationDelay: "0.7s" }}
+                        dangerouslySetInnerHTML={{ __html: currentService.descPara4 }}
+                      />
+                    )}
+                    {currentService.descPara5 && (
+                      <p
+                        className={`service-description5 ${
+                          isAnimate
+                            ? "animate-slide-up show-animation"
+                            : "animate-slide-up"
+                        }`}
+                        style={{ animationDelay: "0.8s" }}
+                        dangerouslySetInnerHTML={{ __html: currentService.descPara5 }}
+                      />
+                    )}
+                  </>
+                )}
               </div>
             </div>
             <div className="service-details-container__image">
@@ -350,7 +407,7 @@ const ServiceDetails = () => {
                 }`}
                 src={currentService.image}
                 alt={currentService.title}
-                style={{ animationDelay: "0.7s" }}
+                style={{ animationDelay: "0.9s" }}
               />
             </div>
           </div>
@@ -358,7 +415,7 @@ const ServiceDetails = () => {
             className={`service__navigation ${
               isAnimate ? "animate-slide-up show-animation" : "animate-slide-up"
             }`}
-            style={{ animationDelay: "0.8s" }}
+            style={{ animationDelay: "1.0s" }}
           >
             {serviceData.index > 0 && (
               <button className="nav-btn prev" onClick={handlePrevService}>

@@ -7,7 +7,32 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scrollDirection, setScrollDirection] = useState("down");
   const birdSectionRef = useRef(null);
-  
+
+  // ==== NEWLY ADDED: Cycling text animation state ====
+  const words = ["brand", "business", "marketing"];
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  // ==== NEWLY ADDED: Function to calculate fixed width for consistent spacing ====
+  const getFixedWidth = () => {
+    const longestWord = words.reduce((a, b) => a.length > b.length ? a : b);
+    const charWidth = window.innerWidth <= 575.98 ? 1.2 : 1.2; // rem units
+    return `${longestWord.length * charWidth}rem`;
+  };
+
+  // ==== NEWLY ADDED: Effect for cycling words every 2 seconds ====
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIsAnimating(true);
+      
+      setTimeout(() => {
+        setWordIndex((prev) => (prev + 1) % words.length);
+        setIsAnimating(false);
+      }, 200); // Shorter duration to prevent stuck effect
+    }, 2000);
+    return () => clearInterval(intervalId);
+  }, []);
+
   const smoothScrollTo = (targetPosition) => {
     const duration = 700;
     const start = window.scrollY;
@@ -139,31 +164,6 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
     };
   };
 
-  // cycling last word
-  const words = ["brand", "business", "marketing"];
-  const [wordIndex, setWordIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  
-  // Calculate fixed width based on the longest word
-  const getFixedWidth = () => {
-    const longestWord = words.reduce((a, b) => a.length > b.length ? a : b);
-    // Approximate character width based on font size - adjust as needed
-    const charWidth = window.innerWidth <= 575.98 ? 1.2 : 1.2; // rem units
-    return `${longestWord.length * charWidth}rem`;
-  };
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIsAnimating(true);
-      
-      setTimeout(() => {
-        setWordIndex((prev) => (prev + 1) % words.length);
-        setIsAnimating(false);
-      }, 200); // Shorter duration to prevent stuck effect
-    }, 2000);
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
     <section
       id="bird"
@@ -176,6 +176,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
         style={getCaptionStyle()}
         aria-label="Caption for the bird section"
       >
+        {/* ==== UPDATED: New heading with cycling text and subtitle ==== */}
         <h1>
           Fix your{" "}
           <span 
@@ -193,7 +194,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
                 position: 'relative',
                 transition: 'all 0.2s ease-out',
                 textAlign: 'left',
-                fontSize: '3rem',
+                fontSize: '4rem',
                 fontWeight: '100',
                 display: 'inline-block',
                 transform: isAnimating ? 'translateY(-20px)' : 'translateY(0)',
@@ -202,34 +203,14 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
             >
               {words[wordIndex]}
             </span>
-            
-            {/* Next word coming from bottom */}
-            {/* isAnimating && (
-              <span 
-                className="changing-word next-word"
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out',
-                  textAlign: 'left',
-                  fontSize: '3rem',
-                  fontWeight: '100',
-                  display: 'inline-block',
-                  transform: 'translateY(30px)',
-                  opacity: 1,
-                  animation: 'slideInFromBottom 0.3s ease-in-out forwards'
-                }}
-              >
-                {words[nextWordIndex]}
-              </span>
-            ) */}
           </span>
           <br /> 
-          <span className="caption-span">with speed, strategy and execution trusted by 100+ businesses. </span>
+          <span className="caption-span">
+            with speed, strategy and execution trusted by 100+ businesses.
+          </span>
         </h1>
         
-        {/* Buttons container */}
+        {/* ==== NEWLY ADDED: Call-to-action buttons ==== */}
         <div 
           className="caption-buttons"
           style={{
@@ -237,30 +218,41 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
             gap: '1rem',
             justifyContent: 'center',
             marginTop: '2rem',
-            flexWrap: 'wrap'
+            flexWrap: 'wrap',
+            
           }}
         >
           <button
             className="explore-service-btn"
             style={{
-              backgroundColor: '#000',
-              color: '#fff',
-              border: 'none',
-              padding: '12px 24px',
+              height: '42px',
+              backgroundColor: '#fff',
+              color: '#000',
+              border: '1px solid #000',
+              padding: '10px 24px',
               fontSize: '1rem',
               fontWeight: '500',
-              borderRadius: '4px',
+              borderRadius: '10px',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              minWidth: '140px'
+              minWidth: '140px',
+              zIndex: '0'
+            }}
+            onClick={() => {
+              // Navigate to serviceDetails section (same as Nav component)
+              window.location.href = "#serviceDetails";
             }}
             onMouseEnter={(e) => {
-              e.target.style.backgroundColor = '#333';
+              e.target.style.backgroundColor = '#f5f5f5';
+              e.target.style.color = '#000';
               e.target.style.transform = 'translateY(-2px)';
+              e.target.style.border = '1px solid #000';
             }}
             onMouseLeave={(e) => {
-              e.target.style.backgroundColor = '#000';
+              e.target.style.backgroundColor = '#fff';
+              e.target.style.color = '#000';
               e.target.style.transform = 'translateY(0)';
+              e.target.style.border = '1px solid #000';
             }}
           >
             Explore Service
@@ -269,32 +261,83 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
           <button
             className="learn-more-btn"
             style={{
+              height: '42px',
               backgroundColor: '#fff',
               color: '#000',
-              border: '2px solid #000',
-              padding: '10px 24px',
+              border: 'none',
+              textDecoration: 'underline',
+              textDecorationColor: '#000',
+              textDecorationThickness: '1.2px',
+              padding: '5px 24px',
               fontSize: '1rem',
               fontWeight: '500',
-              borderRadius: '4px',
+              borderRadius: '0',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              minWidth: '140px'
+              minWidth: '140px',
+              zIndex: '0',
+              textUnderlineOffset: '3px',
             }}
             onMouseEnter={(e) => {
-              e.target.style.backgroundColor = '#000';
-              e.target.style.color = '#fff';
+              e.target.style.color = '#000';
               e.target.style.transform = 'translateY(-2px)';
+              e.target.style.textDecoration = 'underline';
+              e.target.style.textDecorationColor = '#000';
+              e.target.style.textDecorationThickness = '1px';
+              e.target.style.textUnderlineOffset = '6px';
             }}
             onMouseLeave={(e) => {
               e.target.style.backgroundColor = '#fff';
               e.target.style.color = '#000';
               e.target.style.transform = 'translateY(0)';
+              e.target.style.textDecoration = 'underline';
+              e.target.style.textDecorationColor = '#000';
+              e.target.style.textDecorationThickness = '1px';
+              e.target.style.textUnderlineOffset = '6px';
             }}
           >
             Learn More
           </button>
         </div>
+
+        {/* ==== UPDATED: Testimonial Section with new layout ==== */}
+        <div className="testimonial-section">
+          <div className="testimonial-content">
+            {/* Quote comes first, on its own line */}
+            <div className="testimonial-text">
+              <p className="testimonial-quote">
+                "Working with hawksee digital solutions has been a game-changer for our online presence"
+              </p>
+            </div>
+            
+            {/* Avatar and name below the quote, side by side */}
+            <div className="testimonial-author-row">
+              <div 
+                className="avatar-placeholder"
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  backgroundImage: 'url(https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/hawksee/testimonial/Capture_mkym7b.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              >
+              </div>
+              <p className="testimonial-author">
+                <strong>Roshini</strong>, Prime Skin and Laser
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+      
       <div className="bird-container" aria-label="Container for the bird image">
         <img
           className="bird-image"
@@ -302,11 +345,17 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
           src={BirdImg}
           aria-label="Stylized bird representing Hawksee"
           style={{
-            transform: `translate3d(${offset * getTranslateMultiplier().x}px, ${offset * getTranslateMultiplier().y}px, 0) scale(${1 + offset * getScaleMultiplier()})`,
+            transform: `translate3d(${
+              -offset * getTranslateMultiplier().x
+            }px, ${-offset * getTranslateMultiplier().y}px, 0) scale(${
+              (windowWidth <= 767.98 ? 2 : 0.8) + offset * getScaleMultiplier()
+            })`,
             transformOrigin: "center center",
-            transition: scrollDirection === "up" 
-              ? "transform 0.5s cubic-bezier(.73,.58,.83,.67)" 
-              : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)",
+            transition: `${
+              scrollDirection === "up"
+                ? "transform 0.5s cubic-bezier(.73,.58,.83,.67)"
+                : "transform 1.3s cubic-bezier(.49,.41,.1,1.02)"
+            }`,
             willChange: "transform",
           }}
         />

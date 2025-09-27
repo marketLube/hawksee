@@ -923,6 +923,7 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: hidden;
 }
 .get-in-touch__container {
   width: 100%;
@@ -937,44 +938,141 @@ a {
   }
 }
 .get-in-touch__title {
-  font-size: 12.5rem;
+  font-size: 7.5rem;
   font-weight: 700;
-  text-align: right;
+  white-space: nowrap;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  text-align: left;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1699.98px) {
   .get-in-touch__title {
-    font-size: 12rem;
+    font-size: 7.5rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .get-in-touch__title {
-    font-size: 9.5rem;
+    font-size: 6rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .get-in-touch__title {
-    font-size: 8rem;
-    margin-bottom: 2rem;
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .get-in-touch__title {
-    font-size: 6rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .get-in-touch__title {
-    font-size: 5rem;
+    font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 1rem;
   }
 }
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__title {
     font-size: 3.5rem;
-    margin-bottom: -6rem;
     text-align: center;
+  }
+}
+.get-in-touch__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column !important;
+    padding: 0 1rem;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column !important;
+    padding: 0 0;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.get-in-touch__intro {
+  max-width: 46rem;
+  padding: 0;
+  margin-top: -1rem;
+  margin-bottom: 4rem;
+  text-align: left;
+  color: #4e4e4e;
+  margin-top: 1.5rem;
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__intro {
+    margin-bottom: 0rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__intro {
+    margin-bottom: 0rem;
+    font-size: 1.2rem;
+  }
+}
+.get-in-touch__intro p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 0.75rem 0;
+  font-weight: 500;
+}
+@media only screen and (max-width: 575.98px) {
+  .get-in-touch__intro p {
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__intro p {
+    font-size: 0.8rem;
+  }
+}
+.get-in-touch__intro .get-in-touch__cta {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .get-in-touch__intro {
+    padding: 0 1rem;
+    max-width: 100%;
+    text-align: center;
+  }
+  .get-in-touch__intro .get-in-touch__cta {
+    font-size: 0.9rem;
   }
 }
 .get-in-touch__content {
@@ -1059,7 +1157,7 @@ a {
 @media only screen and (max-width: 575.98px) {
   .get-in-touch__logo {
     height: 25rem !important;
-    padding-top: 100px !important;
+    padding-top: 50px !important;
     width: 12rem !important;
   }
 }
@@ -1623,6 +1721,34 @@ a {
 }
 .market a:hover {
   color: blue;
+}
+
+/* Scoped AntD modal primary button override for GetInTouch modal */
+.get-in-touch-modal .ant-btn-primary {
+  background-color: #000 !important;
+  border-color: #000 !important;
+}
+.get-in-touch-modal .ant-btn-primary:hover,
+.get-in-touch-modal .ant-btn-primary:focus,
+.get-in-touch-modal .ant-btn-primary:active {
+  background-color: #111 !important;
+  border-color: #111 !important;
+}
+.get-in-touch-modal .ant-input,
+.get-in-touch-modal .ant-input:focus,
+.get-in-touch-modal .ant-input-focused {
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  background: #FBFBFB !important;
+  box-shadow: none !important;
+}
+.get-in-touch-modal .ant-input:hover {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+.get-in-touch-modal .ant-input {
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  background: #FBFBFB !important;
 }
 
 .bird {

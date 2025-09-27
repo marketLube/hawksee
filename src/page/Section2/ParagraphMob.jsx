@@ -106,50 +106,39 @@ export const ParagraphMob = ({ isTesterHundered, style, paraRef }) => {
         </div>
 
         <div className="paragraph__textDiv" aria-label="Text container">
-          <p
+          <div
             aria-label="Text content for the brand's message"
             style={
               isInView
                 ? {
                     transform: "translateY(0)",
-                    transition: "all 2s ease",
+                    transition: "all 1.3s",
                   }
                 : {
-                    transform: "translateY(5rem)",
+                    transform: "translateY(-5rem)",
                     opacity: "0",
-                    transition: "all 2s ease",
+                    transition: "all 1.3s",
                   }
             }
           >
-            <span ref={paraRef}>Every</span> Brand Needs Hawksee, Because We{" "}
-            {""}
-            <strong style={{ fontWeight: 600 }}>See</strong>! First,
-            <br /> We <strong style={{ fontWeight: 600 }}>See</strong> The
-            Brand&apos;s Potential, Customer Needs, and the Gap. <br />
-            Then, We Act to <strong style={{ fontWeight: 600 }}>
-              Show
-            </strong>{" "}
-            Results.
-          </p>
+            <h2 style={{ fontWeight: 700, marginBottom: "1rem", fontSize: "1.8rem" }}>
+              <span ref={paraRef}>Get</span> a team that's part of you
+            </h2>
+            <p style={{ fontSize: "1.2rem", fontWeight: 300, lineHeight: "1.6" }}>
+              We work with you as an extension of your team to deliver business impact 
+              with growth-ready systems, intent-driven strategies and insight-powered 
+              content – faster.
+            </p>
+          </div>
           <div className="aboutbutton">
-            <button
-              style={{
-                border: "none",
-                outline: "none",
-                cursor: "pointer",
-                backgroundColor: "#3e3d3c",
-                borderRadius: "35px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "1rem 2rem",
-                color: "#fff",
-                fontSize: "1rem",
-              }}
+            <Button
               onClick={() => navigate("/about")}
+              style={{
+                padding: "0rem 2rem !important",
+              }}
             >
               About Us <FiArrowUpRight />
-            </button>
+            </Button>
           </div>
         </div>
       </div>

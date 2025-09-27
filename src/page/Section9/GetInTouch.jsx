@@ -1,4 +1,5 @@
 import React from "react";
+import { Modal, Form, Input, Button } from "antd";
 import LogoFoot from "./../../assets/hawkseelogoo.svg";
 import {
   FaFacebookF,
@@ -10,6 +11,49 @@ import {
 } from "react-icons/fa";
 
 export const GetInTouch = () => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [form] = Form.useForm();
+
+  // Prevent background scrolling when modal is open
+  React.useEffect(() => {
+    if (isModalOpen) {
+      // Store the current scroll position
+      const scrollY = window.scrollY;
+      // Prevent scrolling
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+    } else {
+      // Restore scrolling
+      const scrollY = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+  }, [isModalOpen]);
+
+  const handleOpen = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const values = await form.validateFields();
+      // submit logic placeholder
+      console.log("Appointment form submitted", values);
+      form.resetFields();
+      setIsModalOpen(false);
+    } catch (err) {
+      // validation errors are handled by antd
+    }
+  };
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -29,9 +73,27 @@ export const GetInTouch = () => {
           className="get-in-touch__container"
           aria-label="Get in touch container"
         >
-          <h3 className="get-in-touch__title" aria-label="Get in touch title">
-            Get in touch
-          </h3>
+          <div className="get-in-touch__top" aria-label="Header row with title and intro">
+            <h3 className="get-in-touch__title" aria-label="Get in touch title">
+              Get in touch
+            </h3>
+
+            <div className="get-in-touch__intro" aria-label="Introductory text and CTA">
+              <p>
+                Want to work with a world-class marketing team that helped 100+ brands scale?
+                Book your free consultation now and get clarity on how to take your business ahead.
+              </p>
+              <a
+                href="#"
+                onClick={handleOpen}
+                rel="noopener noreferrer"
+                className="get-in-touch__cta"
+                aria-label="Book free consultation"
+              >
+                Book free consultation
+              </a>
+            </div>
+          </div>
 
           <div
             className="get-in-touch__content"
@@ -74,14 +136,18 @@ export const GetInTouch = () => {
                   rel="noopener noreferrer"
                   style={{
                     cursor: "pointer",
-                    backgroundColor: "black",
-                    color: "white",
-                    padding: ".5rem 1rem",
+                    
+                    color: "black",
+                    padding: ".6rem 1.2rem",
+                    borderRadius: "999px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: ".5rem",
                   }}
                   onClick={() => scrollToSection("contact")}
                   aria-label="Contact us via WhatsApp"
                 >
-                  Contact
+                   Contact
                 </a>
 
                 <span
@@ -229,6 +295,45 @@ export const GetInTouch = () => {
           </a>
         </div>
       </div>
+
+      <Modal
+        title="BOOK APPOINTMENT"
+        open={isModalOpen}
+        onCancel={handleCancel}
+        footer={null}
+        centered
+        destroyOnClose
+        wrapClassName="get-in-touch-modal"
+        maskClosable={true}
+        keyboard={true}
+      >
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={handleSubmit}
+          requiredMark={false}
+        >
+          <Form.Item name="fullName" label="Full name" rules={[{ required: true, message: "Please enter your full name" }]}> 
+            <Input placeholder="e.g. John Mathew" />
+          </Form.Item>
+          <Form.Item name="email" label="Email address" rules={[{ required: true, type: "email", message: "Please enter a valid email" }]}> 
+            <Input placeholder="e.g. john@example.com" />
+          </Form.Item>
+          <Form.Item name="phone" label="Phone number" rules={[{ required: true, message: "Please enter your phone number" }]}> 
+            <Input placeholder="e.g. +91 98765 43210" />
+          </Form.Item>
+          <Form.Item name="subject" label="Subject" rules={[{ required: true, message: "Please enter a subject" }]}> 
+            <Input placeholder="e.g. Need help with digital marketing" />
+          </Form.Item>
+          <Form.Item name="message" label="Message" rules={[{ required: true, message: "Please enter your message" }]}> 
+            <Input.TextArea placeholder="Write your message here..." rows={4} />
+          </Form.Item>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <Button type="text" onClick={handleCancel} style={{ color:"#FB3748"}}>Cancel</Button>
+            <Button type="primary" htmlType="submit" style={{ minWidth: "150px" }}>Submit</Button>
+          </div>
+        </Form>
+      </Modal>
     </>
   );
 };

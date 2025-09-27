@@ -278,12 +278,16 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
               zIndex: '0',
               textUnderlineOffset: '3px',
             }}
+            onClick={() => {
+              // Navigate to Get in Touch section
+              window.location.href = "#contact";
+            }}
             onMouseEnter={(e) => {
               e.target.style.color = '#000';
               e.target.style.transform = 'translateY(-2px)';
               e.target.style.textDecoration = 'underline';
               e.target.style.textDecorationColor = '#000';
-              e.target.style.textDecorationThickness = '1px';
+              e.target.style.textDecorationThickness = '1.5px';
               e.target.style.textUnderlineOffset = '6px';
             }}
             onMouseLeave={(e) => {
@@ -292,7 +296,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
               e.target.style.transform = 'translateY(0)';
               e.target.style.textDecoration = 'underline';
               e.target.style.textDecorationColor = '#000';
-              e.target.style.textDecorationThickness = '1px';
+              e.target.style.textDecorationThickness = '1.5px';
               e.target.style.textUnderlineOffset = '6px';
             }}
           >

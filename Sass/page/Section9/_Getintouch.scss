@@ -21,6 +21,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: hidden; // ensure no overflow on small screens
 
   &__container {
     width: 100%;
@@ -34,33 +35,124 @@
     }
   }
   &__title {
-    font-size: 12.5rem;
+    font-size: 7.5rem;
     font-weight: 700;
+    white-space: nowrap;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
 
-    text-align: right;
+    text-align: left;
     @include responsive.respond(bigDesktop) {
-      font-size: 12rem;
+      font-size: 7.5rem;
     }
     @include responsive.respond(desktop) {
-      font-size: 9.5rem;
+      font-size: 6rem;
     }
     @include responsive.respond(bigTablets) {
-      font-size: 8rem;
-      margin-bottom: 2rem;
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
     }
     @include responsive.respond(tablets) {
-      font-size: 6rem;
-      margin-bottom: 2rem;
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
     }
     @include responsive.respond(phone) {
-      font-size: 5rem;
-      text-align: center;
-      margin-bottom: 1rem;
+      font-size: 3.5rem;
+      text-align: center; // center heading on phones
+     
     }
     @include responsive.respond(smallPhone) {
       font-size: 3.5rem;
-      margin-bottom: -6rem;
+      
+      text-align: center; // center heading on small phones
+    }
+  }
+
+  &__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 2rem;
+
+    @include responsive.respond(smallPhone) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column !important;
+      padding: 0 1rem;
+      gap: 0.5rem;
+      align-items: center; // center stack on phones
+      justify-content: center;
       text-align: center;
+    }
+    @include responsive.respond(phone) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column !important;
+      padding: 0 0;
+      gap: 0.5rem;
+      align-items: center; // center stack on phones
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__intro {
+    max-width: 46rem;
+    padding: 0;
+    margin-top: -1rem;
+    margin-bottom: 4rem;
+    text-align: left;
+    color: #4e4e4e;
+    margin-top: 1.5rem;
+    @include responsive.respond(smallPhone) {
+      margin-bottom: 0rem;
+      font-size: 1.2rem;
+    }
+    @include responsive.respond(phone) {
+      margin-bottom: 0rem;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0 0 0.75rem 0;
+      font-weight: 500;
+      @include responsive.respond(smallPhone) {
+        font-size: 0.875rem;
+      }
+      @include responsive.respond(phone) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .get-in-touch__cta {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    @include responsive.respond(phone) {
+      padding: 0 1rem;
+      max-width: 100%;
+      text-align: center; // center intro and CTA on phones
+      .get-in-touch__cta {
+        font-size: 0.9rem;
+      }
     }
   }
 
@@ -129,7 +221,7 @@
 
     @include responsive.respond(smallPhone) {
       height: 25rem !important;
-      padding-top: 100px !important;
+      padding-top: 50px !important;
       width: 12rem !important;
     }
     img {
@@ -639,5 +731,40 @@
     &:hover {
       color: blue;
     }
+  }
+}
+
+/* Scoped AntD modal primary button override for GetInTouch modal */
+.get-in-touch-modal {
+  .ant-btn-primary {
+    background-color: #000 !important;
+    border-color: #000 !important;
+  }
+  .ant-btn-primary:hover,
+  .ant-btn-primary:focus,
+  .ant-btn-primary:active {
+    background-color: #111 !important;
+    border-color: #111 !important;
+  }
+  
+  // Custom input styling
+  .ant-input,
+  .ant-input:focus,
+  .ant-input-focused {
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 0, 0, 0.20) !important;
+    background: #FBFBFB !important;
+    box-shadow: none !important;
+  }
+  
+  .ant-input:hover {
+    border-color: rgba(0, 0, 0, 0.20) !important;
+  }
+  
+  // TextArea styling
+  .ant-input {
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 0, 0, 0.20) !important;
+    background: #FBFBFB !important;
   }
 }

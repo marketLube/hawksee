@@ -20,7 +20,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
   // Function to get fixed width for consistent layout
   const getFixedWidth = () => {
     const maxLength = Math.max(...words.map(word => word.length));
-    return `${maxLength * 0.6}em`; // Approximate character width
+    return `${maxLength * 0.4}em`; // Approximate character width
   };
 
   // Cycling text animation effect

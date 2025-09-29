@@ -14,7 +14,7 @@ export const BirdMobo = ({ isTesterHundered, isTesterVisible, paraInView }) => {
 
   const [styles, setStyles] = useState({
     transform: "scale(1) translate(0, 0)",
-    transition: "all .5s ease-in-out",
+  transition: "all .5s ease-in-out",
   });
 
   // Function to get fixed width for consistent layout

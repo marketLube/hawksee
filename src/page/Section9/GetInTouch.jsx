@@ -1,5 +1,5 @@
-import React from "react";
-import { Modal, Form, Input, Button } from "antd";
+﻿import React from "react";
+import { Modal, Form, Input, Button, message } from "antd";
 import LogoFoot from "./../../assets/hawkseelogoo.svg";
 import {
   FaFacebookF,
@@ -13,6 +13,7 @@ import {
 export const GetInTouch = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [form] = Form.useForm();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   // Prevent background scrolling when modal is open
   React.useEffect(() => {
@@ -45,12 +46,41 @@ export const GetInTouch = () => {
   const handleSubmit = async () => {
     try {
       const values = await form.validateFields();
-      // submit logic placeholder
-      console.log("Appointment form submitted", values);
-      form.resetFields();
-      setIsModalOpen(false);
+      setIsSubmitting(true);
+      
+      // Send data to backend API
+      const response = await fetch('http://localhost:5000/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      if (result.success) {
+        message.success('Thank you! Your consultation request has been sent successfully. We will get back to you within 24 hours.');
+        form.resetFields();
+        setIsModalOpen(false);
+      } else {
+        message.error(result.message || 'Failed to send your request. Please try again.');
+      }
     } catch (err) {
-      // validation errors are handled by antd
+      console.error('Error submitting form:', err);
+      
+      // Check if it's a connection error
+      if (err.message.includes('Failed to fetch') || err.message.includes('ERR_CONNECTION_REFUSED')) {
+        message.error('Unable to connect to server. Please try again later or contact us directly at info@hawksee.in');
+      } else {
+        message.error('Network error. Please check your connection and try again.');
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -329,8 +359,10 @@ export const GetInTouch = () => {
             <Input.TextArea placeholder="Write your message here..." rows={4} />
           </Form.Item>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <Button type="text" onClick={handleCancel} style={{ color:"#FB3748"}}>Cancel</Button>
-            <Button type="primary" htmlType="submit" style={{ minWidth: "150px" }}>Submit</Button>
+            <Button type="text" onClick={handleCancel} style={{ color:"#FB3748"}} disabled={isSubmitting}>Cancel</Button>
+            <Button type="primary" htmlType="submit" style={{ minWidth: "150px" }} loading={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Submit"}
+            </Button>
           </div>
         </Form>
       </Modal>

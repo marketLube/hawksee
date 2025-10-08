@@ -226,7 +226,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
             className="explore-service-btn"
             style={{
               height: '42px',
-              backgroundColor: '#fff',
+              backgroundColor: 'transparent',
               color: '#000',
               border: '1px solid #000',
               padding: '10px 24px',
@@ -249,7 +249,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
               e.target.style.border = '1px solid #000';
             }}
             onMouseLeave={(e) => {
-              e.target.style.backgroundColor = '#fff';
+              e.target.style.backgroundColor = 'transparent';
               e.target.style.color = '#000';
               e.target.style.transform = 'translateY(0)';
               e.target.style.border = '1px solid #000';
@@ -262,7 +262,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
             className="learn-more-btn"
             style={{
               height: '42px',
-              backgroundColor: '#fff',
+              backgroundColor: 'transparent',
               color: '#000',
               border: 'none',
               textDecoration: 'underline',
@@ -275,7 +275,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
               cursor: 'pointer',
               transition: 'all 0.3s ease',
               minWidth: '140px',
-              zIndex: '0',
+              zIndex: '10',
               textUnderlineOffset: '3px',
             }}
             onClick={() => {
@@ -291,7 +291,7 @@ export const Bird = ({ isNavScrolling, setIsNavScrolling }) => {
               e.target.style.textUnderlineOffset = '6px';
             }}
             onMouseLeave={(e) => {
-              e.target.style.backgroundColor = '#fff';
+              e.target.style.backgroundColor = 'transparent';
               e.target.style.color = '#000';
               e.target.style.transform = 'translateY(0)';
               e.target.style.textDecoration = 'underline';
